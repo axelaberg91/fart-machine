@@ -1,0 +1,173 @@
+[
+  {
+    "key": "smygaren",
+    "file": "audio/smygaren.mp3",
+    "title": "Fart 1",
+    "author": "Breviceps",
+    "source_page": "https://freesound.org/people/Breviceps/sounds/445998/",
+    "download_url": "https://cdn.freesound.org/previews/445/445998_9159316-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "fa2e4edb297ec65372a5fee6705128a307bcadc0b0245ad29e9681a8955bf96e",
+    "bytes": 22493,
+    "duration": 0.862041,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "44100",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "kanonen",
+    "file": "audio/kanonen.mp3",
+    "title": "Fart 2",
+    "author": "Breviceps",
+    "source_page": "https://freesound.org/people/Breviceps/sounds/445999/",
+    "download_url": "https://cdn.freesound.org/previews/445/445999_9159316-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "569793c01b0f84b63a9d55029f004332f918d1370132fb75fba0873995a3f6c1",
+    "bytes": 31423,
+    "duration": 1.149388,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "44100",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "blota",
+    "file": "audio/blota.mp3",
+    "title": "Diarrhea",
+    "author": "Breviceps",
+    "source_page": "https://freesound.org/people/Breviceps/sounds/445997/",
+    "download_url": "https://cdn.freesound.org/previews/445/445997_9159316-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2",
+    "bytes": 23487,
+    "duration": 0.835918,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "44100",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "trumpeten",
+    "file": "audio/trumpeten.mp3",
+    "title": "fart,bum,trumpet,poop.wav",
+    "author": "sorce",
+    "source_page": "https://freesound.org/people/sorce/sounds/431621/",
+    "download_url": "https://cdn.freesound.org/previews/431/431621_144433-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63",
+    "bytes": 102768,
+    "duration": 4.512,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 1,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "ankan",
+    "file": "audio/ankan.mp3",
+    "title": "Fart 3",
+    "author": "Breviceps",
+    "source_page": "https://freesound.org/people/Breviceps/sounds/446000/",
+    "download_url": "https://cdn.freesound.org/previews/446/446000_9159316-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "da890ff85703358d2e3fbcf5271ccf4fe76a15e07dbed5efabed65eb4ae4a210",
+    "bytes": 26774,
+    "duration": 0.966531,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "44100",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "vulkanen",
+    "file": "audio/vulkanen.mp3",
+    "title": "Blubberfreak Fart 3",
+    "author": "Blubberfreak",
+    "source_page": "https://freesound.org/people/Blubberfreak/sounds/732057/",
+    "download_url": "https://cdn.freesound.org/previews/732/732057_15881540-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "c90baedd94619d3d351e556f585dc56067ca9d1f976bfa6ce15f9240ff8a49f6",
+    "bytes": 66384,
+    "duration": 2.616,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "snabbisen",
+    "file": "audio/snabbisen.mp3",
+    "title": "FART.wav",
+    "author": "C-V",
+    "source_page": "https://freesound.org/people/C-V/sounds/506994/",
+    "download_url": "https://cdn.freesound.org/previews/506/506994_8956746-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "912a288d0e14f0d2e68e6904bb1215f9e38080e76d6adede7e0b488e24e8fb00",
+    "bytes": 6864,
+    "duration": 0.552,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "raketen",
+    "file": "audio/raketen.mp3",
+    "title": "FART - 2",
+    "author": "SamuelGremaud",
+    "source_page": "https://freesound.org/people/SamuelGremaud/sounds/518699/",
+    "download_url": "https://cdn.freesound.org/previews/518/518699_8031303-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "37686fdfe462b3609246b9223a73c912f2417b49bfbdb21c7603c17b0c40e878",
+    "bytes": 31872,
+    "duration": 1.32,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  },
+  {
+    "key": "katastrofen",
+    "file": "audio/katastrofen.mp3",
+    "title": "Fart 3",
+    "author": "Under7dude",
+    "source_page": "https://freesound.org/people/Under7dude/sounds/163381/",
+    "download_url": "https://cdn.freesound.org/previews/163/163381_2943714-hq.mp3",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sha256": "b637625415830a5baa34b2db1dd2fd6da3f404670516db2aa6a753e157a2d56a",
+    "bytes": 61200,
+    "duration": 2.616,
+    "format": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2,
+      "validator": "MPEG Layer III frame scan"
+    }
+  }
+]
