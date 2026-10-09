@@ -1,0 +1,33 @@
+name: Import licensed recordings
+on:
+  push:
+    branches: [recorded-audio-v3]
+    paths:
+      - 'tools/import_recordings.py'
+      - '.github/workflows/import-recordings.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure audio validator is installed
+        run: command -v ffprobe || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: Import public CC0 recordings
+        id: recordings
+        continue-on-error: true
+        run: python3 tools/import_recordings.py
+      - name: Save recordings and import report on preparation branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audio
+          if ! git diff --cached --quiet; then
+            git commit -m 'Import recorded CC0 audio and provenance'
+            git push origin HEAD:recorded-audio-v3
+          fi
+      - name: Require all nine recordings
+        if: steps.recordings.outcome != 'success'
+        run: exit 1
