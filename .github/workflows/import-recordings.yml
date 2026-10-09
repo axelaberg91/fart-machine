@@ -3,19 +3,20 @@ on:
   push:
     branches: [recorded-audio-v3]
     paths:
-      - 'tools/import_recordings.py'
+      - 'tools/**'
       - '.github/workflows/import-recordings.yml'
 permissions:
   contents: write
+concurrency:
+  group: recorded-audio-import
+  cancel-in-progress: true
 jobs:
   import:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Ensure audio validator is installed
-        run: command -v ffprobe || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
-      - name: Import public CC0 recordings
+      - name: Import and validate public CC0 recordings
         id: recordings
         continue-on-error: true
         run: python3 tools/import_recordings.py
