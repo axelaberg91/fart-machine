@@ -1,1 +1,16 @@
-{"name":"Fart Machine","short_name":"Fart Machine","start_url":"./","scope":"./","display":"standalone","background_color":"#180d37","theme_color":"#7b2ff7","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}
+{
+  "name": "Hugo och Hermans pruttmaskin",
+  "short_name": "Pruttmaskin",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#180d37",
+  "theme_color": "#7b2ff7",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
