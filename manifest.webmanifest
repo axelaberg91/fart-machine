@@ -1,16 +1,1 @@
-{
-  "name": "Hugo och Hermans pruttmaskin",
-  "short_name": "Pruttmaskin",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#180d37",
-  "theme_color": "#7b2ff7",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+{"name":"Hugo och Hermans pruttmaskin","short_name":"Pruttmaskin","lang":"sv","start_url":"./","scope":"./","display":"standalone","background_color":"#fff9eb","theme_color":"#fff9eb","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}

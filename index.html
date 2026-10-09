@@ -3,36 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#7b2ff7">
+<meta name="theme-color" content="#fff9eb">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Hugo och Hermans pruttmaskin">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg">
 <title>Hugo och Hermans pruttmaskin</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#7d2af9,transparent 60%),#180d37;color:white;font-family:system-ui;text-align:center;min-height:100dvh}main{max-width:940px;margin:auto;padding:20px;padding-top:max(20px,env(safe-area-inset-top));padding-bottom:max(20px,env(safe-area-inset-bottom))}h1{font-size:clamp(28px,6vw,60px);line-height:1.12;overflow-wrap:break-word;text-shadow:5px 5px #ff3985}h2{color:#fff69b;font-size:clamp(16px,4vw,24px)}.badge{display:inline-block;background:#fff69b;color:#30104f;padding:8px 16px;border-radius:30px;font-size:13px;font-weight:900;letter-spacing:.05em}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px}.sound{border:3px solid white;border-bottom-width:8px;border-radius:22px;min-height:145px;color:white;font-weight:900;font-size:clamp(13px,2.5vw,22px);touch-action:manipulation;cursor:pointer;padding:12px 4px;text-shadow:0 1px 2px #0008}.sound:active,.sound.playing{transform:translateY(5px);filter:brightness(1.12)}.sound .emoji{display:block;font-size:clamp(36px,7vw,68px)}.sound small{display:block;font-size:10px;font-weight:600;margin-top:5px}.sound:nth-child(1){background:#fe5d7e}.sound:nth-child(2){background:#ff9c20}.sound:nth-child(3){background:#10bdbe}.sound:nth-child(4){background:#9a62f6}.sound:nth-child(5){background:#9dcf2e}.sound:nth-child(6){background:#e74431}.sound:nth-child(7){background:#2e91f5}.sound:nth-child(8){background:#ff56c8}.sound:nth-child(9){background:#d3a221}label{display:inline-block;margin:8px;padding:12px;border-radius:30px;background:#ffffff33}input[type=range]{max-width:130px;vertical-align:middle}input{accent-color:#fff69b}button{font-family:inherit}button:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #fff69b;outline-offset:4px}#stop{border:0;border-radius:30px;padding:13px;background:#fff;font-weight:bold;cursor:pointer;min-height:44px}#status{min-height:24px;font-weight:700}#offline{font-size:13px;color:#e7d8ff;min-height:20px}#offline.ready{color:#c8ffa5}.info{font-size:14px;color:#fff3ce}.version{margin:24px 0 8px;color:#d9c7ff;font-size:14px}details{font-size:13px;color:#e7d8ff;max-width:640px;margin:20px auto}summary{cursor:pointer;padding:10px}details p{line-height:1.6}a{color:#fff69b}@media(max-width:520px){.sound{min-height:120px;border-radius:15px}.grid{gap:7px}main{padding-left:10px;padding-right:10px}label{margin:4px;padding:10px}h1{margin:22px 0}h2{margin-bottom:20px}}@media(prefers-reduced-motion:reduce){.sound:active,.sound.playing{transform:none}}
-</style>
-<script src="./app-v3.js" defer></script>
+<link rel="stylesheet" href="./theme-v4.css">
+<script src="./app-v4.js" defer></script>
 </head>
 <body><main>
-<h1>&#x1f4a8; Hugo och Hermans pruttmaskin &#x1f4a5;</h1>
-<span class="badge">NYTT! INSPELADE LJUD</span>
-<h2>TRYCK &bull; SKRATTA &bull; UPPREPA</h2>
-<section aria-label="Ljudkontroller">
-<label>&#x1f50a; Volym <input id="vol" aria-label="Volym" type="range" min="0" max="100" value="75"></label>
-<label><input id="layer" type="checkbox" checked> Fisorkester &#x1f3bc;</label>
-<button id="stop" type="button">&#x1f6d1; Stoppa allt</button>
+<header class="page-header">
+<h1><span class="owners">Hugo och Hermans</span><span class="title">pruttmaskin</span></h1>
+</header>
+<section class="controls" aria-label="Ljudkontroller">
+<label class="volume"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5zM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></svg>Volym<input id="vol" aria-label="Volym" type="range" min="0" max="100" value="75"></label>
+<label class="orchestra"><input id="layer" type="checkbox" checked> Fisorkester</label>
+<button id="stop" class="stop" type="button"><i aria-hidden="true"></i>Stoppa allt</button>
 </section>
-<section class="grid" id="grid" aria-label="Inspelade pruttljud"></section>
-<p id="status" role="status" aria-live="polite">Laddar inspelningarna &hellip;</p>
-<p id="offline" aria-live="polite">F&ouml;rbereder offlinel&auml;ge &hellip;</p>
-<p class="info">9 inspelade ljud &bull; Inga annonser &bull; Ingen mikrofon beh&ouml;vs</p>
-<details><summary>Ljud &amp; licenser (CC0)</summary>
-<p>Inspelningar fr&aring;n Freesound, sparade som MP3-filer i appen. Alla anv&auml;nds under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>. Inga ljud syntetiseras.</p>
-<p>Breviceps: <a href="https://freesound.org/people/Breviceps/sounds/445998/" target="_blank" rel="noopener noreferrer">Smygaren</a>, <a href="https://freesound.org/people/Breviceps/sounds/445999/" target="_blank" rel="noopener noreferrer">Kanonen</a>, <a href="https://freesound.org/people/Breviceps/sounds/445997/" target="_blank" rel="noopener noreferrer">Bl&ouml;ta</a>, <a href="https://freesound.org/people/Breviceps/sounds/446000/" target="_blank" rel="noopener noreferrer">Ankan</a>.<br>
-sorce: <a href="https://freesound.org/people/sorce/sounds/431621/" target="_blank" rel="noopener noreferrer">Trumpeten</a>. Blubberfreak: <a href="https://freesound.org/people/Blubberfreak/sounds/732057/" target="_blank" rel="noopener noreferrer">Vulkanen</a>. C-V: <a href="https://freesound.org/people/C-V/sounds/506994/" target="_blank" rel="noopener noreferrer">Snabbisen</a>. SamuelGremaud: <a href="https://freesound.org/people/SamuelGremaud/sounds/518699/" target="_blank" rel="noopener noreferrer">Raketen</a>. Under7dude: <a href="https://freesound.org/people/Under7dude/sounds/163381/" target="_blank" rel="noopener noreferrer">Katastrofen</a>.</p>
-<p>&Ouml;ppna appen med internet tills den visar &rdquo;Redo offline &ndash; 9/9 ljud sparade&rdquo;. D&auml;refter beh&ouml;vs ingen uppkoppling s&aring; l&auml;nge webbl&auml;saren beh&aring;ller appens sparade filer.</p>
-</details>
-<footer class="version">Version 3.0 &middot; Inspelade ljud</footer>
+<div class="boardhead"><h2>V&auml;lj din prutt</h2><span class="hint">9 KNAPPAR. NOLL HYFS.</span></div>
+<section class="grid" id="grid" aria-label="Pruttljud"></section>
+<p id="status" role="status" aria-live="polite">Laddar ljuden &hellip;</p>
+<div class="lower"><p id="offline" aria-live="polite">F&ouml;rbereder offlinel&auml;ge &hellip;</p><span>Bara trams. Inga annonser.</span></div>
+<details><summary>Ljud &amp; licenser</summary><div class="credits">
+<p>Alla nio ljud &auml;r MP3-inspelningar fr&aring;n Freesound under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>. Ljudfilerna f&ouml;ljer med appen.</p>
+<p>Breviceps: <a href="https://freesound.org/people/Breviceps/sounds/445998/" target="_blank" rel="noopener noreferrer">Smygaren</a>, <a href="https://freesound.org/people/Breviceps/sounds/445999/" target="_blank" rel="noopener noreferrer">Kanonen</a>, <a href="https://freesound.org/people/Breviceps/sounds/445997/" target="_blank" rel="noopener noreferrer">Bl&ouml;ta</a>, <a href="https://freesound.org/people/Breviceps/sounds/446000/" target="_blank" rel="noopener noreferrer">Ankan</a>.<br>sorce: <a href="https://freesound.org/people/sorce/sounds/431621/" target="_blank" rel="noopener noreferrer">Trumpeten</a>. Blubberfreak: <a href="https://freesound.org/people/Blubberfreak/sounds/732057/" target="_blank" rel="noopener noreferrer">Vulkanen</a>. C-V: <a href="https://freesound.org/people/C-V/sounds/506994/" target="_blank" rel="noopener noreferrer">Snabbisen</a>. SamuelGremaud: <a href="https://freesound.org/people/SamuelGremaud/sounds/518699/" target="_blank" rel="noopener noreferrer">Raketen</a>. Under7dude: <a href="https://freesound.org/people/Under7dude/sounds/163381/" target="_blank" rel="noopener noreferrer">Katastrofen</a>.</p>
+<p>L&aring;t sidan vara &ouml;ppen med internetanslutning tills den visar att den &auml;r redo offline. Ljud och bilder sparas d&aring; tillsammans med appen.</p>
+</div></details>
+<footer>Version 4.1</footer>
 <noscript>Aktivera JavaScript f&ouml;r att spela ljuden.</noscript>
 </main></body></html>
