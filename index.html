@@ -10,7 +10,7 @@
 <link rel="icon" href="icon.svg">
 <title>Hugo och Hermans pruttmaskin</title>
 <link rel="stylesheet" href="./theme-v4.css">
-<script src="./app-v4.js" defer></script>
+<script src="./app-v4.3.js" defer></script>
 </head>
 <body><main>
 <header class="page-header">
@@ -23,7 +23,7 @@
 </section>
 <div class="boardhead"><h2>V&auml;lj din prutt</h2><span class="hint">9 KNAPPAR. NOLL HYFS.</span></div>
 <section class="grid" id="grid" aria-label="Pruttljud"></section>
-<p id="status" role="status" aria-live="polite">Laddar ljuden &hellip;</p>
+<p id="status" role="status" aria-live="polite">V&auml;lj din prutt!</p>
 <div class="lower"><p id="offline" aria-live="polite">F&ouml;rbereder offlinel&auml;ge &hellip;</p><span>Bara trams. Inga annonser.</span></div>
 <details><summary>Ljud &amp; licenser</summary><div class="credits">
 <p>Alla nio ljud &auml;r MP3-inspelningar fr&aring;n Freesound under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>. Ljudfilerna f&ouml;ljer med appen.</p>
@@ -31,13 +31,13 @@
 <p>L&aring;t sidan vara &ouml;ppen med internetanslutning tills den visar att den &auml;r redo offline. Ljud och bilder sparas d&aring; tillsammans med appen.</p>
 </div></details>
 <details id="audio-help"><summary>Inget ljud?</summary><div class="credits">
-<p>H&ouml;j iPadens volym och st&auml;ng av Tyst l&auml;ge i Kontrollcenter. Kontrollera ocks&aring; att ljudet inte skickas till Bluetooth-h&ouml;rlurar eller AirPlay.</p>
-<button id="reset-audio" class="stop" type="button" style="min-height:44px;padding:10px 16px">Starta om och testa ljudet</button>
-<p>Fortfarande tyst? Prova samma ljud i den vanliga ljudspelaren:</p>
+<p>P&aring; iPad och iPhone anv&auml;nder du enhetens volymknappar. Kontrollera &auml;ven att ljudet inte skickas till Bluetooth-h&ouml;rlurar eller AirPlay.</p>
+<button id="reset-audio" class="stop" type="button" style="min-height:44px;padding:10px 16px">Testa ljudet</button>
+<p>Knapparna anv&auml;nder nu vanlig medieuppspelning. H&auml;r kan du ocks&aring; prova webbl&auml;sarens egna kontroller:</p>
 <audio id="audio-test" controls preload="none" src="./audio/snabbisen.mp3" style="display:block;max-width:100%">Din webbl&auml;sare saknar ljudspelare.</audio>
 <p><a href="./audio/snabbisen.mp3" target="_blank" rel="noopener">&Ouml;ppna ljudfilen separat</a></p>
 <p id="audio-debug" aria-live="polite"></p>
 </div></details>
-<footer>Version 4.2</footer>
+<footer>Version 4.3</footer>
 <noscript>Aktivera JavaScript f&ouml;r att spela ljuden.</noscript>
 </main></body></html>

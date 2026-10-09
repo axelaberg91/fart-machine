@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = '4.2';
+const VERSION = '4.3';
 const CACHE = 'fart-machine-v' + VERSION;
 const SOUND_IDS = ['smygaren','kanonen','blota','trumpeten','ankan','vulkanen','snabbisen','raketen','katastrofen'];
-const ASSETS = ['./','./index.html','./app-v4.js','./theme-v4.css','./manifest.webmanifest','./icon.svg',...SOUND_IDS.map(id => './audio/' + id + '.mp3'),...Array.from({length: 9}, (_, i) => './photos/photo-' + String(i+1).padStart(2, '0') + '.webp')];
+const ASSETS = ['./','./index.html','./app-v4.3.js','./theme-v4.css','./manifest.webmanifest','./icon.svg',...SOUND_IDS.map(id => './audio/' + id + '.mp3'),...Array.from({length: 9}, (_, i) => './photos/photo-' + String(i+1).padStart(2, '0') + '.webp')];
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     try {
@@ -10,7 +10,7 @@ self.addEventListener('install', event => {
       await cache.addAll(ASSETS.map(url => new Request(url, {cache: 'reload'})));
       const page = await cache.match('./index.html');
       if (!(await page.text()).includes('Version ' + VERSION)) throw new Error('Older app shell returned by host');
-      const code = await cache.match('./app-v4.js');
+      const code = await cache.match('./app-v4.3.js');
       if (!(await code.text()).includes("const VERSION = '" + VERSION + "'")) throw new Error('Older app code returned by host');
       await self.skipWaiting();
     } catch (error) {
@@ -26,7 +26,7 @@ self.addEventListener('activate', event => {
     await self.clients.claim();
   })());
 });
-// Safari's native media player requests byte ranges, including when offline.
+// The main player uses full local Blobs. Native test controls also need HTTP byte ranges.
 async function audioRange(cached, range) {
   const match = /^bytes=(\d*)-(\d*)$/.exec(range);
   if (!match || (!match[1] && !match[2])) return cached;
@@ -38,7 +38,7 @@ async function audioRange(cached, range) {
     return new Response(null, {status: 416, headers: {'Content-Range': 'bytes */' + length}});
   }
   return new Response(data.slice(start, end + 1), {status: 206, headers: {
-    'Content-Type': cached.headers.get('Content-Type') || 'audio/mpeg',
+    'Content-Type': 'audio/mpeg',
     'Content-Length': String(end - start + 1),
     'Content-Range': 'bytes ' + start + '-' + end + '/' + length,
     'Accept-Ranges': 'bytes'
