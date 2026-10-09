@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.1';
+  const VERSION = '4.2';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -20,6 +20,7 @@
   const offline = document.getElementById('offline');
   const bytes = new Map(), buffers = new Map(), voices = new Set();
   let context, master, compressor, generation = 0, interacted = false;
+  let needsAudioReset = false;
 
   for (const [index, sound] of sounds.entries()) {
     const button = document.createElement('button');
@@ -97,8 +98,41 @@
     return bytes.get(sound.id);
   }
 
-  // Called directly from the tap handler to unlock audio on iPhone/iPad.
+  // WebKit bug 237322: Web Audio defaults to ambient on iOS, unlike media playback.
+  // Feature-detect the API. Never request microphone permission or override device volume.
+  function usePlaybackSession() {
+    try {
+      if (navigator.audioSession && navigator.audioSession.type !== 'playback') {
+        navigator.audioSession.type = 'playback';
+      }
+    } catch (_) { /* Older browsers keep their default audio route. */ }
+  }
+
+  function withTimeout(promise, ms, name) {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        const error = new Error(name);
+        error.name = name;
+        reject(error);
+      }, ms);
+      Promise.resolve(promise).then(value => {
+        clearTimeout(timer); resolve(value);
+      }, error => {
+        clearTimeout(timer); reject(error);
+      });
+    });
+  }
+
+  function audioDebug(error) {
+    const element = document.getElementById('audio-debug');
+    if (!element) return;
+    element.textContent = 'Version ' + VERSION + ' | Audio: ' + (context ? context.state : 'ej startat') +
+      (error ? ' | ' + (error.name || 'Error') : '');
+  }
+
+  // Synchronous creation + resume + silent warm-up inside the user's tap, before any await.
   function unlockAudio() {
+    usePlaybackSession();
     if (!context) {
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
       if (!AudioContextClass) throw new Error('Web Audio not supported');
@@ -113,8 +147,46 @@
       master.gain.value = Number(volume.value) / 100 * 0.8;
       compressor.connect(master);
       master.connect(context.destination);
+      context.addEventListener('statechange', () => audioDebug());
     }
-    return context.state === 'running' ? Promise.resolve() : context.resume();
+    const current = context;
+    if (current.state === 'running') return Promise.resolve();
+    const resumed = current.resume();
+    const warmup = current.createBufferSource();
+    warmup.buffer = current.createBuffer(1, 1, current.sampleRate);
+    warmup.connect(current.destination);
+    warmup.onended = () => warmup.disconnect();
+    warmup.start(0); // One silent sample, not an audible synthesized sound.
+    return withTimeout(resumed, 3000, 'AudioStartTimeout').then(() => {
+      if (current.state !== 'running') {
+        const error = new Error('Audio did not enter running state');
+        error.name = 'AudioStartError';
+        throw error;
+      }
+    }).catch(error => {
+      if (current === context) needsAudioReset = true;
+      throw error;
+    });
+  }
+
+  function resetAudio() {
+    stopAll();
+    const previous = context;
+    context = master = compressor = undefined;
+    buffers.clear();
+    needsAudioReset = false;
+    if (previous && previous.state !== 'closed') {
+      try { Promise.resolve(previous.close()).catch(() => {}); } catch (_) {}
+    }
+    audioDebug();
+  }
+
+  // Callback support also covers older Safari versions of decodeAudioData.
+  function decodeRecording(data, audioContext) {
+    return withTimeout(new Promise((resolve, reject) => {
+      const result = audioContext.decodeAudioData(data.slice(0), resolve, reject);
+      if (result && typeof result.then === 'function') result.then(resolve, reject);
+    }), 10000, 'AudioDecodeTimeout');
   }
 
   volume.addEventListener('input', () => {
@@ -123,6 +195,8 @@
 
   function stopAll() {
     generation++;
+    const testPlayer = document.getElementById('audio-test');
+    if (testPlayer) testPlayer.pause();
     for (const voice of voices) {
       try { voice.source.stop(); } catch (_) { /* Already stopped. */ }
       voice.source.disconnect();
@@ -134,6 +208,7 @@
   document.getElementById('stop').addEventListener('click', () => { interacted = true; stopAll(); });
 
   async function play(sound) {
+    if (needsAudioReset || (context && (context.state === 'closed' || context.state === 'interrupted'))) resetAudio();
     if (!layer.checked) stopAll();
     const ticket = generation;
     try {
@@ -142,7 +217,7 @@
       const [data] = await Promise.all([loadBytes(sound), unlocked]);
       if (ticket !== generation) return;
       if (!buffers.has(sound.id)) {
-        const decoded = context.decodeAudioData(data.slice(0)).catch(error => {
+        const decoded = decodeRecording(data, context).catch(error => {
           buffers.delete(sound.id);
           throw error;
         });
@@ -169,8 +244,12 @@
       source.start();
       sound.button.classList.add('playing');
       status.textContent = sound.emoji + ' ' + sound.name + '!';
+      audioDebug();
     } catch (error) {
-      if (ticket === generation) status.textContent = 'Kunde inte spela ' + sound.name + '. Kontrollera anslutningen och tryck igen.';
+      if (ticket === generation) {
+        status.textContent = 'Ljudet startade inte. Tryck igen eller \u00f6ppna Inget ljud? nedan.';
+        audioDebug(error);
+      }
       console.warn('Recording playback failed:', sound.id, error);
     }
   }
@@ -181,6 +260,27 @@
     offline.textContent = 'F\u00f6rhandsvisning av temat \u00b7 ljuden \u00e4r inte aktiva';
     return;
   }
+
+  const resetButton = document.getElementById('reset-audio');
+  if (resetButton) resetButton.addEventListener('click', () => {
+    interacted = true;
+    resetAudio();
+    void play(sounds[6]);
+  });
+  const testPlayer = document.getElementById('audio-test');
+  if (testPlayer) testPlayer.addEventListener('play', usePlaybackSession);
+  // Do not leave queued sounds waiting to play after the screen unlocks.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      stopAll();
+      needsAudioReset = Boolean(context);
+    }
+  });
+  window.addEventListener('pagehide', () => {
+    stopAll();
+    needsAudioReset = Boolean(context);
+  });
+  audioDebug();
 
   let loaded = 0;
   Promise.allSettled(sounds.map(sound => loadBytes(sound).then(() => {
