@@ -53,7 +53,7 @@ CC0 license to any referenced composition, release or published song arrangement
 | `bjornen-sover.mp3` | Björnen sover / Gubben Noak (traditional) | 21.07 s |
 | `baby-shark.mp3` | Baby Shark, children's chant popularized by Pinkfong; two melody verses | 17.34 s |
 | `en-livstid-i-krig.mp3` | En livstid i krig — Joakim Brodén / Sabaton (2012); short opening lead melody | 17.85 s |
-| `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); opening instrumental piano hook | 23.64 s |
+| `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); instrumental main drop / chorus lead | 23.06 s |
 
 Greta Gris follows the original two-bar Peppa Pig melody hook, including the
 low G and rising G–B–D–F figure.
@@ -65,17 +65,24 @@ represented by their target notes. Written F4–Eb5 is moved one octave down to
 F3–Eb4 for the fart instrument. Its half-time notation uses 68 quarter notes per
 minute, equivalent to 136 with doubled written durations.
 
-Bromance uses the original instrumental opening piano motif shared by Bromance
-and Seek Bromance. Two independent readings of Note-Store's free first-page
-Piano Solo arrangement by Ivan establish the notes and rhythm: the two-beat
-opening pickup occurs once, then measures 2–5 repeat three times. Tied F-sharp
-eighth notes are merged into one note. The printed 128 BPM is this rendition's
-arrangement tempo; the Arena recording is approximately 126 BPM. C#4–G#4 is
-moved down one octave to C#3–G#3 for the same wet fart instrument.
-The official Arena preview confirms the C-sharp-minor pitch material. It is a
-later section of that recording and is not the reference for exact intro
-onsets. The later vocal melody in the Seek Bromance score is omitted; no
-original recording or vocal is sampled.
+Bromance starts directly on the instrumental main drop / chorus melody. It uses
+the highest lead line at beats 224–240 in the freely published *Avicii Melodies*
+MIDI compilation by No_Literature4584, who credits Keiric and TyphoonMusic.
+The following sixteen beats repeat that melody exactly. This rendition repeats
+the four-bar hook three times at the Arena recording's tempo of 126 BPM, using
+the source's dotted-eighth (0.75 beat) and eighth-note (0.5 beat) durations.
+The compilation's 128 BPM serves its whole multi-song file.
+One fixed two-octave transposition places its G#4–B5 highest melody line at
+G#2–B3 for the wet fart instrument, preserving the source's register contour.
+
+The main hook's pitch classes and syncopated onsets were independently aligned
+with the official Arena preview from approximately 0.55 seconds: repeated
+G-sharps, B, F-sharp, repeated D-sharps, then the rising transition into C-sharp.
+The original mix contains doubled piano/synth and sustained chords, so spectrum
+alone establishes its pitch classes and timing more firmly than its octave
+placement. This solo preserves the published MIDI contour without per-note
+octave changes. It omits the opening piano motif and the separate Seek Bromance
+vocal chorus. No original recording or vocal is sampled.
 
 Baby Shark uses the recognizable D–E–G melody, repeated-note refrain and
 G–G–F-sharp ending, transposed down an octave for the same wet fart instrument.
@@ -97,13 +104,13 @@ Notation references:
 - [Bromance Arena mix, official label release](https://sirupmusic.com/releases/bromance-aviciis-arena-mix/).
 - [Bromance distributor metadata and composer credit](https://www.qobuz.com/us-en/album/bromance-remixes-pt-2-tim-berg/7640130863125).
 - [Official Bromance Arena recording preview](https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174).
-- [Published Piano Solo arrangement by Ivan](https://note-store.com/notes/tim-berg/seek-bromance/piano-solo/).
-- [Publisher's free first-page sample, opening instrumental motif](https://note-store.com/api/preview_pdf_download/125466/).
+- [Avicii Melodies MIDI compiler's original publication and credits](https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/).
+- [Publicly shared MIDI/FLP compilation](https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file).
 
 ## Format, validation and regeneration
 
 All five files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is 1,205,863 bytes (approximately 1.21 MB). Decoded peak levels
+`audio/mpeg`. Their combined size is 1,198,967 bytes (approximately 1.20 MB). Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
 noise, so idealized note-precision measurements do not describe this mix.

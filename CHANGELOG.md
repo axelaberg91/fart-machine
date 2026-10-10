@@ -1,5 +1,13 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.5.2 - Bromance-refrängen
+
+- Replaced the Bromance piano opening motif with the instrumental main-lead/drop
+  (chorus) melody from Bromance (Arena), using the same wet recorded fart instrument.
+- Kept the same five song buttons and the other four recordings unchanged.
+- Updated the offline cache to Version 4.5.2 so the revised clip replaces the
+  previous version.
+
 ## 4.5.1 - Fem låtar och Bromance
 
 - Removed Lover, Paw Patrol and The Puerto Rico Song, and replaced Ghosts ’n’ Stuff

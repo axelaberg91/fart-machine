@@ -25,12 +25,12 @@ def score(text):
     return [(token.split(":")[0], float(token.split(":")[1])) for token in text.split()]
 
 
-BROMANCE_PICKUP = 'E4:0.5 C#4:0.5 E4:0.5 F#4:0.5'
-BROMANCE_HOOK = (
-    'G#4:2 E4:0.5 C#4:0.5 E4:0.5 F#4:0.5 '
-    'C#4:2 E4:0.5 C#4:0.5 E4:0.5 F#4:0.5 '
-    'G#4:1.5 F#4:1 E4:0.5 F#4:0.5 G#4:0.5 '
-    'E4:2 E4:0.5 C#4:0.5 E4:0.5 F#4:0.5'
+BROMANCE_CHORUS = (
+    'G#5:0.75 G#5:0.75 G#5:0.75 B5:0.75 F#5:0.75 '
+    'D#5:0.75 D#5:0.75 D#5:0.75 D#5:0.75 D#5:0.75 '
+    'G#4:0.5 B4:0.5 E5:0.5 D#5:0.5 '
+    'C#5:0.75 C#5:0.75 C#5:0.75 C#5:0.75 C#5:0.75 C#5:0.75 '
+    'C#5:0.5 D#5:0.5 E5:0.5 F#5:0.5'
 )
 
 PEPPA_HOOK = (
@@ -108,22 +108,28 @@ SONGS = [
                     'https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html']},
     {'id': 'bromance',
      'title': 'Bromance',
-     'bpm': 128,
-     'transpose': -12,
-     'meter': '4/4, two-beat opening pickup',
+     'bpm': 126,
+     'transpose': -24,
+     'meter': '4/4',
      'melody': 'Bromance — Tim Berg / Tim Bergling (Avicii, 2010)',
      'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
-     'arrangement': 'Instrumental piano hook: initial two-beat pickup once, followed by four-bar '
-                    'melody repeated three times at the published arrangement tempo of 128 BPM',
-     'source_notation': 'Note-Store Piano Solo arrangement by Ivan, free first-page preview 125466, '
-                        'opening pickup and measures 2–5; written C#4–G#4 rendered C#3–G#3. '
-                        'The instrumental hook is shared by Bromance and Seek Bromance; '
-                        'the later vocal melody is omitted',
+     'arrangement': 'Instrumental main drop / chorus lead: four-bar melody repeated three times '
+                    'at 126 BPM, starting directly on the main hook',
+     'source_notation': 'Freely published Avicii Melodies MIDI by No_Literature4584, who credits '
+                        'Keiric and TyphoonMusic; highest lead at beats 224–240, confirmed by '
+                        'the identical repetition at 240–256. MIDI G#4–B5 rendered G#2–B3 '
+                        'through one fixed transposition, preserving the register contour',
+     'reference_validation': 'Pitch classes and syncopated onsets checked against the official '
+                             'Arena preview from approximately 0.55 seconds; its mixed and '
+                             'doubled instruments make octave identification less certain. '
+                             'The solo follows the published MIDI lead with no per-note '
+                             'octave changes',
      'references': ['https://sirupmusic.com/releases/bromance-aviciis-arena-mix/',
                     'https://www.qobuz.com/us-en/album/bromance-remixes-pt-2-tim-berg/7640130863125',
                     'https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174',
-                    'https://note-store.com/api/preview_pdf_download/125466/'],
-     'notes': score(BROMANCE_PICKUP)+score(BROMANCE_HOOK)*3}
+                    'https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/',
+                    'https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file'],
+     'notes': score(BROMANCE_CHORUS)*3}
 ]
 
 

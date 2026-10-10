@@ -20,7 +20,7 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '4.5.1');
+assert.equal(version, '4.5.2');
 assert.ok(assets.includes('./app-v4.4.js'));
 assert.deepEqual(assets.filter(asset => asset.startsWith('./audio/songs/')).sort(), expectedSongIds.map(id => './audio/songs/' + id + '.mp3').sort());
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
@@ -29,7 +29,7 @@ assert.equal(assets.length, 29);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 4\.5\.1/);
+assert.match(html, /Version 4\.5\.2/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);
@@ -75,10 +75,12 @@ async function main() {
       assert.equal(data.length, song.validation.bytes, song.id + ' byte count');
       const hash = createHash('sha256').update(data).digest('hex');
       assert.equal(hash, song.validation.sha256, song.id + ' output hash');
+      if (song.id === 'bromance') assert.notEqual(hash, '8b51db3b8a4d01ae58a00ac35cc17d0756e5e9aabb05e5716628f95532452d7a', 'Bromance must replace the previous intro recording');
       if (retainedSongHashes[song.id]) assert.equal(hash, retainedSongHashes[song.id], song.id + ' must retain the previous approved recording');
     }
     console.log('PASS all five song payloads match their metadata byte counts and SHA-256 hashes.');
     console.log('PASS all four retained recordings are unchanged, including Björnen sover and Baby Shark.');
+    console.log('PASS Bromance differs from the previous 4.5.1 intro recording.');
   }
 }
 
