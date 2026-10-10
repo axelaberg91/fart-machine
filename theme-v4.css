@@ -8,3 +8,44 @@
 
 .page-header{margin:8px 0 25px;text-align:center}.page-header h1{margin:0;line-height:1.08}.page-header .owners{display:block;font-size:clamp(17px,2.6vw,25px);font-weight:900;letter-spacing:.025em;margin-bottom:7px}.page-header .title{display:block;font-size:clamp(34px,6vw,56px);font-weight:900;color:var(--purple);letter-spacing:-.04em;text-shadow:1px 2px white,3px 4px var(--ink)}
 @media(max-width:520px){.page-header{margin:3px 0 22px}.page-header .owners{font-size:18px}.page-header .title{font-size:38px}}
+
+.song-heading{margin-top:34px;margin-bottom:7px}
+.song-intro{margin:0 2px 16px;font-size:12px;font-weight:700;color:#64576c;line-height:1.5}
+.song-grid{gap:16px}
+.song{min-height:208px;padding:24px 14px 17px}
+.song:nth-child(1){--tile:#fff0aa}
+.song:nth-child(2){--tile:#e6dcff}
+.song:nth-child(3){--tile:#ffc8b0}
+.song:nth-child(4){--tile:#bce6d8}
+.song:nth-child(5){--tile:#f6cfdf}
+.song:nth-child(6){--tile:#bddef7}
+.song-art{position:relative;display:grid;place-items:center;width:80px;height:80px;flex:none;border:2px dashed var(--ink);border-radius:50%;background:#ffffff80}
+.song-art:before,.song-art:after{position:absolute;font-size:25px;font-weight:900;line-height:1;color:var(--purple)}
+.song-art:before{content:'\266a';left:-20px;top:5px;transform:rotate(-14deg)}
+.song-art:after{content:'\266b';right:-23px;bottom:3px;transform:rotate(12deg)}
+.song .emoji{position:static;width:auto;height:auto;font-size:42px}
+.song .name{display:flex;align-items:center;justify-content:center;min-height:2.4em;margin-top:10px;font-size:20px;text-align:center}
+.song small{min-height:1.3em;font-size:11px;font-weight:700}
+.song .burst{top:11px;bottom:auto;right:10px;padding:4px 6px;font-size:9px;background:#fff9eb}
+.song[aria-busy=true] .song-art{border-style:solid}
+@media(max-width:740px){
+  .song-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .song{min-height:192px;border-radius:20px}
+  .song .name{font-size:18px}
+}
+@media(max-width:520px){
+  .song-heading{margin-top:29px}
+  .song-heading .hint{font-size:8px}
+  .song-intro{font-size:11px;margin-bottom:13px}
+  .song-grid{gap:12px}
+  .song{min-height:174px;padding:24px 8px 13px;border-radius:18px}
+  .song-art{width:66px;height:66px}
+  .song-art:before,.song-art:after{font-size:20px}
+  .song-art:before{left:-17px}
+  .song-art:after{right:-19px}
+  .song .emoji{font-size:35px}
+  .song .name{font-size:15px;margin-top:9px}
+  .song small{font-size:9px}
+  .song .burst{top:6px;right:6px;padding:3px 4px;font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){.song-art:before,.song-art:after{transform:none}}

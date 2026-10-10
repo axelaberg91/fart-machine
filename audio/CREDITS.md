@@ -6,6 +6,11 @@ License: https://creativecommons.org/publicdomain/zero/1.0/
 Unmodified copies of the publicly playable high-quality MP3 previews. No synthesis.
 See sources.json for source URLs, authors, sizes and SHA-256 checksums.
 
+Version 4.4 also includes six song arrangements in `songs/`. Those new files
+use pitched and sequenced excerpts of the recordings credited here. The nine
+original MP3 files listed below remain unmodified. See the song credits and
+arrangement metadata in `songs/` for the melody and sample sources.
+
 - **smygaren**: Fart 1 by Breviceps
   https://freesound.org/people/Breviceps/sounds/445998/
 - **kanonen**: Fart 2 by Breviceps

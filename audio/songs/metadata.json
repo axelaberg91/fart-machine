@@ -1,0 +1,1083 @@
+{
+  "instrument": {
+    "file": "audio/trumpeten.mp3",
+    "sha256": "cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63",
+    "title": "fart,bum,trumpet,poop.wav",
+    "author": "sorce",
+    "license": "CC0-1.0",
+    "source_page": "https://freesound.org/people/sorce/sounds/431621/",
+    "sample": {
+      "start_seconds": 1.626236,
+      "end_seconds": 1.737846,
+      "base_frequency_hz": 250.873629,
+      "cycles": 28
+    }
+  },
+  "format": {
+    "codec": "mp3",
+    "mime": "audio/mpeg",
+    "sample_rate": 44100,
+    "channels": 1,
+    "bitrate_kbps": 96
+  },
+  "songs": [
+    {
+      "id": "blinka-lilla-stjarna",
+      "title": "Blinka lilla stjärna",
+      "bpm": 138,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: Ah! vous dirai-je, maman",
+      "references": [
+        "https://ciss.se/munspel/barnvisor.html"
+      ],
+      "file": "audio/songs/blinka-lilla-stjarna.mp3",
+      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 21.0696,
+        "peak": 0.760778,
+        "rms": 0.190121,
+        "clipping_samples": 0,
+        "max_note_pitch_error_cents": 3.108,
+        "bytes": 253788,
+        "sha256": "b38f477976d7f25e002cce2d02690ed88518e22e3581e75ad49d7b30152ba58e"
+      }
+    },
+    {
+      "id": "ba-ba-vita-lamm",
+      "title": "Bä bä vita lamm",
+      "bpm": 104,
+      "transpose": -10,
+      "meter": "2/4",
+      "melody": "Alice Tegnér, Sjung med oss, mamma! (1892), no. 5",
+      "references": [
+        "https://runeberg.org/sjungmamma/1/0010.html",
+        "https://runeberg.org/sjungmamma/1/0011.html",
+        "https://www.spelapiano.org/noter/ba-ba-vita-lamm.html"
+      ],
+      "file": "audio/songs/ba-ba-vita-lamm.mp3",
+      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "C5",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "C5",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 1.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 1.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 1.0
+        },
+        {
+          "note": "Bb4",
+          "beats": 1.0
+        },
+        {
+          "note": "C5",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 18.6615,
+        "peak": 0.766954,
+        "rms": 0.182793,
+        "clipping_samples": 0,
+        "max_note_pitch_error_cents": 7.091,
+        "bytes": 224939,
+        "sha256": "46fe12cef0615b5e86f5d74f039306cf32b1a3e89127eb4387817637005b396a"
+      }
+    },
+    {
+      "id": "broder-jakob",
+      "title": "Broder Jakob",
+      "bpm": 116,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: Frère Jacques",
+      "references": [
+        "https://www.skolesaga.no/musikk-8/musikk-8-1-1"
+      ],
+      "file": "audio/songs/broder-jakob.mp3",
+      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 16.7517,
+        "peak": 0.760486,
+        "rms": 0.191353,
+        "clipping_samples": 0,
+        "max_note_pitch_error_cents": 7.064,
+        "bytes": 202035,
+        "sha256": "175eb0455dfa8b5c58ca6fc3f390f1b18959f6fa419f5ec241bdea7828dfd08a"
+      }
+    },
+    {
+      "id": "imse-vimse-spindel",
+      "title": "Imse vimse spindel",
+      "bpm": 300,
+      "transpose": -5,
+      "meter": "6/8 (tempo counts eighth notes)",
+      "melody": "Traditional: Itsy Bitsy Spider",
+      "references": [
+        "https://www.bethsnotesplus.com/wp-content/uploads/2024/11/Itsy-Bitsy-Spider.pdf"
+      ],
+      "file": "audio/songs/imse-vimse-spindel.mp3",
+      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 6.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 3.0
+        },
+        {
+          "note": "G4",
+          "beats": 3.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 6.0
+        },
+        {
+          "note": "C4",
+          "beats": 3.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 3.0
+        },
+        {
+          "note": "G3",
+          "beats": 2.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 5.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 19.4,
+        "peak": 0.769531,
+        "rms": 0.19218,
+        "clipping_samples": 0,
+        "max_note_pitch_error_cents": 7.804,
+        "bytes": 233701,
+        "sha256": "bbd57aa24b22b83eebeb797e1351bd37a7f615beb43cd122cda846b8ce35d59f"
+      }
+    },
+    {
+      "id": "bjornen-sover",
+      "title": "Björnen sover",
+      "bpm": 138,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: Gubben Noak / Björnen sover",
+      "references": [
+        "https://ciss.se/munspel/barnvisor.html"
+      ],
+      "file": "audio/songs/bjornen-sover.mp3",
+      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 4.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 4.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 21.0696,
+        "peak": 0.76261,
+        "rms": 0.190942,
+        "clipping_samples": 0,
+        "max_note_pitch_error_cents": 1.803,
+        "bytes": 253774,
+        "sha256": "d8cab98dc09e89381eb67cc991a633fb4fc5ab742047e35de46dd7a31113459d"
+      }
+    },
+    {
+      "id": "london-bridge",
+      "title": "London Bridge",
+      "bpm": 120,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: London Bridge Is Falling Down",
+      "references": [
+        "https://www.8notes.com/scores/18427.asp"
+      ],
+      "file": "audio/songs/london-bridge.mp3",
+      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 3.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 16.2,
+        "peak": 0.763246,
+        "rms": 0.189918,
+        "clipping_samples": 0,
+        "max_note_pitch_error_cents": 3.12,
+        "bytes": 195453,
+        "sha256": "6fe98d5b1c38bb214c53510f98572e069bdf0609a1c4b74d2ba09ed9dc6acab3"
+      }
+    }
+  ]
+}

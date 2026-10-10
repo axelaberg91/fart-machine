@@ -1,8 +1,9 @@
 'use strict';
-const VERSION = '4.3';
+const VERSION = '4.4';
 const CACHE = 'fart-machine-v' + VERSION;
 const SOUND_IDS = ['smygaren','kanonen','blota','trumpeten','ankan','vulkanen','snabbisen','raketen','katastrofen'];
-const ASSETS = ['./','./index.html','./app-v4.3.js','./theme-v4.css','./manifest.webmanifest','./icon.svg',...SOUND_IDS.map(id => './audio/' + id + '.mp3'),...Array.from({length: 9}, (_, i) => './photos/photo-' + String(i+1).padStart(2, '0') + '.webp')];
+const SONG_IDS = ['blinka-lilla-stjarna','ba-ba-vita-lamm','broder-jakob','imse-vimse-spindel','bjornen-sover','london-bridge'];
+const ASSETS = ['./','./index.html','./app-v4.4.js','./theme-v4.css','./manifest.webmanifest','./icon.svg',...SOUND_IDS.map(id => './audio/' + id + '.mp3'),...SONG_IDS.map(id => './audio/songs/' + id + '.mp3'),...Array.from({length: 9}, (_, i) => './photos/photo-' + String(i+1).padStart(2, '0') + '.webp')];
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     try {
@@ -10,7 +11,7 @@ self.addEventListener('install', event => {
       await cache.addAll(ASSETS.map(url => new Request(url, {cache: 'reload'})));
       const page = await cache.match('./index.html');
       if (!(await page.text()).includes('Version ' + VERSION)) throw new Error('Older app shell returned by host');
-      const code = await cache.match('./app-v4.3.js');
+      const code = await cache.match('./app-v4.4.js');
       if (!(await code.text()).includes("const VERSION = '" + VERSION + "'")) throw new Error('Older app code returned by host');
       await self.skipWaiting();
     } catch (error) {
@@ -66,6 +67,6 @@ self.addEventListener('message', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
     const responses = await Promise.all(ASSETS.map(url => cache.match(url)));
-    event.ports[0].postMessage({version: VERSION, ready: responses.every(Boolean), sounds: SOUND_IDS.length});
+    event.ports[0].postMessage({version: VERSION, ready: responses.every(Boolean), sounds: SOUND_IDS.length, songs: SONG_IDS.length});
   })());
 });
