@@ -3,12 +3,12 @@
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
-never loaded by the app. All instrument audio comes from audio/trumpeten.mp3.
+never loaded by the app. All instrument audio comes from the unchanged CC0
+recordings audio/trumpeten.mp3 and audio/blota.mp3.
 """
 import argparse
 import hashlib
 import json
-import math
 from pathlib import Path
 import subprocess
 
@@ -17,6 +17,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLE_RATE = 44100
 SOURCE_SHA256 = "cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63"
+WET_SHA256 = "a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2"
 
 
 def score(text):
@@ -85,57 +86,55 @@ def frequency(name, transpose):
     return 440 * 2 ** ((midi - 69) / 12)
 
 
-def instrument_sample(ffmpeg):
-    source = ROOT / "audio/trumpeten.mp3"
-    assert hashlib.sha256(source.read_bytes()).hexdigest() == SOURCE_SHA256, "Unexpected source recording"
+def decode_source(ffmpeg, name, checksum):
+    source = ROOT / "audio" / name
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == checksum, "Unexpected source recording"
     raw = run_ffmpeg(ffmpeg, ["-i", str(source), "-ac", "1", "-ar", str(SAMPLE_RATE),
                              "-f", "f32le", "pipe:1"])
-    audio = np.frombuffer(raw, dtype="<f4").astype(np.float64)
-    # This real recorded fart has a clearly periodic section at about 250 Hz.
-    # Use a measured, phase-aligned multi-cycle loop so sustained notes retain the
-    # original waveform and variation rather than adding a synthesized tone.
-    region = audio[round(1.59 * SAMPLE_RATE):round(1.75 * SAMPLE_RATE)]
-    crossing = np.where((region[:-1] <= 0) & (region[1:] > 0))[0]
-    # Strong positive-going crossings once per fundamental period. Other tiny
-    # crossings in the same cycle are rejected with a 3 ms refractory interval.
-    selected = []
-    for i in crossing:
-        if region[i+1:min(len(region), i+30)].max(initial=0) > 0.22:
-            if not selected or i-selected[-1] > 0.003 * SAMPLE_RATE:
-                selected.append(int(i))
-    candidates = [(a, b) for a in selected for b in selected if
-                  0.09 * SAMPLE_RATE < b-a < 0.13 * SAMPLE_RATE]
-    start, end = min(candidates, key=lambda pair:
-                     np.mean((region[pair[0]:pair[0]+90]-region[pair[1]:pair[1]+90])**2))
-    loop = region[start:end].copy()
-    periods = round(len(loop) / (SAMPLE_RATE / 250))
-    base_hz = periods * SAMPLE_RATE / len(loop)
-    loop -= np.mean(loop)
-    # A short phase-aligned overlap hides the join while retaining the recording.
-    fade = min(64, len(loop)//12)
-    blend = np.linspace(0, 1, fade)
-    seam = loop[-fade:] * (1-blend) + loop[:fade] * blend
-    loop[-fade:] = seam
-    return loop, base_hz, {"start_seconds": round(1.59+start/SAMPLE_RATE, 6),
-                           "end_seconds": round(1.59+end/SAMPLE_RATE, 6),
-                           "base_frequency_hz": round(base_hz, 6), "cycles": periods}
+    return np.frombuffer(raw, dtype="<f4").astype(np.float64)
 
 
-def note_audio(loop, base_hz, hz, duration, index):
+def instrument_samples(ffmpeg):
+    trumpet = decode_source(ffmpeg, "trumpeten.mp3", SOURCE_SHA256)
+    wet = decode_source(ffmpeg, "blota.mp3", WET_SHA256)
+    # Preserve a complete recorded attack/body/tail, not a repeating wavetable.
+    core = trumpet[round(1.49*SAMPLE_RATE):round(1.94*SAMPLE_RATE)].copy()
+    wet = wet[:round(0.67*SAMPLE_RATE)].copy()
+    core -= np.mean(core)
+    wet -= np.mean(wet)
+    return core, wet, 250.873629
+
+
+def sample_playback(sample, positions):
+    # Zero beyond the original recording: neither source is looped or tiled.
+    return np.interp(positions, np.arange(len(sample)), sample, left=0, right=0)
+
+
+def note_audio(core, wet, base_hz, hz, duration, index):
     count = max(1, round(duration * SAMPLE_RATE))
-    rate = hz / base_hz
-    # Sample playback-rate transposition, with the sustained portion looped.
-    position = (np.arange(count) * rate) % len(loop)
-    result = np.interp(position, np.arange(len(loop)+1), np.r_[loop, loop[0]])
     time = np.arange(count) / SAMPLE_RATE
-    attack = np.minimum(time / 0.012, 1)
-    release = np.minimum((duration-time) / min(0.075, duration*0.3), 1)
-    # A slight breath-like amplitude fall gives every recorded fart a clear onset.
-    envelope = np.maximum(0, attack * release) * (0.68 + 0.32*np.exp(-time/0.11))
-    return result * envelope * (0.96 if index % 4 else 1.0)
+    # The wet recording leads every note. Its variations remain at their natural
+    # pitch and almost their original speed, including the irregular bubbling.
+    wet_offsets = [0.0, 0.038, 0.011, 0.072, 0.022, 0.095, 0.048]
+    wet_rates = [0.98, 1.025, 0.95, 1.01, 1.045, 0.97, 1.0]
+    offset = wet_offsets[index % len(wet_offsets)]
+    wet_rate = wet_rates[(index*3) % len(wet_rates)]
+    texture = sample_playback(wet, (time*wet_rate+offset)*SAMPLE_RATE)
+    # Compress only the unusually sharp recorded wet transients. This preserves
+    # real splutters without letting a few spikes drown the melodic body.
+    texture = 0.72*np.tanh(texture*3.2)
+    # A full unlooped fart is repitched for the melodic body, arriving 18 ms after
+    # the wet attack. All its natural pitch scoops and decay remain in the file.
+    body = sample_playback(core, (time-0.018)*SAMPLE_RATE*(hz/base_hz))
+    body_gain = [0.58, 0.62, 0.54, 0.60, 0.56, 0.64, 0.59][index % 7]
+    result = texture + body*body_gain
+    attack = np.minimum(time / 0.003, 1)
+    release = np.minimum((duration-time) / min(0.055, duration*0.28), 1)
+    envelope = np.maximum(0, attack * release)
+    return result*envelope
 
 
-def render(song, loop, base_hz):
+def render(song, core, wet, base_hz):
     seconds_per_beat = 60 / song["bpm"]
     total = sum(beats for _, beats in song["notes"]) * seconds_per_beat
     output = np.zeros(round((total+0.2) * SAMPLE_RATE))
@@ -145,8 +144,10 @@ def render(song, loop, base_hz):
         span = beats * seconds_per_beat
         if name != "R":
             hz = frequency(name, song["transpose"])
-            gate = max(0.065, span-min(0.04, span*0.10))
-            note = note_audio(loop, base_hz, hz, gate, index)
+            # Long written notes end in an organic recorded tail, rather than
+            # sustaining a perfectly even tone for the entire note duration.
+            gate = min(0.72, max(0.065, span-min(0.035, span*0.08)))
+            note = note_audio(core, wet, base_hz, hz, gate, index)
             start = round(position*SAMPLE_RATE)
             output[start:start+len(note)] += note
             onsets.append(dict(note=name, rendered_frequency_hz=round(hz, 4),
@@ -164,57 +165,64 @@ def validate_mp3(ffmpeg, path, onsets):
     assert len(decoded) > SAMPLE_RATE*10, "Song too short"
     peak = float(np.max(np.abs(decoded)))
     assert 0.1 < peak < 0.99, "Empty or clipping audio"
-    max_cents = 0
-    for item in onsets:
-        start = round((item["start_seconds"]+0.04)*SAMPLE_RATE)
-        length = round(min(0.11, item["length_seconds"]-0.055)*SAMPLE_RATE)
-        if length < 1000:
-            continue
-        x = decoded[start:start+length]
-        x -= np.mean(x)
-        corr = np.correlate(x, x, mode="full")[len(x)-1:]
-        target_period = SAMPLE_RATE / item["rendered_frequency_hz"]
-        lower, upper = round(target_period*0.91), round(target_period*1.09)
-        lag = lower + int(np.argmax(corr[lower:upper+1]))
-        # Subsample interpolation makes the measurement meaningful at high notes.
-        a, b, c = corr[lag-1:lag+2]
-        fractional_lag = lag + 0.5*(a-c)/(a-2*b+c)
-        measured = SAMPLE_RATE/fractional_lag
-        max_cents = max(max_cents, abs(1200*math.log2(measured/item["rendered_frequency_hz"])))
-    assert max_cents < 35, f"Pitch drift too large: {max_cents} cents"
+    # Every note must have an audible attack in the final mixed file. The wet
+    # layer is deliberately unpitched and retains natural pitch fluctuation;
+    # measuring it as an ideal sine-like note would give misleading results.
+    attacks = [decoded[round(item["start_seconds"]*SAMPLE_RATE):
+                       round((item["start_seconds"]+min(0.09,item["length_seconds"]))*SAMPLE_RATE)]
+               for item in onsets]
+    attack_rms = [float(np.sqrt(np.mean(a*a))) for a in attacks]
+    assert min(attack_rms) > 0.012, "Inaudible recorded fart attack"
     return dict(duration_seconds=round(len(decoded)/SAMPLE_RATE, 4),
                 peak=round(peak, 6), rms=round(float(np.sqrt(np.mean(decoded**2))), 6),
                 clipping_samples=int(np.sum(np.abs(decoded) >= 1)),
-                max_note_pitch_error_cents=round(max_cents, 3),
+                audible_recorded_attacks=len(attacks),
+                minimum_attack_rms=round(min(attack_rms), 6),
                 bytes=path.stat().st_size, sha256=hashlib.sha256(path.read_bytes()).hexdigest())
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ffmpeg", default="ffmpeg")
+    parser.add_argument("--audition", type=Path,
+                        help="Render only the first 8 seconds of Blinka to this MP3; leave app assets untouched")
     args = parser.parse_args()
     output_dir = ROOT / "audio/songs"
     output_dir.mkdir(parents=True, exist_ok=True)
-    loop, base_hz, sample = instrument_sample(args.ffmpeg)
+    core, wet, base_hz = instrument_samples(args.ffmpeg)
+    if args.audition:
+        audio, _ = render(SONGS[0], core, wet, base_hz)
+        run_ffmpeg(args.ffmpeg, ["-y", "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1",
+                   "-i", "pipe:0", "-c:a", "libmp3lame", "-b:a", "96k", str(args.audition)],
+                   audio[:8*SAMPLE_RATE].astype("<f4").tobytes())
+        print(args.audition)
+        return
     metadata = dict(instrument=dict(file="audio/trumpeten.mp3", sha256=SOURCE_SHA256,
                     title="fart,bum,trumpet,poop.wav", author="sorce", license="CC0-1.0",
-                    source_page="https://freesound.org/people/sorce/sounds/431621/", sample=sample),
+                    source_page="https://freesound.org/people/sorce/sounds/431621/",
+                    sample=dict(start_seconds=1.49, end_seconds=1.94,
+                                base_frequency_hz=base_hz, looped=False)),
+                    wet_instrument=dict(file="audio/blota.mp3", sha256=WET_SHA256,
+                    title="Diarrhea", author="Breviceps", license="CC0-1.0",
+                    source_page="https://freesound.org/people/Breviceps/sounds/445997/",
+                    sample=dict(start_seconds=0, end_seconds=0.67, looped=False)),
+                    articulation="Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
                     format=dict(codec="mp3", mime="audio/mpeg", sample_rate=SAMPLE_RATE,
                                 channels=1, bitrate_kbps=96), songs=[])
     for song in SONGS:
-        audio, onsets = render(song, loop, base_hz)
+        audio, onsets = render(song, core, wet, base_hz)
         path = output_dir / (song["id"]+".mp3")
         run_ffmpeg(args.ffmpeg, ["-y", "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1",
                    "-i", "pipe:0", "-c:a", "libmp3lame", "-b:a", "96k", "-id3v2_version", "3",
                    "-metadata", "title="+song["title"], "-metadata", "artist=Fart Machine",
-                   "-metadata", "comment=Melody played on the CC0 fart recording by sorce",
+                   "-metadata", "comment=Wet sampled-fart melody: CC0 recordings by sorce and Breviceps",
                    str(path)], audio.astype("<f4").tobytes())
         report = validate_mp3(args.ffmpeg, path, onsets)
         metadata["songs"].append({k: v for k, v in song.items() if k != "notes"} |
-            dict(file="audio/songs/"+path.name, arrangement="One complete melody verse, solo sampled fart; no voice or accompaniment",
+            dict(file="audio/songs/"+path.name, arrangement="One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
                  notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report))
         print(f"{path.name}: {report['duration_seconds']} s, {report['bytes']} bytes, "
-              f"peak {report['peak']}, pitch error <= {report['max_note_pitch_error_cents']} cents", flush=True)
+              f"peak {report['peak']}, {report['audible_recorded_attacks']} audible wet attacks", flush=True)
     (output_dir / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 

@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '4.4';
+const VERSION = '4.4.1';
 const CACHE = 'fart-machine-v' + VERSION;
 const SOUND_IDS = ['smygaren','kanonen','blota','trumpeten','ankan','vulkanen','snabbisen','raketen','katastrofen'];
 const SONG_IDS = ['blinka-lilla-stjarna','ba-ba-vita-lamm','broder-jakob','imse-vimse-spindel','bjornen-sover','london-bridge'];

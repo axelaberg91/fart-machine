@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.4';
+  const VERSION = '4.4.1';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],

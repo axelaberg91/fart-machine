@@ -1,8 +1,10 @@
-# Release 4.4 - Barnsånger med fisar
+# Release 4.4.1 - Barnsånger med blötare fisar
 
 Six new song buttons play Blinka lilla stjärna, Bä bä vita lamm, Broder Jakob,
 Imse vimse spindel, Björnen sover and London Bridge using pitched samples of the
-app's existing CC0 Trumpeten recording by sorce. Each button plays a complete instrumental
+app's existing CC0 Blöta recording by Breviceps and Trumpeten recording by sorce.
+Each note uses recorded wet fart sounds for its onset and texture, with a pitched
+fart body carrying the melody. Each button plays a complete instrumental
 arrangement with no singing or other instruments.
 
 - Song playback uses prerecorded local MP3 files and the same native HTML audio
@@ -11,7 +13,7 @@ arrangement with no singing or other instruments.
   test player and page hiding share the existing playback lifecycle.
 - Song buttons show their playing state and expose play/stop labels to assistive
   technology. The song grid has three columns on larger screens and two on phones.
-- Version 4.4 caches all six songs with the app, original recordings and photos.
+- Version 4.4.1 caches all six songs with the app, original recordings and photos.
   The previous offline version remains available if any new asset fails to cache.
 - Song arrangements, source credits and the rendering tool are included in the
   repository so the bundled recordings can be reproduced.
@@ -26,7 +28,6 @@ responses. JavaScript syntax checks and independent range tests passed.
 
 The six arrangements are 16.2–21.1 seconds long and total about 1.36 MB. Offline
 decoding verified mono MP3 audio at 44.1 kHz and 96 kbps, with no clipped samples.
-Measured sustained note pitches were within eight cents of their targets.
 Desktop and 390-pixel phone layouts were visually checked with no overflow.
 
 Run `node tests/service-worker.cjs --require-assets` and

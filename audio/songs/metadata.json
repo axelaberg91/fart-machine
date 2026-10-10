@@ -7,12 +7,26 @@
     "license": "CC0-1.0",
     "source_page": "https://freesound.org/people/sorce/sounds/431621/",
     "sample": {
-      "start_seconds": 1.626236,
-      "end_seconds": 1.737846,
+      "start_seconds": 1.49,
+      "end_seconds": 1.94,
       "base_frequency_hz": 250.873629,
-      "cycles": 28
+      "looped": false
     }
   },
+  "wet_instrument": {
+    "file": "audio/blota.mp3",
+    "sha256": "a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2",
+    "title": "Diarrhea",
+    "author": "Breviceps",
+    "license": "CC0-1.0",
+    "source_page": "https://freesound.org/people/Breviceps/sounds/445997/",
+    "sample": {
+      "start_seconds": 0,
+      "end_seconds": 0.67,
+      "looped": false
+    }
+  },
+  "articulation": "Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
   "format": {
     "codec": "mp3",
     "mime": "audio/mpeg",
@@ -32,7 +46,7 @@
         "https://ciss.se/munspel/barnvisor.html"
       ],
       "file": "audio/songs/blinka-lilla-stjarna.mp3",
-      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
           "note": "C4",
@@ -205,12 +219,13 @@
       ],
       "validation": {
         "duration_seconds": 21.0696,
-        "peak": 0.760778,
-        "rms": 0.190121,
+        "peak": 0.79716,
+        "rms": 0.138625,
         "clipping_samples": 0,
-        "max_note_pitch_error_cents": 3.108,
-        "bytes": 253788,
-        "sha256": "b38f477976d7f25e002cce2d02690ed88518e22e3581e75ad49d7b30152ba58e"
+        "audible_recorded_attacks": 42,
+        "minimum_attack_rms": 0.143671,
+        "bytes": 253802,
+        "sha256": "d2435b5165c4be32f638eb21a81e7ace3c400a44717a33f9304012aca688e1a4"
       }
     },
     {
@@ -226,7 +241,7 @@
         "https://www.spelapiano.org/noter/ba-ba-vita-lamm.html"
       ],
       "file": "audio/songs/ba-ba-vita-lamm.mp3",
-      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
           "note": "F4",
@@ -411,12 +426,13 @@
       ],
       "validation": {
         "duration_seconds": 18.6615,
-        "peak": 0.766954,
-        "rms": 0.182793,
+        "peak": 0.785157,
+        "rms": 0.137487,
         "clipping_samples": 0,
-        "max_note_pitch_error_cents": 7.091,
-        "bytes": 224939,
-        "sha256": "46fe12cef0615b5e86f5d74f039306cf32b1a3e89127eb4387817637005b396a"
+        "audible_recorded_attacks": 42,
+        "minimum_attack_rms": 0.134837,
+        "bytes": 224953,
+        "sha256": "292de705fa48573456adc7ab99340e40a5d56ee0ba90ea81297270746cd05fd6"
       }
     },
     {
@@ -430,7 +446,7 @@
         "https://www.skolesaga.no/musikk-8/musikk-8-1-1"
       ],
       "file": "audio/songs/broder-jakob.mp3",
-      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
           "note": "C4",
@@ -563,12 +579,13 @@
       ],
       "validation": {
         "duration_seconds": 16.7517,
-        "peak": 0.760486,
-        "rms": 0.191353,
+        "peak": 0.823403,
+        "rms": 0.139457,
         "clipping_samples": 0,
-        "max_note_pitch_error_cents": 7.064,
-        "bytes": 202035,
-        "sha256": "175eb0455dfa8b5c58ca6fc3f390f1b18959f6fa419f5ec241bdea7828dfd08a"
+        "audible_recorded_attacks": 32,
+        "minimum_attack_rms": 0.140127,
+        "bytes": 202049,
+        "sha256": "2658917d78cb77755d399671b2ba031d61ae854c5a2d4c65bb7a9721a4b0629c"
       }
     },
     {
@@ -582,7 +599,7 @@
         "https://www.bethsnotesplus.com/wp-content/uploads/2024/11/Itsy-Bitsy-Spider.pdf"
       ],
       "file": "audio/songs/imse-vimse-spindel.mp3",
-      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
           "note": "G3",
@@ -775,12 +792,13 @@
       ],
       "validation": {
         "duration_seconds": 19.4,
-        "peak": 0.769531,
-        "rms": 0.19218,
+        "peak": 0.808378,
+        "rms": 0.139033,
         "clipping_samples": 0,
-        "max_note_pitch_error_cents": 7.804,
-        "bytes": 233701,
-        "sha256": "bbd57aa24b22b83eebeb797e1351bd37a7f615beb43cd122cda846b8ce35d59f"
+        "audible_recorded_attacks": 47,
+        "minimum_attack_rms": 0.136081,
+        "bytes": 233715,
+        "sha256": "841b07ca41b084b18b3561518d29bf629fa3651f4067a7ea7a34b2168e19882d"
       }
     },
     {
@@ -794,7 +812,7 @@
         "https://ciss.se/munspel/barnvisor.html"
       ],
       "file": "audio/songs/bjornen-sover.mp3",
-      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
           "note": "C4",
@@ -951,12 +969,13 @@
       ],
       "validation": {
         "duration_seconds": 21.0696,
-        "peak": 0.76261,
-        "rms": 0.190942,
+        "peak": 0.827693,
+        "rms": 0.137342,
         "clipping_samples": 0,
-        "max_note_pitch_error_cents": 1.803,
-        "bytes": 253774,
-        "sha256": "d8cab98dc09e89381eb67cc991a633fb4fc5ab742047e35de46dd7a31113459d"
+        "audible_recorded_attacks": 38,
+        "minimum_attack_rms": 0.146523,
+        "bytes": 253788,
+        "sha256": "7cf0cc79156bfa228a9ec0a089b4ea172396e867a6a83c6aa16b4546a26264b8"
       }
     },
     {
@@ -970,7 +989,7 @@
         "https://www.8notes.com/scores/18427.asp"
       ],
       "file": "audio/songs/london-bridge.mp3",
-      "arrangement": "One complete melody verse, solo sampled fart; no voice or accompaniment",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
           "note": "G4",
@@ -1071,12 +1090,13 @@
       ],
       "validation": {
         "duration_seconds": 16.2,
-        "peak": 0.763246,
-        "rms": 0.189918,
+        "peak": 0.797251,
+        "rms": 0.123932,
         "clipping_samples": 0,
-        "max_note_pitch_error_cents": 3.12,
-        "bytes": 195453,
-        "sha256": "6fe98d5b1c38bb214c53510f98572e069bdf0609a1c4b74d2ba09ed9dc6acab3"
+        "audible_recorded_attacks": 24,
+        "minimum_attack_rms": 0.149803,
+        "bytes": 195467,
+        "sha256": "f786691267e06048486101914cab8c0eba8af0d4926561bde5336bf56385e4fc"
       }
     }
   ]

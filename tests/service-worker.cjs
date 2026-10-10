@@ -3,6 +3,7 @@
 // Pure checks for the offline asset manifest and HTTP byte ranges.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const { createHash } = require('node:crypto');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
@@ -12,7 +13,7 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '4.4');
+assert.equal(version, '4.4.1');
 assert.ok(assets.includes('./app-v4.4.js'));
 assert.equal(assets.filter(asset => asset.startsWith('./audio/songs/')).length, 6);
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
@@ -20,7 +21,7 @@ assert.equal(new Set(assets).size, assets.length);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 4\.4/);
+assert.match(html, /Version 4\.4\.1/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);
@@ -55,6 +56,18 @@ async function main() {
   if (missing.length) console.log('Manifest files still pending: ' + missing.join(', '));
   else console.log('PASS all manifest assets exist.');
   if (process.argv.includes('--require-assets')) assert.deepEqual(missing, [], 'every offline asset must be present');
+  const metadataFile = path.join(root, 'audio', 'songs', 'metadata.json');
+  if (!missing.length && fs.existsSync(metadataFile)) {
+    const metadata = JSON.parse(fs.readFileSync(metadataFile, 'utf8'));
+    assert.equal(metadata.songs.length, 6);
+    for (const song of metadata.songs) {
+      assert.ok(assets.includes('./' + song.file), 'metadata song must be part of the offline asset list');
+      const data = fs.readFileSync(path.join(root, song.file));
+      assert.equal(data.length, song.validation.bytes, song.id + ' byte count');
+      assert.equal(createHash('sha256').update(data).digest('hex'), song.validation.sha256, song.id + ' output hash');
+    }
+    console.log('PASS all six song payloads match their metadata byte counts and SHA-256 hashes.');
+  }
 }
 
 main().catch(error => { console.error(error.stack); process.exitCode = 1; });

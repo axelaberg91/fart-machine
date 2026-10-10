@@ -1,10 +1,10 @@
 # Fart-song recordings
 
-Six complete, solo instrumental melody verses, rendered offline from a real
-recorded fart. There are no voices, backing instruments or external audio
+Six complete, solo instrumental melody verses, rendered offline from two real
+recorded farts. There are no voices, backing instruments or external audio
 requests. The app plays these finished MP3 files using native HTML audio.
 
-## Recorded instrument
+## Recorded instruments
 
 - Source file: `../trumpeten.mp3` (unchanged).
 - Recording: **fart,bum,trumpet,poop.wav** by **sorce**.
@@ -12,11 +12,26 @@ requests. The app plays these finished MP3 files using native HTML audio.
 - Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 - SHA-256: `cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63`.
 
-The sampled section is approximately 1.626–1.738 seconds into that recording.
-Its measured fundamental is 250.874 Hz. A phase-aligned loop sustains the
-original recorded waveform; resampled playback sets each melody note's pitch.
-Short attack and release envelopes prevent clicks and articulate repeated notes.
-No oscillator or added instrument produces the melody.
+- Source file: `../blota.mp3` (unchanged).
+- Recording: **Diarrhea** by **Breviceps**.
+- Source: https://freesound.org/people/Breviceps/sounds/445997/
+- Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+- SHA-256: `a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2`.
+
+Every note begins with and includes a real wet fart articulation from Blöta's
+first 0.67 seconds. Small changes to the starting point and playback speed
+(within 5% of the original) vary the recorded splutters between notes. The
+natural wet texture keeps its original pitch. Soft compression controls sharp
+recorded transients so the melody remains audible.
+
+The melodic body uses a complete attack, body and tail from approximately
+1.49–1.94 seconds of Trumpeten. Its central body has a measured fundamental of
+250.874 Hz; resampled playback places that body on each melody note. The
+recording's natural pitch scoops, irregularity and decay remain audible.
+
+**Neither recording is looped or tiled.** Long written notes end with an organic
+recorded tail and space before the next note. Short attack and release envelopes
+prevent clicks. No oscillator or added instrument produces the melody.
 
 ## Melodies
 
@@ -51,16 +66,25 @@ Notation references:
 
 All six files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
 `audio/mpeg`. Their combined size is approximately 1.36 MB. Decoded peak levels
-are below 0.78 full scale with zero clipped samples. Autocorrelation checks of
-the rendered notes found a maximum pitch error below 8 cents. These measurements
-check the audio files themselves and do not claim testing on a physical iPad.
+are below 0.90 full scale with zero clipped samples. Every melody note has an
+audible recorded attack in the finished mixed file. Unlike the earlier tonal
+loop rendition, the wet recording deliberately retains its natural pitch and
+noise, so idealized note-precision measurements do not describe this mix.
+These measurements check the audio files themselves and do not claim testing
+on a physical iPad.
 
 `metadata.json` records every melody note and duration, tempo, transposition,
-source checksum, output checksum and validation result. Regenerate the assets
+source checksums, output checksum and validation result. Regenerate the assets
 with Python, NumPy and FFmpeg:
 
 ```sh
 python tools/render-songs.py --ffmpeg /path/to/ffmpeg
+```
+
+To preview the first eight seconds before replacing the app assets:
+
+```sh
+python tools/render-songs.py --ffmpeg /path/to/ffmpeg --audition /path/to/preview.mp3
 ```
 
 Rendering is a development step only. The deployed app needs no Python,

@@ -4,6 +4,7 @@
 // Uses real browser media, a localhost server, and no production instrumentation.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const { createHash } = require('node:crypto');
 const http = require('node:http');
 const path = require('node:path');
 const vm = require('node:vm');
@@ -82,7 +83,7 @@ async function main() {
   for (const name of ['app-v4.4.js', 'sw.js']) new vm.Script(fs.readFileSync(path.join(root, name), 'utf8'), { filename: name });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(html, /app-v4\.4\.js/);
-  assert.match(html, /Version 4\.4/);
+  assert.match(html, /Version 4\.4\.1/);
   console.log('PASS syntax and version references');
 
   const server = http.createServer((request, response) => {
@@ -189,25 +190,32 @@ async function main() {
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
 
-    await check('service worker caches complete version 4.4 shell, six songs, and original audio', async () => {
+    await check('service worker caches complete version 4.4.1 shell, six songs, and original audio', async () => {
       await page.locator('#offline.ready').waitFor({ timeout: 30000 });
       await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
       const cache = await page.evaluate(async () => {
-        const current = await caches.open('fart-machine-v4.4');
+        const current = await caches.open('fart-machine-v4.4.1');
         const keys = await current.keys();
-        return Promise.all(keys.map(async request => { const response = await current.match(request); return { path: new URL(request.url).pathname, status: response.status, bytes: (await response.arrayBuffer()).byteLength, type: response.headers.get('Content-Type') }; }));
+        return Promise.all(keys.map(async request => {
+          const response = await current.match(request);
+          const data = await response.arrayBuffer();
+          const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', data)), byte => byte.toString(16).padStart(2, '0')).join('');
+          return { path: new URL(request.url).pathname, status: response.status, bytes: data.byteLength, hash, type: response.headers.get('Content-Type') };
+        }));
       });
       assert.ok(cache.some(entry => entry.path === '/app-v4.4.js'));
       assert.equal(cache.filter(entry => /\/audio\/songs\//.test(entry.path)).length, 6);
       assert.equal(cache.filter(entry => /\/audio\/[^/]+\.mp3$/.test(entry.path)).length, 9);
       for (const entry of cache) {
         assert.equal(entry.status, 200, 'cached assets must be complete, not partial responses');
-        assert.equal(entry.bytes, fs.statSync(path.join(root, entry.path === '/' ? 'index.html' : entry.path.slice(1))).size, entry.path + ' cache has all original bytes');
+        const original = fs.readFileSync(path.join(root, entry.path === '/' ? 'index.html' : entry.path.slice(1)));
+        assert.equal(entry.bytes, original.length, entry.path + ' cache has the complete response');
+        assert.equal(entry.hash, createHash('sha256').update(original).digest('hex'), entry.path + ' cached payload matches the actual file');
         if (entry.path.endsWith('.mp3')) assert.match(entry.type, /audio\/mpeg/);
         if (entry.path.endsWith('.wav')) assert.match(entry.type, /audio\/wav|audio\/x-wav/);
       }
       const status = await page.evaluate(() => new Promise(resolve => { const channel = new MessageChannel(); channel.port1.onmessage = event => resolve(event.data); navigator.serviceWorker.controller.postMessage({ type: 'CACHE_STATUS' }, [channel.port2]); }));
-      assert.equal(status.version, '4.4');
+      assert.equal(status.version, '4.4.1');
       assert.equal(status.ready, true);
       assert.equal(status.sounds, 9);
       assert.equal(status.songs, 6);
@@ -219,7 +227,7 @@ async function main() {
       await page.locator('#offline.ready').waitFor({ timeout: 15000 });
       for (const song of songs) { await playAndWait(page, '[data-song="' + song.id + '"]'); await stop(page); }
       for (const id of pads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
-      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.4')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
+      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.4.1')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
       for (const asset of paths) {
         const result = await page.evaluate(async asset => {
           const response = await fetch(asset, { headers: { Range: 'bytes=0-63' } });

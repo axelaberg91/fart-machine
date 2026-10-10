@@ -1,14 +1,15 @@
 # Hugo och Hermans pruttmaskin
 
-## 4.4 - Barnsånger med fisar
+## 4.4.1 - Barnsånger med blötare fisar
 
 - Added six song buttons: Blinka lilla stjärna, Bä bä vita lamm, Broder Jakob,
   Imse vimse spindel, Björnen sover and London Bridge.
-- The melodies use pitched versions of an existing CC0 fart recording and play
+- The melodies use pitched versions of the existing CC0 Trumpeten recording,
+  with wet recorded attacks and textures from Blöta, and play
   as bundled MP3 files through the native audio player.
 - Tap a playing song again to stop it. Songs share volume, Fisorkester and
   Stoppa allt with the nine original sounds.
-- Added the songs to the Version 4.4 offline cache and included arrangement
+- Added the songs to the Version 4.4.1 offline cache and included arrangement
   metadata, source credits and the audio rendering tool.
 
 ## 3.0 - Recorded audio
