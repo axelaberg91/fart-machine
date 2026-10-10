@@ -1229,30 +1229,39 @@
       }
     },
     {
-      "id": "sommar-och-sol",
-      "title": "Sommar och sol",
-      "bpm": 101.7,
+      "id": "sommartider",
+      "title": "Sommartider",
+      "bpm": 130,
       "transpose": -12,
       "meter": "4/4",
-      "melody": "Sommar och sol — Markoolio; Arijan Selami, Daniel Bäckström and Marko Lehtosalo (1998)",
+      "melody": "Sommartider — Gyllene Tider; Per Gessle (1982)",
       "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
-      "arrangement": "Two-bar chorus title motif repeated five times; the final half-beat pickup into the omitted later phrase replaced with a breathing rest for a clean loop with wet recorded fart articulation; no voice or accompaniment",
-      "source_notation": "Direct transcription of the officially distributed Deezer original release preview, track 1113135202 / ISRC SEAHC9810010, around 9.07–13.79 seconds, checked against its repetition around 18.51–23.23 seconds. Source D4–G4 rendered D3–G3; arrangement tempo 101.7 BPM follows the measured reference",
-      "reference_validation": "Two independent fundamental/harmonic checks establish the two-bar title motif and rhythm, including held D4 and the E4 transition. Higher D5 components are harmonics; the later rap/adlib overlap is omitted",
+      "arrangement": "Title / hej-hej refrain motif, repeated six times; four eighth-note pickup notes followed by the repeated F-sharps and tied E, with one quarter-note breathing rest completing each eight-beat loop with wet recorded fart articulation; no voice or accompaniment",
+      "source_notation": "TheddyKeys published piano-arrangement preview, first system: the melody pickup in bar 1, all of bar 2 and the first tied note of bar 3. The E4 tie is merged into 1.5 beats. C#4–F#4 rendered C#3–F#3; 130 BPM is the published arrangement tempo",
+      "reference_validation": "Two independent visual readings agree on all ten melody notes and durations. Fundamental and harmonic material in the official original-release Apple preview supports the F-sharp to E contour; the solo preserves the published melody register with a fixed one-octave transposition",
       "references": [
-        "https://www.shazam.com/song/1536422806/sommar-och-sol",
-        "https://music.apple.com/se/album/sommar-och-sol/1536422247?i=1536422806",
-        "https://www.deezer.com/track/1113135202",
-        "https://www.youtube.com/watch?v=GsPV3i2kT5A"
+        "https://mymusic5.com/Theddykeys/151169",
+        "https://music.apple.com/us/song/691335578",
+        "https://www.gyllenetider.com/discography/singles/sommartider/",
+        "https://www.gyllenetider.com/lyrics/",
+        "https://www.youtube.com/watch?v=4kVRF0hTeyQ"
       ],
-      "file": "audio/songs/sommar-och-sol.mp3",
+      "file": "audio/songs/sommartider.mp3",
       "notes": [
         {
-          "note": "F#4",
+          "note": "C#4",
           "beats": 0.5
         },
         {
-          "note": "F#4",
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "C#4",
           "beats": 0.5
         },
         {
@@ -1260,39 +1269,43 @@
           "beats": 1.0
         },
         {
-          "note": "D4",
+          "note": "F#4",
+          "beats": 1.0
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
           "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "C#4",
+          "beats": 0.5
         },
         {
           "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "G4",
+          "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "R",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
+          "note": "C#4",
           "beats": 0.5
         },
         {
@@ -1300,39 +1313,43 @@
           "beats": 1.0
         },
         {
-          "note": "D4",
+          "note": "F#4",
+          "beats": 1.0
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
           "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "C#4",
+          "beats": 0.5
         },
         {
           "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "G4",
+          "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "R",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
+          "note": "C#4",
           "beats": 0.5
         },
         {
@@ -1340,39 +1357,43 @@
           "beats": 1.0
         },
         {
-          "note": "D4",
+          "note": "F#4",
+          "beats": 1.0
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
           "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "C#4",
+          "beats": 0.5
         },
         {
           "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "G4",
+          "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "R",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
+          "note": "C#4",
           "beats": 0.5
         },
         {
@@ -1380,39 +1401,43 @@
           "beats": 1.0
         },
         {
-          "note": "D4",
+          "note": "F#4",
+          "beats": 1.0
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
           "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "C#4",
+          "beats": 0.5
         },
         {
           "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "G4",
+          "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "R",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
-          "beats": 0.5
-        },
-        {
-          "note": "F#4",
+          "note": "C#4",
           "beats": 0.5
         },
         {
@@ -1420,16 +1445,52 @@
           "beats": 1.0
         },
         {
-          "note": "D4",
+          "note": "F#4",
+          "beats": 1.0
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
           "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "C#4",
+          "beats": 0.5
         },
         {
           "note": "E4",
           "beats": 0.5
         },
         {
-          "note": "G4",
+          "note": "E4",
           "beats": 0.5
+        },
+        {
+          "note": "C#4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 1.0
+        },
+        {
+          "note": "F#4",
+          "beats": 1.0
         },
         {
           "note": "F#4",
@@ -1440,23 +1501,27 @@
           "beats": 0.5
         },
         {
-          "note": "D4",
-          "beats": 2.0
+          "note": "F#4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.5
         },
         {
           "note": "R",
-          "beats": 0.5
+          "beats": 1.0
         }
       ],
       "validation": {
-        "duration_seconds": 23.7988,
-        "peak": 0.799597,
-        "rms": 0.12999,
+        "duration_seconds": 22.3539,
+        "peak": 0.775125,
+        "rms": 0.135047,
         "clipping_samples": 0,
-        "audible_recorded_attacks": 45,
-        "minimum_attack_rms": 0.134291,
-        "bytes": 286688,
-        "sha256": "a12a44ce48e29ed3a308c58fdb9f9d4e3400bd5d6d93f2b4326e9c7310a4e7cb"
+        "audible_recorded_attacks": 60,
+        "minimum_attack_rms": 0.133002,
+        "bytes": 269130,
+        "sha256": "432a10395f5112889ad50d41ea2d6cc83fbc816e0c0df855a556c8883a173ad0"
       }
     }
   ]

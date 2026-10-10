@@ -1,5 +1,12 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.6.1 - Sommartider
+
+- Replaced Sommar och sol with Sommartider, using its recurring title/chorus
+  hook played through the same wet recorded fart instrument.
+- Kept the other five song buttons and recordings exactly unchanged.
+- Updated the offline cache to Version 4.6.1 with the six current songs.
+
 ## 4.6.0 - Sommar och sol
 
 - Added Sommar och sol by Markoolio as a sixth song button, with a short chorus

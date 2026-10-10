@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.6.0';
+  const VERSION = '4.6.1';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -19,7 +19,7 @@
     ['baby-shark', '\u{1f988}', 'Baby Shark'],
     ['en-livstid-i-krig', '\u2694\ufe0f', 'En livstid i krig'],
     ['bromance', '\u{1f3a7}', 'Bromance'],
-    ['sommar-och-sol', '\u{1f31e}', 'Sommar och sol']
+    ['sommartider', '\u{1f31e}', 'Sommartider']
   ].map(([id, emoji, name]) => ({id, emoji, name, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');
