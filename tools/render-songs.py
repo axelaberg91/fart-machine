@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the six fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Render the eight fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
@@ -25,58 +25,163 @@ def score(text):
     return [(token.split(":")[0], float(token.split(":")[1])) for token in text.split()]
 
 
-TWINKLE_A = "C4:1 C4:1 G4:1 G4:1 A4:1 A4:1 G4:2 F4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:2"
-TWINKLE_B = "G4:1 G4:1 F4:1 F4:1 E4:1 E4:1 D4:2"
-BA_A = "F4:1 C5:1 A4:0.5 A4:0.5 F4:1 G4:0.5 G4:0.5 C4:0.5 C4:0.5 F4:1 R:1"
-BROTHER_A = "C4:1 D4:1 E4:1 C4:1"
-BROTHER_B = "E4:1 F4:1 G4:2"
-BROTHER_C = "G4:0.5 A4:0.5 G4:0.5 F4:0.5 E4:1 C4:1"
-BROTHER_D = "C4:1 G3:1 C4:2"
-BEAR_A = "C4:1 C4:1 C4:1 E4:1 D4:1 D4:1 D4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:4"
-BABY_SHARK_REFRAIN = "G4:0.5 G4:0.5 G4:0.5 G4:0.25 G4:0.5 G4:0.25 G4:0.5"
-BABY_SHARK_VERSE = " ".join(["D4:1 E4:1", BABY_SHARK_REFRAIN,
-                            "D4:0.5 E4:0.5", BABY_SHARK_REFRAIN,
-                            "D4:0.5 E4:0.5", BABY_SHARK_REFRAIN,
-                            "G4:0.5 G4:0.5 F#4:2"])
+# Original four-bar organ-hook chord changes. Held chords are rearticulated
+# as eighth-note fart stabs; neither source waveform is looped or sustained.
+GHOSTS_HOOK = [(chord, 0.5) for chord, beats in
+               [("Bb3+Db4+F4", 4), ("Ab3+C4+Eb4", 1.5),
+                ("Gb3+Bb3+Db4", 2), ("G3+Bb3+Eb4", 8.5)]
+               for _ in range(round(beats/0.5))]
+
+PAW_PATROL_HOOK = (
+    'B4:1 G4:0.5 G4:2.5 B4:1 G4:0.5 G4:0.5 G4:1.5 E4:0.5 '
+    'G4:1 G4:1 G4:1 G4:0.5 B4:1 A4:2.5 R:0.5 G4:0.5 '
+    'B4:1 B4:1 G4:1 E4:0.5 G4:1 G4:1.5 R:2 E4:1 '
+    'G4:1 G4:1 E4:0.5 A4:2.5 R:2 B4:1 B4:1 G4:1 '
+    'E4:0.5 G4:1.5 G4:1 G4:0.5 R:1 E4:0.5 E4:1 G4:1 '
+    'G4:1 E4:0.5 A4:4.5'
+)
+
+LOVER_REFRAIN = (
+    'A4:0.5 B4:0.25 A4:0.25 G4:1 B4:0.25 A4:0.25 G4:1 B4:0.25 '
+    'A4:0.25 G4:1 B4:0.25 A4:0.25 G4:2.5 R:1.5 R:1.5 B3:0.5 '
+    'B3:1'
+)
+
+PUERTO_RICO_HOOK = (
+    'C5:0.5 C5:0.5 D5:0.5 F5:0.75 F5:0.25 R:1.5 '
+    'F5:0.5 C5:0.5 D5:0.5 R:3 C5:0.5 D5:0.5 F5:0.5 D5:0.5 R:0.5 '
+    'F5:0.5 R:0.25 C5:0.75 C5:0.5 D5:0.5 R:2.5 '
+    'C5:0.5 C5:0.5 D5:0.5 F5:0.75 F5:0.25 R:1.5 '
+    'F5:0.5 C5:0.5 D5:0.5 R:3 C5:0.5 D5:0.5 F5:0.5 D5:0.5 R:0.5 '
+    'F5:0.5 R:0.25 C5:0.75 C5:0.5 D5:0.5 R:1'
+)
+
+PEPPA_HOOK = (
+    'G4:1 E4:0.5 C4:0.5 D4:1 G3:1 G3:0.5 B3:0.5 D4:0.5 '
+    'F4:0.5 E4:1 C4:1'
+)
+
+BEAR_VERSE = (
+    'C4:1 C4:1 C4:1 E4:1 D4:1 D4:1 D4:1 F4:1 '
+    'E4:1 E4:1 D4:1 D4:1 C4:4 E4:1 E4:1 E4:1 '
+    'E4:1 G4:2 F4:2 D4:1 D4:1 D4:1 D4:1 F4:2 '
+    'E4:2 C4:1 C4:1 C4:1 E4:1 D4:1 D4:1 D4:1 '
+    'F4:1 E4:1 E4:1 D4:1 D4:1 C4:4'
+)
+
+BABY_SHARK_VERSE = (
+    'D4:1 E4:1 G4:0.5 G4:0.5 G4:0.5 G4:0.25 G4:0.5 G4:0.25 '
+    'G4:0.5 D4:0.5 E4:0.5 G4:0.5 G4:0.5 G4:0.5 G4:0.25 G4:0.5 '
+    'G4:0.25 G4:0.5 D4:0.5 E4:0.5 G4:0.5 G4:0.5 G4:0.5 G4:0.25 '
+    'G4:0.5 G4:0.25 G4:0.5 G4:0.5 G4:0.5 F#4:2'
+)
+
+SABATON_HOOK = (
+    'G4:0.75 Bb4:0.75 D5:0.5 C5:1.5 C5:0.25 D5:0.25 Eb5:0.75 D5:0.75 '
+    'Bb4:0.5 C5:2 Eb5:0.75 D5:0.75 Bb4:0.25 C5:0.25 Bb4:2 Bb4:0.75 '
+    'Ab4:0.75 G4:0.5 F4:2 F4:0.75 G4:0.75 Ab4:0.5 G4:0.125 Ab4:0.125 '
+    'G4:0.125 F4:0.125 G4:1.5'
+)
 
 SONGS = [
-    dict(id="blinka-lilla-stjarna", title="Blinka lilla stjärna", bpm=138,
-         transpose=-5, meter="4/4", melody="Traditional: Ah! vous dirai-je, maman",
-         notes=score(" ".join([TWINKLE_A, TWINKLE_B, TWINKLE_B, TWINKLE_A])),
-         references=["https://ciss.se/munspel/barnvisor.html"]),
-    dict(id="ba-ba-vita-lamm", title="Bä bä vita lamm", bpm=104,
-         transpose=-10, meter="2/4", melody="Alice Tegnér, Sjung med oss, mamma! (1892), no. 5",
-         notes=score(" ".join([BA_A, BA_A,
-             "D5:0.5 Bb4:0.5 Bb4:0.5 Bb4:0.5 C5:1.5 A4:0.5",
-             "Bb4:0.5 G4:0.5 G4:0.5 G4:0.5 A4:1.5 F4:0.5",
-             "D5:1 Bb4:1 C5:1 A4:0.5 A4:0.5 Bb4:0.5 E4:0.5 E4:0.5 E4:0.5 F4:1 R:1"])),
-         references=["https://runeberg.org/sjungmamma/1/0010.html",
-                     "https://runeberg.org/sjungmamma/1/0011.html",
-                     "https://www.spelapiano.org/noter/ba-ba-vita-lamm.html"]),
-    dict(id="broder-jakob", title="Broder Jakob", bpm=116,
-         transpose=-5, meter="4/4", melody="Traditional: Frère Jacques",
-         notes=score(" ".join([BROTHER_A, BROTHER_A, BROTHER_B, BROTHER_B,
-                               BROTHER_C, BROTHER_C, BROTHER_D, BROTHER_D])),
-         references=["https://www.skolesaga.no/musikk-8/musikk-8-1-1"]),
-    dict(id="imse-vimse-spindel", title="Imse vimse spindel", bpm=300,
-         transpose=-5, meter="6/8 (tempo counts eighth notes)", melody="Traditional: Itsy Bitsy Spider",
-         notes=score("G3:1 C4:2 C4:1 C4:2 D4:1 E4:3 E4:2 E4:1 D4:2 C4:1 D4:2 E4:1 C4:6 "
-                     "E4:3 E4:2 F4:1 G4:3 G4:3 F4:2 E4:1 F4:2 G4:1 E4:6 "
-                     "C4:3 C4:2 D4:1 E4:3 E4:3 D4:2 C4:1 D4:2 E4:1 C4:3 G3:2 G3:1 "
-                     "C4:2 C4:1 C4:2 D4:1 E4:3 E4:2 E4:1 D4:2 C4:1 D4:2 E4:1 C4:5"),
-         references=["https://www.bethsnotesplus.com/wp-content/uploads/2024/11/Itsy-Bitsy-Spider.pdf"]),
-    dict(id="bjornen-sover", title="Björnen sover", bpm=138,
-         transpose=-5, meter="4/4", melody="Traditional: Gubben Noak / Björnen sover",
-         notes=score(" ".join([BEAR_A,
-             "E4:1 E4:1 E4:1 E4:1 G4:2 F4:2 D4:1 D4:1 D4:1 D4:1 F4:2 E4:2", BEAR_A])),
-         references=["https://ciss.se/munspel/barnvisor.html"]),
-    dict(id="baby-shark", title="Baby Shark", bpm=112,
-         transpose=-12, meter="4/4",
-         melody="Children's melody: Baby Shark (traditional chant, popularized by Pinkfong)",
-         notes=score(" ".join([BABY_SHARK_VERSE, BABY_SHARK_VERSE])),
-         references=["https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377",
-                     "https://www.stantons.com/scores/03746512.pdf",
-                     "https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html"]),
+    {'id': 'paw-patrol',
+     'title': 'Paw Patrol',
+     'bpm': 120,
+     'transpose': -12,
+     'meter': '4/4',
+     'melody': 'PAW Patrol Theme — Jeff Cohen, Molly Kaye, Scott Krippayne and Michael ‘Smidi’ Smith '
+               '(2013)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'arrangement': 'Twelve-bar opening melody hook in G major, transposed down one octave',
+     'references': ['https://www.virtualsheetmusic.com/score/HL-426310.html',
+                    'https://vivace-music.org/pdfs/paw_patrol_medium.pdf'],
+     'notes': score(PAW_PATROL_HOOK)},
+    {'id': 'lover',
+     'title': 'Lover',
+     'bpm': 111,
+     'transpose': -12,
+     'meter': '12/8 (quarter-note tempo; dotted-quarter = 74)',
+     'melody': 'Lover — Taylor Swift (2019)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'notes': score(LOVER_REFRAIN)*3,
+     'arrangement': 'Short title refrain, repeated three times; printed ties and rests preserved',
+     'references': ['https://www.musicnotes.com/sheetmusic/taylor-swift/lover/MN0200599',
+                    'https://sheetsfree.com/sheets/T/Taylor%20Swift%20-%20Lover.pdf']},
+    {'id': 'puerto-rico',
+     'title': 'The Puerto Rico Song',
+     'bpm': 109,
+     'transpose': -24,
+     'meter': '4/4',
+     'melody': 'The Puerto Rico Song — Saxboy Billy / William Stiteler (AI-assisted release, 2026)',
+     'composition_rights': 'No CC0 license asserted for the referenced composition or release; '
+                           'CC0 applies only to the source fart recordings',
+     'arrangement': 'Opening vocal melody hook repeated twice; initial 1.5-beat rest removed, '
+                    'printed timing and internal rests retained',
+     'source_notation': 'Note-Store Piano & Vocal Easy PVE0328631, free first-page preview, '
+                        'measures 5–8; written C5–F5 rendered C3–F3, one octave below the '
+                        'C4–F4 pitches independently verified in the official release preview',
+     'references': ['https://linktr.ee/saxboybilly18',
+                    'https://music.apple.com/us/album/the-puerto-rico-song/6781297349?i=6781297353',
+                    'https://note-store.com/notes/saxboy-billy/the-puerto-rico-song/piano-vocal-easy/',
+                    'https://note-store.com/api/preview_pdf_download/328631/'],
+     'notes': score(PUERTO_RICO_HOOK)},
+    {'id': 'greta-gris',
+     'title': 'Greta Gris',
+     'bpm': 144,
+     'transpose': -5,
+     'meter': '4/4',
+     'melody': 'Peppa Pig Main Theme — Julian Nott (2004)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'arrangement': 'Two-bar main-theme hook, repeated six times',
+     'references': ['https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242',
+                    'https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf'],
+     'notes': score(PEPPA_HOOK)*6},
+    {'id': 'bjornen-sover',
+     'title': 'Björnen sover',
+     'bpm': 138,
+     'transpose': -5,
+     'meter': '4/4',
+     'melody': 'Traditional: Gubben Noak / Björnen sover',
+     'notes': score(BEAR_VERSE),
+     'references': ['https://ciss.se/munspel/barnvisor.html']},
+    {'id': 'baby-shark',
+     'title': 'Baby Shark',
+     'bpm': 112,
+     'transpose': -12,
+     'meter': '4/4',
+     'melody': "Children's melody: Baby Shark (traditional chant, popularized by Pinkfong)",
+     'notes': score(BABY_SHARK_VERSE)*2,
+     'references': ['https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377',
+                    'https://www.stantons.com/scores/03746512.pdf',
+                    'https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html']},
+    {'id': 'en-livstid-i-krig',
+     'title': 'En livstid i krig',
+     'bpm': 68,
+     'transpose': -12,
+     'meter': '4/4, half-time notation',
+     'melody': 'En livstid i krig — Joakim Brodén / Sabaton (2012)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'notes': score(SABATON_HOOK),
+     'arrangement': 'Short opening lead melody; exact GP5 note durations and tied notes, with slide/hammer '
+                    'targets represented as notes',
+     'source_notation': 'Freely published Solo Guitar GP5 arrangement, opening measures 2 through the '
+                        'first half of 7; written F4–Eb5 rendered F3–Eb4',
+     'references': ['https://www.sabaton.net/discography/carolus-rex/en-livstid-i-krig/',
+                    'https://gtptabs.com/tabs/19/sabaton/en-livstid-i-krig.html',
+                    'https://gtptabs.com/tabs/download/55609.html',
+                    'https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html']},
+    {'id': 'ghosts-n-stuff',
+     'title': 'Ghosts ’n’ Stuff',
+     'bpm': 126,
+     'transpose': -5,
+     'meter': '4/4',
+     'melody': 'Ghosts ’n’ Stuff — Joel Zimmerman (deadmau5) and Rob Swire (2009)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'arrangement': 'Four-bar organ-hook harmony, repeated three times; its held chords rearticulated as '
+                    'short wet fart chord stabs at eighth-note intervals',
+     'references': ['https://www.musicnotes.com/sheetmusic/deadmau5/ghosts-n-stuff/MN0083548',
+                    'https://lauriegoldsteincsp4project.wordpress.com/2012/03/10/recreation-and-analysis-of-deadmau5-ghosts-n-stuff/'],
+     'notes': GHOSTS_HOOK*3}
 ]
 
 
@@ -149,14 +254,19 @@ def render(song, core, wet, base_hz):
     for index, (name, beats) in enumerate(song["notes"]):
         span = beats * seconds_per_beat
         if name != "R":
-            hz = frequency(name, song["transpose"])
+            pitches = [frequency(pitch, song["transpose"]) for pitch in name.split("+")]
             # Long written notes end in an organic recorded tail, rather than
             # sustaining a perfectly even tone for the entire note duration.
             gate = min(0.72, max(0.065, span-min(0.035, span*0.08)))
-            note = note_audio(core, wet, base_hz, hz, gate, index)
+            note = note_audio(core, wet, base_hz, pitches[0], gate, index)
+            if len(pitches) > 1:
+                # The wet layer is identical in every voice, so averaging keeps
+                # that real texture unchanged and blends the pitched fart bodies.
+                note = sum(note_audio(core, wet, base_hz, hz, gate, index)
+                           for hz in pitches) / len(pitches)
             start = round(position*SAMPLE_RATE)
             output[start:start+len(note)] += note
-            onsets.append(dict(note=name, rendered_frequency_hz=round(hz, 4),
+            onsets.append(dict(note=name, rendered_frequency_hz=[round(hz, 4) for hz in pitches],
                                start_seconds=round(position, 6), length_seconds=round(gate, 6)))
         position += span
     peak = float(np.max(np.abs(output)))
@@ -191,9 +301,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ffmpeg", default="ffmpeg")
     parser.add_argument("--audition", type=Path,
-                        help="Render only the first 8 seconds of Blinka to this MP3; leave app assets untouched")
-    parser.add_argument("--only", choices=[song["id"] for song in SONGS],
-                        help="Regenerate only this song and its metadata, preserving the other MP3 files exactly")
+                        help="Render only the first 8 seconds of the first song to this MP3; leave app assets untouched")
+    parser.add_argument("--only", nargs="+", choices=[song["id"] for song in SONGS],
+                        help="Regenerate only these songs and their metadata, preserving the other MP3 files exactly")
     args = parser.parse_args()
     output_dir = ROOT / "audio/songs"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -222,7 +332,7 @@ def main():
         prior_metadata = json.loads((output_dir / "metadata.json").read_text(encoding="utf-8"))
         prior = {song["id"]: song for song in prior_metadata["songs"]}
     for song in SONGS:
-        if args.only and song["id"] != args.only:
+        if args.only and song["id"] not in args.only:
             previous = prior[song["id"]]
             assert hashlib.sha256((ROOT / previous["file"]).read_bytes()).hexdigest() == previous["validation"]["sha256"], "Existing song changed"
             metadata["songs"].append(previous)
@@ -237,7 +347,7 @@ def main():
         report = validate_mp3(args.ffmpeg, path, onsets)
         metadata["songs"].append({k: v for k, v in song.items() if k != "notes"} |
             dict(file="audio/songs/"+path.name,
-                 arrangement=("Two complete melody verses" if song["id"] == "baby-shark" else "One complete melody verse")
+                 arrangement=song.get("arrangement", "Two complete melody verses" if song["id"] == "baby-shark" else "One complete melody verse")
                  + " with wet recorded fart articulation; no voice or accompaniment",
                  notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report))
         print(f"{path.name}: {report['duration_seconds']} s, {report['bytes']} bytes, "

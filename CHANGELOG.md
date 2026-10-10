@@ -1,5 +1,16 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.5.0 - Åtta låtar med fisar
+
+- Replaced Blinka lilla stjärna, Bä bä vita lamm, Broder Jakob and Imse vimse
+  spindel with Paw Patrol, Lover, The Puerto Rico Song (the AI hit by
+  Bill Stiteler / saxboybilly18) and Greta Gris.
+- Added En livstid i krig and Ghosts ’n’ Stuff, for eight song buttons in total.
+- Kept Björnen sover and Baby Shark exactly as approved, with the same wet
+  recorded fart instrument used for the new arrangements.
+- Songs still replace the previous song even with Fisorkester enabled.
+- Updated the offline cache to include the eight current recordings.
+
 ## 4.4.2 - En sång i taget och Baby Shark
 
 - Starting a new song stops the previous song, including a pending start, even

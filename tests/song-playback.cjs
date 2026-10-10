@@ -1,6 +1,7 @@
 'use strict';
 
 // Run with: node tests/song-playback.cjs
+// For a recording-only replacement: node tests/song-playback.cjs --replacement-only
 // Uses real browser media, a localhost server, and no production instrumentation.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -23,6 +24,19 @@ const browserPath = process.env.CHROME_PATH || [
 const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.mp3': 'audio/mpeg', '.wav': 'audio/wav', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.webmanifest': 'application/manifest+json' };
 const songSelector = '#songs button[data-song]';
 const padSelector = '#grid button[data-sound]';
+const replacementOnly = process.argv.includes('--replacement-only');
+const replacementId = 'puerto-rico';
+const expectedSongs = [
+  { id: 'paw-patrol', name: 'Paw Patrol' },
+  { id: 'lover', name: 'Lover' },
+  { id: 'puerto-rico', name: 'The Puerto Rico Song' },
+  { id: 'greta-gris', name: 'Greta Gris' },
+  { id: 'bjornen-sover', name: 'Björnen sover' },
+  { id: 'baby-shark', name: 'Baby Shark' },
+  { id: 'en-livstid-i-krig', name: 'En livstid i krig' },
+  { id: 'ghosts-n-stuff', name: 'Ghosts ’n’ Stuff' }
+];
+const expectedSongIds = expectedSongs.map(song => song.id);
 const errors = [];
 const reports = [];
 
@@ -57,7 +71,8 @@ function instrument() {
   };
 }
 
-async function check(name, operation) {
+async function check(name, operation, validateReplacement = false) {
+  if (replacementOnly && !validateReplacement) return;
   try { await operation(); reports.push({ name, ok: true }); console.log('PASS ' + name); }
   catch (error) { errors.push(error); reports.push({ name, ok: false, error: error.message }); console.error('FAIL ' + name + '\n' + error.stack); }
 }
@@ -83,7 +98,7 @@ async function main() {
   for (const name of ['app-v4.4.js', 'sw.js']) new vm.Script(fs.readFileSync(path.join(root, name), 'utf8'), { filename: name });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(html, /app-v4\.4\.js/);
-  assert.match(html, /Version 4\.4\.2/);
+  assert.match(html, /Version 4\.5\.0/);
   console.log('PASS syntax and version references');
 
   const server = http.createServer((request, response) => {
@@ -105,28 +120,37 @@ async function main() {
     const pageErrors = [];
     page.on('pageerror', error => pageErrors.push(error.message));
     await page.goto(url);
-    await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 6);
+    await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 8);
     const songs = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => ({ id: button.dataset.song, name: button.querySelector('.name').textContent })));
     const pads = await page.locator(padSelector).evaluateAll(buttons => buttons.map(button => button.dataset.sound));
+    const playbackSongs = replacementOnly ? songs.filter(song => song.id === replacementId) : songs;
+    const playbackPads = replacementOnly ? [] : pads;
+    const metadata = JSON.parse(fs.readFileSync(path.join(root, 'audio', 'songs', 'metadata.json'), 'utf8'));
+    async function playSong(song) {
+      const state = await playAndWait(page, '[data-song="' + song.id + '"]');
+      const expectedDuration = metadata.songs.find(entry => entry.id === song.id)?.validation.duration_seconds;
+      assert.ok(Number.isFinite(expectedDuration), song.id + ' must have a validated duration');
+      assert.ok(Math.abs(state.played.duration - expectedDuration) < 0.1, song.id + ' native decoded duration must match its validated recording');
+      await stop(page);
+    }
 
-    await check('six song buttons and nine original pads expose accessible names', async () => {
-      assert.equal(songs.length, 6);
-      assert.equal(new Set(songs.map(song => song.id)).size, 6);
-      assert.ok(songs.some(song => song.id === 'baby-shark' && song.name === 'Baby Shark'));
-      assert.ok(songs.every(song => song.id !== 'london-bridge'));
+    await check('eight requested songs in order and nine original pads expose accessible names', async () => {
+      assert.equal(songs.length, 8);
+      assert.equal(new Set(songs.map(song => song.id)).size, 8);
+      assert.deepEqual(songs, expectedSongs);
       assert.equal(pads.length, 9);
       for (const song of songs) {
         const button = page.locator('[data-song="' + song.id + '"]');
         assert.equal(await button.getAttribute('aria-pressed'), 'false');
         assert.equal(await button.getAttribute('aria-label'), 'Spela ' + song.name);
       }
-    });
+    }, true);
 
-    await check('all fifteen recordings decode and start native playback synchronously from a trusted click', async () => {
-      for (const song of songs) { await playAndWait(page, '[data-song="' + song.id + '"]'); await stop(page); }
-      for (const id of pads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
+    await check(replacementOnly ? 'replacement recording decodes and starts native playback synchronously from a trusted click' : 'all seventeen recordings decode and start native playback synchronously from a trusted click', async () => {
+      for (const song of playbackSongs) await playSong(song);
+      for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
       assert.deepEqual(await page.evaluate(() => window.__mediaTest.webAudio), []);
-    });
+    }, true);
 
     await check('songs stay exclusive while orchestra still layers original pads', async () => {
       await page.locator('#layer').check();
@@ -203,11 +227,12 @@ async function main() {
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
 
-    await check('service worker caches complete version 4.4.2 shell, six songs, and original audio', async () => {
+    await check('service worker caches complete version 4.5.0 shell, eight songs, and original audio', async () => {
       await page.locator('#offline.ready').waitFor({ timeout: 30000 });
+      assert.match(await page.locator('#offline.ready').textContent(), /8\s+låtar/);
       await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
       const cache = await page.evaluate(async () => {
-        const current = await caches.open('fart-machine-v4.4.2');
+        const current = await caches.open('fart-machine-v4.5.0');
         const keys = await current.keys();
         return Promise.all(keys.map(async request => {
           const response = await current.match(request);
@@ -217,7 +242,8 @@ async function main() {
         }));
       });
       assert.ok(cache.some(entry => entry.path === '/app-v4.4.js'));
-      assert.equal(cache.filter(entry => /\/audio\/songs\//.test(entry.path)).length, 6);
+      assert.equal(cache.length, 32);
+      assert.deepEqual(cache.filter(entry => /\/audio\/songs\//.test(entry.path)).map(entry => entry.path).sort(), expectedSongIds.map(id => '/audio/songs/' + id + '.mp3').sort());
       assert.equal(cache.filter(entry => /\/audio\/[^/]+\.mp3$/.test(entry.path)).length, 9);
       for (const entry of cache) {
         assert.equal(entry.status, 200, 'cached assets must be complete, not partial responses');
@@ -228,19 +254,19 @@ async function main() {
         if (entry.path.endsWith('.wav')) assert.match(entry.type, /audio\/wav|audio\/x-wav/);
       }
       const status = await page.evaluate(() => new Promise(resolve => { const channel = new MessageChannel(); channel.port1.onmessage = event => resolve(event.data); navigator.serviceWorker.controller.postMessage({ type: 'CACHE_STATUS' }, [channel.port2]); }));
-      assert.equal(status.version, '4.4.2');
+      assert.equal(status.version, '4.5.0');
       assert.equal(status.ready, true);
       assert.equal(status.sounds, 9);
-      assert.equal(status.songs, 6);
-    });
+      assert.equal(status.songs, 8);
+    }, true);
 
-    await check('offline reload, all song playback, and byte range responses work without network', async () => {
+    await check(replacementOnly ? 'offline replacement playback and all eight song byte range responses work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
       await context.setOffline(true);
       await page.reload();
       await page.locator('#offline.ready').waitFor({ timeout: 15000 });
-      for (const song of songs) { await playAndWait(page, '[data-song="' + song.id + '"]'); await stop(page); }
-      for (const id of pads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
-      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.4.2')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
+      for (const song of playbackSongs) await playSong(song);
+      for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
+      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.5.0')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
       for (const asset of paths) {
         const result = await page.evaluate(async asset => {
           const response = await fetch(asset, { headers: { Range: 'bytes=0-63' } });
@@ -263,7 +289,7 @@ async function main() {
       await context.setOffline(false);
       assert.deepEqual(await page.evaluate(() => window.__mediaTest.webAudio), []);
       assert.deepEqual(pageErrors, []);
-    });
+    }, true);
 
     await check('new songs, toggling, and stop-all cancel actual pending native play requests', async () => {
       const pendingContext = await browser.newContext({ serviceWorkers: 'block' });
@@ -318,9 +344,9 @@ async function main() {
     await browser.close();
     await new Promise(resolve => server.close(resolve));
   }
-  fs.writeFileSync(path.join(output, 'song-playback-results.json'), JSON.stringify({ reports, failed: errors.length }, null, 2) + '\n');
+  fs.writeFileSync(path.join(output, replacementOnly ? 'song-replacement-results.json' : 'song-playback-results.json'), JSON.stringify({ mode: replacementOnly ? 'replacement-only' : 'full', reports, failed: errors.length }, null, 2) + '\n');
   if (errors.length) throw new Error(errors.length + ' verification group(s) failed');
-  console.log('All native playback and offline verification passed.');
+  console.log(replacementOnly ? 'Replacement native playback, full-cache integrity, and offline verification passed.' : 'All native playback and offline verification passed.');
 }
 
 main().catch(error => { console.error(error.stack); process.exitCode = 1; });

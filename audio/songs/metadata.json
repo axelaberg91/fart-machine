@@ -36,24 +36,58 @@
   },
   "songs": [
     {
-      "id": "blinka-lilla-stjarna",
-      "title": "Blinka lilla stjärna",
-      "bpm": 138,
-      "transpose": -5,
+      "id": "paw-patrol",
+      "title": "Paw Patrol",
+      "bpm": 120,
+      "transpose": -12,
       "meter": "4/4",
-      "melody": "Traditional: Ah! vous dirai-je, maman",
+      "melody": "PAW Patrol Theme — Jeff Cohen, Molly Kaye, Scott Krippayne and Michael ‘Smidi’ Smith (2013)",
+      "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
+      "arrangement": "Twelve-bar opening melody hook in G major, transposed down one octave with wet recorded fart articulation; no voice or accompaniment",
       "references": [
-        "https://ciss.se/munspel/barnvisor.html"
+        "https://www.virtualsheetmusic.com/score/HL-426310.html",
+        "https://vivace-music.org/pdfs/paw_patrol_medium.pdf"
       ],
-      "file": "audio/songs/blinka-lilla-stjarna.mp3",
-      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "file": "audio/songs/paw-patrol.mp3",
       "notes": [
         {
-          "note": "C4",
+          "note": "B4",
           "beats": 1.0
         },
         {
-          "note": "C4",
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 2.5
+        },
+        {
+          "note": "B4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
           "beats": 1.0
         },
         {
@@ -62,47 +96,115 @@
         },
         {
           "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "B4",
           "beats": 1.0
         },
         {
           "note": "A4",
+          "beats": 2.5
+        },
+        {
+          "note": "R",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "B4",
           "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
         },
         {
           "note": "A4",
-          "beats": 1.0
+          "beats": 2.5
         },
         {
-          "note": "G4",
+          "note": "R",
           "beats": 2.0
         },
         {
-          "note": "F4",
+          "note": "B4",
           "beats": 1.0
         },
         {
-          "note": "F4",
+          "note": "B4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
           "beats": 1.0
         },
         {
           "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "R",
           "beats": 1.0
         },
         {
           "note": "E4",
-          "beats": 1.0
+          "beats": 0.5
         },
         {
-          "note": "D4",
+          "note": "E4",
           "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 2.0
         },
         {
           "note": "G4",
@@ -113,311 +215,437 @@
           "beats": 1.0
         },
         {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
           "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "G4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 1.0
+          "beats": 0.5
         },
         {
           "note": "A4",
-          "beats": 1.0
-        },
-        {
-          "note": "A4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 2.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 2.0
+          "beats": 4.5
         }
       ],
       "validation": {
-        "duration_seconds": 21.0696,
-        "peak": 0.79716,
-        "rms": 0.138625,
+        "duration_seconds": 24.2,
+        "peak": 0.815291,
+        "rms": 0.125503,
         "clipping_samples": 0,
-        "audible_recorded_attacks": 42,
-        "minimum_attack_rms": 0.143671,
-        "bytes": 253802,
-        "sha256": "d2435b5165c4be32f638eb21a81e7ace3c400a44717a33f9304012aca688e1a4"
+        "audible_recorded_attacks": 39,
+        "minimum_attack_rms": 0.138227,
+        "bytes": 291386,
+        "sha256": "5e25bdd1ffcf38281bedc381d3404f754c46cb4138fdca13bdaf3eb806ff09ac"
       }
     },
     {
-      "id": "ba-ba-vita-lamm",
-      "title": "Bä bä vita lamm",
-      "bpm": 104,
-      "transpose": -10,
-      "meter": "2/4",
-      "melody": "Alice Tegnér, Sjung med oss, mamma! (1892), no. 5",
+      "id": "lover",
+      "title": "Lover",
+      "bpm": 111,
+      "transpose": -12,
+      "meter": "12/8 (quarter-note tempo; dotted-quarter = 74)",
+      "melody": "Lover — Taylor Swift (2019)",
+      "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
+      "arrangement": "Short title refrain, repeated three times; printed ties and rests preserved with wet recorded fart articulation; no voice or accompaniment",
       "references": [
-        "https://runeberg.org/sjungmamma/1/0010.html",
-        "https://runeberg.org/sjungmamma/1/0011.html",
-        "https://www.spelapiano.org/noter/ba-ba-vita-lamm.html"
+        "https://www.musicnotes.com/sheetmusic/taylor-swift/lover/MN0200599",
+        "https://sheetsfree.com/sheets/T/Taylor%20Swift%20-%20Lover.pdf"
       ],
-      "file": "audio/songs/ba-ba-vita-lamm.mp3",
-      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "file": "audio/songs/lover.mp3",
       "notes": [
         {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "C5",
-          "beats": 1.0
-        },
-        {
           "note": "A4",
           "beats": 0.5
         },
         {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
           "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
+          "beats": 0.25
         },
         {
           "note": "G4",
-          "beats": 0.5
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
         },
         {
           "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "C4",
-          "beats": 0.5
-        },
-        {
-          "note": "C4",
-          "beats": 0.5
-        },
-        {
-          "note": "F4",
           "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 2.5
         },
         {
           "note": "R",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "C5",
-          "beats": 1.0
-        },
-        {
-          "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "C4",
-          "beats": 0.5
-        },
-        {
-          "note": "C4",
-          "beats": 0.5
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
+          "beats": 1.5
         },
         {
           "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
           "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 2.5
+        },
+        {
+          "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 2.5
+        },
+        {
+          "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 1.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 20.4703,
+        "peak": 0.779099,
+        "rms": 0.118313,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 45,
+        "minimum_attack_rms": 0.135056,
+        "bytes": 246554,
+        "sha256": "38de61be149d06a651426b93704aa489b6f07e812f038885c0329d085960d48e"
+      }
+    },
+    {
+      "id": "puerto-rico",
+      "title": "The Puerto Rico Song",
+      "bpm": 109,
+      "transpose": -24,
+      "meter": "4/4",
+      "melody": "The Puerto Rico Song — Saxboy Billy / William Stiteler (AI-assisted release, 2026)",
+      "composition_rights": "No CC0 license asserted for the referenced composition or release; CC0 applies only to the source fart recordings",
+      "arrangement": "Opening vocal melody hook repeated twice; initial 1.5-beat rest removed, printed timing and internal rests retained with wet recorded fart articulation; no voice or accompaniment",
+      "source_notation": "Note-Store Piano & Vocal Easy PVE0328631, free first-page preview, measures 5–8; written C5–F5 rendered C3–F3, one octave below the C4–F4 pitches independently verified in the official release preview",
+      "references": [
+        "https://linktr.ee/saxboybilly18",
+        "https://music.apple.com/us/album/the-puerto-rico-song/6781297349?i=6781297353",
+        "https://note-store.com/notes/saxboy-billy/the-puerto-rico-song/piano-vocal-easy/",
+        "https://note-store.com/api/preview_pdf_download/328631/"
+      ],
+      "file": "audio/songs/puerto-rico.mp3",
+      "notes": [
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
         },
         {
           "note": "D5",
           "beats": 0.5
         },
         {
-          "note": "Bb4",
-          "beats": 0.5
+          "note": "F5",
+          "beats": 0.75
         },
         {
-          "note": "Bb4",
-          "beats": 0.5
+          "note": "F5",
+          "beats": 0.25
         },
         {
-          "note": "Bb4",
+          "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "F5",
           "beats": 0.5
         },
         {
           "note": "C5",
-          "beats": 1.5
-        },
-        {
-          "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "Bb4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "A4",
-          "beats": 1.5
-        },
-        {
-          "note": "F4",
           "beats": 0.5
         },
         {
           "note": "D5",
-          "beats": 1.0
+          "beats": 0.5
         },
         {
-          "note": "Bb4",
-          "beats": 1.0
+          "note": "R",
+          "beats": 3.0
         },
         {
           "note": "C5",
-          "beats": 1.0
-        },
-        {
-          "note": "A4",
           "beats": 0.5
         },
         {
-          "note": "A4",
+          "note": "D5",
           "beats": 0.5
         },
         {
-          "note": "Bb4",
+          "note": "F5",
           "beats": 0.5
         },
         {
-          "note": "E4",
+          "note": "D5",
           "beats": 0.5
         },
         {
-          "note": "E4",
+          "note": "R",
           "beats": 0.5
         },
         {
-          "note": "E4",
+          "note": "F5",
           "beats": 0.5
         },
         {
-          "note": "F4",
-          "beats": 1.0
+          "note": "R",
+          "beats": 0.25
+        },
+        {
+          "note": "C5",
+          "beats": 0.75
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "R",
+          "beats": 2.5
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "F5",
+          "beats": 0.75
+        },
+        {
+          "note": "F5",
+          "beats": 0.25
+        },
+        {
+          "note": "R",
+          "beats": 1.5
+        },
+        {
+          "note": "F5",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "R",
+          "beats": 3.0
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "F5",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "R",
+          "beats": 0.5
+        },
+        {
+          "note": "F5",
+          "beats": 0.5
+        },
+        {
+          "note": "R",
+          "beats": 0.25
+        },
+        {
+          "note": "C5",
+          "beats": 0.75
+        },
+        {
+          "note": "C5",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
         },
         {
           "note": "R",
@@ -425,225 +653,66 @@
         }
       ],
       "validation": {
-        "duration_seconds": 18.6615,
-        "peak": 0.785157,
-        "rms": 0.137487,
-        "clipping_samples": 0,
-        "audible_recorded_attacks": 42,
-        "minimum_attack_rms": 0.134837,
-        "bytes": 224953,
-        "sha256": "292de705fa48573456adc7ab99340e40a5d56ee0ba90ea81297270746cd05fd6"
-      }
-    },
-    {
-      "id": "broder-jakob",
-      "title": "Broder Jakob",
-      "bpm": 116,
-      "transpose": -5,
-      "meter": "4/4",
-      "melody": "Traditional: Frère Jacques",
-      "references": [
-        "https://www.skolesaga.no/musikk-8/musikk-8-1-1"
-      ],
-      "file": "audio/songs/broder-jakob.mp3",
-      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
-      "notes": [
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 2.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 2.0
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "F4",
-          "beats": 0.5
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 0.5
-        },
-        {
-          "note": "F4",
-          "beats": 0.5
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "G3",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 2.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "G3",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 2.0
-        }
-      ],
-      "validation": {
-        "duration_seconds": 16.7517,
-        "peak": 0.823403,
-        "rms": 0.139457,
+        "duration_seconds": 16.989,
+        "peak": 0.830429,
+        "rms": 0.109939,
         "clipping_samples": 0,
         "audible_recorded_attacks": 32,
-        "minimum_attack_rms": 0.140127,
-        "bytes": 202049,
-        "sha256": "2658917d78cb77755d399671b2ba031d61ae854c5a2d4c65bb7a9721a4b0629c"
+        "minimum_attack_rms": 0.132995,
+        "bytes": 204878,
+        "sha256": "25bba11acbe6863c1cbeb00f581f034a21473bec537d3bb24b06858c186bdfa2"
       }
     },
     {
-      "id": "imse-vimse-spindel",
-      "title": "Imse vimse spindel",
-      "bpm": 300,
+      "id": "greta-gris",
+      "title": "Greta Gris",
+      "bpm": 144,
       "transpose": -5,
-      "meter": "6/8 (tempo counts eighth notes)",
-      "melody": "Traditional: Itsy Bitsy Spider",
+      "meter": "4/4",
+      "melody": "Peppa Pig Main Theme — Julian Nott (2004)",
+      "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
+      "arrangement": "Two-bar main-theme hook, repeated six times with wet recorded fart articulation; no voice or accompaniment",
       "references": [
-        "https://www.bethsnotesplus.com/wp-content/uploads/2024/11/Itsy-Bitsy-Spider.pdf"
+        "https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242",
+        "https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf"
       ],
-      "file": "audio/songs/imse-vimse-spindel.mp3",
-      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "file": "audio/songs/greta-gris.mp3",
       "notes": [
         {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
           "note": "G3",
           "beats": 1.0
         },
         {
-          "note": "C4",
-          "beats": 2.0
+          "note": "G3",
+          "beats": 0.5
         },
         {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 2.0
+          "note": "B3",
+          "beats": 0.5
         },
         {
           "note": "D4",
-          "beats": 1.0
+          "beats": 0.5
         },
         {
-          "note": "E4",
-          "beats": 3.0
-        },
-        {
-          "note": "E4",
-          "beats": 2.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
+          "note": "F4",
+          "beats": 0.5
         },
         {
           "note": "E4",
@@ -651,39 +720,7 @@
         },
         {
           "note": "C4",
-          "beats": 6.0
-        },
-        {
-          "note": "E4",
-          "beats": 3.0
-        },
-        {
-          "note": "E4",
-          "beats": 2.0
-        },
-        {
-          "note": "F4",
           "beats": 1.0
-        },
-        {
-          "note": "G4",
-          "beats": 3.0
-        },
-        {
-          "note": "G4",
-          "beats": 3.0
-        },
-        {
-          "note": "F4",
-          "beats": 2.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 2.0
         },
         {
           "note": "G4",
@@ -691,95 +728,123 @@
         },
         {
           "note": "E4",
-          "beats": 6.0
+          "beats": 0.5
         },
         {
           "note": "C4",
-          "beats": 3.0
-        },
-        {
-          "note": "C4",
-          "beats": 2.0
+          "beats": 0.5
         },
         {
           "note": "D4",
           "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 3.0
-        },
-        {
-          "note": "E4",
-          "beats": 3.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "C4",
-          "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "C4",
-          "beats": 3.0
-        },
-        {
-          "note": "G3",
-          "beats": 2.0
         },
         {
           "note": "G3",
           "beats": 1.0
         },
         {
-          "note": "C4",
-          "beats": 2.0
+          "note": "G3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
         },
         {
           "note": "C4",
           "beats": 1.0
         },
         {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
           "note": "C4",
-          "beats": 2.0
+          "beats": 0.5
         },
         {
           "note": "D4",
           "beats": 1.0
         },
         {
-          "note": "E4",
-          "beats": 3.0
+          "note": "G3",
+          "beats": 1.0
         },
         {
-          "note": "E4",
-          "beats": 2.0
+          "note": "G3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
         },
         {
           "note": "E4",
           "beats": 1.0
-        },
-        {
-          "note": "D4",
-          "beats": 2.0
         },
         {
           "note": "C4",
           "beats": 1.0
         },
         {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
           "note": "D4",
-          "beats": 2.0
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
         },
         {
           "note": "E4",
@@ -787,18 +852,106 @@
         },
         {
           "note": "C4",
-          "beats": 5.0
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 0.5
+        },
+        {
+          "note": "B3",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
         }
       ],
       "validation": {
-        "duration_seconds": 19.4,
-        "peak": 0.808378,
-        "rms": 0.139033,
+        "duration_seconds": 20.2,
+        "peak": 0.769761,
+        "rms": 0.148425,
         "clipping_samples": 0,
-        "audible_recorded_attacks": 47,
-        "minimum_attack_rms": 0.136081,
-        "bytes": 233715,
-        "sha256": "841b07ca41b084b18b3561518d29bf629fa3651f4067a7ea7a34b2168e19882d"
+        "audible_recorded_attacks": 66,
+        "minimum_attack_rms": 0.134641,
+        "bytes": 243425,
+        "sha256": "773755c69f926f9422d5b6df44f32fec44045a1b8329ac9d77aa0417dc74fc37"
       }
     },
     {
@@ -1243,6 +1396,555 @@
         "minimum_attack_rms": 0.139786,
         "bytes": 208943,
         "sha256": "f24b28f778462916fb52c62bd6dd88f3767e05433ba64400ab8a74fa6001b8f7"
+      }
+    },
+    {
+      "id": "en-livstid-i-krig",
+      "title": "En livstid i krig",
+      "bpm": 68,
+      "transpose": -12,
+      "meter": "4/4, half-time notation",
+      "melody": "En livstid i krig — Joakim Brodén / Sabaton (2012)",
+      "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
+      "arrangement": "Short opening lead melody; exact GP5 note durations and tied notes, with slide/hammer targets represented as notes with wet recorded fart articulation; no voice or accompaniment",
+      "source_notation": "Freely published Solo Guitar GP5 arrangement, opening measures 2 through the first half of 7; written F4–Eb5 rendered F3–Eb4",
+      "references": [
+        "https://www.sabaton.net/discography/carolus-rex/en-livstid-i-krig/",
+        "https://gtptabs.com/tabs/19/sabaton/en-livstid-i-krig.html",
+        "https://gtptabs.com/tabs/download/55609.html",
+        "https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html"
+      ],
+      "file": "audio/songs/en-livstid-i-krig.mp3",
+      "notes": [
+        {
+          "note": "G4",
+          "beats": 0.75
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.75
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 1.5
+        },
+        {
+          "note": "C5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "Eb5",
+          "beats": 0.75
+        },
+        {
+          "note": "D5",
+          "beats": 0.75
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 2.0
+        },
+        {
+          "note": "Eb5",
+          "beats": 0.75
+        },
+        {
+          "note": "D5",
+          "beats": 0.75
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.25
+        },
+        {
+          "note": "C5",
+          "beats": 0.25
+        },
+        {
+          "note": "Bb4",
+          "beats": 2.0
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.75
+        },
+        {
+          "note": "Ab4",
+          "beats": 0.75
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 0.75
+        },
+        {
+          "note": "G4",
+          "beats": 0.75
+        },
+        {
+          "note": "Ab4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.125
+        },
+        {
+          "note": "Ab4",
+          "beats": 0.125
+        },
+        {
+          "note": "G4",
+          "beats": 0.125
+        },
+        {
+          "note": "F4",
+          "beats": 0.125
+        },
+        {
+          "note": "G4",
+          "beats": 1.5
+        }
+      ],
+      "validation": {
+        "duration_seconds": 17.8471,
+        "peak": 0.806704,
+        "rms": 0.118292,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 27,
+        "minimum_attack_rms": 0.135899,
+        "bytes": 215220,
+        "sha256": "e0767b28d081eee8ed85713d97fcce3f4876d3dcac5f8f62df9b9f4c51274bca"
+      }
+    },
+    {
+      "id": "ghosts-n-stuff",
+      "title": "Ghosts ’n’ Stuff",
+      "bpm": 126,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Ghosts ’n’ Stuff — Joel Zimmerman (deadmau5) and Rob Swire (2009)",
+      "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
+      "arrangement": "Four-bar organ-hook harmony, repeated three times; its held chords rearticulated as short wet fart chord stabs at eighth-note intervals with wet recorded fart articulation; no voice or accompaniment",
+      "references": [
+        "https://www.musicnotes.com/sheetmusic/deadmau5/ghosts-n-stuff/MN0083548",
+        "https://lauriegoldsteincsp4project.wordpress.com/2012/03/10/recreation-and-analysis-of-deadmau5-ghosts-n-stuff/"
+      ],
+      "file": "audio/songs/ghosts-n-stuff.mp3",
+      "notes": [
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb3+Db4+F4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Ab3+C4+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "Gb3+Bb3+Db4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G3+Bb3+Eb4",
+          "beats": 0.5
+        }
+      ],
+      "validation": {
+        "duration_seconds": 23.0571,
+        "peak": 0.836739,
+        "rms": 0.165319,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 96,
+        "minimum_attack_rms": 0.172609,
+        "bytes": 277618,
+        "sha256": "5a9fa8eec758632251f8bb1369d006847feb6058d5d65c15a2e7f35d27c26da3"
       }
     }
   ]

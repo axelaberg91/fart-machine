@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.4.2';
+  const VERSION = '4.5.0';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -14,12 +14,14 @@
     ['katastrofen', '\u2622\ufe0f', 'Katastrofen', '08']
   ].map(([id, emoji, name, photo]) => ({id, emoji, name, photo, url: './audio/' + id + '.mp3'}));
   const songs = [
-    ['blinka-lilla-stjarna', '\u2b50', 'Blinka lilla stj\u00e4rna'],
-    ['ba-ba-vita-lamm', '\u{1f411}', 'B\u00e4 b\u00e4 vita lamm'],
-    ['broder-jakob', '\u{1f514}', 'Broder Jakob'],
-    ['imse-vimse-spindel', '\u{1f577}\ufe0f', 'Imse vimse spindel'],
+    ['paw-patrol', '\u{1f43e}', 'Paw Patrol'],
+    ['lover', '\u{1f49c}', 'Lover'],
+    ['puerto-rico', '\u{1f1f5}\u{1f1f7}', 'The Puerto Rico Song'],
+    ['greta-gris', '\u{1f437}', 'Greta Gris'],
     ['bjornen-sover', '\u{1f43b}', 'Bj\u00f6rnen sover'],
-    ['baby-shark', '\u{1f988}', 'Baby Shark']
+    ['baby-shark', '\u{1f988}', 'Baby Shark'],
+    ['en-livstid-i-krig', '\u2694\ufe0f', 'En livstid i krig'],
+    ['ghosts-n-stuff', '\u{1f3a7}', 'Ghosts \u2019n\u2019 Stuff']
   ].map(([id, emoji, name]) => ({id, emoji, name, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');
@@ -323,7 +325,7 @@
         clearTimeout(timer);
         channel.port1.close();
         if (event.data.version === VERSION && event.data.ready) {
-          offline.textContent = 'Redo offline \u2013 ljud, 6 s\u00e5nger och bilder sparade';
+          offline.textContent = 'Redo offline \u2013 ljud, ' + songs.length + ' l\u00e5tar och bilder sparade';
           offline.classList.add('ready');
         }
       };
