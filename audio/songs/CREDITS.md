@@ -1,6 +1,6 @@
 # Fart-song recordings
 
-Seven instrumental melody and riff clips, rendered offline from real
+Six instrumental melody and riff clips, rendered offline from real
 recorded farts. There are no vocals, backing instruments or external audio
 requests. The app plays these finished MP3 files using native HTML audio.
 
@@ -17,18 +17,6 @@ requests. The app plays these finished MP3 files using native HTML audio.
 - Source: https://freesound.org/people/Breviceps/sounds/445997/
 - Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 - SHA-256: `a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2`.
-
-Through the Fire and Flames additionally uses these unchanged recordings in
-its deliberately comic ending:
-
-- Source file: `../katastrofen.mp3` — **Fart 3** by **Under7dude**.
-- Source: https://freesound.org/people/Under7dude/sounds/163381/
-- Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
-- SHA-256: `b637625415830a5baa34b2db1dd2fd6da3f404670516db2aa6a753e157a2d56a`.
-- Source file: `../vulkanen.mp3` — **Blubberfreak Fart 3** by **Blubberfreak**.
-- Source: https://freesound.org/people/Blubberfreak/sounds/732057/
-- Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
-- SHA-256: `c90baedd94619d3d351e556f585dc56067ca9d1f976bfa6ce15f9240ff8a49f6`.
 
 Every note begins with and includes a real wet fart articulation from Blöta's
 first 0.67 seconds. Small changes to the starting point and playback speed
@@ -67,7 +55,7 @@ CC0 license to any referenced composition, release or published song arrangement
 | `en-livstid-i-krig.mp3` | En livstid i krig — Joakim Brodén / Sabaton (2012); short opening lead melody | 17.85 s |
 | `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); instrumental main drop / chorus lead | 23.06 s |
 | `sommartider.mp3` | Sommartider — Gyllene Tider; Per Gessle (1982); title / hej-hej refrain motif | 22.35 s |
-| `through-the-fire-and-flames.mp3` | Through the Fire and Flames — DragonForce; Sam Totman, ZP Theart, Vadim Pruzhanov and Herman Li (Inhuman Rampage, 2006); fast guitar intro followed by an original comic failure | 10.00 s |
+
 
 Greta Gris follows the original two-bar Peppa Pig melody hook, including the
 low G and rising G–B–D–F figure.
@@ -116,39 +104,6 @@ band-endorsed GylleneTider.com archive. That archive identifies itself as
 independent, with song material courtesy of Jimmy Fun Music and Elevator
 Entertainment. Preview images and original music remain outside the app.
 
-Through the Fire and Flames begins with the iconic two-bar acoustic guitar
-figure at its published 200 BPM. The licensed mySongBook/Arobas Music preview
-by Tency explicitly alternates each upper melody note with G3 in sixteenth
-notes. An independent arranger-published Technical Guitar/kiso-ren preview
-matches the sixteen upper melody notes. Two independent readings verified
-both sources; standard-tuned tablature establishes the sounding G3–G4 range,
-which this rendition retains without transposition. One complete two-bar loop
-provides the faithful 2.4-second opening. The original Apple preview confirms C-minor
-pitch material but contains a later mixed passage; the published notation
-determines exact intro timing. The composition credits follow the official
-DragonForce/PIAS recording (the score calls Sam Totman "Ian Totman").
-
-The whole performance lasts exactly ten seconds, with this intentionally
-failing original arrangement after the opening:
-
-| Section | Time | Performance |
-| --- | --- | --- |
-| Faithful guitar hook | 0.04–2.44 s | 32 recorded-fart sixteenth attacks at 200 BPM |
-| Stressed attempt | 2.50–5.15 s | Faster notes, irregular hesitations, short stammers and growing pitch slips |
-| Pitch collapse | 5.15–6.00 s | Dragging last attempts and pitch slides down, ending in surrender |
-| Giving-up pause | 6.00–6.45 s | Complete silence |
-| Wet collapse | 6.45–9.76 s | Overlapping Katastrofen, Vulkanen and Blöta recordings, irregular wet splutters and a decaying tail |
-
-Pitch slides change the playback rate of the real recorded fart body; its wet
-texture stays at natural pitch. The ending uses unlooped real recording
-excerpts, with small playback-speed changes and soft compression of their
-sharp transients. It has no original DragonForce audio, synthesizer, voice,
-drums or backing instrument. Its failing notes, timing and collapse are comic
-arrangement choices. `metadata.json` records each section boundary and every
-performance event, including the ending's sample offsets, rates and gains.
-The final recorded splutter decays naturally; a final fade and digital silence
-ensure a smooth ending before the exact ten-second file boundary.
-
 Baby Shark uses the recognizable D–E–G melody, repeated-note refrain and
 G–G–F-sharp ending, transposed down an octave for the same wet fart instrument.
 The clip contains two verses of that melody, without vocals or an introduction.
@@ -176,16 +131,12 @@ Notation references:
 - [Sommartider officially distributed artist recording](https://www.youtube.com/watch?v=4kVRF0hTeyQ).
 - [Sommartider original 1982 single, band-endorsed archive](https://www.gyllenetider.com/discography/singles/sommartider/).
 - [Song credits supplied by Jimmy Fun Music / Elevator Entertainment](https://www.gyllenetider.com/lyrics/).
-- [Licensed Through the Fire and Flames acoustic-guitar notation preview, mySongBook / Arobas Music](https://www.guitar-pro.com/tabs/t/3864-through-the-fire-and-flames).
-- [Through the Fire and Flames melody notation, Technical Guitar / kiso-ren](https://www.mymusic5.com/technicalguitar/181763).
-- [DragonForce's Inhuman Rampage album page](https://dragonforce.com/release/inhuman-rampage/).
-- [Original Through the Fire and Flames Apple Music release and preview](https://music.apple.com/us/song/1679612971).
-- [Official DragonForce/PIAS recording and composition credits](https://www.youtube.com/watch?v=XkFz_hi2tWY).
+
 
 ## Format, validation and regeneration
 
-All seven files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is 1,588,972 bytes (approximately 1.59 MB). Decoded peak levels
+All six files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
+`audio/mpeg`. Their combined size is 1,468,097 bytes (approximately 1.47 MB). Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
 noise, so idealized note-precision measurements do not describe this mix.
@@ -203,7 +154,7 @@ python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 To regenerate selected songs while preserving the other MP3 files exactly:
 
 ```sh
-python tools/render-songs.py --ffmpeg /path/to/ffmpeg --only through-the-fire-and-flames
+python tools/render-songs.py --ffmpeg /path/to/ffmpeg --only sommartider
 ```
 
 To preview the first eight seconds before replacing the app assets:

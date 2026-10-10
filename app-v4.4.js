@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.7.0';
+  const VERSION = '4.7.1';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -14,14 +14,13 @@
     ['katastrofen', '\u2622\ufe0f', 'Katastrofen', '08']
   ].map(([id, emoji, name, photo]) => ({id, emoji, name, photo, url: './audio/' + id + '.mp3'}));
   const songs = [
-    ['greta-gris', '\u{1f437}', 'Greta Gris'],
-    ['bjornen-sover', '\u{1f43b}', 'Bj\u00f6rnen sover'],
-    ['baby-shark', '\u{1f988}', 'Baby Shark'],
-    ['en-livstid-i-krig', '\u2694\ufe0f', 'En livstid i krig'],
-    ['bromance', '\u{1f3a7}', 'Bromance'],
-    ['sommartider', '\u{1f31e}', 'Sommartider'],
-    ['through-the-fire-and-flames', '\u{1f525}', 'Through the Fire and Flames', 'Ett tappert f\u00f6rs\u00f6k']
-  ].map(([id, emoji, name, caption = 'Fisar i takt']) => ({id, emoji, name, caption, song: true, url: './audio/songs/' + id + '.mp3'}));
+    ['greta-gris', '\u{1f437}', 'Greta Gris', 'Julian Nott'],
+    ['bjornen-sover', '\u{1f43b}', 'Bj\u00f6rnen sover', 'Traditionell'],
+    ['baby-shark', '\u{1f988}', 'Baby Shark', 'Pinkfong'],
+    ['en-livstid-i-krig', '\u2694\ufe0f', 'En livstid i krig', 'Sabaton'],
+    ['bromance', '\u{1f3a7}', 'Bromance', 'Tim Berg (Avicii)'],
+    ['sommartider', '\u{1f31e}', 'Sommartider', 'Gyllene Tider']
+  ].map(([id, emoji, name, caption]) => ({id, emoji, name, caption, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');
   const songGrid = document.getElementById('songs');

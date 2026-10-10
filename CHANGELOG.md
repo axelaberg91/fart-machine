@@ -1,5 +1,13 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.7.1 - Sex låtar med artistnamn
+
+- Removed Through the Fire and Flames, leaving the six approved song recordings
+  unchanged.
+- Replaced "Fisar i takt" with artist or melody credits on the song buttons:
+  Julian Nott, Traditionell, Pinkfong, Sabaton, Tim Berg (Avicii) and Gyllene Tider.
+- Updated the offline cache to Version 4.7.1 with the six current songs.
+
 ## 4.7.0 - Through the Fire and Flames
 
 - Added Through the Fire and Flames by DragonForce as a seventh song. The complete

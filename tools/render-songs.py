@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Render the seven fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Render the six fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
 never loaded by the app. All instrument audio comes from the unchanged CC0
-recordings audio/trumpeten.mp3 and audio/blota.mp3. DragonForce's comic ending
-also uses the unchanged CC0 recordings audio/katastrofen.mp3 and audio/vulkanen.mp3.
+recordings audio/trumpeten.mp3 and audio/blota.mp3.
 """
 import argparse
 import hashlib
@@ -19,14 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SAMPLE_RATE = 44100
 SOURCE_SHA256 = "cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63"
 WET_SHA256 = "a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2"
-COLLAPSE_SOURCES = [
-    dict(file="audio/katastrofen.mp3", title="Fart 3", author="Under7dude",
-         license="CC0-1.0", source_page="https://freesound.org/people/Under7dude/sounds/163381/",
-         sha256="b637625415830a5baa34b2db1dd2fd6da3f404670516db2aa6a753e157a2d56a"),
-    dict(file="audio/vulkanen.mp3", title="Blubberfreak Fart 3", author="Blubberfreak",
-         license="CC0-1.0", source_page="https://freesound.org/people/Blubberfreak/sounds/732057/",
-         sha256="c90baedd94619d3d351e556f585dc56067ca9d1f976bfa6ce15f9240ff8a49f6")
-]
+
 
 
 def score(text):
@@ -73,12 +65,6 @@ SABATON_HOOK = (
     'Ab4:0.75 G4:0.5 F4:2 F4:0.75 G4:0.75 Ab4:0.5 G4:0.125 Ab4:0.125 '
     'G4:0.125 F4:0.125 G4:1.5'
 )
-
-DRAGONFORCE_MELODY = 'C4 D4 Eb4 C4 D4 Eb4 F4 Eb4 G4 Eb4 F4 D4 Eb4 C4 D4 Bb3'
-# The published acoustic guitar line places a G3 sixteenth between every
-# melody sixteenth. One two-bar loop lasts 2.4 seconds at 200 BPM.
-DRAGONFORCE_INTRO = [(note, .25) for melody in DRAGONFORCE_MELODY.split()
-                    for note in (melody, 'G3')]
 
 SONGS = [
     {'id': 'greta-gris',
@@ -174,35 +160,7 @@ SONGS = [
                     'https://www.gyllenetider.com/discography/singles/sommartider/',
                     'https://www.gyllenetider.com/lyrics/',
                     'https://www.youtube.com/watch?v=4kVRF0hTeyQ'],
-     'notes': score(SOMMARTIDER_HOOK)*6},
-    {'id': 'through-the-fire-and-flames',
-     'title': 'Through the Fire and Flames',
-     'bpm': 200,
-     'transpose': 0,
-     'meter': '4/4',
-     'melody': 'Through the Fire and Flames — DragonForce; Sam Totman, ZP Theart, '
-               'Vadim Pruzhanov and Herman Li (Inhuman Rampage, 2006)',
-     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
-     'render_mode': 'guitar_attempt_comedy',
-     'arrangement': 'Ten-second comic performance: one 2.4-second faithful rapid guitar-intro hook; '
-                    'a faster attempt increasingly '
-                    'stutters and slips in pitch, loses momentum, gives up in silence, and '
-                    'ends in a longer wet recorded-fart collapse',
-     'source_notation': 'mySongBook published acoustic-guitar preview: two-bar sixteenth-note '
-                        'figure with G3 between the sixteen melody notes, played once. '
-                        'The melody also matches Technical Guitar / kiso-ren published notation. '
-                        'Sounding G3–G4 register and published 200 BPM retained',
-     'reference_validation': 'Two independent visual readings agree on the melody, recurring '
-                             'G3 and sixteenth-note timing. The official Apple preview confirms '
-                             'C-minor pitch material but contains a later mixed section; exact '
-                             'intro timing follows the published acoustic notation. All timing '
-                             'errors and pitch slides after the opening are intentional comedy',
-     'references': ['https://www.guitar-pro.com/tabs/t/3864-through-the-fire-and-flames',
-                    'https://www.mymusic5.com/technicalguitar/181763',
-                    'https://dragonforce.com/release/inhuman-rampage/',
-                    'https://music.apple.com/us/song/1679612971',
-                    'https://www.youtube.com/watch?v=XkFz_hi2tWY'],
-     'notes': DRAGONFORCE_INTRO}
+     'notes': score(SOMMARTIDER_HOOK)*6}
 ]
 
 
@@ -295,141 +253,11 @@ def render(song, core, wet, base_hz):
     return output, onsets
 
 
-def slipping_note_audio(core, wet, base_hz, hz, duration, index, bend):
-    """Pitch-slide a recorded body; the wet recording remains at natural pitch."""
-    if bend == 0:
-        return note_audio(core, wet, base_hz, hz, duration, index)
-    count = max(1, round(duration*SAMPLE_RATE))
-    time = np.arange(count)/SAMPLE_RATE
-    texture = note_audio(np.zeros_like(core), wet, base_hz, hz, duration, index)
-    # Integrate changing sample-playback rates. There is no oscillator, repeated
-    # waveform or generated instrument under the real recorded fart body.
-    rates = (hz/base_hz)*2**(np.linspace(0, bend, count)/12)
-    positions = np.cumsum(rates)-rates[0]-(.018*SAMPLE_RATE*hz/base_hz)
-    body = sample_playback(core, positions)
-    gain = [0.58, 0.62, 0.54, 0.60, 0.56, 0.64, 0.59][index % 7]
-    envelope = np.maximum(0, np.minimum(time/.003, 1)*
-                          np.minimum((duration-time)/min(.055, duration*.28), 1))
-    return texture+body*gain*envelope
-
-
-def render_dragonforce(song, core, wet, base_hz, ffmpeg):
-    """The new song's comic progression; the other six renderers stay unchanged."""
-    clean, onsets = render(song, core, wet, base_hz)
-    clean_end = .04+sum(beats for _, beats in song['notes'])*60/song['bpm']
-    assert abs(clean_end-2.44) < .000001, 'Verified two-bar opening must last 2.4 seconds'
-    strained_start, strained_end = 2.50, 5.15
-    slipping_end = 6.00
-    collapse_start, collapse_end = 6.45, 9.76
-    output = np.zeros(10*SAMPLE_RATE)
-    output[:len(clean)] = clean
-    for event in onsets:
-        event['stage'] = 'faithful_hook'
-        event['kind'] = 'melody_note'
-        event['bend_semitones'] = 0
-
-    def add_note(name, start, duration, index, stage, bend=0):
-        hz = frequency(name, song['transpose'])
-        note = slipping_note_audio(core, wet, base_hz, hz, duration, index, bend)
-        offset = round(start*SAMPLE_RATE)
-        output[offset:offset+len(note)] += note
-        onsets.append(dict(note=name, kind='melody_note', stage=stage,
-                           rendered_frequency_hz=[round(hz, 4)],
-                           start_seconds=round(start, 6), length_seconds=round(duration, 6),
-                           bend_semitones=round(bend, 4)))
-
-    position, index = strained_start, 0
-    jitter = [0, .009, -.006, .018, -.003, .004, -.009]
-    bends = [0, .6, -.9, 1.5, -2.2, .3, -1.1]
-    while position < strained_end-.04:
-        progress = (position-strained_start)/(strained_end-strained_start)
-        name, beats = song['notes'][index % len(song['notes'])]
-        # Start faster, progressively rush, insert audible hesitations and
-        # interrupt selected notes with tight recorded-fart stammers.
-        pulse = beats*60/song['bpm']/(1.12+.38*progress)
-        if index % 19 == 13:
-            position += .07+.07*progress
-        if position >= strained_end-.04:
-            break
-        repetitions = 3 if index % 17 == 9 else 1
-        for repeat in range(repetitions):
-            if position >= strained_end-.04:
-                break
-            duration = min(.065 if repetitions == 1 else .037,
-                           strained_end-position)
-            bend = bends[(index+repeat) % len(bends)]*(.25+progress)
-            add_note(name, position, duration, index+128+repeat, 'stressed_attempt', bend)
-            position += (.033 if repetitions > 1 else
-                         max(.038, pulse+jitter[index % len(jitter)]*progress))
-        index += 1
-
-    # A few last notes drag down, followed by one completely quiet surrender.
-    last_notes = [song['notes'][i][0] for i in (0, 4, 12)]
-    for index, (name, offset, duration, bend) in enumerate(zip(
-            last_notes, [0, .15, .36], [.12, .17, .40], [-3, -7, -12])):
-        add_note(name, strained_end+offset, duration, index+333, 'pitch_collapse', bend)
-
-    recordings = {'blota.mp3': decode_source(ffmpeg, 'blota.mp3', WET_SHA256)}
-    for source in COLLAPSE_SOURCES:
-        name = Path(source['file']).name
-        recordings[name] = decode_source(ffmpeg, name, source['sha256'])
-    # Each event plays an unlooped real recording excerpt. The long catastrophe
-    # is surrounded by irregular wet splutters, with no voice or accompaniment.
-    splutters = [
-        ('blota.mp3', 0, 0, .55, .90, .63),
-        ('vulkanen.mp3', .25, .89, .61, 1, .70),
-        ('katastrofen.mp3', .40, 0, 2.55, 1.04, .72),
-        ('blota.mp3', .60, .10, .35, 1.10, .54),
-        ('blota.mp3', 1.15, .03, .55, .95, .56),
-        ('vulkanen.mp3', 1.75, .89, .53, .90, .62),
-        ('katastrofen.mp3', 2.10, 1.20, .75, 1.05, .55),
-        ('blota.mp3', 2.50, 0, .48, .70, .60)
-    ]
-    for name, offset, source_start, source_duration, rate, gain in splutters:
-        duration = source_duration/rate
-        time = np.arange(round(duration*SAMPLE_RATE))/SAMPLE_RATE
-        audio = sample_playback(recordings[name], (source_start+time*rate)*SAMPLE_RATE)
-        audio -= np.mean(audio)
-        audio = gain*np.tanh(audio*2.2)
-        envelope = np.minimum(time/.004, 1)*np.minimum((duration-time)/.04, 1)
-        audio *= np.maximum(envelope, 0)
-        start = collapse_start+offset
-        output_offset = round(start*SAMPLE_RATE)
-        output[output_offset:output_offset+len(audio)] += audio
-        onsets.append(dict(note='recorded wet collapse', kind='recorded_fart',
-                           stage='wet_collapse', source_file='audio/'+name,
-                           source_start_seconds=source_start, source_duration_seconds=source_duration,
-                           playback_rate=rate, gain=gain,
-                           start_seconds=round(start, 6), length_seconds=round(duration, 6)))
-    # End with a clean decay, then exact digital silence before the ten-second
-    # deadline. No sample is abruptly truncated by the exported file boundary.
-    fade_start, fade_end = round(9.60*SAMPLE_RATE), round(9.94*SAMPLE_RATE)
-    output[fade_start:fade_end] *= np.linspace(1, 0, fade_end-fade_start)
-    output[fade_end:] = 0
-    output *= .77/np.max(np.abs(output))
-    stages = [
-        dict(id='faithful_hook', start_seconds=.04, end_seconds=round(clean_end, 6),
-             description='Verified guitar-intro notes and sixteenth pulse at 200 BPM'),
-        dict(id='stressed_attempt', start_seconds=round(strained_start, 6),
-             end_seconds=round(strained_end, 6),
-             description='Faster reprise with increasingly irregular timing, stammers and pitch slips'),
-        dict(id='pitch_collapse', start_seconds=round(strained_end, 6),
-             end_seconds=round(slipping_end, 6),
-             description='Dragging final attempts and recorded-note pitch slides down'),
-        dict(id='giving_up_pause', start_seconds=round(slipping_end, 6),
-             end_seconds=round(collapse_start, 6), description='Completely silent surrender'),
-        dict(id='wet_collapse', start_seconds=round(collapse_start, 6),
-             end_seconds=round(collapse_end, 6),
-             description='Long layered real wet farts, including Katastrofen, Vulkanen and Blöta')
-    ]
-    return output, onsets, stages
-
-
 def validate_mp3(ffmpeg, path, onsets):
     raw = run_ffmpeg(ffmpeg, ["-i", str(path), "-ac", "1", "-ar", str(SAMPLE_RATE),
                              "-f", "f32le", "pipe:1"])
     decoded = np.frombuffer(raw, dtype="<f4").astype(float)
-    assert len(decoded) >= SAMPLE_RATE*10, "Song too short"
+    assert len(decoded) > SAMPLE_RATE*10, "Song too short"
     peak = float(np.max(np.abs(decoded)))
     assert 0.1 < peak < 0.99, "Empty or clipping audio"
     # Every note must have an audible attack in the final mixed file. The wet
@@ -476,7 +304,6 @@ def main():
                     source_page="https://freesound.org/people/Breviceps/sounds/445997/",
                     sample=dict(start_seconds=0, end_seconds=0.67, looped=False)),
                     articulation="Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
-                    additional_instruments=COLLAPSE_SOURCES,
                     format=dict(codec="mp3", mime="audio/mpeg", sample_rate=SAMPLE_RATE,
                                 channels=1, bitrate_kbps=96), songs=[])
     prior = {}
@@ -489,11 +316,7 @@ def main():
             assert hashlib.sha256((ROOT / previous["file"]).read_bytes()).hexdigest() == previous["validation"]["sha256"], "Existing song changed"
             metadata["songs"].append(previous)
             continue
-        stages = []
-        if song.get('render_mode') == 'guitar_attempt_comedy':
-            audio, onsets, stages = render_dragonforce(song, core, wet, base_hz, args.ffmpeg)
-        else:
-            audio, onsets = render(song, core, wet, base_hz)
+        audio, onsets = render(song, core, wet, base_hz)
         path = output_dir / (song["id"]+".mp3")
         run_ffmpeg(args.ffmpeg, ["-y", "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1",
                    "-i", "pipe:0", "-c:a", "libmp3lame", "-b:a", "96k", "-id3v2_version", "3",
@@ -505,10 +328,7 @@ def main():
             dict(file="audio/songs/"+path.name,
                  arrangement=song.get("arrangement", "Two complete melody verses" if song["id"] == "baby-shark" else "One complete melody verse")
                  + " with wet recorded fart articulation; no voice or accompaniment",
-                 notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report) |
-                 (dict(stages=stages, performance_events=onsets,
-                       additional_source_files=[source['file'] for source in COLLAPSE_SOURCES])
-                  if stages else {}))
+                 notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report))
         print(f"{path.name}: {report['duration_seconds']} s, {report['bytes']} bytes, "
               f"peak {report['peak']}, {report['audible_recorded_attacks']} audible wet attacks", flush=True)
     (output_dir / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
