@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the eight fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Render the five fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
@@ -25,35 +25,12 @@ def score(text):
     return [(token.split(":")[0], float(token.split(":")[1])) for token in text.split()]
 
 
-# Original four-bar organ-hook chord changes. Held chords are rearticulated
-# as eighth-note fart stabs; neither source waveform is looped or sustained.
-GHOSTS_HOOK = [(chord, 0.5) for chord, beats in
-               [("Bb3+Db4+F4", 4), ("Ab3+C4+Eb4", 1.5),
-                ("Gb3+Bb3+Db4", 2), ("G3+Bb3+Eb4", 8.5)]
-               for _ in range(round(beats/0.5))]
-
-PAW_PATROL_HOOK = (
-    'B4:1 G4:0.5 G4:2.5 B4:1 G4:0.5 G4:0.5 G4:1.5 E4:0.5 '
-    'G4:1 G4:1 G4:1 G4:0.5 B4:1 A4:2.5 R:0.5 G4:0.5 '
-    'B4:1 B4:1 G4:1 E4:0.5 G4:1 G4:1.5 R:2 E4:1 '
-    'G4:1 G4:1 E4:0.5 A4:2.5 R:2 B4:1 B4:1 G4:1 '
-    'E4:0.5 G4:1.5 G4:1 G4:0.5 R:1 E4:0.5 E4:1 G4:1 '
-    'G4:1 E4:0.5 A4:4.5'
-)
-
-LOVER_REFRAIN = (
-    'A4:0.5 B4:0.25 A4:0.25 G4:1 B4:0.25 A4:0.25 G4:1 B4:0.25 '
-    'A4:0.25 G4:1 B4:0.25 A4:0.25 G4:2.5 R:1.5 R:1.5 B3:0.5 '
-    'B3:1'
-)
-
-PUERTO_RICO_HOOK = (
-    'C5:0.5 C5:0.5 D5:0.5 F5:0.75 F5:0.25 R:1.5 '
-    'F5:0.5 C5:0.5 D5:0.5 R:3 C5:0.5 D5:0.5 F5:0.5 D5:0.5 R:0.5 '
-    'F5:0.5 R:0.25 C5:0.75 C5:0.5 D5:0.5 R:2.5 '
-    'C5:0.5 C5:0.5 D5:0.5 F5:0.75 F5:0.25 R:1.5 '
-    'F5:0.5 C5:0.5 D5:0.5 R:3 C5:0.5 D5:0.5 F5:0.5 D5:0.5 R:0.5 '
-    'F5:0.5 R:0.25 C5:0.75 C5:0.5 D5:0.5 R:1'
+BROMANCE_PICKUP = 'E4:0.5 C#4:0.5 E4:0.5 F#4:0.5'
+BROMANCE_HOOK = (
+    'G#4:2 E4:0.5 C#4:0.5 E4:0.5 F#4:0.5 '
+    'C#4:2 E4:0.5 C#4:0.5 E4:0.5 F#4:0.5 '
+    'G#4:1.5 F#4:1 E4:0.5 F#4:0.5 G#4:0.5 '
+    'E4:2 E4:0.5 C#4:0.5 E4:0.5 F#4:0.5'
 )
 
 PEPPA_HOOK = (
@@ -84,47 +61,6 @@ SABATON_HOOK = (
 )
 
 SONGS = [
-    {'id': 'paw-patrol',
-     'title': 'Paw Patrol',
-     'bpm': 120,
-     'transpose': -12,
-     'meter': '4/4',
-     'melody': 'PAW Patrol Theme — Jeff Cohen, Molly Kaye, Scott Krippayne and Michael ‘Smidi’ Smith '
-               '(2013)',
-     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
-     'arrangement': 'Twelve-bar opening melody hook in G major, transposed down one octave',
-     'references': ['https://www.virtualsheetmusic.com/score/HL-426310.html',
-                    'https://vivace-music.org/pdfs/paw_patrol_medium.pdf'],
-     'notes': score(PAW_PATROL_HOOK)},
-    {'id': 'lover',
-     'title': 'Lover',
-     'bpm': 111,
-     'transpose': -12,
-     'meter': '12/8 (quarter-note tempo; dotted-quarter = 74)',
-     'melody': 'Lover — Taylor Swift (2019)',
-     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
-     'notes': score(LOVER_REFRAIN)*3,
-     'arrangement': 'Short title refrain, repeated three times; printed ties and rests preserved',
-     'references': ['https://www.musicnotes.com/sheetmusic/taylor-swift/lover/MN0200599',
-                    'https://sheetsfree.com/sheets/T/Taylor%20Swift%20-%20Lover.pdf']},
-    {'id': 'puerto-rico',
-     'title': 'The Puerto Rico Song',
-     'bpm': 109,
-     'transpose': -24,
-     'meter': '4/4',
-     'melody': 'The Puerto Rico Song — Saxboy Billy / William Stiteler (AI-assisted release, 2026)',
-     'composition_rights': 'No CC0 license asserted for the referenced composition or release; '
-                           'CC0 applies only to the source fart recordings',
-     'arrangement': 'Opening vocal melody hook repeated twice; initial 1.5-beat rest removed, '
-                    'printed timing and internal rests retained',
-     'source_notation': 'Note-Store Piano & Vocal Easy PVE0328631, free first-page preview, '
-                        'measures 5–8; written C5–F5 rendered C3–F3, one octave below the '
-                        'C4–F4 pitches independently verified in the official release preview',
-     'references': ['https://linktr.ee/saxboybilly18',
-                    'https://music.apple.com/us/album/the-puerto-rico-song/6781297349?i=6781297353',
-                    'https://note-store.com/notes/saxboy-billy/the-puerto-rico-song/piano-vocal-easy/',
-                    'https://note-store.com/api/preview_pdf_download/328631/'],
-     'notes': score(PUERTO_RICO_HOOK)},
     {'id': 'greta-gris',
      'title': 'Greta Gris',
      'bpm': 144,
@@ -170,18 +106,24 @@ SONGS = [
                     'https://gtptabs.com/tabs/19/sabaton/en-livstid-i-krig.html',
                     'https://gtptabs.com/tabs/download/55609.html',
                     'https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html']},
-    {'id': 'ghosts-n-stuff',
-     'title': 'Ghosts ’n’ Stuff',
-     'bpm': 126,
-     'transpose': -5,
-     'meter': '4/4',
-     'melody': 'Ghosts ’n’ Stuff — Joel Zimmerman (deadmau5) and Rob Swire (2009)',
+    {'id': 'bromance',
+     'title': 'Bromance',
+     'bpm': 128,
+     'transpose': -12,
+     'meter': '4/4, two-beat opening pickup',
+     'melody': 'Bromance — Tim Berg / Tim Bergling (Avicii, 2010)',
      'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
-     'arrangement': 'Four-bar organ-hook harmony, repeated three times; its held chords rearticulated as '
-                    'short wet fart chord stabs at eighth-note intervals',
-     'references': ['https://www.musicnotes.com/sheetmusic/deadmau5/ghosts-n-stuff/MN0083548',
-                    'https://lauriegoldsteincsp4project.wordpress.com/2012/03/10/recreation-and-analysis-of-deadmau5-ghosts-n-stuff/'],
-     'notes': GHOSTS_HOOK*3}
+     'arrangement': 'Instrumental piano hook: initial two-beat pickup once, followed by four-bar '
+                    'melody repeated three times at the published arrangement tempo of 128 BPM',
+     'source_notation': 'Note-Store Piano Solo arrangement by Ivan, free first-page preview 125466, '
+                        'opening pickup and measures 2–5; written C#4–G#4 rendered C#3–G#3. '
+                        'The instrumental hook is shared by Bromance and Seek Bromance; '
+                        'the later vocal melody is omitted',
+     'references': ['https://sirupmusic.com/releases/bromance-aviciis-arena-mix/',
+                    'https://www.qobuz.com/us-en/album/bromance-remixes-pt-2-tim-berg/7640130863125',
+                    'https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174',
+                    'https://note-store.com/api/preview_pdf_download/125466/'],
+     'notes': score(BROMANCE_PICKUP)+score(BROMANCE_HOOK)*3}
 ]
 
 

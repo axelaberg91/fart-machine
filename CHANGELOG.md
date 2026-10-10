@@ -1,5 +1,15 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.5.1 - Fem låtar och Bromance
+
+- Removed Lover, Paw Patrol and The Puerto Rico Song, and replaced Ghosts ’n’ Stuff
+  with Bromance by Avicii.
+- The five songs are Greta Gris, Björnen sover, Baby Shark,
+  En livstid i krig and Bromance, in that order.
+- Kept the four retained recordings unchanged and preserved one-song playback,
+  Stoppa allt, volume and Fisorkester for the nine original sound pads.
+- Updated the offline cache to Version 4.5.1 with all five current songs.
+
 ## 4.5.0 - Åtta låtar med fisar
 
 - Replaced Blinka lilla stjärna, Bä bä vita lamm, Broder Jakob and Imse vimse
