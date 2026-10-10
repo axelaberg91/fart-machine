@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.6.1';
+  const VERSION = '4.7.0';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -19,8 +19,9 @@
     ['baby-shark', '\u{1f988}', 'Baby Shark'],
     ['en-livstid-i-krig', '\u2694\ufe0f', 'En livstid i krig'],
     ['bromance', '\u{1f3a7}', 'Bromance'],
-    ['sommartider', '\u{1f31e}', 'Sommartider']
-  ].map(([id, emoji, name]) => ({id, emoji, name, song: true, url: './audio/songs/' + id + '.mp3'}));
+    ['sommartider', '\u{1f31e}', 'Sommartider'],
+    ['through-the-fire-and-flames', '\u{1f525}', 'Through the Fire and Flames', 'Ett tappert f\u00f6rs\u00f6k']
+  ].map(([id, emoji, name, caption = 'Fisar i takt']) => ({id, emoji, name, caption, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');
   const songGrid = document.getElementById('songs');
@@ -120,7 +121,7 @@
     name.className = 'name';
     name.textContent = song.name;
     const badge = document.createElement('small');
-    badge.textContent = 'Fisar i takt';
+    badge.textContent = song.caption;
     const burst = document.createElement('span');
     burst.className = 'burst';
     burst.setAttribute('aria-hidden', 'true');
@@ -163,7 +164,7 @@
     if (sound.song) {
       sound.button.setAttribute('aria-pressed', String(isActive));
       sound.button.setAttribute('aria-label', (isActive ? 'Stoppa ' : 'Spela ') + sound.name);
-      sound.badge.textContent = isActive ? 'Tryck f\u00f6r att stoppa' : 'Fisar i takt';
+      sound.badge.textContent = isActive ? 'Tryck f\u00f6r att stoppa' : sound.caption;
     }
   }
 

@@ -1,5 +1,15 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.7.0 - Through the Fire and Flames
+
+- Added Through the Fire and Flames by DragonForce as a seventh song. The complete
+  ten-second clip moves from a faithful short guitar hook into intentional
+  stuttering, falling notes, a pause and a comic wet-fart collapse.
+- Added the card caption "Ett tappert försök" and kept all six existing song
+  recordings exactly unchanged.
+- Preserved native playback and one-song switching, including with Fisorkester.
+- Updated the offline cache to Version 4.7.0 with all seven songs.
+
 ## 4.6.1 - Sommartider
 
 - Replaced Sommar och sol with Sommartider, using its recurring title/chorus
