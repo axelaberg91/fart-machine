@@ -1,0 +1,1103 @@
+{
+  "instrument": {
+    "file": "audio/trumpeten.mp3",
+    "sha256": "cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63",
+    "title": "fart,bum,trumpet,poop.wav",
+    "author": "sorce",
+    "license": "CC0-1.0",
+    "source_page": "https://freesound.org/people/sorce/sounds/431621/",
+    "sample": {
+      "start_seconds": 1.49,
+      "end_seconds": 1.94,
+      "base_frequency_hz": 250.873629,
+      "looped": false
+    }
+  },
+  "wet_instrument": {
+    "file": "audio/blota.mp3",
+    "sha256": "a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2",
+    "title": "Diarrhea",
+    "author": "Breviceps",
+    "license": "CC0-1.0",
+    "source_page": "https://freesound.org/people/Breviceps/sounds/445997/",
+    "sample": {
+      "start_seconds": 0,
+      "end_seconds": 0.67,
+      "looped": false
+    }
+  },
+  "articulation": "Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
+  "format": {
+    "codec": "mp3",
+    "mime": "audio/mpeg",
+    "sample_rate": 44100,
+    "channels": 1,
+    "bitrate_kbps": 96
+  },
+  "songs": [
+    {
+      "id": "blinka-lilla-stjarna",
+      "title": "Blinka lilla stjärna",
+      "bpm": 138,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: Ah! vous dirai-je, maman",
+      "references": [
+        "https://ciss.se/munspel/barnvisor.html"
+      ],
+      "file": "audio/songs/blinka-lilla-stjarna.mp3",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 21.0696,
+        "peak": 0.79716,
+        "rms": 0.138625,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 42,
+        "minimum_attack_rms": 0.143671,
+        "bytes": 253802,
+        "sha256": "d2435b5165c4be32f638eb21a81e7ace3c400a44717a33f9304012aca688e1a4"
+      }
+    },
+    {
+      "id": "ba-ba-vita-lamm",
+      "title": "Bä bä vita lamm",
+      "bpm": 104,
+      "transpose": -10,
+      "meter": "2/4",
+      "melody": "Alice Tegnér, Sjung med oss, mamma! (1892), no. 5",
+      "references": [
+        "https://runeberg.org/sjungmamma/1/0010.html",
+        "https://runeberg.org/sjungmamma/1/0011.html",
+        "https://www.spelapiano.org/noter/ba-ba-vita-lamm.html"
+      ],
+      "file": "audio/songs/ba-ba-vita-lamm.mp3",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "C5",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "C5",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "C4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "C5",
+          "beats": 1.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 1.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "D5",
+          "beats": 1.0
+        },
+        {
+          "note": "Bb4",
+          "beats": 1.0
+        },
+        {
+          "note": "C5",
+          "beats": 1.0
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "Bb4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "R",
+          "beats": 1.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 18.6615,
+        "peak": 0.785157,
+        "rms": 0.137487,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 42,
+        "minimum_attack_rms": 0.134837,
+        "bytes": 224953,
+        "sha256": "292de705fa48573456adc7ab99340e40a5d56ee0ba90ea81297270746cd05fd6"
+      }
+    },
+    {
+      "id": "broder-jakob",
+      "title": "Broder Jakob",
+      "bpm": 116,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: Frère Jacques",
+      "references": [
+        "https://www.skolesaga.no/musikk-8/musikk-8-1-1"
+      ],
+      "file": "audio/songs/broder-jakob.mp3",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 16.7517,
+        "peak": 0.823403,
+        "rms": 0.139457,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 32,
+        "minimum_attack_rms": 0.140127,
+        "bytes": 202049,
+        "sha256": "2658917d78cb77755d399671b2ba031d61ae854c5a2d4c65bb7a9721a4b0629c"
+      }
+    },
+    {
+      "id": "imse-vimse-spindel",
+      "title": "Imse vimse spindel",
+      "bpm": 300,
+      "transpose": -5,
+      "meter": "6/8 (tempo counts eighth notes)",
+      "melody": "Traditional: Itsy Bitsy Spider",
+      "references": [
+        "https://www.bethsnotesplus.com/wp-content/uploads/2024/11/Itsy-Bitsy-Spider.pdf"
+      ],
+      "file": "audio/songs/imse-vimse-spindel.mp3",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 6.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 3.0
+        },
+        {
+          "note": "G4",
+          "beats": 3.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 6.0
+        },
+        {
+          "note": "C4",
+          "beats": 3.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 3.0
+        },
+        {
+          "note": "G3",
+          "beats": 2.0
+        },
+        {
+          "note": "G3",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 3.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 5.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 19.4,
+        "peak": 0.808378,
+        "rms": 0.139033,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 47,
+        "minimum_attack_rms": 0.136081,
+        "bytes": 233715,
+        "sha256": "841b07ca41b084b18b3561518d29bf629fa3651f4067a7ea7a34b2168e19882d"
+      }
+    },
+    {
+      "id": "bjornen-sover",
+      "title": "Björnen sover",
+      "bpm": 138,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: Gubben Noak / Björnen sover",
+      "references": [
+        "https://ciss.se/munspel/barnvisor.html"
+      ],
+      "file": "audio/songs/bjornen-sover.mp3",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 4.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 2.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 4.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 21.0696,
+        "peak": 0.827693,
+        "rms": 0.137342,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 38,
+        "minimum_attack_rms": 0.146523,
+        "bytes": 253788,
+        "sha256": "7cf0cc79156bfa228a9ec0a089b4ea172396e867a6a83c6aa16b4546a26264b8"
+      }
+    },
+    {
+      "id": "london-bridge",
+      "title": "London Bridge",
+      "bpm": 120,
+      "transpose": -5,
+      "meter": "4/4",
+      "melody": "Traditional: London Bridge Is Falling Down",
+      "references": [
+        "https://www.8notes.com/scores/18427.asp"
+      ],
+      "file": "audio/songs/london-bridge.mp3",
+      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "notes": [
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 1.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "F4",
+          "beats": 1.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "D4",
+          "beats": 2.0
+        },
+        {
+          "note": "G4",
+          "beats": 2.0
+        },
+        {
+          "note": "E4",
+          "beats": 1.0
+        },
+        {
+          "note": "C4",
+          "beats": 3.0
+        }
+      ],
+      "validation": {
+        "duration_seconds": 16.2,
+        "peak": 0.797251,
+        "rms": 0.123932,
+        "clipping_samples": 0,
+        "audible_recorded_attacks": 24,
+        "minimum_attack_rms": 0.149803,
+        "bytes": 195467,
+        "sha256": "f786691267e06048486101914cab8c0eba8af0d4926561bde5336bf56385e4fc"
+      }
+    }
+  ]
+}
