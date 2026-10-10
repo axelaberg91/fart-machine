@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = '4.4.1';
+const VERSION = '4.4.2';
 const CACHE = 'fart-machine-v' + VERSION;
 const SOUND_IDS = ['smygaren','kanonen','blota','trumpeten','ankan','vulkanen','snabbisen','raketen','katastrofen'];
-const SONG_IDS = ['blinka-lilla-stjarna','ba-ba-vita-lamm','broder-jakob','imse-vimse-spindel','bjornen-sover','london-bridge'];
+const SONG_IDS = ['blinka-lilla-stjarna','ba-ba-vita-lamm','broder-jakob','imse-vimse-spindel','bjornen-sover','baby-shark'];
 const ASSETS = ['./','./index.html','./app-v4.4.js','./theme-v4.css','./manifest.webmanifest','./icon.svg',...SOUND_IDS.map(id => './audio/' + id + '.mp3'),...SONG_IDS.map(id => './audio/songs/' + id + '.mp3'),...Array.from({length: 9}, (_, i) => './photos/photo-' + String(i+1).padStart(2, '0') + '.webp')];
 self.addEventListener('install', event => {
   event.waitUntil((async () => {

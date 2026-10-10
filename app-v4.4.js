@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '4.4.1';
+  const VERSION = '4.4.2';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -19,7 +19,7 @@
     ['broder-jakob', '\u{1f514}', 'Broder Jakob'],
     ['imse-vimse-spindel', '\u{1f577}\ufe0f', 'Imse vimse spindel'],
     ['bjornen-sover', '\u{1f43b}', 'Bj\u00f6rnen sover'],
-    ['london-bridge', '\u{1f309}', 'London Bridge']
+    ['baby-shark', '\u{1f988}', 'Baby Shark']
   ].map(([id, emoji, name]) => ({id, emoji, name, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');
@@ -140,6 +140,7 @@
         debug('Stoppad ' + song.name);
       } else if (preview) {
         if (!layer.checked) stopAll();
+        else stopSongs();
         song.previewTimer = setTimeout(() => {
           song.previewTimer = null;
           updateButton(song);
@@ -199,6 +200,15 @@
     updateButton(voice.sound);
   }
 
+  function stopSongs() {
+    [...voices].filter(voice => voice.sound.song).forEach(finish);
+    songs.forEach(song => {
+      clearTimeout(song.previewTimer);
+      song.previewTimer = null;
+      updateButton(song);
+    });
+  }
+
   function stopAll() {
     [...voices].forEach(finish);
     if (testPlayer) testPlayer.pause();
@@ -222,7 +232,10 @@
 
   function play(sound) {
     if (!layer.checked) stopAll();
-    else if (testPlayer) testPlayer.pause();
+    else {
+      if (sound.song) stopSongs();
+      if (testPlayer) testPlayer.pause();
+    }
     while (voices.size >= 12) finish(voices.values().next().value);
     // A fresh native player avoids stale/paused audio contexts after iPad screen lock.
     // Never connect this element to Web Audio: that would reintroduce the failing path.

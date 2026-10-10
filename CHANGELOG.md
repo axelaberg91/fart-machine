@@ -1,5 +1,12 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.4.2 - En sång i taget och Baby Shark
+
+- Starting a new song stops the previous song, including a pending start, even
+  with Fisorkester enabled. Tapping the active song again still stops it.
+- Replaced London Bridge with Baby Shark using the approved wet fart instrument.
+- Updated the offline cache so the replacement and playback rules work offline.
+
 ## 4.4.1 - Barnsånger med blötare fisar
 
 - Added six song buttons: Blinka lilla stjärna, Bä bä vita lamm, Broder Jakob,

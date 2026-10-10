@@ -1,6 +1,6 @@
 # Fart-song recordings
 
-Six complete, solo instrumental melody verses, rendered offline from two real
+Six solo instrumental melody clips, rendered offline from two real
 recorded farts. There are no voices, backing instruments or external audio
 requests. The app plays these finished MP3 files using native HTML audio.
 
@@ -35,8 +35,9 @@ prevent clicks. No oscillator or added instrument produces the melody.
 
 ## Melodies
 
-These are new solo sampled-fart renditions of the underlying traditional or
-public-domain melodies. No modern performance or accompaniment is sampled.
+These are new solo sampled-fart renditions of the melodies below. The only
+sampled audio is the two CC0 fart recordings credited above. No modern song
+performance or accompaniment is sampled.
 The notation links below were used to verify melody notes; their page layouts,
 modern arrangements, harmonies and audio are not included.
 
@@ -47,10 +48,16 @@ modern arrangements, harmonies and audio are not included.
 | `broder-jakob.mp3` | Broder Jakob / Frère Jacques (traditional) | 16.75 s |
 | `imse-vimse-spindel.mp3` | Imse vimse spindel / Itsy Bitsy Spider (traditional) | 19.40 s |
 | `bjornen-sover.mp3` | Björnen sover / Gubben Noak (traditional) | 21.07 s |
-| `london-bridge.mp3` | London Bridge Is Falling Down (traditional) | 16.20 s |
+| `baby-shark.mp3` | Baby Shark, children's chant popularized by Pinkfong; two melody verses | 17.34 s |
 
 **Bä bä vita lamm uses Alice Tegnér's Swedish melody**, which is different from
 Blinka lilla stjärna and the English Baa, Baa, Black Sheep melody.
+
+Baby Shark uses the recognizable D–E–G melody, repeated-note refrain and
+G–G–F-sharp ending, transposed down an octave for the same wet fart instrument.
+The clip contains two verses of that melody, without vocals or an introduction.
+The CC0 licenses above cover the source fart recordings; they do not assert a
+license for any Pinkfong recording, arrangement or other Baby Shark material.
 
 Notation references:
 
@@ -60,12 +67,14 @@ Notation references:
 - [Blinka lilla stjärna and Björnen sover notation](https://ciss.se/munspel/barnvisor.html).
 - [Broder Jakob opening notes](https://www.skolesaga.no/musikk-8/musikk-8-1-1).
 - [Itsy Bitsy Spider melody notation](https://www.bethsnotesplus.com/wp-content/uploads/2024/11/Itsy-Bitsy-Spider.pdf).
-- [London Bridge melody notation](https://www.8notes.com/scores/18427.asp).
+- [Baby Shark melody edition](https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377).
+- [Hal Leonard's Baby Shark score credits](https://www.stantons.com/scores/03746512.pdf).
+- [Baby Shark note timing reference](https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html).
 
 ## Format, validation and regeneration
 
 All six files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is approximately 1.36 MB. Decoded peak levels
+`audio/mpeg`. Their combined size is approximately 1.38 MB. Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. Unlike the earlier tonal
 loop rendition, the wet recording deliberately retains its natural pitch and
@@ -79,6 +88,12 @@ with Python, NumPy and FFmpeg:
 
 ```sh
 python tools/render-songs.py --ffmpeg /path/to/ffmpeg
+```
+
+To regenerate one selected song while preserving the other MP3 files exactly:
+
+```sh
+python tools/render-songs.py --ffmpeg /path/to/ffmpeg --only baby-shark
 ```
 
 To preview the first eight seconds before replacing the app assets:

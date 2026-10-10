@@ -979,32 +979,22 @@
       }
     },
     {
-      "id": "london-bridge",
-      "title": "London Bridge",
-      "bpm": 120,
-      "transpose": -5,
+      "id": "baby-shark",
+      "title": "Baby Shark",
+      "bpm": 112,
+      "transpose": -12,
       "meter": "4/4",
-      "melody": "Traditional: London Bridge Is Falling Down",
+      "melody": "Children's melody: Baby Shark (traditional chant, popularized by Pinkfong)",
       "references": [
-        "https://www.8notes.com/scores/18427.asp"
+        "https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377",
+        "https://www.stantons.com/scores/03746512.pdf",
+        "https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html"
       ],
-      "file": "audio/songs/london-bridge.mp3",
-      "arrangement": "One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+      "file": "audio/songs/baby-shark.mp3",
+      "arrangement": "Two complete melody verses with wet recorded fart articulation; no voice or accompaniment",
       "notes": [
         {
-          "note": "G4",
-          "beats": 1.5
-        },
-        {
-          "note": "A4",
-          "beats": 0.5
-        },
-        {
-          "note": "G4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
+          "note": "D4",
           "beats": 1.0
         },
         {
@@ -1012,11 +1002,115 @@
           "beats": 1.0
         },
         {
-          "note": "F4",
-          "beats": 1.0
+          "note": "G4",
+          "beats": 0.5
         },
         {
           "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
           "beats": 2.0
         },
         {
@@ -1028,75 +1122,127 @@
           "beats": 1.0
         },
         {
-          "note": "F4",
-          "beats": 2.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
           "note": "G4",
-          "beats": 2.0
-        },
-        {
-          "note": "G4",
-          "beats": 1.5
-        },
-        {
-          "note": "A4",
           "beats": 0.5
         },
         {
           "note": "G4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
-        },
-        {
-          "note": "E4",
-          "beats": 1.0
-        },
-        {
-          "note": "F4",
-          "beats": 1.0
+          "beats": 0.5
         },
         {
           "note": "G4",
-          "beats": 2.0
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
         },
         {
           "note": "D4",
-          "beats": 2.0
-        },
-        {
-          "note": "G4",
-          "beats": 2.0
+          "beats": 0.5
         },
         {
           "note": "E4",
-          "beats": 1.0
+          "beats": 0.5
         },
         {
-          "note": "C4",
-          "beats": 3.0
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "D4",
+          "beats": 0.5
+        },
+        {
+          "note": "E4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.25
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "G4",
+          "beats": 0.5
+        },
+        {
+          "note": "F#4",
+          "beats": 2.0
         }
       ],
       "validation": {
-        "duration_seconds": 16.2,
-        "peak": 0.797251,
-        "rms": 0.123932,
+        "duration_seconds": 17.3429,
+        "peak": 0.838604,
+        "rms": 0.152212,
         "clipping_samples": 0,
-        "audible_recorded_attacks": 24,
-        "minimum_attack_rms": 0.149803,
-        "bytes": 195467,
-        "sha256": "f786691267e06048486101914cab8c0eba8af0d4926561bde5336bf56385e4fc"
+        "audible_recorded_attacks": 60,
+        "minimum_attack_rms": 0.139786,
+        "bytes": 208943,
+        "sha256": "f24b28f778462916fb52c62bd6dd88f3767e05433ba64400ab8a74fa6001b8f7"
       }
     }
   ]

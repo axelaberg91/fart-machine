@@ -33,7 +33,11 @@ BROTHER_B = "E4:1 F4:1 G4:2"
 BROTHER_C = "G4:0.5 A4:0.5 G4:0.5 F4:0.5 E4:1 C4:1"
 BROTHER_D = "C4:1 G3:1 C4:2"
 BEAR_A = "C4:1 C4:1 C4:1 E4:1 D4:1 D4:1 D4:1 F4:1 E4:1 E4:1 D4:1 D4:1 C4:4"
-LONDON_A = "G4:1.5 A4:0.5 G4:1 F4:1 E4:1 F4:1 G4:2"
+BABY_SHARK_REFRAIN = "G4:0.5 G4:0.5 G4:0.5 G4:0.25 G4:0.5 G4:0.25 G4:0.5"
+BABY_SHARK_VERSE = " ".join(["D4:1 E4:1", BABY_SHARK_REFRAIN,
+                            "D4:0.5 E4:0.5", BABY_SHARK_REFRAIN,
+                            "D4:0.5 E4:0.5", BABY_SHARK_REFRAIN,
+                            "G4:0.5 G4:0.5 F#4:2"])
 
 SONGS = [
     dict(id="blinka-lilla-stjarna", title="Blinka lilla stjärna", bpm=138,
@@ -66,11 +70,13 @@ SONGS = [
          notes=score(" ".join([BEAR_A,
              "E4:1 E4:1 E4:1 E4:1 G4:2 F4:2 D4:1 D4:1 D4:1 D4:1 F4:2 E4:2", BEAR_A])),
          references=["https://ciss.se/munspel/barnvisor.html"]),
-    dict(id="london-bridge", title="London Bridge", bpm=120,
-         transpose=-5, meter="4/4", melody="Traditional: London Bridge Is Falling Down",
-         notes=score(" ".join([LONDON_A, "D4:1 E4:1 F4:2 E4:1 F4:1 G4:2", LONDON_A,
-                               "D4:2 G4:2 E4:1 C4:3"])),
-         references=["https://www.8notes.com/scores/18427.asp"]),
+    dict(id="baby-shark", title="Baby Shark", bpm=112,
+         transpose=-12, meter="4/4",
+         melody="Children's melody: Baby Shark (traditional chant, popularized by Pinkfong)",
+         notes=score(" ".join([BABY_SHARK_VERSE, BABY_SHARK_VERSE])),
+         references=["https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377",
+                     "https://www.stantons.com/scores/03746512.pdf",
+                     "https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html"]),
 ]
 
 
@@ -186,6 +192,8 @@ def main():
     parser.add_argument("--ffmpeg", default="ffmpeg")
     parser.add_argument("--audition", type=Path,
                         help="Render only the first 8 seconds of Blinka to this MP3; leave app assets untouched")
+    parser.add_argument("--only", choices=[song["id"] for song in SONGS],
+                        help="Regenerate only this song and its metadata, preserving the other MP3 files exactly")
     args = parser.parse_args()
     output_dir = ROOT / "audio/songs"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -209,7 +217,16 @@ def main():
                     articulation="Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
                     format=dict(codec="mp3", mime="audio/mpeg", sample_rate=SAMPLE_RATE,
                                 channels=1, bitrate_kbps=96), songs=[])
+    prior = {}
+    if args.only:
+        prior_metadata = json.loads((output_dir / "metadata.json").read_text(encoding="utf-8"))
+        prior = {song["id"]: song for song in prior_metadata["songs"]}
     for song in SONGS:
+        if args.only and song["id"] != args.only:
+            previous = prior[song["id"]]
+            assert hashlib.sha256((ROOT / previous["file"]).read_bytes()).hexdigest() == previous["validation"]["sha256"], "Existing song changed"
+            metadata["songs"].append(previous)
+            continue
         audio, onsets = render(song, core, wet, base_hz)
         path = output_dir / (song["id"]+".mp3")
         run_ffmpeg(args.ffmpeg, ["-y", "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1",
@@ -219,7 +236,9 @@ def main():
                    str(path)], audio.astype("<f4").tobytes())
         report = validate_mp3(args.ffmpeg, path, onsets)
         metadata["songs"].append({k: v for k, v in song.items() if k != "notes"} |
-            dict(file="audio/songs/"+path.name, arrangement="One complete melody verse with wet recorded fart articulation; no voice or accompaniment",
+            dict(file="audio/songs/"+path.name,
+                 arrangement=("Two complete melody verses" if song["id"] == "baby-shark" else "One complete melody verse")
+                 + " with wet recorded fart articulation; no voice or accompaniment",
                  notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report))
         print(f"{path.name}: {report['duration_seconds']} s, {report['bytes']} bytes, "
               f"peak {report['peak']}, {report['audible_recorded_attacks']} audible wet attacks", flush=True)

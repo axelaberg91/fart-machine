@@ -13,15 +13,17 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '4.4.1');
+assert.equal(version, '4.4.2');
 assert.ok(assets.includes('./app-v4.4.js'));
 assert.equal(assets.filter(asset => asset.startsWith('./audio/songs/')).length, 6);
+assert.ok(assets.includes('./audio/songs/baby-shark.mp3'));
+assert.ok(!assets.includes('./audio/songs/london-bridge.mp3'));
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
 assert.equal(new Set(assets).size, assets.length);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 4\.4\.1/);
+assert.match(html, /Version 4\.4\.2/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);

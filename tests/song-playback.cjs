@@ -73,7 +73,7 @@ async function playAndWait(page, selector) {
   await page.waitForFunction(count => window.__mediaTest.playing.length > count, before, { timeout: 15000 });
   const state = await page.evaluate(() => ({ call: window.__mediaTest.calls.at(-1), played: window.__mediaTest.playing.at(-1) }));
   assert.equal(state.call.click?.trusted, true, 'play() must be called during a real user click');
-  assert.ok(state.call.click.id, 'play() must be called synchronously before the click microtask ends');
+  assert.ok(state.call.click.id, 'play() must be called synchronously within the trusted button callback');
   assert.ok(Number.isFinite(state.played.duration) && state.played.duration > 0, 'actual browser decoder must read a nonempty audio recording');
   return state;
 }
@@ -83,7 +83,7 @@ async function main() {
   for (const name of ['app-v4.4.js', 'sw.js']) new vm.Script(fs.readFileSync(path.join(root, name), 'utf8'), { filename: name });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(html, /app-v4\.4\.js/);
-  assert.match(html, /Version 4\.4\.1/);
+  assert.match(html, /Version 4\.4\.2/);
   console.log('PASS syntax and version references');
 
   const server = http.createServer((request, response) => {
@@ -112,6 +112,8 @@ async function main() {
     await check('six song buttons and nine original pads expose accessible names', async () => {
       assert.equal(songs.length, 6);
       assert.equal(new Set(songs.map(song => song.id)).size, 6);
+      assert.ok(songs.some(song => song.id === 'baby-shark' && song.name === 'Baby Shark'));
+      assert.ok(songs.every(song => song.id !== 'london-bridge'));
       assert.equal(pads.length, 9);
       for (const song of songs) {
         const button = page.locator('[data-song="' + song.id + '"]');
@@ -126,21 +128,29 @@ async function main() {
       assert.deepEqual(await page.evaluate(() => window.__mediaTest.webAudio), []);
     });
 
-    await check('song toggle stops only that song while orchestra permits overlap', async () => {
+    await check('songs stay exclusive while orchestra still layers original pads', async () => {
       await page.locator('#layer').check();
+      await playAndWait(page, '#grid [data-sound="trumpeten"]');
+      const original = await page.locator('#native-players audio').elementHandle();
       await playAndWait(page, '[data-song="' + songs[0].id + '"]');
+      assert.equal(await page.locator('#native-players audio').count(), 2);
       await playAndWait(page, '[data-song="' + songs[1].id + '"]');
       assert.equal(await page.locator('#native-players audio').count(), 2);
       const first = page.locator('[data-song="' + songs[0].id + '"]');
-      assert.equal(await first.getAttribute('aria-pressed'), 'true');
-      assert.equal(await first.getAttribute('aria-label'), 'Stoppa ' + songs[0].name);
-      await first.click();
-      assert.equal(await page.locator('#native-players audio').count(), 1);
       assert.equal(await first.getAttribute('aria-pressed'), 'false');
       assert.equal(await first.getAttribute('aria-label'), 'Spela ' + songs[0].name);
-      assert.equal(await page.locator('[data-song="' + songs[1].id + '"]').getAttribute('aria-pressed'), 'true');
-      await playAndWait(page, '#grid [data-sound="' + pads[0] + '"]');
-      assert.equal(await page.locator('[data-song="' + songs[1].id + '"]').getAttribute('aria-pressed'), 'true');
+      const second = page.locator('[data-song="' + songs[1].id + '"]');
+      assert.equal(await second.getAttribute('aria-pressed'), 'true');
+      assert.equal(await second.getAttribute('aria-label'), 'Stoppa ' + songs[1].name);
+      assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 1);
+      assert.deepEqual(await original.evaluate(audio => ({ connected: audio.isConnected, paused: audio.paused })), { connected: true, paused: false });
+      await second.click();
+      assert.equal(await page.locator('#native-players audio').count(), 1);
+      assert.equal(await second.getAttribute('aria-pressed'), 'false');
+      assert.equal(await second.getAttribute('aria-label'), 'Spela ' + songs[1].name);
+      assert.deepEqual(await original.evaluate(audio => ({ connected: audio.isConnected, paused: audio.paused })), { connected: true, paused: false });
+      await playAndWait(page, '#grid [data-sound="vulkanen"]');
+      assert.equal(await page.locator('#native-players audio').count(), 2, 'original pads may still overlap with orchestra checked');
       await stop(page);
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
@@ -157,6 +167,9 @@ async function main() {
       assert.equal(await page.locator('[data-song="' + songs[0].id + '"]').getAttribute('aria-pressed'), 'false');
       await playAndWait(page, '#grid [data-sound="' + pads[0] + '"]');
       assert.equal(await page.locator('[data-song="' + songs[1].id + '"]').getAttribute('aria-pressed'), 'false');
+      await playAndWait(page, '#grid [data-sound="trumpeten"]');
+      await playAndWait(page, '#grid [data-sound="vulkanen"]');
+      assert.equal(await page.locator('#native-players audio').count(), 1, 'original pads stay exclusive with orchestra unchecked');
       await stop(page);
       await page.locator('#layer').check();
     });
@@ -190,11 +203,11 @@ async function main() {
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
 
-    await check('service worker caches complete version 4.4.1 shell, six songs, and original audio', async () => {
+    await check('service worker caches complete version 4.4.2 shell, six songs, and original audio', async () => {
       await page.locator('#offline.ready').waitFor({ timeout: 30000 });
       await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
       const cache = await page.evaluate(async () => {
-        const current = await caches.open('fart-machine-v4.4.1');
+        const current = await caches.open('fart-machine-v4.4.2');
         const keys = await current.keys();
         return Promise.all(keys.map(async request => {
           const response = await current.match(request);
@@ -215,7 +228,7 @@ async function main() {
         if (entry.path.endsWith('.wav')) assert.match(entry.type, /audio\/wav|audio\/x-wav/);
       }
       const status = await page.evaluate(() => new Promise(resolve => { const channel = new MessageChannel(); channel.port1.onmessage = event => resolve(event.data); navigator.serviceWorker.controller.postMessage({ type: 'CACHE_STATUS' }, [channel.port2]); }));
-      assert.equal(status.version, '4.4.1');
+      assert.equal(status.version, '4.4.2');
       assert.equal(status.ready, true);
       assert.equal(status.sounds, 9);
       assert.equal(status.songs, 6);
@@ -227,7 +240,7 @@ async function main() {
       await page.locator('#offline.ready').waitFor({ timeout: 15000 });
       for (const song of songs) { await playAndWait(page, '[data-song="' + song.id + '"]'); await stop(page); }
       for (const id of pads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
-      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.4.1')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
+      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.4.2')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
       for (const asset of paths) {
         const result = await page.evaluate(async asset => {
           const response = await fetch(asset, { headers: { Range: 'bytes=0-63' } });
@@ -252,7 +265,7 @@ async function main() {
       assert.deepEqual(pageErrors, []);
     });
 
-    await check('toggling or stop-all cancels actual pending native play requests', async () => {
+    await check('new songs, toggling, and stop-all cancel actual pending native play requests', async () => {
       const pendingContext = await browser.newContext({ serviceWorkers: 'block' });
       await pendingContext.addInitScript(instrument);
       const pendingPage = await pendingContext.newPage();
@@ -266,10 +279,21 @@ async function main() {
         assert.equal(await button.getAttribute('aria-pressed'), 'true');
         assert.equal(await button.getAttribute('aria-label'), 'Stoppa ' + songs[0].name);
         const player = await pendingPage.locator('#native-players audio').elementHandle();
-        await button.click();
-        assert.equal(await pendingPage.locator('#native-players audio').count(), 0);
+        const replacement = pendingPage.locator('[data-song="' + songs[1].id + '"]');
+        await replacement.click();
+        assert.equal(await pendingPage.locator('#layer').isChecked(), true);
+        assert.equal(await pendingPage.locator('#native-players audio').count(), 1);
         assert.deepEqual(await player.evaluate(audio => ({ connected: audio.isConnected, src: audio.getAttribute('src'), paused: audio.paused })), { connected: false, src: null, paused: true });
+        assert.equal(await button.getAttribute('aria-pressed'), 'false');
+        assert.equal(await replacement.getAttribute('aria-pressed'), 'true');
+        assert.equal(await pendingPage.locator(songSelector + '[aria-pressed="true"]').count(), 1);
         await pendingPage.waitForFunction(() => window.__mediaTest.calls[0].result === 'AbortError');
+        const replacementPlayer = await pendingPage.locator('#native-players audio').elementHandle();
+        await replacement.click();
+        assert.equal(await pendingPage.locator('#native-players audio').count(), 0);
+        assert.deepEqual(await replacementPlayer.evaluate(audio => ({ connected: audio.isConnected, src: audio.getAttribute('src'), paused: audio.paused })), { connected: false, src: null, paused: true });
+        assert.equal(await replacement.getAttribute('aria-pressed'), 'false');
+        await pendingPage.waitForFunction(() => window.__mediaTest.calls[1].result === 'AbortError');
         await button.click();
         await pendingPage.locator('#stop').click();
         assert.equal(await pendingPage.locator('#native-players audio').count(), 0);
