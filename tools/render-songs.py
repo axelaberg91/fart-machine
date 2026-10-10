@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the five fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Render the six fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
@@ -31,6 +31,11 @@ BROMANCE_CHORUS = (
     'G#4:0.5 B4:0.5 E5:0.5 D#5:0.5 '
     'C#5:0.75 C#5:0.75 C#5:0.75 C#5:0.75 C#5:0.75 C#5:0.75 '
     'C#5:0.5 D#5:0.5 E5:0.5 F#5:0.5'
+)
+
+SOMMAR_CHORUS = (
+    'F#4:0.5 F#4:0.5 F#4:1 D4:1.5 E4:0.5 '
+    'G4:0.5 F#4:0.5 F#4:0.5 D4:2 R:0.5'
 )
 
 PEPPA_HOOK = (
@@ -129,7 +134,29 @@ SONGS = [
                     'https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174',
                     'https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/',
                     'https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file'],
-     'notes': score(BROMANCE_CHORUS)*3}
+     'notes': score(BROMANCE_CHORUS)*3},
+    {'id': 'sommar-och-sol',
+     'title': 'Sommar och sol',
+     'bpm': 101.7,
+     'transpose': -12,
+     'meter': '4/4',
+     'melody': 'Sommar och sol — Markoolio; Arijan Selami, Daniel Bäckström and Marko Lehtosalo (1998)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'arrangement': 'Two-bar chorus title motif repeated five times; the final half-beat pickup '
+                    'into the omitted later phrase replaced with a breathing rest for a clean loop',
+     'source_notation': 'Direct transcription of the officially distributed Deezer original release '
+                        'preview, track 1113135202 / ISRC SEAHC9810010, around 9.07–13.79 seconds, '
+                        'checked against its repetition around 18.51–23.23 seconds. Source D4–G4 '
+                        'rendered D3–G3; arrangement tempo 101.7 BPM follows the measured reference',
+     'reference_validation': 'Two independent fundamental/harmonic checks establish the two-bar '
+                             'title motif and rhythm, including held D4 and the E4 transition. '
+                             'Higher D5 components are harmonics; the later rap/adlib overlap '
+                             'is omitted',
+     'references': ['https://www.shazam.com/song/1536422806/sommar-och-sol',
+                    'https://music.apple.com/se/album/sommar-och-sol/1536422247?i=1536422806',
+                    'https://www.deezer.com/track/1113135202',
+                    'https://www.youtube.com/watch?v=GsPV3i2kT5A'],
+     'notes': score(SOMMAR_CHORUS)*5}
 ]
 
 

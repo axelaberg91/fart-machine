@@ -1,6 +1,6 @@
 # Fart-song recordings
 
-Five instrumental melody and riff clips, rendered offline from two real
+Six instrumental melody and riff clips, rendered offline from two real
 recorded farts. There are no vocals, backing instruments or external audio
 requests. The app plays these finished MP3 files using native HTML audio.
 
@@ -54,6 +54,7 @@ CC0 license to any referenced composition, release or published song arrangement
 | `baby-shark.mp3` | Baby Shark, children's chant popularized by Pinkfong; two melody verses | 17.34 s |
 | `en-livstid-i-krig.mp3` | En livstid i krig — Joakim Brodén / Sabaton (2012); short opening lead melody | 17.85 s |
 | `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); instrumental main drop / chorus lead | 23.06 s |
+| `sommar-och-sol.mp3` | Sommar och sol — Markoolio; Arijan Selami, Daniel Bäckström and Marko Lehtosalo (1998); two-bar chorus title motif | 23.80 s |
 
 Greta Gris follows the original two-bar Peppa Pig melody hook, including the
 low G and rising G–B–D–F figure.
@@ -84,6 +85,19 @@ placement. This solo preserves the published MIDI contour without per-note
 octave changes. It omits the opening piano motif and the separate Seek Bromance
 vocal chorus. No original recording or vocal is sampled.
 
+Sommar och sol uses the first two bars of the sung refrain from Markoolio's
+original 1998 release, repeated five times at 101.7 BPM. The motif was directly
+transcribed from the officially distributed Deezer preview around 9.07 seconds
+and independently checked against its repetition around 18.50 seconds. The
+arrangement tempo follows the measured reference pulse; Apple/Shazam metadata
+rounds it to 101 BPM. The D4–G4 melody is moved down one octave to D3–G3.
+Fundamental and harmonic checks distinguish the held D4 from its D5 harmonic
+and confirm the short E4 transition. Repeated F-sharps keep separate attacks.
+The last eighth-note pickup into the later refrain phrase becomes a breathing
+rest for a clean two-bar loop. Later rap/adlib overlaps are omitted. Expressive
+scoops are simplified into stable notes on the original eighth-note pulse.
+The previews and analysis remain development references outside the app.
+
 Baby Shark uses the recognizable D–E–G melody, repeated-note refrain and
 G–G–F-sharp ending, transposed down an octave for the same wet fart instrument.
 The clip contains two verses of that melody, without vocals or an introduction.
@@ -106,11 +120,15 @@ Notation references:
 - [Official Bromance Arena recording preview](https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174).
 - [Avicii Melodies MIDI compiler's original publication and credits](https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/).
 - [Publicly shared MIDI/FLP compilation](https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file).
+- [Sommar och sol official original-release preview](https://www.deezer.com/track/1113135202).
+- [Official Sommar och sol Apple Music release](https://music.apple.com/se/album/sommar-och-sol/1536422247?i=1536422806).
+- [Sommar och sol composition credits, release date and tempo metadata](https://www.shazam.com/song/1536422806/sommar-och-sol).
+- [Sommar och sol official artist Topic recording](https://www.youtube.com/watch?v=GsPV3i2kT5A).
 
 ## Format, validation and regeneration
 
-All five files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is 1,198,967 bytes (approximately 1.20 MB). Decoded peak levels
+All six files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
+`audio/mpeg`. Their combined size is 1,485,655 bytes (approximately 1.49 MB). Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
 noise, so idealized note-precision measurements do not describe this mix.
@@ -128,7 +146,7 @@ python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 To regenerate selected songs while preserving the other MP3 files exactly:
 
 ```sh
-python tools/render-songs.py --ffmpeg /path/to/ffmpeg --only bromance
+python tools/render-songs.py --ffmpeg /path/to/ffmpeg --only sommar-och-sol
 ```
 
 To preview the first eight seconds before replacing the app assets:

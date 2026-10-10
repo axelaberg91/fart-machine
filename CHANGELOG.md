@@ -1,5 +1,14 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.6.0 - Sommar och sol
+
+- Added Sommar och sol by Markoolio as a sixth song button, with a short chorus
+  clip played through the same wet recorded fart instrument.
+- Kept Greta Gris, Björnen sover, Baby Shark, En livstid i krig and Bromance
+  exactly as approved, including their recording bytes.
+- Preserved one-song playback, volume, Stoppa allt and the nine original pads.
+- Updated the offline cache to Version 4.6.0 with all six songs.
+
 ## 4.5.2 - Bromance-refrängen
 
 - Replaced the Bromance piano opening motif with the instrumental main-lead/drop
