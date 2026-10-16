@@ -7,7 +7,7 @@ const { createHash } = require('node:crypto');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
-const expectedSongIds = ['greta-gris', 'bjornen-sover', 'baby-shark', 'en-livstid-i-krig', 'bromance', 'sommartider'];
+const expectedSongIds = ['greta-gris', 'bjornen-sover', 'baby-shark', 'en-livstid-i-krig', 'bromance', 'sommartider', 'sandstorm', 'ring-of-fire'];
 const retainedSongHashes = {
   'greta-gris': '773755c69f926f9422d5b6df44f32fec44045a1b8329ac9d77aa0417dc74fc37',
   'bjornen-sover': '7cf0cc79156bfa228a9ec0a089b4ea172396e867a6a83c6aa16b4546a26264b8',
@@ -22,16 +22,16 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '4.7.1');
+assert.equal(version, '4.8');
 assert.ok(assets.includes('./app-v4.4.js'));
 assert.deepEqual(assets.filter(asset => asset.startsWith('./audio/songs/')).sort(), expectedSongIds.map(id => './audio/songs/' + id + '.mp3').sort());
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
 assert.equal(new Set(assets).size, assets.length);
-assert.equal(assets.length, 30);
+assert.equal(assets.length, 32);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 4\.7\.1/);
+assert.match(html, /Version 4\.8/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);
@@ -62,7 +62,7 @@ async function main() {
     assert.deepEqual(new Uint8Array(await response.arrayBuffer()), source);
   }
   const missing = assets.filter(asset => asset !== './' && !fs.existsSync(path.join(root, asset)));
-  console.log('PASS app/service-worker syntax, version references, complete fifteen-recording manifest, byte ranges, suffix ranges, and invalid ranges.');
+  console.log('PASS app/service-worker syntax, version references, complete seventeen-recording manifest, byte ranges, suffix ranges, and invalid ranges.');
   if (missing.length) console.log('Manifest files still pending: ' + missing.join(', '));
   else console.log('PASS all manifest assets exist.');
   if (process.argv.includes('--require-assets')) assert.deepEqual(missing, [], 'every offline asset must be present');
@@ -79,7 +79,7 @@ async function main() {
       assert.equal(hash, song.validation.sha256, song.id + ' output hash');
       if (retainedSongHashes[song.id]) assert.equal(hash, retainedSongHashes[song.id], song.id + ' must retain the previous approved recording');
     }
-    console.log('PASS all six song payloads match their metadata byte counts and SHA-256 hashes.');
+    console.log('PASS all eight song payloads match their metadata byte counts and SHA-256 hashes.');
     console.log('PASS all six retained recordings are unchanged, including Sommartider and the approved Bromance chorus.');
   }
 }

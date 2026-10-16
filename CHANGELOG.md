@@ -1,5 +1,14 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.8 - Sandstorm och Ring of Fire
+
+- Added Sandstorm (Darude) and Ring of Fire (Johnny Cash), bringing the song
+  board to eight short instrumental fart renditions.
+- Rendered both clips using the existing recorded fart instruments; retained
+  all six previous MP3 files unchanged.
+- Added the recordings to the version 4.8 offline cache and expanded playback
+  and cache checks to cover all eight songs.
+
 ## 4.7.1 - Sex låtar med artistnamn
 
 - Removed Through the Fire and Flames, leaving the six approved song recordings

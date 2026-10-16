@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the six fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Render the eight fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
@@ -64,6 +64,19 @@ SABATON_HOOK = (
     'Bb4:0.5 C5:2 Eb5:0.75 D5:0.75 Bb4:0.25 C5:0.25 Bb4:2 Bb4:0.75 '
     'Ab4:0.75 G4:0.5 F4:2 F4:0.75 G4:0.75 Ab4:0.5 G4:0.125 Ab4:0.125 '
     'G4:0.125 F4:0.125 G4:1.5'
+)
+
+# Compact solo hooks. Durations are quarter-note beats at the stated tempo.
+SANDSTORM_HOOK = (
+    'B4:0.5 B4:0.25 B4:0.25 B4:0.25 B4:0.75 '
+    'E5:0.5 E5:0.25 E5:0.75 D5:0.5 D5:0.25 D5:0.75 '
+    'A4:0.25 B4:0.5 B4:0.25 B4:0.25 B4:0.25 B4:0.5 E5:0.25 '
+    'B4:0.5 B4:0.25 B4:0.25 B4:0.25 B4:0.5 E5:0.25'
+)
+
+RING_OF_FIRE_HOOK = (
+    'D5:1 D5:0.5 D5:1 D5:0.5 D5:1 E5:1 C5:1 D5:4 '
+    'B4:1 B4:0.5 B4:1 B4:0.5 B4:1 C5:1 A4:1 B4:4'
 )
 
 SONGS = [
@@ -160,7 +173,31 @@ SONGS = [
                     'https://www.gyllenetider.com/discography/singles/sommartider/',
                     'https://www.gyllenetider.com/lyrics/',
                     'https://www.youtube.com/watch?v=4kVRF0hTeyQ'],
-     'notes': score(SOMMARTIDER_HOOK)*6}
+     'notes': score(SOMMARTIDER_HOOK)*6},
+    {'id': 'sandstorm',
+     'title': 'Sandstorm',
+     'bpm': 136,
+     'transpose': -12,
+     'meter': '4/4',
+     'melody': 'Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'arrangement': 'Compact main synth riff, repeated four times; solo melody without the long introduction',
+     'source_notation': 'Main riff pitch contour B–E–D–A, moved down one octave for the fart instrument; compact rhythmic arrangement at 136 BPM',
+     'references': ['https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488',
+                    'https://www.guitartabs.cc/tabs/d/darude/sandstorm_tab_ver_4.html'],
+     'notes': score(SANDSTORM_HOOK)*4},
+    {'id': 'ring-of-fire',
+     'title': 'Ring of Fire',
+     'bpm': 105,
+     'transpose': -12,
+     'meter': '4/4 with 2/4 turnaround',
+     'melody': 'Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963)',
+     'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
+     'arrangement': 'Two-part trumpet hook, repeated twice; tied eighth notes merged and long notes shortened to four beats between phrases',
+     'source_notation': 'Upper trumpet line in Gary Badger transcription; written F#5–G#5–E5–F#5 and D#5–E5–C#5–D#5 moved to D4–E4–C4–D4 and B3–C4–A3–B3 for the solo fart instrument',
+     'references': ['https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf',
+                    'https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397'],
+     'notes': score(RING_OF_FIRE_HOOK)*2}
 ]
 
 

@@ -1,6 +1,6 @@
 # Fart-song recordings
 
-Six instrumental melody and riff clips, rendered offline from real
+Eight instrumental melody and riff clips, rendered offline from real
 recorded farts. There are no vocals, backing instruments or external audio
 requests. The app plays these finished MP3 files using native HTML audio.
 
@@ -55,6 +55,29 @@ CC0 license to any referenced composition, release or published song arrangement
 | `en-livstid-i-krig.mp3` | En livstid i krig — Joakim Brodén / Sabaton (2012); short opening lead melody | 17.85 s |
 | `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); instrumental main drop / chorus lead | 23.06 s |
 | `sommartider.mp3` | Sommartider — Gyllene Tider; Per Gessle (1982); title / hej-hej refrain motif | 22.35 s |
+| `sandstorm.mp3` | Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999); compact main synth riff | 16.52 s |
+| `ring-of-fire.mp3` | Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963); two-part trumpet hook | 23.06 s |
+
+Sandstorm uses a compact solo arrangement of the main repeated-note synth riff,
+with its B–E–D–A pitch contour at 136 BPM, repeated four times. The riff moves
+down one octave for the recorded fart instrument. Its note contour was checked
+against publicly available guitar notation; the published Musicnotes edition
+supplies tempo and composer credits. It omits the long introduction and backing.
+
+Ring of Fire uses the upper trumpet hook from Gary Badger's published trumpet
+transcription. Its repeated F-sharps, rise to G-sharp and fall to E are moved to
+D, E and C, followed by the lower B, C and A response. Tied eighth notes are
+merged; the long ending of each phrase is shortened to four beats in this
+compact arrangement. Both phrases repeat twice at 105 BPM. The source's pickup
+and second trumpet harmony are omitted. Composer credits are June Carter and
+Merle Kilgore; Johnny Cash is the recording artist named on the song button.
+
+References for the two additions:
+
+- [Sandstorm published edition and composer credits](https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488).
+- [Sandstorm publicly published guitar riff](https://www.guitartabs.cc/tabs/d/darude/sandstorm_tab_ver_4.html).
+- [Ring of Fire trumpet transcription, Gary Badger](https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf).
+- [Ring of Fire licensed trumpet edition and composer credits](https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397).
 
 
 Greta Gris follows the original two-bar Peppa Pig melody hook, including the
@@ -135,8 +158,8 @@ Notation references:
 
 ## Format, validation and regeneration
 
-All six files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is 1,468,097 bytes (approximately 1.47 MB). Decoded peak levels
+All eight files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
+`audio/mpeg`. Their combined size is 1,944,915 bytes (approximately 1.94 MB). Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
 noise, so idealized note-precision measurements do not describe this mix.
