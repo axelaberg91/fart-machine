@@ -4,7 +4,7 @@
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
 never loaded by the app. All instrument audio comes from the unchanged CC0
-recordings audio/trumpeten.mp3 and audio/blota.mp3.
+recordings audio/trumpeten.mp3, audio/blota.mp3 and audio/snabbisen.mp3.
 """
 import argparse
 import hashlib
@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SAMPLE_RATE = 44100
 SOURCE_SHA256 = "cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63"
 WET_SHA256 = "a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2"
+SHORT_SHA256 = "912a288d0e14f0d2e68e6904bb1215f9e38080e76d6adede7e0b488e24e8fb00"
 
 
 
@@ -68,10 +69,17 @@ SABATON_HOOK = (
 
 # Compact solo hooks. Durations are quarter-note beats at the stated tempo.
 SANDSTORM_HOOK = (
-    'B4:0.5 B4:0.25 B4:0.25 B4:0.25 B4:0.75 '
-    'E5:0.5 E5:0.25 E5:0.75 D5:0.5 D5:0.25 D5:0.75 '
-    'A4:0.25 B4:0.5 B4:0.25 B4:0.25 B4:0.25 B4:0.5 E5:0.25 '
-    'B4:0.5 B4:0.25 B4:0.25 B4:0.25 B4:0.5 E5:0.25'
+    'B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.5 '
+    'B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.5 '
+    'E5:0.25 E5:0.25 E5:0.25 E5:0.25 E5:0.25 E5:0.25 E5:0.5 '
+    'D5:0.25 D5:0.25 D5:0.25 D5:0.25 D5:0.25 D5:0.25 D5:0.5 '
+    'A4:0.25 A4:0.25 '
+    'B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.5 '
+    'B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.5 '
+    'E5:0.25 E5:0.25 '
+    'B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.5 '
+    'B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.25 B4:0.5 '
+    'E5:0.25 E5:0.25'
 )
 
 RING_OF_FIRE_HOOK = (
@@ -176,19 +184,24 @@ SONGS = [
      'notes': score(SOMMARTIDER_HOOK)*6},
     {'id': 'sandstorm',
      'title': 'Sandstorm',
-     'bpm': 136,
+     'bpm': 140,
      'transpose': -12,
      'meter': '4/4',
      'melody': 'Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999)',
      'composition_rights': 'Copyrighted composition; CC0 applies only to the source fart recordings',
-     'arrangement': 'Compact main synth riff, repeated four times; solo melody without the long introduction',
-     'source_notation': 'Main riff pitch contour B–E–D–A, moved down one octave for the fart instrument; compact rhythmic arrangement at 136 BPM',
+     'arrangement': 'Four-bar main synth riff, repeated three times at 140 BPM; alternating short Blota/Snabbisen attacks and a clear pitched fart body',
+     'source_notation': 'Upper lead line of publicly shared MIDI, track 6, beats 72–88; all 56 note onsets preserved on the sixteenth-note grid. B4–E5–D5–A4 rendered one octave down',
+     'articulation': 'tight-alternating',
+     'alternate_attack': {'file': 'audio/snabbisen.mp3', 'sha256': SHORT_SHA256,
+                          'author': 'C-V', 'license': 'CC0-1.0',
+                          'source_page': 'https://freesound.org/people/C-V/sounds/506994/'},
      'references': ['https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488',
-                    'https://www.guitartabs.cc/tabs/d/darude/sandstorm_tab_ver_4.html'],
-     'notes': score(SANDSTORM_HOOK)*4},
+                    'https://bitmidi.com/darude_-_sandstorm-mid',
+                    'https://www.cprato.com/en/midi/details/223/darude-sandstorm'],
+     'notes': score(SANDSTORM_HOOK)*3},
     {'id': 'ring-of-fire',
      'title': 'Ring of Fire',
-     'bpm': 105,
+     'bpm': 114,
      'transpose': -12,
      'meter': '4/4 with 2/4 turnaround',
      'melody': 'Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963)',
@@ -237,9 +250,19 @@ def sample_playback(sample, positions):
     return np.interp(positions, np.arange(len(sample)), sample, left=0, right=0)
 
 
-def note_audio(core, wet, base_hz, hz, duration, index):
+def note_audio(core, wet, base_hz, hz, duration, index, tight_attacks=None):
     count = max(1, round(duration * SAMPLE_RATE))
     time = np.arange(count) / SAMPLE_RATE
+    if tight_attacks is not None:
+        # Alternate two real fart attacks, without random timing or wet tails
+        # masking the sixteenth-note pulse. The same pitched body carries the
+        # melody on both articulations, so changing attacks cannot change notes.
+        texture = sample_playback(tight_attacks[index % 2], time*SAMPLE_RATE)
+        texture *= np.maximum(0, 1-time/0.045)**0.65
+        body = sample_playback(core, time*SAMPLE_RATE*(hz/base_hz))
+        attack = np.minimum(time/0.0015, 1)
+        release = np.clip((duration-time)/0.008, 0, 1)
+        return (texture*0.20 + body*1.35)*attack*release
     # The wet recording leads every note. Its variations remain at their natural
     # pitch and almost their original speed, including the irregular bubbling.
     wet_offsets = [0.0, 0.038, 0.011, 0.072, 0.022, 0.095, 0.048]
@@ -261,7 +284,7 @@ def note_audio(core, wet, base_hz, hz, duration, index):
     return result*envelope
 
 
-def render(song, core, wet, base_hz):
+def render(song, core, wet, base_hz, tight_attacks=None):
     seconds_per_beat = 60 / song["bpm"]
     total = sum(beats for _, beats in song["notes"]) * seconds_per_beat
     output = np.zeros(round((total+0.2) * SAMPLE_RATE))
@@ -273,8 +296,12 @@ def render(song, core, wet, base_hz):
             pitches = [frequency(pitch, song["transpose"]) for pitch in name.split("+")]
             # Long written notes end in an organic recorded tail, rather than
             # sustaining a perfectly even tone for the entire note duration.
-            gate = min(0.72, max(0.065, span-min(0.035, span*0.08)))
-            note = note_audio(core, wet, base_hz, pitches[0], gate, index)
+            tight = song.get('articulation') == 'tight-alternating'
+            if tight:
+                assert tight_attacks is not None, 'Alternating fart attacks required'
+            gate = min(0.12, span*0.67) if tight else min(0.72, max(0.065, span-min(0.035, span*0.08)))
+            note = note_audio(core, wet, base_hz, pitches[0], gate, index,
+                              tight_attacks if tight else None)
             if len(pitches) > 1:
                 # The wet layer is identical in every voice, so averaging keeps
                 # that real texture unchanged and blends the pitched fart bodies.
@@ -324,6 +351,18 @@ def main():
     output_dir = ROOT / "audio/songs"
     output_dir.mkdir(parents=True, exist_ok=True)
     core, wet, base_hz = instrument_samples(args.ffmpeg)
+    tight_attacks = None
+    if not args.audition and (not args.only or 'sandstorm' in args.only):
+        short = decode_source(args.ffmpeg, 'snabbisen.mp3', SHORT_SHA256)
+        def short_attack(recording):
+            # Use the loudest 30 ms block in the first 300 ms; never loop it.
+            block = round(0.03*SAMPLE_RATE)
+            chunks = recording[:10*block].reshape(-1, block)
+            start = int(np.argmax(np.mean(chunks**2, axis=1)))*block
+            clip = recording[start:start+round(0.045*SAMPLE_RATE)].copy()
+            clip -= np.mean(clip)
+            return clip*(0.8/np.max(np.abs(clip)))
+        tight_attacks = (short_attack(wet), short_attack(short))
     if args.audition:
         audio, _ = render(SONGS[0], core, wet, base_hz)
         run_ffmpeg(args.ffmpeg, ["-y", "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1",
@@ -340,7 +379,7 @@ def main():
                     title="Diarrhea", author="Breviceps", license="CC0-1.0",
                     source_page="https://freesound.org/people/Breviceps/sounds/445997/",
                     sample=dict(start_seconds=0, end_seconds=0.67, looped=False)),
-                    articulation="Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
+                    articulation="Unlooped recorded fart articulation and repitched fart body; Sandstorm uses short alternating Blota/Snabbisen attacks; other songs retain natural wet scoops and decay",
                     format=dict(codec="mp3", mime="audio/mpeg", sample_rate=SAMPLE_RATE,
                                 channels=1, bitrate_kbps=96), songs=[])
     prior = {}
@@ -353,7 +392,7 @@ def main():
             assert hashlib.sha256((ROOT / previous["file"]).read_bytes()).hexdigest() == previous["validation"]["sha256"], "Existing song changed"
             metadata["songs"].append(previous)
             continue
-        audio, onsets = render(song, core, wet, base_hz)
+        audio, onsets = render(song, core, wet, base_hz, tight_attacks)
         path = output_dir / (song["id"]+".mp3")
         run_ffmpeg(args.ffmpeg, ["-y", "-f", "f32le", "-ar", str(SAMPLE_RATE), "-ac", "1",
                    "-i", "pipe:0", "-c:a", "libmp3lame", "-b:a", "96k", "-id3v2_version", "3",
@@ -364,11 +403,11 @@ def main():
         metadata["songs"].append({k: v for k, v in song.items() if k != "notes"} |
             dict(file="audio/songs/"+path.name,
                  arrangement=song.get("arrangement", "Two complete melody verses" if song["id"] == "baby-shark" else "One complete melody verse")
-                 + " with wet recorded fart articulation; no voice or accompaniment",
+                 + ("; no voice or accompaniment" if song.get('articulation') == 'tight-alternating' else " with wet recorded fart articulation; no voice or accompaniment"),
                  notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report))
         print(f"{path.name}: {report['duration_seconds']} s, {report['bytes']} bytes, "
               f"peak {report['peak']}, {report['audible_recorded_attacks']} audible wet attacks", flush=True)
-    (output_dir / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+    (output_dir / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

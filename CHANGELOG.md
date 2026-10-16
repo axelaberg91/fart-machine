@@ -1,5 +1,14 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.8.1 - Rappare Sandstorm och snabbare Ring of Fire
+
+- Rebuilt Sandstorm around the full 56-note, four-bar main riff, with its
+  sixteenth-note timing checked against a public MIDI reference, at 140 BPM.
+- Alternated short Blöta and Snabbisen attacks, brought the pitched fart body
+  forward, and shortened note tails to create a distinct rapid pulse.
+- Increased Ring of Fire from 105 to 114 BPM, retaining its notes and phrasing.
+- Updated the offline cache so existing installations receive the new MP3s.
+
 ## 4.8 - Sandstorm och Ring of Fire
 
 - Added Sandstorm (Darude) and Ring of Fire (Johnny Cash), bringing the song

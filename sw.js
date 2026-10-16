@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '4.8';
+const VERSION = '4.8.1';
 const CACHE = 'fart-machine-v' + VERSION;
 const SOUND_IDS = ['smygaren','kanonen','blota','trumpeten','ankan','vulkanen','snabbisen','raketen','katastrofen'];
 const SONG_IDS = ['greta-gris','bjornen-sover','baby-shark','en-livstid-i-krig','bromance','sommartider','sandstorm','ring-of-fire'];

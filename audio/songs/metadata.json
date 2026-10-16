@@ -26,7 +26,7 @@
       "looped": false
     }
   },
-  "articulation": "Unlooped wet recorded attack/body/tail on every note; full repitched recorded fart body with natural scoops and decay",
+  "articulation": "Unlooped recorded fart articulation and repitched fart body; Sandstorm uses short alternating Blota/Snabbisen attacks; other songs retain natural wet scoops and decay",
   "format": {
     "codec": "mp3",
     "mime": "audio/mpeg",
@@ -1527,21 +1527,46 @@
     {
       "id": "sandstorm",
       "title": "Sandstorm",
-      "bpm": 136,
+      "bpm": 140,
       "transpose": -12,
       "meter": "4/4",
       "melody": "Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999)",
       "composition_rights": "Copyrighted composition; CC0 applies only to the source fart recordings",
-      "arrangement": "Compact main synth riff, repeated four times; solo melody without the long introduction with wet recorded fart articulation; no voice or accompaniment",
-      "source_notation": "Main riff pitch contour B–E–D–A, moved down one octave for the fart instrument; compact rhythmic arrangement at 136 BPM",
+      "arrangement": "Four-bar main synth riff, repeated three times at 140 BPM; alternating short Blota/Snabbisen attacks and a clear pitched fart body; no voice or accompaniment",
+      "source_notation": "Upper lead line of publicly shared MIDI, track 6, beats 72–88; all 56 note onsets preserved on the sixteenth-note grid. B4–E5–D5–A4 rendered one octave down",
+      "articulation": "tight-alternating",
+      "alternate_attack": {
+        "file": "audio/snabbisen.mp3",
+        "sha256": "912a288d0e14f0d2e68e6904bb1215f9e38080e76d6adede7e0b488e24e8fb00",
+        "author": "C-V",
+        "license": "CC0-1.0",
+        "source_page": "https://freesound.org/people/C-V/sounds/506994/"
+      },
       "references": [
         "https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488",
-        "https://www.guitartabs.cc/tabs/d/darude/sandstorm_tab_ver_4.html"
+        "https://bitmidi.com/darude_-_sandstorm-mid",
+        "https://www.cprato.com/en/midi/details/223/darude-sandstorm"
       ],
       "file": "audio/songs/sandstorm.mp3",
       "notes": [
         {
           "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
           "beats": 0.5
         },
         {
@@ -1558,10 +1583,18 @@
         },
         {
           "note": "B4",
-          "beats": 0.75
+          "beats": 0.25
         },
         {
-          "note": "E5",
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
           "beats": 0.5
         },
         {
@@ -1570,10 +1603,26 @@
         },
         {
           "note": "E5",
-          "beats": 0.75
+          "beats": 0.25
         },
         {
-          "note": "D5",
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
           "beats": 0.5
         },
         {
@@ -1582,7 +1631,31 @@
         },
         {
           "note": "D5",
-          "beats": 0.75
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.5
+        },
+        {
+          "note": "A4",
+          "beats": 0.25
         },
         {
           "note": "A4",
@@ -1590,7 +1663,91 @@
         },
         {
           "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
           "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.5
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
         },
         {
           "note": "B4",
@@ -1613,8 +1770,40 @@
           "beats": 0.25
         },
         {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
           "note": "B4",
           "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
         },
         {
           "note": "B4",
@@ -1637,48 +1826,60 @@
           "beats": 0.25
         },
         {
-          "note": "B4",
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
           "beats": 0.5
         },
         {
-          "note": "B4",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "B4",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "B4",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "B4",
-          "beats": 0.75
-        },
-        {
-          "note": "E5",
-          "beats": 0.5
-        },
-        {
-          "note": "E5",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "E5",
-          "beats": 0.75
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
         },
         {
           "note": "D5",
           "beats": 0.5
         },
         {
-          "note": "D5",
+          "note": "A4",
           "beats": 0.25
-        },
-        {
-          "note": "D5",
-          "beats": 0.75
         },
         {
           "note": "A4",
@@ -1686,7 +1887,91 @@
         },
         {
           "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
           "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.5
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
         },
         {
           "note": "B4",
@@ -1709,8 +1994,40 @@
           "beats": 0.25
         },
         {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
           "note": "B4",
           "beats": 0.5
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
         },
         {
           "note": "B4",
@@ -1733,48 +2050,60 @@
           "beats": 0.25
         },
         {
-          "note": "B4",
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "E5",
           "beats": 0.5
         },
         {
-          "note": "B4",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "B4",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "B4",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "B4",
-          "beats": 0.75
-        },
-        {
-          "note": "E5",
-          "beats": 0.5
-        },
-        {
-          "note": "E5",
+          "note": "D5",
           "beats": 0.25
         },
         {
-          "note": "E5",
-          "beats": 0.75
+          "note": "D5",
+          "beats": 0.25
+        },
+        {
+          "note": "D5",
+          "beats": 0.25
         },
         {
           "note": "D5",
           "beats": 0.5
         },
         {
-          "note": "D5",
+          "note": "A4",
           "beats": 0.25
-        },
-        {
-          "note": "D5",
-          "beats": 0.75
         },
         {
           "note": "A4",
@@ -1782,31 +2111,7 @@
         },
         {
           "note": "B4",
-          "beats": 0.5
-        },
-        {
-          "note": "B4",
           "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.5
-        },
-        {
-          "note": "E5",
-          "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.5
         },
         {
           "note": "B4",
@@ -1825,14 +2130,6 @@
           "beats": 0.5
         },
         {
-          "note": "E5",
-          "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.5
-        },
-        {
           "note": "B4",
           "beats": 0.25
         },
@@ -1843,42 +2140,6 @@
         {
           "note": "B4",
           "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.75
-        },
-        {
-          "note": "E5",
-          "beats": 0.5
-        },
-        {
-          "note": "E5",
-          "beats": 0.25
-        },
-        {
-          "note": "E5",
-          "beats": 0.75
-        },
-        {
-          "note": "D5",
-          "beats": 0.5
-        },
-        {
-          "note": "D5",
-          "beats": 0.25
-        },
-        {
-          "note": "D5",
-          "beats": 0.75
-        },
-        {
-          "note": "A4",
-          "beats": 0.25
-        },
-        {
-          "note": "B4",
-          "beats": 0.5
         },
         {
           "note": "B4",
@@ -1901,6 +2162,26 @@
           "beats": 0.25
         },
         {
+          "note": "E5",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
           "note": "B4",
           "beats": 0.5
         },
@@ -1918,7 +2199,23 @@
         },
         {
           "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
+          "beats": 0.25
+        },
+        {
+          "note": "B4",
           "beats": 0.5
+        },
+        {
+          "note": "E5",
+          "beats": 0.25
         },
         {
           "note": "E5",
@@ -1926,20 +2223,20 @@
         }
       ],
       "validation": {
-        "duration_seconds": 16.5235,
-        "peak": 0.789349,
-        "rms": 0.141474,
+        "duration_seconds": 20.7714,
+        "peak": 0.758389,
+        "rms": 0.159287,
         "clipping_samples": 0,
-        "audible_recorded_attacks": 96,
-        "minimum_attack_rms": 0.136444,
-        "bytes": 199224,
-        "sha256": "de335eb4eb41004edd1ba03716b320c70563c2d0c371f2dfbe2a5dbf4e7a771f"
+        "audible_recorded_attacks": 168,
+        "minimum_attack_rms": 0.15866,
+        "bytes": 250319,
+        "sha256": "17c33b460ed3f7f4b4f64b80ec92c1ffde487a1f42e2af372cd4b5e16e57f6aa"
       }
     },
     {
       "id": "ring-of-fire",
       "title": "Ring of Fire",
-      "bpm": 105,
+      "bpm": 114,
       "transpose": -12,
       "meter": "4/4 with 2/4 turnaround",
       "melody": "Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963)",
@@ -2082,14 +2379,14 @@
         }
       ],
       "validation": {
-        "duration_seconds": 23.0571,
-        "peak": 0.8048,
-        "rms": 0.116782,
+        "duration_seconds": 21.2526,
+        "peak": 0.826408,
+        "rms": 0.119126,
         "clipping_samples": 0,
         "audible_recorded_attacks": 32,
-        "minimum_attack_rms": 0.148569,
-        "bytes": 277594,
-        "sha256": "2f4b301a10dd188c762ac5b91b0feced3ee902698724fc4fac2bc733688666a8"
+        "minimum_attack_rms": 0.14864,
+        "bytes": 255965,
+        "sha256": "fc2cd91aa08ee3e38f3f74cc39d8402ccc7aabd0479653d886fc5652848326a2"
       }
     }
   ]

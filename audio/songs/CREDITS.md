@@ -18,7 +18,7 @@ requests. The app plays these finished MP3 files using native HTML audio.
 - Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 - SHA-256: `a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2`.
 
-Every note begins with and includes a real wet fart articulation from Blöta's
+Except for Sandstorm, every note begins with and includes a real wet fart articulation from Blöta's
 first 0.67 seconds. Small changes to the starting point and playback speed
 (within 5% of the original) vary the recorded splutters between notes. The
 natural wet texture keeps its original pitch. Soft compression controls sharp
@@ -29,9 +29,24 @@ The melodic body uses a complete attack, body and tail from approximately
 250.874 Hz; resampled playback places that body on each melody note. The
 recording's natural pitch scoops, irregularity and decay remain audible.
 
-**Neither recording is looped or tiled.** Long written notes end with an organic
+**No recording is looped or tiled.** Long written notes end with an organic
 recorded tail and space before the next note. Short attack and release envelopes
 prevent clicks. No oscillator or added instrument produces the melody.
+
+Sandstorm additionally uses a short attack from `../snabbisen.mp3`:
+
+- Recording: **Fart** by **C-V**.
+- Source: https://freesound.org/people/C-V/sounds/506994/.
+- License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+- SHA-256: `912a288d0e14f0d2e68e6904bb1215f9e38080e76d6adede7e0b488e24e8fb00`.
+
+Its attacks alternate between Blöta and Snabbisen. Each uses up to 45 ms from
+the loudest 30 ms block within the first 300 ms of its source, with a fast fade.
+The pitched Trumpeten body starts immediately, without the usual 18 ms delay,
+and is more prominent than the unpitched attack. Notes occupy 67% of their
+written spacing, capped at 120 ms, leaving a clear gap between sixteenths.
+The same pitched body carries both attacks, so alternation changes timbre
+without changing the melody. No synth or percussion recording is added.
 
 ## Melodies
 
@@ -55,27 +70,30 @@ CC0 license to any referenced composition, release or published song arrangement
 | `en-livstid-i-krig.mp3` | En livstid i krig — Joakim Brodén / Sabaton (2012); short opening lead melody | 17.85 s |
 | `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); instrumental main drop / chorus lead | 23.06 s |
 | `sommartider.mp3` | Sommartider — Gyllene Tider; Per Gessle (1982); title / hej-hej refrain motif | 22.35 s |
-| `sandstorm.mp3` | Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999); compact main synth riff | 16.52 s |
-| `ring-of-fire.mp3` | Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963); two-part trumpet hook | 23.06 s |
+| `sandstorm.mp3` | Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999); compact main synth riff | 20.77 s |
+| `ring-of-fire.mp3` | Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963); two-part trumpet hook | 21.25 s |
 
-Sandstorm uses a compact solo arrangement of the main repeated-note synth riff,
-with its B–E–D–A pitch contour at 136 BPM, repeated four times. The riff moves
-down one octave for the recorded fart instrument. Its note contour was checked
-against publicly available guitar notation; the published Musicnotes edition
-supplies tempo and composer credits. It omits the long introduction and backing.
+Sandstorm now follows the full four-bar main riff: 56 note onsets from the
+upper lead in track 6, beats 72–88, of the publicly shared MIDI below. The
+sixteenth-note pulse and half-beat gaps replace the earlier sparse 9.25-beat
+approximation. The original MIDI pitches B4, E5, D5 and A4 move down one octave.
+Three repetitions at 140 BPM create a short clip with alternating, clipped fart
+attacks. MIDI note timing is a reference only; no MIDI or original recording
+is included in the website. The Musicnotes edition supplies composer credits.
 
 Ring of Fire uses the upper trumpet hook from Gary Badger's published trumpet
 transcription. Its repeated F-sharps, rise to G-sharp and fall to E are moved to
 D, E and C, followed by the lower B, C and A response. Tied eighth notes are
 merged; the long ending of each phrase is shortened to four beats in this
-compact arrangement. Both phrases repeat twice at 105 BPM. The source's pickup
+compact arrangement. Both phrases repeat twice at 114 BPM (previously 105 BPM). The source's pickup
 and second trumpet harmony are omitted. Composer credits are June Carter and
 Merle Kilgore; Johnny Cash is the recording artist named on the song button.
 
 References for the two additions:
 
 - [Sandstorm published edition and composer credits](https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488).
-- [Sandstorm publicly published guitar riff](https://www.guitartabs.cc/tabs/d/darude/sandstorm_tab_ver_4.html).
+- [Sandstorm MIDI timing reference](https://bitmidi.com/darude_-_sandstorm-mid).
+- [Carlo Prato Sandstorm reference and tempo](https://www.cprato.com/en/midi/details/223/darude-sandstorm).
 - [Ring of Fire trumpet transcription, Gary Badger](https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf).
 - [Ring of Fire licensed trumpet edition and composer credits](https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397).
 
@@ -159,7 +177,7 @@ Notation references:
 ## Format, validation and regeneration
 
 All eight files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is 1,944,915 bytes (approximately 1.94 MB). Decoded peak levels
+`audio/mpeg`. Their combined size is 1,974,381 bytes (approximately 1.97 MB). Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
 noise, so idealized note-precision measurements do not describe this mix.

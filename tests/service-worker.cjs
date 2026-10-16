@@ -22,7 +22,7 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '4.8');
+assert.equal(version, '4.8.1');
 assert.ok(assets.includes('./app-v4.4.js'));
 assert.deepEqual(assets.filter(asset => asset.startsWith('./audio/songs/')).sort(), expectedSongIds.map(id => './audio/songs/' + id + '.mp3').sort());
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
@@ -31,7 +31,7 @@ assert.equal(assets.length, 32);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 4\.8/);
+assert.match(html, /Version 4\.8\.1/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);
