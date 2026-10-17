@@ -1,5 +1,11 @@
 # Hugo och Hermans pruttmaskin
 
+## 5.3.1 - Musiken först
+
+- Moved Pruttparaden above the individual fart pads, updated section numbers
+  and preserved consistent panel spacing on desktop and mobile.
+- Refreshed the offline cache; recordings and playback behavior are unchanged.
+
 ## 5.3 - Brunare kostym och en hel fis-hitlista
 
 - Added all twelve approved parody song and artist names, including
