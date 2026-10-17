@@ -2,6 +2,7 @@
 
 // Run with: node tests/song-playback.cjs
 // For focused song/UI changes: node tests/song-playback.cjs --replacement-only
+// For visual-only changes: node tests/song-playback.cjs --design-only
 // Uses real browser media, a localhost server, and no production instrumentation.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -25,35 +26,72 @@ const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
 const songSelector = '#songs button[data-song]';
 const padSelector = '#grid button[data-sound]';
 const replacementOnly = process.argv.includes('--replacement-only');
+const designOnly = process.argv.includes('--design-only');
 const replacementId = 'through-the-fire-and-flames';
 const expectedSongs = [
-  { id: 'greta-gris', name: 'Greta Gris' },
-  { id: 'bjornen-sover', name: 'Björnen sover' },
-  { id: 'baby-shark', name: 'Baby Shark' },
-  { id: 'en-livstid-i-krig', name: 'En livstid i krig' },
-  { id: 'bromance', name: 'Bromance' },
-  { id: 'sommartider', name: 'Sommartider' },
-  { id: 'sandstorm', name: 'Sandstorm' },
-  { id: 'ring-of-fire', name: 'Ring of Fire' },
-  { id: 'the-final-countdown', name: 'The Final Countdown' },
-  { id: 'imperial-march', name: 'The Imperial March' },
-  { id: 'seven-nation-army', name: 'Seven Nation Army' },
-  { id: 'through-the-fire-and-flames', name: 'Through the Fire and Flames' }
+  {
+    "id": "greta-gris",
+    "name": "Greta Fis"
+  },
+  {
+    "id": "bjornen-sover",
+    "name": "Björnen fiser"
+  },
+  {
+    "id": "baby-shark",
+    "name": "Baby Shart"
+  },
+  {
+    "id": "en-livstid-i-krig",
+    "name": "En livstid på dass"
+  },
+  {
+    "id": "bromance",
+    "name": "Pruttmance"
+  },
+  {
+    "id": "sommartider",
+    "name": "Sommargaser"
+  },
+  {
+    "id": "sandstorm",
+    "name": "Fartstorm"
+  },
+  {
+    "id": "ring-of-fire",
+    "name": "Ring of Farts"
+  },
+  {
+    "id": "the-final-countdown",
+    "name": "The Final Fartdown"
+  },
+  {
+    "id": "imperial-march",
+    "name": "The Imperial Fart"
+  },
+  {
+    "id": "seven-nation-army",
+    "name": "Seven Nation Farty"
+  },
+  {
+    "id": "through-the-fire-and-flames",
+    "name": "Through the Fire and Farts"
+  }
 ];
 const expectedSongIds = expectedSongs.map(song => song.id);
 const expectedCaptions = {
-  'greta-gris': 'Julian Nott',
-  'bjornen-sover': 'Traditionell',
-  'baby-shark': 'Pinkfong',
-  'en-livstid-i-krig': 'Sabaton',
-  'bromance': 'Tim Berg (Avicii)',
-  'sommartider': 'Gyllene Tider',
-  'sandstorm': 'Darude',
-  'ring-of-fire': 'Johnny Cash',
-  'the-final-countdown': 'Europe',
-  'imperial-march': 'John Williams',
-  'seven-nation-army': 'The White Stripes',
-  'through-the-fire-and-flames': 'DragonForce'
+  "greta-gris": "Julian Prutt",
+  "bjornen-sover": "Pruttkören",
+  "baby-shark": "Stinkfong",
+  "en-livstid-i-krig": "Sabatarm",
+  "bromance": "Tim Brak (Avifis)",
+  "sommartider": "Gyllene Tarmar",
+  "sandstorm": "Da Röv",
+  "ring-of-fire": "Johnny Gas",
+  "the-final-countdown": "Europrutt",
+  "imperial-march": "John Windliams",
+  "seven-nation-army": "The Brown Stripes",
+  "through-the-fire-and-flames": "DragonFjärt"
 };
 const errors = [];
 const reports = [];
@@ -89,8 +127,9 @@ function instrument() {
   };
 }
 
-async function check(name, operation, validateReplacement = false) {
+async function check(name, operation, validateReplacement = false, validateDesign = false) {
   if (replacementOnly && !validateReplacement) return;
+  if (designOnly && !validateDesign) return;
   try { await operation(); reports.push({ name, ok: true }); console.log('PASS ' + name); }
   catch (error) { errors.push(error); reports.push({ name, ok: false, error: error.message }); console.error('FAIL ' + name + '\n' + error.stack); }
 }
@@ -111,12 +150,22 @@ async function playAndWait(page, selector) {
   return state;
 }
 
+async function waitForSongIllustrations(page) {
+  await page.waitForFunction(() => {
+    const icons = [...document.querySelectorAll('#songs .song-icon')];
+    return icons.length === 12 && icons.every(icon => {
+      const box = icon.getBBox();
+      return box.width > 0 && box.height > 0;
+    });
+  });
+}
+
 async function main() {
   fs.mkdirSync(output, { recursive: true });
   for (const name of ['app-v4.4.js', 'sw.js']) new vm.Script(fs.readFileSync(path.join(root, name), 'utf8'), { filename: name });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(html, /app-v4\.4\.js/);
-  assert.match(html, /Version 5\.2/);
+  assert.match(html, /Version 5\.3/);
   console.log('PASS syntax and version references');
 
   const server = http.createServer((request, response) => {
@@ -141,8 +190,8 @@ async function main() {
     await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 12);
     const songs = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => ({ id: button.dataset.song, name: button.querySelector('.name').textContent })));
     const pads = await page.locator(padSelector).evaluateAll(buttons => buttons.map(button => button.dataset.sound));
-    const playbackSongs = songs;
-    const playbackPads = replacementOnly ? [] : pads;
+    const playbackSongs = designOnly ? [] : songs;
+    const playbackPads = replacementOnly || designOnly ? [] : pads;
     const metadata = JSON.parse(fs.readFileSync(path.join(root, 'audio', 'songs', 'metadata.json'), 'utf8'));
     async function playSong(song) {
       const state = await playAndWait(page, '[data-song="' + song.id + '"]');
@@ -164,7 +213,32 @@ async function main() {
         assert.equal(await button.getAttribute('aria-label'), 'Spela ' + song.name);
         assert.equal(await button.locator('small').textContent(), expectedCaptions[song.id]);
       }
-    }, true);
+    }, true, true);
+
+    await check('all twelve custom song illustrations resolve to distinct visible SVG symbols', async () => {
+      await waitForSongIllustrations(page);
+      const icons = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => {
+        const icon = button.querySelector('.song-icon');
+        const box = icon.getBoundingClientRect();
+        const style = getComputedStyle(icon);
+        return { id: button.dataset.song, href: icon.querySelector('use')?.getAttribute('href'), viewBox: icon.getAttribute('viewBox'), visible: style.display !== 'none' && style.visibility === 'visible' && Number(style.opacity) > 0, width: box.width, height: box.height };
+      }));
+      for (const icon of icons) {
+        assert.equal(icon.href, './song-icons.svg#' + icon.id, icon.id + ' selects its own illustration');
+        assert.equal(icon.viewBox, '0 0 96 96');
+        assert.equal(icon.visible, true, icon.id + ' illustration is visible');
+        assert.ok(icon.width >= 32 && icon.height >= 32, icon.id + ' illustration has a usable visible size');
+      }
+      assert.equal(new Set(icons.map(icon => icon.href)).size, 12, 'all twelve illustrations are distinct');
+      const spriteIds = await page.evaluate(async () => {
+        const response = await fetch('./song-icons.svg');
+        if (!response.ok) throw new Error('Illustration sprite could not load');
+        const sprite = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
+        if (sprite.querySelector('parsererror')) throw new Error('Illustration sprite has invalid SVG');
+        return [...sprite.querySelectorAll('symbol')].map(symbol => symbol.id);
+      });
+      assert.deepEqual(spriteIds.sort(), [...expectedSongIds].sort(), 'the sprite contains every song illustration');
+    }, true, true);
 
     await check(replacementOnly ? 'all twelve songs decode and start native playback synchronously from a trusted click' : 'all twenty-one recordings decode and start native playback synchronously from a trusted click', async () => {
       for (const song of playbackSongs) await playSong(song);
@@ -285,12 +359,12 @@ async function main() {
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
 
-    await check('service worker caches complete version 5.2 shell, twelve songs, and original audio', async () => {
+    await check('service worker caches complete version 5.3 shell, twelve songs, and original audio', async () => {
       await page.locator('#offline.ready').waitFor({ timeout: 30000 });
       assert.match(await page.locator('#offline.ready').textContent(), /12\s+låtar/);
       await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
       const cache = await page.evaluate(async () => {
-        const current = await caches.open('fart-machine-v5.2');
+        const current = await caches.open('fart-machine-v5.3');
         const keys = await current.keys();
         return Promise.all(keys.map(async request => {
           const response = await current.match(request);
@@ -300,7 +374,8 @@ async function main() {
         }));
       });
       assert.ok(cache.some(entry => entry.path === '/app-v4.4.js'));
-      assert.equal(cache.length, 36);
+      assert.ok(cache.some(entry => entry.path === '/song-icons.svg'), 'the new song illustrations are cached');
+      assert.equal(cache.length, 37);
       assert.deepEqual(cache.filter(entry => /\/audio\/songs\//.test(entry.path)).map(entry => entry.path).sort(), expectedSongIds.map(id => '/audio/songs/' + id + '.mp3').sort());
       assert.equal(cache.filter(entry => /\/audio\/[^/]+\.mp3$/.test(entry.path)).length, 9);
       for (const entry of cache) {
@@ -312,19 +387,19 @@ async function main() {
         if (entry.path.endsWith('.wav')) assert.match(entry.type, /audio\/wav|audio\/x-wav/);
       }
       const status = await page.evaluate(() => new Promise(resolve => { const channel = new MessageChannel(); channel.port1.onmessage = event => resolve(event.data); navigator.serviceWorker.controller.postMessage({ type: 'CACHE_STATUS' }, [channel.port2]); }));
-      assert.equal(status.version, '5.2');
+      assert.equal(status.version, '5.3');
       assert.equal(status.ready, true);
       assert.equal(status.sounds, 9);
       assert.equal(status.songs, 12);
-    }, true);
+    }, true, true);
 
-    await check(replacementOnly ? 'offline twelve-song playback restores captions and all twelve byte ranges work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
+    await check(designOnly ? 'offline reload, rendered illustrations, and byte range responses work without network' : replacementOnly ? 'offline twelve-song playback restores captions and all twelve byte ranges work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
       await context.setOffline(true);
       await page.reload();
       await page.locator('#offline.ready').waitFor({ timeout: 15000 });
       for (const song of playbackSongs) await playSong(song);
       for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
-      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v5.2')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
+      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v5.3')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
       for (const asset of paths) {
         const result = await page.evaluate(async asset => {
           const response = await fetch(asset, { headers: { Range: 'bytes=0-63' } });
@@ -344,10 +419,12 @@ async function main() {
       assert.deepEqual(ranges[0].bytes, [...fs.readFileSync(path.join(root, paths[0].slice(1))).subarray(-32)]);
       assert.equal(ranges[1].status, 416);
       assert.equal(ranges[2].status, 416);
+      await waitForSongIllustrations(page);
+      await page.screenshot({ path: path.join(output, 'song-offline-desktop.png'), fullPage: true });
       await context.setOffline(false);
       assert.deepEqual(await page.evaluate(() => window.__mediaTest.webAudio), []);
       assert.deepEqual(pageErrors, []);
-    }, true);
+    }, true, true);
 
     await check('new songs, toggling, and stop-all cancel actual pending native play requests', async () => {
       const pendingContext = await browser.newContext({ serviceWorkers: 'block' });
@@ -394,25 +471,49 @@ async function main() {
     });
 
     await check('all twelve song titles and artist captions fit desktop, tablet, and narrow mobile cards', async () => {
+      const responsiveGeometry = [];
       try {
         for (const width of [320, 390, 768, 1024]) {
           await page.setViewportSize({ width, height: 844 });
           const layout = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => {
             const card = button.getBoundingClientRect();
-            return { id: button.dataset.song, contents: ['.name', 'small'].map(selector => {
+            const icon = button.querySelector('.song-icon');
+            const geometry = icon.getBBox();
+            const matrix = icon.getScreenCTM();
+            const corners = [[geometry.x, geometry.y], [geometry.x + geometry.width, geometry.y], [geometry.x, geometry.y + geometry.height], [geometry.x + geometry.width, geometry.y + geometry.height]].map(([x, y]) => new DOMPoint(x, y).matrixTransform(matrix));
+            const painted = { left: Math.min(...corners.map(point => point.x)), right: Math.max(...corners.map(point => point.x)), top: Math.min(...corners.map(point => point.y)), bottom: Math.max(...corners.map(point => point.y)) };
+            return { id: button.dataset.song, illustration: { painted, insideCard: painted.left >= card.left && painted.right <= card.right && painted.top >= card.top && painted.bottom <= card.bottom, insideViewport: painted.left >= 0 && painted.right <= innerWidth }, contents: ['.name', 'small', '.song-art'].map(selector => {
               const element = button.querySelector(selector);
               const box = element.getBoundingClientRect();
-              return { selector, inside: box.left >= card.left && box.right <= card.right && box.top >= card.top && box.bottom <= card.bottom, fits: element.scrollWidth <= element.clientWidth + 1 && element.scrollHeight <= element.clientHeight + 1 };
+              // Decorative thought bubbles extend outside the art capsule; text must fit its own box.
+              return { selector, inside: box.left >= card.left && box.right <= card.right && box.top >= card.top && box.bottom <= card.bottom, fits: selector === '.song-art' || element.scrollWidth <= element.clientWidth + 1 && element.scrollHeight <= element.clientHeight + 1 };
             }) };
           }));
           assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, width + 'px page has no horizontal overflow');
-          for (const song of layout) for (const content of song.contents) {
-            assert.equal(content.inside, true, width + 'px ' + song.id + ' ' + content.selector + ' stays inside its card');
-            assert.equal(content.fits, true, width + 'px ' + song.id + ' ' + content.selector + ' is fully visible');
+          for (const song of layout) {
+            assert.equal(song.illustration.insideCard, true, width + 'px ' + song.id + ' painted SVG geometry stays inside its card');
+            assert.equal(song.illustration.insideViewport, true, width + 'px ' + song.id + ' painted SVG geometry stays inside the viewport');
+            for (const content of song.contents) {
+              assert.equal(content.inside, true, width + 'px ' + song.id + ' ' + content.selector + ' stays inside its card');
+              assert.equal(content.fits, true, width + 'px ' + song.id + ' ' + content.selector + ' is fully visible');
+            }
           }
+          const hero = await page.evaluate(() => {
+            const mascot = document.querySelector('.hero-mascot').getBoundingClientRect();
+            return ['.page-header h1', '.hero-tagline'].map(selector => {
+              const box = document.querySelector(selector).getBoundingClientRect();
+              return { selector, overlapsMascot: box.left < mascot.right && box.right > mascot.left && box.top < mascot.bottom && box.bottom > mascot.top };
+            });
+          });
+          for (const item of hero) assert.equal(item.overlapsMascot, false, width + 'px hero mascot leaves ' + item.selector + ' clear');
+          responsiveGeometry.push({ width, hero, songs: layout });
+          if (width === 320 || width === 768) await page.screenshot({ path: path.join(output, width === 320 ? 'song-mobile-320.png' : 'song-tablet.png'), fullPage: true });
         }
-      } finally { await page.setViewportSize({ width: 1024, height: 1000 }); }
-    }, true);
+      } finally {
+        fs.writeFileSync(path.join(output, 'responsive-geometry.json'), JSON.stringify(responsiveGeometry, null, 2) + '\n');
+        await page.setViewportSize({ width: 1024, height: 1000 });
+      }
+    }, true, true);
 
     const screenPath = path.join(output, 'song-desktop.png');
     await page.screenshot({ path: screenPath, fullPage: true });
@@ -424,9 +525,9 @@ async function main() {
     await browser.close();
     await new Promise(resolve => server.close(resolve));
   }
-  fs.writeFileSync(path.join(output, replacementOnly ? 'song-replacement-results.json' : 'song-playback-results.json'), JSON.stringify({ mode: replacementOnly ? 'replacement-only' : 'full', reports, failed: errors.length }, null, 2) + '\n');
+  fs.writeFileSync(path.join(output, designOnly ? 'song-design-results.json' : replacementOnly ? 'song-replacement-results.json' : 'song-playback-results.json'), JSON.stringify({ mode: designOnly ? 'design-only' : replacementOnly ? 'replacement-only' : 'full', reports, failed: errors.length }, null, 2) + '\n');
   if (errors.length) throw new Error(errors.length + ' verification group(s) failed');
-  console.log(replacementOnly ? 'Replacement native playback, full-cache integrity, and offline verification passed.' : 'All native playback and offline verification passed.');
+  console.log(designOnly ? 'Design, cache integrity, and offline illustration verification passed.' : replacementOnly ? 'Replacement native playback, full-cache integrity, and offline verification passed.' : 'All native playback and offline verification passed.');
 }
 
 main().catch(error => { console.error(error.stack); process.exitCode = 1; });

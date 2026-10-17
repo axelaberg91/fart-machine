@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '5.2';
+  const VERSION = '5.3';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -14,19 +14,19 @@
     ['katastrofen', '\u2622\ufe0f', 'Katastrofen', '08']
   ].map(([id, emoji, name, photo]) => ({id, emoji, name, photo, url: './audio/' + id + '.mp3'}));
   const songs = [
-    ['greta-gris', '\u{1f437}', 'Greta Gris', 'Julian Nott'],
-    ['bjornen-sover', '\u{1f43b}', 'Bj\u00f6rnen sover', 'Traditionell'],
-    ['baby-shark', '\u{1f988}', 'Baby Shark', 'Pinkfong'],
-    ['en-livstid-i-krig', '\u2694\ufe0f', 'En livstid i krig', 'Sabaton'],
-    ['bromance', '\u{1f3a7}', 'Bromance', 'Tim Berg (Avicii)'],
-    ['sommartider', '\u{1f31e}', 'Sommartider', 'Gyllene Tider'],
-    ['sandstorm', '\u{1f32a}', 'Sandstorm', 'Darude'],
-    ['ring-of-fire', '\u{1f525}', 'Ring of Fire', 'Johnny Cash'],
-    ['the-final-countdown', '\u{1f680}', 'The Final Countdown', 'Europe'],
-    ['imperial-march', '\u{1f30c}', 'The Imperial March', 'John Williams'],
-    ['seven-nation-army', '\u{1f941}', 'Seven Nation Army', 'The White Stripes'],
-    ['through-the-fire-and-flames', '\u{1f525}', 'Through the Fire and Flames', 'DragonForce']
-  ].map(([id, emoji, name, caption]) => ({id, emoji, name, caption, song: true, url: './audio/songs/' + id + '.mp3'}));
+    ['greta-gris', 'Greta Fis', 'Julian Prutt'],
+    ['bjornen-sover', 'Björnen fiser', 'Pruttkören'],
+    ['baby-shark', 'Baby Shart', 'Stinkfong'],
+    ['en-livstid-i-krig', 'En livstid på dass', 'Sabatarm'],
+    ['bromance', 'Pruttmance', 'Tim Brak (Avifis)'],
+    ['sommartider', 'Sommargaser', 'Gyllene Tarmar'],
+    ['sandstorm', 'Fartstorm', 'Da Röv'],
+    ['ring-of-fire', 'Ring of Farts', 'Johnny Gas'],
+    ['the-final-countdown', 'The Final Fartdown', 'Europrutt'],
+    ['imperial-march', 'The Imperial Fart', 'John Windliams'],
+    ['seven-nation-army', 'Seven Nation Farty', 'The Brown Stripes'],
+    ['through-the-fire-and-flames', 'Through the Fire and Farts', 'DragonFjärt']
+  ].map(([id, name, caption]) => ({id, name, caption, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');
   const songGrid = document.getElementById('songs');
@@ -118,10 +118,14 @@
     const art = document.createElement('span');
     art.className = 'song-art';
     art.setAttribute('aria-hidden', 'true');
-    const emoji = document.createElement('span');
-    emoji.className = 'emoji';
-    emoji.textContent = song.emoji;
-    art.appendChild(emoji);
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.classList.add('song-icon');
+    icon.setAttribute('viewBox', '0 0 96 96');
+    icon.setAttribute('focusable', 'false');
+    const illustration = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+    illustration.setAttribute('href', './song-icons.svg#' + song.id);
+    icon.appendChild(illustration);
+    art.appendChild(icon);
     const name = document.createElement('span');
     name.className = 'name';
     name.textContent = song.name;

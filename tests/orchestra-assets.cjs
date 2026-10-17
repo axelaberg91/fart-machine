@@ -20,9 +20,11 @@ const retainedSongHashes = {
   "bromance": "277366c4558deb513a478eb0938eb7b354ea340ed592a470b18513f55fcf58e7",
   "sommartider": "cd0c91f74958deadc002f22d4e6e1dbd86c05668d8112a1c5db874f61f75cf17",
   "sandstorm": "2bc5a4a0fc2bf40cc7acfd6dce1f93ed9c0427524d130fb90182c993806a82fb",
+  "ring-of-fire": "41d4a459c0ee0c53ed79cdbe720ff410e275d8b3018ac8393b3c819f14f0d3e6",
   "the-final-countdown": "3fdc6d8e18d516dfcdbada426efdb08118081e88c9a63bf47f1e2af5de773f84",
   "imperial-march": "2bf7cad4826c8d9b18e808f909ea1b4a0d7e1d6b5b4d4336afbb062b1fbb2942",
-  "seven-nation-army": "d7390e70fc9d245cef2f04bd2f60b11f16fcd80b29a88334ff689bdb746dee44"
+  "seven-nation-army": "d7390e70fc9d245cef2f04bd2f60b11f16fcd80b29a88334ff689bdb746dee44",
+  "through-the-fire-and-flames": "19f136ad5f55500090ef245621135b0ec9589bdb56e0df6332b16a21065cc314"
 };
 const retainedMetadataHashes = {
   "greta-gris": "ee4430edc593842c2089dd7a8eed9e1c0cac5f83621ebf104aebeda1a8872877",
@@ -32,9 +34,11 @@ const retainedMetadataHashes = {
   "bromance": "dff457348c41b3fafa01877ff1ed16dbddf4da72efd2dfcfdaeb5a43e7b9f7aa",
   "sommartider": "3842b16ed185db560616fa101407d240ca488b21e70e70166ede7295ba65ce30",
   "sandstorm": "9b801ffe51c1e37455f3fa73eccf149f822a688d3539bc8dc99763123906ddbc",
+  "ring-of-fire": "40a7c51b58a8379b3066fbceb89c54793c37275c8675973d927a01a6ceb44348",
   "the-final-countdown": "2ef1e2df85e624cd9ce59c37502da349a0e0e5d63bd9a9e496e4a03262bb4ad0",
   "imperial-march": "46aede4e9d1f3b3db3dffcd0064c41d63d54c42c2402735ea2fef0c51770af86",
-  "seven-nation-army": "fdbf594b3eba334c7346ce4a30fad63808057541d2395420b859211e0859914f"
+  "seven-nation-army": "fdbf594b3eba334c7346ce4a30fad63808057541d2395420b859211e0859914f",
+  "through-the-fire-and-flames": "dca9e35e11c55197a387d815fdbdfab3b7d6db3671b5a530e8996858b6ed3f0d"
 };
 const expectedIds = ['greta-gris', 'bjornen-sover', 'baby-shark', 'en-livstid-i-krig', 'bromance', 'sommartider', 'sandstorm', 'ring-of-fire', 'the-final-countdown', 'imperial-march', 'seven-nation-army', 'through-the-fire-and-flames'];
 assert.deepEqual(metadata.songs.map(song => song.id), expectedIds, 'all twelve arrangements stay in the approved order');

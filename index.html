@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#fff9eb">
+<meta name="theme-color" content="#f5ead5">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Hugo och Hermans pruttmaskin">
 <link rel="manifest" href="manifest.webmanifest">
@@ -14,23 +14,35 @@
 </head>
 <body><main>
 <header class="page-header">
+<div class="hero-copy">
+<span class="hero-badge"><span aria-hidden="true">●</span> LITEN MASKIN. STORA UTSLÄPP.</span>
 <h1><span class="owners">Hugo och Hermans</span><span class="title">pruttmaskin</span></h1>
+<p class="hero-tagline">Tryck. Fnissa. Släpp loss.</p>
+</div>
+<div class="hero-mascot" aria-hidden="true">
+<svg viewBox="0 0 180 160" fill="none"><path class="mascot-wisp" d="M32 125c-18 5-26-2-19-9m139-78c15-9 20-4 16 4m-18 79c16-1 23 7 18 13"/><path class="mascot-cloud" d="M49 116c-24 0-38-12-36-30 1-13 11-22 24-23-2-23 15-40 37-35 14-26 53-20 57 9 29-5 48 22 36 44 9 27-11 43-33 38-9 20-31 27-49 14-15 9-32 2-36-17Z"/><path class="mascot-shine" d="M49 65c-1-12 8-20 19-17m23-10c10-8 24-3 26 8"/><ellipse cx="77" cy="83" rx="5" ry="7" fill="currentColor"/><ellipse cx="116" cy="83" rx="5" ry="7" fill="currentColor"/><path d="M87 102c5 7 13 7 18 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path class="mascot-cheek" d="M57 96h11m57 0h11"/><path class="mascot-puff" d="M39 132c-11-1-16 3-14 10 3 9 16 10 22 1m-24-5c-8-6-16 1-11 8"/></svg>
+<span class="mascot-label">Full gas!</span>
+</div>
 </header>
 <section class="controls" aria-label="Ljudkontroller">
 <label class="volume"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5zM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></svg>Volym<input id="vol" aria-label="Volym" type="range" min="0" max="100" value="75"></label>
 <label class="orchestra"><input id="layer" type="checkbox" checked> Fisorkester</label>
 <button id="stop" class="stop" type="button"><i aria-hidden="true"></i>Stoppa allt</button>
 </section>
-<div class="boardhead"><h2>V&auml;lj din prutt</h2><span class="hint">9 KNAPPAR. NOLL HYFS.</span></div>
+<div class="board-panel">
+<div class="boardhead"><div><span class="eyebrow">01 / LÖSA PRUTTAR</span><h2>Välj din prutt</h2></div><span class="hint">9 KNAPPAR.<br>NOLL HYFS.</span></div>
 <section class="grid" id="grid" aria-label="Pruttljud"></section>
-<div class="boardhead song-heading"><h2 id="songs-title">Låtar med fisar</h2><span class="hint">12 LÅTAR. BARA FISAR.</span></div>
+</div>
+<div class="board-panel song-panel">
+<div class="boardhead song-heading"><div><span class="eyebrow">02 / FIS PÅ REPEAT</span><h2 id="songs-title">Pruttparaden</h2></div><span class="hint">12 HITS.<br>HELT URBLÅSTA.</span></div>
 <p class="song-intro">En låt i taget. Tryck igen för att stoppa.</p>
 <section class="grid song-grid" id="songs" aria-labelledby="songs-title"></section>
+</div>
 <p id="status" role="status" aria-live="polite">V&auml;lj din prutt!</p>
 <div class="lower"><p id="offline" aria-live="polite">F&ouml;rbereder offlinel&auml;ge &hellip;</p><span>Bara trams. Inga annonser.</span></div>
 <details><summary>Ljud &amp; licenser</summary><div class="credits">
 <p>Alla nio ljud &auml;r MP3-inspelningar fr&aring;n Freesound under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>. Ljudfilerna f&ouml;ljer med appen.</p>
-<p>De tolv låtarna är våra instrumentala fisorkestrar med flera lager av melodi, bas, rytmer och extra pruttar från våra CC0-inspelningar. Inspelningarna har klippts och tonhöjdsändrats till instrument. Sandstorm har täta, växlande anslag och The Final Countdown spelas i en lägre tonart. Låtarnas melodier tillhör sina respektive upphovspersoner. Ljudfilerna följer med appen.</p>
+<p>De tolv låtarna är våra instrumentala fisorkestrar med flera lager av melodi, bas, rytmer och extra pruttar från våra CC0-inspelningar. Inspelningarna har klippts och tonhöjdsändrats till instrument. Fartstorm har täta, växlande anslag och The Final Fartdown spelas i en lägre tonart. Låtnamnen och artistnamnen i Pruttparaden är skämtnamn. Originalens melodier tillhör sina respektive upphovspersoner; fullständiga uppgifter finns i <a href="./audio/songs/CREDITS.md">låtarnas källförteckning</a>. Ljudfilerna följer med appen.</p>
 <p>Breviceps: <a href="https://freesound.org/people/Breviceps/sounds/445998/" target="_blank" rel="noopener noreferrer">Smygaren</a>, <a href="https://freesound.org/people/Breviceps/sounds/445999/" target="_blank" rel="noopener noreferrer">Kanonen</a>, <a href="https://freesound.org/people/Breviceps/sounds/445997/" target="_blank" rel="noopener noreferrer">Bl&ouml;ta</a>, <a href="https://freesound.org/people/Breviceps/sounds/446000/" target="_blank" rel="noopener noreferrer">Ankan</a>.<br>sorce: <a href="https://freesound.org/people/sorce/sounds/431621/" target="_blank" rel="noopener noreferrer">Trumpeten</a>. Blubberfreak: <a href="https://freesound.org/people/Blubberfreak/sounds/732057/" target="_blank" rel="noopener noreferrer">Vulkanen</a>. C-V: <a href="https://freesound.org/people/C-V/sounds/506994/" target="_blank" rel="noopener noreferrer">Snabbisen</a>. SamuelGremaud: <a href="https://freesound.org/people/SamuelGremaud/sounds/518699/" target="_blank" rel="noopener noreferrer">Raketen</a>. Under7dude: <a href="https://freesound.org/people/Under7dude/sounds/163381/" target="_blank" rel="noopener noreferrer">Katastrofen</a>.</p>
 <p>L&aring;t sidan vara &ouml;ppen med internetanslutning tills den visar att den &auml;r redo offline. Ljud, sånger och bilder sparas d&aring; tillsammans med appen.</p>
 </div></details>
@@ -42,6 +54,6 @@
 <p><a href="./audio/snabbisen.mp3" target="_blank" rel="noopener">&Ouml;ppna ljudfilen separat</a></p>
 <p id="audio-debug" aria-live="polite"></p>
 </div></details>
-<footer>Version 5.2</footer>
+<footer><span>Handgjort oljud. Med kärlek och gas.</span><span>Version 5.3</span></footer>
 <noscript>Aktivera JavaScript f&ouml;r att spela ljuden.</noscript>
 </main></body></html>

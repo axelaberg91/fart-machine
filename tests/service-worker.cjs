@@ -16,9 +16,11 @@ const retainedSongHashes = {
   "bromance": "277366c4558deb513a478eb0938eb7b354ea340ed592a470b18513f55fcf58e7",
   "sommartider": "cd0c91f74958deadc002f22d4e6e1dbd86c05668d8112a1c5db874f61f75cf17",
   "sandstorm": "2bc5a4a0fc2bf40cc7acfd6dce1f93ed9c0427524d130fb90182c993806a82fb",
+  "ring-of-fire": "41d4a459c0ee0c53ed79cdbe720ff410e275d8b3018ac8393b3c819f14f0d3e6",
   "the-final-countdown": "3fdc6d8e18d516dfcdbada426efdb08118081e88c9a63bf47f1e2af5de773f84",
   "imperial-march": "2bf7cad4826c8d9b18e808f909ea1b4a0d7e1d6b5b4d4336afbb062b1fbb2942",
-  "seven-nation-army": "d7390e70fc9d245cef2f04bd2f60b11f16fcd80b29a88334ff689bdb746dee44"
+  "seven-nation-army": "d7390e70fc9d245cef2f04bd2f60b11f16fcd80b29a88334ff689bdb746dee44",
+  "through-the-fire-and-flames": "19f136ad5f55500090ef245621135b0ec9589bdb56e0df6332b16a21065cc314"
 };
 const code = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
 const context = vm.createContext({ self: { addEventListener() {} }, URL, Request, Response });
@@ -26,16 +28,17 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '5.2');
+assert.equal(version, '5.3');
 assert.ok(assets.includes('./app-v4.4.js'));
+assert.ok(assets.includes('./song-icons.svg'), 'the song illustrations are available offline');
 assert.deepEqual(assets.filter(asset => asset.startsWith('./audio/songs/')).sort(), expectedSongIds.map(id => './audio/songs/' + id + '.mp3').sort());
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
 assert.equal(new Set(assets).size, assets.length);
-assert.equal(assets.length, 36);
+assert.equal(assets.length, 37);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 5\.2/);
+assert.match(html, /Version 5\.3/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);
@@ -84,7 +87,7 @@ async function main() {
       if (retainedSongHashes[song.id]) assert.equal(hash, retainedSongHashes[song.id], song.id + ' must retain the previous approved recording');
     }
     console.log('PASS all twelve song payloads match their metadata byte counts and SHA-256 hashes.');
-    console.log('PASS all ten retained approved recordings are byte-for-byte unchanged.');
+    console.log('PASS all twelve approved recordings are byte-for-byte unchanged.');
   }
 }
 

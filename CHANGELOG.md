@@ -1,5 +1,15 @@
 # Hugo och Hermans pruttmaskin
 
+## 5.3 - Brunare kostym och en hel fis-hitlista
+
+- Added all twelve approved parody song and artist names, including
+  Björnen fiser by Pruttkören and Through the Fire and Farts by DragonFjärt.
+- Drew twelve distinct fart-themed vector icons and redesigned the interface
+  with warm chocolate, caramel, cream and olive gas accents.
+- Updated the app icon, install colors, mobile layout and offline cache.
+- Preserved all twelve song recordings, original composition metadata and
+  the nine individual fart recordings exactly unchanged.
+
 ## 5.2 - Mer fisig DragonForce och snabbare Ring of Fire
 
 - Shortened DragonForce's repeated acoustic opening to two bars. The complete
