@@ -1,5 +1,18 @@
 # Hugo och Hermans pruttmaskin
 
+## 5.1 - Seven Nation Army och ett nytt DragonForce-försök
+
+- Added Seven Nation Army (The White Stripes), with its exact dotted riff,
+  G/A power build, low lead and growing stadium-fart rhythm.
+- Rebuilt Through the Fire and Flames (DragonForce) as a complete 31-second
+  excerpt: verified rapid acoustic reduction, electric hook, real second
+  guitar line and an arranged C-minor closing cadence at 200 BPM.
+- Corrected the rapid lead's natural sample pitch scoop, kept the melody dry,
+  and added physical pitch/gap verification alongside the score audit.
+- Used all nine CC0 recordings in each new arrangement. Kept all ten existing
+  recordings and their song metadata exactly unchanged.
+- Updated the offline cache and mobile song layout for twelve songs.
+
 ## 5.0 - Hela fisorkestern
 
 - Lowered The Final Countdown's melody and harmonies five semitones while

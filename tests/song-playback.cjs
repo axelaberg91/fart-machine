@@ -25,7 +25,7 @@ const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
 const songSelector = '#songs button[data-song]';
 const padSelector = '#grid button[data-sound]';
 const replacementOnly = process.argv.includes('--replacement-only');
-const replacementId = 'the-final-countdown';
+const replacementId = 'through-the-fire-and-flames';
 const expectedSongs = [
   { id: 'greta-gris', name: 'Greta Gris' },
   { id: 'bjornen-sover', name: 'Björnen sover' },
@@ -36,7 +36,9 @@ const expectedSongs = [
   { id: 'sandstorm', name: 'Sandstorm' },
   { id: 'ring-of-fire', name: 'Ring of Fire' },
   { id: 'the-final-countdown', name: 'The Final Countdown' },
-  { id: 'imperial-march', name: 'The Imperial March' }
+  { id: 'imperial-march', name: 'The Imperial March' },
+  { id: 'seven-nation-army', name: 'Seven Nation Army' },
+  { id: 'through-the-fire-and-flames', name: 'Through the Fire and Flames' }
 ];
 const expectedSongIds = expectedSongs.map(song => song.id);
 const expectedCaptions = {
@@ -49,7 +51,9 @@ const expectedCaptions = {
   'sandstorm': 'Darude',
   'ring-of-fire': 'Johnny Cash',
   'the-final-countdown': 'Europe',
-  'imperial-march': 'John Williams'
+  'imperial-march': 'John Williams',
+  'seven-nation-army': 'The White Stripes',
+  'through-the-fire-and-flames': 'DragonForce'
 };
 const errors = [];
 const reports = [];
@@ -112,7 +116,7 @@ async function main() {
   for (const name of ['app-v4.4.js', 'sw.js']) new vm.Script(fs.readFileSync(path.join(root, name), 'utf8'), { filename: name });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(html, /app-v4\.4\.js/);
-  assert.match(html, /Version 5\.0/);
+  assert.match(html, /Version 5\.1/);
   console.log('PASS syntax and version references');
 
   const server = http.createServer((request, response) => {
@@ -134,7 +138,7 @@ async function main() {
     const pageErrors = [];
     page.on('pageerror', error => pageErrors.push(error.message));
     await page.goto(url);
-    await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 10);
+    await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 12);
     const songs = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => ({ id: button.dataset.song, name: button.querySelector('.name').textContent })));
     const pads = await page.locator(padSelector).evaluateAll(buttons => buttons.map(button => button.dataset.sound));
     const playbackSongs = songs;
@@ -149,12 +153,11 @@ async function main() {
       assert.equal(await page.locator('[data-song="' + song.id + '"] small').textContent(), expectedCaptions[song.id], 'stopping restores the artist/origin');
     }
 
-    await check('ten requested songs in order expose artist/origin captions and nine original pads', async () => {
-      assert.equal(songs.length, 10);
-      assert.equal(new Set(songs.map(song => song.id)).size, 10);
+    await check('twelve requested songs in order expose artist/origin captions and nine original pads', async () => {
+      assert.equal(songs.length, 12);
+      assert.equal(new Set(songs.map(song => song.id)).size, 12);
       assert.deepEqual(songs, expectedSongs);
       assert.equal(pads.length, 9);
-      assert.equal(await page.locator('[data-song="through-the-fire-and-flames"]').count(), 0);
       for (const song of songs) {
         const button = page.locator('[data-song="' + song.id + '"]');
         assert.equal(await button.getAttribute('aria-pressed'), 'false');
@@ -163,7 +166,7 @@ async function main() {
       }
     }, true);
 
-    await check(replacementOnly ? 'all ten songs decode and start native playback synchronously from a trusted click' : 'all nineteen recordings decode and start native playback synchronously from a trusted click', async () => {
+    await check(replacementOnly ? 'all twelve songs decode and start native playback synchronously from a trusted click' : 'all twenty-one recordings decode and start native playback synchronously from a trusted click', async () => {
       for (const song of playbackSongs) await playSong(song);
       for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
       assert.deepEqual(await page.evaluate(() => window.__mediaTest.webAudio), []);
@@ -282,12 +285,12 @@ async function main() {
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
 
-    await check('service worker caches complete version 5.0 shell, ten songs, and original audio', async () => {
+    await check('service worker caches complete version 5.1 shell, twelve songs, and original audio', async () => {
       await page.locator('#offline.ready').waitFor({ timeout: 30000 });
-      assert.match(await page.locator('#offline.ready').textContent(), /10\s+låtar/);
+      assert.match(await page.locator('#offline.ready').textContent(), /12\s+låtar/);
       await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
       const cache = await page.evaluate(async () => {
-        const current = await caches.open('fart-machine-v5.0');
+        const current = await caches.open('fart-machine-v5.1');
         const keys = await current.keys();
         return Promise.all(keys.map(async request => {
           const response = await current.match(request);
@@ -297,7 +300,7 @@ async function main() {
         }));
       });
       assert.ok(cache.some(entry => entry.path === '/app-v4.4.js'));
-      assert.equal(cache.length, 34);
+      assert.equal(cache.length, 36);
       assert.deepEqual(cache.filter(entry => /\/audio\/songs\//.test(entry.path)).map(entry => entry.path).sort(), expectedSongIds.map(id => '/audio/songs/' + id + '.mp3').sort());
       assert.equal(cache.filter(entry => /\/audio\/[^/]+\.mp3$/.test(entry.path)).length, 9);
       for (const entry of cache) {
@@ -309,19 +312,19 @@ async function main() {
         if (entry.path.endsWith('.wav')) assert.match(entry.type, /audio\/wav|audio\/x-wav/);
       }
       const status = await page.evaluate(() => new Promise(resolve => { const channel = new MessageChannel(); channel.port1.onmessage = event => resolve(event.data); navigator.serviceWorker.controller.postMessage({ type: 'CACHE_STATUS' }, [channel.port2]); }));
-      assert.equal(status.version, '5.0');
+      assert.equal(status.version, '5.1');
       assert.equal(status.ready, true);
       assert.equal(status.sounds, 9);
-      assert.equal(status.songs, 10);
+      assert.equal(status.songs, 12);
     }, true);
 
-    await check(replacementOnly ? 'offline ten-song playback restores captions and all ten byte ranges work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
+    await check(replacementOnly ? 'offline twelve-song playback restores captions and all twelve byte ranges work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
       await context.setOffline(true);
       await page.reload();
       await page.locator('#offline.ready').waitFor({ timeout: 15000 });
       for (const song of playbackSongs) await playSong(song);
       for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
-      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v5.0')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
+      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v5.1')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
       for (const asset of paths) {
         const result = await page.evaluate(async asset => {
           const response = await fetch(asset, { headers: { Range: 'bytes=0-63' } });
@@ -354,13 +357,14 @@ async function main() {
       await pendingPage.route('**/audio/**', route => { held.push(route); });
       try {
         await pendingPage.goto(url);
-        const button = pendingPage.locator('[data-song="' + songs[0].id + '"]');
+        const pendingSongs = songs.slice(-2);
+        const button = pendingPage.locator('[data-song="' + pendingSongs[0].id + '"]');
         await button.click();
         assert.equal(await pendingPage.locator('#native-players audio').count(), 1);
         assert.equal(await button.getAttribute('aria-pressed'), 'true');
-        assert.equal(await button.getAttribute('aria-label'), 'Stoppa ' + songs[0].name);
+        assert.equal(await button.getAttribute('aria-label'), 'Stoppa ' + pendingSongs[0].name);
         const player = await pendingPage.locator('#native-players audio').elementHandle();
-        const replacement = pendingPage.locator('[data-song="' + songs[1].id + '"]');
+        const replacement = pendingPage.locator('[data-song="' + pendingSongs[1].id + '"]');
         await replacement.click();
         assert.equal(await pendingPage.locator('#layer').isChecked(), true);
         assert.equal(await pendingPage.locator('#native-players audio').count(), 1);
@@ -388,6 +392,27 @@ async function main() {
         assert.deepEqual(await pendingPage.evaluate(() => window.__mediaTest.webAudio), []);
       } finally { await pendingContext.close(); }
     });
+
+    await check('all twelve song titles and artist captions fit desktop, tablet, and narrow mobile cards', async () => {
+      try {
+        for (const width of [320, 390, 768, 1024]) {
+          await page.setViewportSize({ width, height: 844 });
+          const layout = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => {
+            const card = button.getBoundingClientRect();
+            return { id: button.dataset.song, contents: ['.name', 'small'].map(selector => {
+              const element = button.querySelector(selector);
+              const box = element.getBoundingClientRect();
+              return { selector, inside: box.left >= card.left && box.right <= card.right && box.top >= card.top && box.bottom <= card.bottom, fits: element.scrollWidth <= element.clientWidth + 1 && element.scrollHeight <= element.clientHeight + 1 };
+            }) };
+          }));
+          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, width + 'px page has no horizontal overflow');
+          for (const song of layout) for (const content of song.contents) {
+            assert.equal(content.inside, true, width + 'px ' + song.id + ' ' + content.selector + ' stays inside its card');
+            assert.equal(content.fits, true, width + 'px ' + song.id + ' ' + content.selector + ' is fully visible');
+          }
+        }
+      } finally { await page.setViewportSize({ width: 1024, height: 1000 }); }
+    }, true);
 
     const screenPath = path.join(output, 'song-desktop.png');
     await page.screenshot({ path: screenPath, fullPage: true });

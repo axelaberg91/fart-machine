@@ -1,6 +1,6 @@
 # Fart-song recordings
 
-Ten independently arranged fart orchestras. The website plays finished local MP3s
+Twelve independently arranged fart orchestras. The website plays finished local MP3s
 through native HTML audio. Every audible instrument comes from the nine recorded
 farts below: no voices, original song recordings, synth oscillators or drum libraries.
 
@@ -69,6 +69,8 @@ score page or downloaded MIDI is an app asset.
 | `ring-of-fire.mp3` | Johnny Cash / June Carter / Merle Kilgore | 114 BPM | 22.25 s |
 | `the-final-countdown.mp3` | Europe / Joey Tempest | 118 BPM | 26.88 s |
 | `imperial-march.mp3` | John Williams / John Williams | 108 BPM | 27.87 s |
+| `seven-nation-army.mp3` | The White Stripes / Jack White | 124 BPM | 28.30 s |
+| `through-the-fire-and-flames.mp3` | DragonForce / Herman Li, ZP Theart, Sam Totman and Vadim Pruzhanov | 200 BPM | 31.20 s |
 
 ### Greta Gris
 
@@ -168,7 +170,49 @@ Melody and note durations visually checked against the official Faber/Warner-Cha
 - [Reference 1](https://faber-product-media.s3.amazonaws.com/082ddb6e-cb5d-4875-acb9-0417d55a5b01).
 - [Reference 2](https://www.halleonard.com/product/4005404/the-imperial-march-darth-vaders-theme).
 
+### Seven Nation Army
+
+Riff pitches and durations visually verified against online-skills own educational bass notation, published on the Polish government ZPE portal (CC BY 3.0). Its Riff I supplies E E G E D / C B at onsets 0,1.5,2,2.75,3.5 / 4,6. Riff III supplies C D C B at 4,4.75,5.5,6. Riff II is eight G eighths then eight A eighths. The displayed bass octave is used as the fart-lead register (E3 opening); it is an arrangement choice rather than the recording sounding register. The source text mislabels the tonal centre C major; the notation supports E minor. Tempo 124 BPM, section order, all accompaniment voicings and the last E3 cadence are independent arrangement decisions. No original-recording audio is used.
+
+- [Reference 1](https://zpe.gov.pl/a/wejdz-na-wyzszy-poziom/D61RF834M).
+- [Reference 2](https://static.zpe.gov.pl/portal/f/res-minimized/R1R4ROAAMNNOF/1775666943/2ctG2fR98YgPOFB0mHGC9wqirj2VvO2U.png).
+
+### Through the Fire and Flames
+
+Original key C minor, 4/4, 200 BPM (licensed Musicnotes lists 199; Hal Leonard artist-approved preview marks 200). All beats below are quarter-note beats at 200, with straight sixteenths at 0.25 beat = 75 ms. Bars 1-15 (beats 0-60) use the licensed Hal Leonard page-1 Guitar 3 two-bar top-voice reduction, repeating its 32 exact sounding guitar notes: 240 events. This is an intentional melodic reduction of simultaneous acoustic voices; it is not a claim that any single community MIDI track equals the licensed reduction. The higher moving eighth-note pitches independently agree with the maximum of the 12-track Acoustic+Keyboard and Acoustic Guitar parts; the licensed reduction supplies the explicit C4 interleaved pedal. Bar 16 (beats 60-64) is the exact 16-event Acoustic+Keyboard connecting run from Songparts dPOfCHp4g18SSKCN, 480 ticks per beat. Bars 17-24 (beats 64-96) are all 123 exact note onsets and durations from that transcription Lead 1, with a single fixed -12-semitone register change for this electric section. The optional harmony uses the same exact window of Lead 2, also -12 semitones, 123 events. The two alternate 12-track public transcriptions corroborate the intro and electric hook structure. The recommended 14-track version lKrvLtRPuj0rrCfY was rejected because its acoustic Guitar 2 has implausible D3 pedal glitches and its electric hook has discordant alternative pitches. Beat 96 C4/Eb4 held for four beats and the final C-minor chord are a new arranged resolution, not part of the excerpted original melody. Chords are simplified arrangement guidance derived from the source bass/harmony; they are not a transcription of every original rhythm-guitar attack. No original-song recordings are included.
+
+- [Reference 1](https://www.guitarinstructor.com/product/guitar-tab/dragonforce/through-the-fire-and-flames/1000059217).
+- [Reference 2](https://s3.amazonaws.com/halleonard-pagepreviews/HL_DDS_0000000000260920.png).
+- [Reference 3](https://www.musicnotes.com/sheetmusic/dragonforce/through-the-fire-and-flames/MN0063997).
+- [Reference 4](https://songparts.com/songs/dragonforce/through-the-fire-and-flames/dPOfCHp4g18SSKCN/play).
+- [Reference 5](https://songparts.com/songs/dragonforce/through-the-fire-and-flames/pFIAHjqfn3WloQCj/play).
+- [Reference 6](https://songparts.com/songs/dragonforce/through-the-fire-and-flames/Wfl4gzq4LpqpHCkK/play).
+
+### Extra work on the rapid DragonForce lead
+
+The lead has 380 scheduled melody attacks at 200 BPM. The acoustic opening
+uses 75 ms sixteenths; the electric section has a quieter, independently
+verified second guitar line. The opening is a documented upper-voice reduction
+of simultaneous acoustics, rather than a claim that one guitar alone plays it.
+
+An early source passage scoops sharp during very short notes. For this new
+arrangement only, a steady 1.595–1.680 s passage of Trumpeten is stretched once
+using overlap-add tempo filters, then repitched from a 250 Hz tuning reference.
+This is finite recorded audio, not an oscillator or repeating wavetable.
+Lead gates occupy 88% of the written spacing, capped at 0.85 s. Its lead echo
+is disabled, avoiding a 71 ms delay landing near the following 75 ms note.
+Backing uses bass, muted chord chugs, rapid kicks and restrained wet attacks.
+The ending is a new C-minor cadence; there is no intentional stutter or collapse.
+
+The independent physical pitch test measures all 380 isolated lead notes.
+The final measured median absolute error is 9.82 cents (about 0.10 semitone);
+all 379 inter-note dry gaps are silent. This physical test complements the
+separate event-by-event transcription audit and decoded delivered MP3 checks.
+
 ## Musical preservation checks
+
+Version 5.1 adds two recordings. All ten previously approved MP3s and their
+per-song metadata entries remain exactly unchanged.
 
 The original eight tunes keep every accepted sounding pitch, note onset,
 written duration, tempo and phrase repetition. Sommartider retains its six
@@ -182,16 +226,16 @@ byte-for-byte identical to the approved 4.9 release:
 
 ## Format, validation and regeneration
 
-All ten files are stereo MPEG Layer III (MP3), 44,100 Hz, 128 kbit/s, MIME
-`audio/mpeg`. Their total size is 3,637,983 bytes (approximately 3.64 MB).
+All twelve files are stereo MPEG Layer III (MP3), 44,100 Hz, 128 kbit/s, MIME
+`audio/mpeg`. Their total size is 4,592,547 bytes (approximately 4.59 MB).
 Decoded output has zero clipped samples. Metadata records decoded peaks and
 RMS, lead attack measurements, source hashes, every scheduled layer and
-final output hashes. All ten songs are included in the version 5.0 offline cache.
+final output hashes. All twelve songs are included in the version 5.1 offline cache.
 
 The score registry `tools/orchestra-scores.json` contains all current melodies
 and creative chord plans. `tools/render-songs.py` retains the original eight
 solo score definitions for regression checks and delegates rendering to the
-current orchestra tool. Regenerate the nine revised songs with Python, NumPy
+current orchestra tool. Regenerate the current arrangements with Python, NumPy
 and FFmpeg (Imperial March is preserved by default):
 
 ```sh
@@ -211,3 +255,16 @@ step only. The deployed app needs no Python, FFmpeg or Web Audio synthesis.
 Verification covers the delivered MP3s, source attribution, musical timing,
 native browser playback and offline operation; it does not claim a physical
 iPad listening test.
+
+To regenerate only the two 5.1 additions:
+
+```sh
+python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg --only seven-nation-army through-the-fire-and-flames
+```
+
+The rapid-lead pitch/articulation regression check is runnable with the same
+Python, NumPy and FFmpeg dependencies:
+
+```sh
+python tests/power-metal-pitch.py --ffmpeg /path/to/ffmpeg
+```

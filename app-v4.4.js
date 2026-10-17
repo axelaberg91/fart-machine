@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '5.0';
+  const VERSION = '5.1';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -23,7 +23,9 @@
     ['sandstorm', '\u{1f32a}', 'Sandstorm', 'Darude'],
     ['ring-of-fire', '\u{1f525}', 'Ring of Fire', 'Johnny Cash'],
     ['the-final-countdown', '\u{1f680}', 'The Final Countdown', 'Europe'],
-    ['imperial-march', '\u{1f30c}', 'The Imperial March', 'John Williams']
+    ['imperial-march', '\u{1f30c}', 'The Imperial March', 'John Williams'],
+    ['seven-nation-army', '\u{1f941}', 'Seven Nation Army', 'The White Stripes'],
+    ['through-the-fire-and-flames', '\u{1f525}', 'Through the Fire and Flames', 'DragonForce']
   ].map(([id, emoji, name, caption]) => ({id, emoji, name, caption, song: true, url: './audio/songs/' + id + '.mp3'}));
   const recordings = [...sounds, ...songs];
   const grid = document.getElementById('grid');

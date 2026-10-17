@@ -4825,5 +4825,3300 @@
       }
     ],
     "musical_direction": "A grand, silly fart brass band, 26.67 seconds before the release tail. Start the recognizable lead at beat 0 without an intro. Opening register G3, climactic high G4. Keep melody pitches exact; make rests and the dotted-eighth/sixteenth snaps crisp, with note gates around 75-85% except the final half-note. Alternate several pitched short dry rasps and resonant brass-like farts across melodic notes without changing the fundamental. Layer a quieter octave-down bass fart on strong beats, sparse triad stabs (two or three different timbres) under the first three repeated notes, and airy little puffs as snare on beats 1 and 3 of each bar. Add restrained marching 16th puffs in the written rests at beats 15, 21.0-21.5, 25.0-25.5, 37.0-37.5 and 41.0-41.5; avoid masking the Eb/Bb lead snaps. Give bars 9-12 a larger supporting ensemble and a small fill into beat 44. Finish with the G minor cadence and one low, rounded fart release. Lower harmonies are a pad/stab layer, never a competing tune."
+  },
+  {
+    "id": "seven-nation-army",
+    "title": "Seven Nation Army",
+    "artist": "The White Stripes",
+    "composer": "Jack White",
+    "bpm": 124,
+    "meter": "4/4",
+    "bars": 14,
+    "total_beats": 56,
+    "key": "E minor",
+    "style": "garage-rock",
+    "melody": [
+      {
+        "beat": 0,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 1.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 2,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 2.75,
+        "note": "E3",
+        "duration": 0.75
+      },
+      {
+        "beat": 3.5,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 4,
+        "note": "C3",
+        "duration": 2
+      },
+      {
+        "beat": 6,
+        "note": "B2",
+        "duration": 2
+      },
+      {
+        "beat": 8,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 9.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 10,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 10.75,
+        "note": "E3",
+        "duration": 0.75
+      },
+      {
+        "beat": 11.5,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 12,
+        "note": "C3",
+        "duration": 0.75
+      },
+      {
+        "beat": 12.75,
+        "note": "D3",
+        "duration": 0.75
+      },
+      {
+        "beat": 13.5,
+        "note": "C3",
+        "duration": 0.5
+      },
+      {
+        "beat": 14,
+        "note": "B2",
+        "duration": 2
+      },
+      {
+        "beat": 16.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 16.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 17.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 17.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 18.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 18.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 19.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 19.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 20.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 20.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 22.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 22.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 23.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 23.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 24,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 25.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 26,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 26.75,
+        "note": "E3",
+        "duration": 0.75
+      },
+      {
+        "beat": 27.5,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 28,
+        "note": "C3",
+        "duration": 2
+      },
+      {
+        "beat": 30,
+        "note": "B2",
+        "duration": 2
+      },
+      {
+        "beat": 32,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 33.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 34,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 34.75,
+        "note": "E3",
+        "duration": 0.75
+      },
+      {
+        "beat": 35.5,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 36,
+        "note": "C3",
+        "duration": 0.75
+      },
+      {
+        "beat": 36.75,
+        "note": "D3",
+        "duration": 0.75
+      },
+      {
+        "beat": 37.5,
+        "note": "C3",
+        "duration": 0.5
+      },
+      {
+        "beat": 38,
+        "note": "B2",
+        "duration": 2
+      },
+      {
+        "beat": 40.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 40.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 42.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 42.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 43.0,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 43.5,
+        "note": "G2",
+        "duration": 0.5
+      },
+      {
+        "beat": 44.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 44.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 46.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 46.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 47.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 47.5,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 48,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 49.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 50,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 50.75,
+        "note": "E3",
+        "duration": 0.75
+      },
+      {
+        "beat": 51.5,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 52,
+        "note": "C3",
+        "duration": 0.75
+      },
+      {
+        "beat": 52.75,
+        "note": "D3",
+        "duration": 0.75
+      },
+      {
+        "beat": 53.5,
+        "note": "C3",
+        "duration": 0.5
+      },
+      {
+        "beat": 54,
+        "note": "B2",
+        "duration": 1
+      },
+      {
+        "beat": 55,
+        "note": "E3",
+        "duration": 1
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "B2",
+          "E3"
+        ]
+      },
+      {
+        "beat": 4,
+        "duration": 2,
+        "notes": [
+          "C2",
+          "G2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 6,
+        "duration": 2,
+        "notes": [
+          "B1",
+          "F#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 8,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "B2",
+          "E3"
+        ]
+      },
+      {
+        "beat": 12,
+        "duration": 2,
+        "notes": [
+          "C2",
+          "G2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 14,
+        "duration": 2,
+        "notes": [
+          "B1",
+          "F#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 16,
+        "duration": 4,
+        "notes": [
+          "G2",
+          "D3",
+          "G3"
+        ]
+      },
+      {
+        "beat": 20,
+        "duration": 4,
+        "notes": [
+          "A2",
+          "E3",
+          "A3"
+        ]
+      },
+      {
+        "beat": 24,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "B2",
+          "E3"
+        ]
+      },
+      {
+        "beat": 28,
+        "duration": 2,
+        "notes": [
+          "C2",
+          "G2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 30,
+        "duration": 2,
+        "notes": [
+          "B1",
+          "F#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 32,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "B2",
+          "E3"
+        ]
+      },
+      {
+        "beat": 36,
+        "duration": 2,
+        "notes": [
+          "C2",
+          "G2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 38,
+        "duration": 2,
+        "notes": [
+          "B1",
+          "F#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 40,
+        "duration": 4,
+        "notes": [
+          "G2",
+          "D3",
+          "G3"
+        ]
+      },
+      {
+        "beat": 44,
+        "duration": 4,
+        "notes": [
+          "A2",
+          "E3",
+          "A3"
+        ]
+      },
+      {
+        "beat": 48,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "B2",
+          "E3"
+        ]
+      },
+      {
+        "beat": 52,
+        "duration": 2,
+        "notes": [
+          "C2",
+          "G2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 54,
+        "duration": 1,
+        "notes": [
+          "B1",
+          "F#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 55,
+        "duration": 1,
+        "notes": [
+          "E2",
+          "B2",
+          "E3"
+        ]
+      }
+    ],
+    "references": [
+      "https://zpe.gov.pl/a/wejdz-na-wyzszy-poziom/D61RF834M",
+      "https://static.zpe.gov.pl/portal/f/res-minimized/R1R4ROAAMNNOF/1775666943/2ctG2fR98YgPOFB0mHGC9wqirj2VvO2U.png"
+    ],
+    "source_notes": "Riff pitches and durations visually verified against online-skills own educational bass notation, published on the Polish government ZPE portal (CC BY 3.0). Its Riff I supplies E E G E D / C B at onsets 0,1.5,2,2.75,3.5 / 4,6. Riff III supplies C D C B at 4,4.75,5.5,6. Riff II is eight G eighths then eight A eighths. The displayed bass octave is used as the fart-lead register (E3 opening); it is an arrangement choice rather than the recording sounding register. The source text mislabels the tonal centre C major; the notation supports E minor. Tempo 124 BPM, section order, all accompaniment voicings and the last E3 cadence are independent arrangement decisions. No original-recording audio is used.",
+    "musical_direction": "27.1 seconds before a short release tail. Begin immediately with the iconic riff, with a firm and very clear E3 lead; keep every riff in the same register and timbre family so the listener can follow it. The bass-root G2/A2 turnaround intentionally sits below the E3 riff. Use one tight woody/rasping pitched fart as the main voice and another rounder one as occasional accents, with stable pitch bodies and approximately 82-90 percent note gates. The dotted rhythm must stay exact; do not quantise the .75-beat notes into straight eighths. First two bars: expose riff with only soft low kick farts on beats 0 and 2. Bars 3-4: add dry papery snare/clap farts on beats 1 and 3 and a restrained eighth-note breath/hiss pulse. Bars 5-6: the G/A eighth-note power-chord build grows into the next riff, with a tiny snare-fart fill in the last beat. Bars 7-10: fuller stadium-size response, quiet octave-down bass tracking the root movement, broad fifth stabs and a little stereo rasp. Prefer eight or nine recorded fart colours across percussion/fills, but keep the melodic lead dominant and do not alternate random samples on every riff note. Bars 11-12: stronger G/A rise, short puffs becoming a sixteenth-note fill at beat 47. Bars 13-14: final full riff, then C-D-C-B and an added E3 at beat 55. Land all voices with the final E chord; one low rounded release, no additional busy solo. Harmony entries are newly arranged root/fifth/octave voicings, not a competing counter-melody. Keep bass quieter than the riff, kick and snare distinct, and short lead notes clean enough to identify the hook."
+  },
+  {
+    "id": "through-the-fire-and-flames",
+    "title": "Through the Fire and Flames",
+    "artist": "DragonForce",
+    "composer": "Herman Li, ZP Theart, Sam Totman and Vadim Pruzhanov",
+    "bpm": 200,
+    "meter": "4/4",
+    "bars": 25,
+    "total_beats": 100,
+    "style": "power-metal",
+    "melody": [
+      {
+        "beat": 0.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 0.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 0.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 0.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 1.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 1.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 1.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 1.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 5.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 5.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 5.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 5.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 13.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 13.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 13.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 13.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 15.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 15.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 15.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 15.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 17.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 17.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 17.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 17.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 21.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 21.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 21.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 21.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 25.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 25.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 25.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 25.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 29.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 29.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 29.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 29.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 31.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 31.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 31.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 31.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 33.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 33.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 33.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 33.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 35.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 35.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 35.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 35.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 37.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 37.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 37.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 37.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 39.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 39.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 39.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 39.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 41.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 41.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 41.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 41.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 43.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 43.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 43.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 43.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 45.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 45.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 45.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 45.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 47.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 47.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 47.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 47.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 48.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 48.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 48.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 48.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 49.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 49.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 49.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 49.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 50.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 50.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 50.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 50.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 51.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 51.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 51.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 51.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 52.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 52.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 52.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 52.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 53.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 53.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 53.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 53.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 54.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 54.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 54.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 54.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 55.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 55.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 55.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 55.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 56.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 56.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 56.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 56.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 57.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 57.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 57.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 57.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 58.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 58.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 58.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 58.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 59.0,
+        "note": "Ab4",
+        "duration": 0.25
+      },
+      {
+        "beat": 59.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 59.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 59.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 60.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 60.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 60.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 60.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 61.0,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 61.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 61.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 61.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 62.0,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 62.25,
+        "note": "C5",
+        "duration": 0.25
+      },
+      {
+        "beat": 62.5,
+        "note": "Bb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 62.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 63.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 63.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 63.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 63.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.5,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.0,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.25,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.25,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.75,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.75,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.25,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.25,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.25,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.75,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.75,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.25,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.0,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.25,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.25,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.75,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.0,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.5,
+        "note": "F4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.75,
+        "note": "G4",
+        "duration": 0.25
+      },
+      {
+        "beat": 94.0,
+        "note": "Eb4",
+        "duration": 0.5
+      },
+      {
+        "beat": 94.5,
+        "note": "F4",
+        "duration": 0.5
+      },
+      {
+        "beat": 95.0,
+        "note": "G4",
+        "duration": 1.0
+      },
+      {
+        "beat": 96,
+        "note": "C4",
+        "duration": 4
+      }
+    ],
+    "harmony": [
+      {
+        "beat": 64.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 64.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.0,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 65.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 66.75,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 67.75,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 68.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.0,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 69.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 70.75,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 71.75,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 72.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 73.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 74.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 75.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 76.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.5,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 77.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 78.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.0,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.25,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 79.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 80.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.0,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.25,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 81.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.5,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 82.75,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.5,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 83.75,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 84.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.0,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.25,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 85.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.5,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 86.75,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.5,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 87.75,
+        "note": "Ab3",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 88.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.0,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 89.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 90.75,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.0,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 91.75,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.0,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.25,
+        "note": "Bb3",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 92.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.0,
+        "note": "Bb3",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.25,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 93.75,
+        "note": "Eb4",
+        "duration": 0.25
+      },
+      {
+        "beat": 94.0,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 94.5,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 95.0,
+        "note": "Eb4",
+        "duration": 1.0
+      },
+      {
+        "beat": 96,
+        "note": "Eb4",
+        "duration": 4
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0,
+        "duration": 16,
+        "notes": [
+          "C2",
+          "Eb3",
+          "G3"
+        ]
+      },
+      {
+        "beat": 16,
+        "duration": 8,
+        "notes": [
+          "Bb1",
+          "D3",
+          "F3"
+        ]
+      },
+      {
+        "beat": 24,
+        "duration": 4,
+        "notes": [
+          "Ab1",
+          "C3",
+          "Eb3"
+        ]
+      },
+      {
+        "beat": 28,
+        "duration": 4,
+        "notes": [
+          "G1",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 32,
+        "duration": 16,
+        "notes": [
+          "C2",
+          "Eb3",
+          "G3"
+        ]
+      },
+      {
+        "beat": 48,
+        "duration": 8,
+        "notes": [
+          "Ab1",
+          "C3",
+          "Eb3"
+        ]
+      },
+      {
+        "beat": 56,
+        "duration": 8,
+        "notes": [
+          "G1",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 64,
+        "duration": 8,
+        "notes": [
+          "C2",
+          "Eb3",
+          "G3"
+        ]
+      },
+      {
+        "beat": 72,
+        "duration": 8,
+        "notes": [
+          "Ab1",
+          "C3",
+          "Eb3"
+        ]
+      },
+      {
+        "beat": 80,
+        "duration": 8,
+        "notes": [
+          "F1",
+          "Ab2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 88,
+        "duration": 4,
+        "notes": [
+          "C2",
+          "Eb3",
+          "G3"
+        ]
+      },
+      {
+        "beat": 92,
+        "duration": 4,
+        "notes": [
+          "Bb1",
+          "D3",
+          "F3"
+        ]
+      },
+      {
+        "beat": 96,
+        "duration": 4,
+        "notes": [
+          "C2",
+          "Eb3",
+          "G3"
+        ]
+      }
+    ],
+    "references": [
+      "https://www.guitarinstructor.com/product/guitar-tab/dragonforce/through-the-fire-and-flames/1000059217",
+      "https://s3.amazonaws.com/halleonard-pagepreviews/HL_DDS_0000000000260920.png",
+      "https://www.musicnotes.com/sheetmusic/dragonforce/through-the-fire-and-flames/MN0063997",
+      "https://songparts.com/songs/dragonforce/through-the-fire-and-flames/dPOfCHp4g18SSKCN/play",
+      "https://songparts.com/songs/dragonforce/through-the-fire-and-flames/pFIAHjqfn3WloQCj/play",
+      "https://songparts.com/songs/dragonforce/through-the-fire-and-flames/Wfl4gzq4LpqpHCkK/play"
+    ],
+    "source_notes": "Original key C minor, 4/4, 200 BPM (licensed Musicnotes lists 199; Hal Leonard artist-approved preview marks 200). All beats below are quarter-note beats at 200, with straight sixteenths at 0.25 beat = 75 ms. Bars 1-15 (beats 0-60) use the licensed Hal Leonard page-1 Guitar 3 two-bar top-voice reduction, repeating its 32 exact sounding guitar notes: 240 events. This is an intentional melodic reduction of simultaneous acoustic voices; it is not a claim that any single community MIDI track equals the licensed reduction. The higher moving eighth-note pitches independently agree with the maximum of the 12-track Acoustic+Keyboard and Acoustic Guitar parts; the licensed reduction supplies the explicit C4 interleaved pedal. Bar 16 (beats 60-64) is the exact 16-event Acoustic+Keyboard connecting run from Songparts dPOfCHp4g18SSKCN, 480 ticks per beat. Bars 17-24 (beats 64-96) are all 123 exact note onsets and durations from that transcription Lead 1, with a single fixed -12-semitone register change for this electric section. The optional harmony uses the same exact window of Lead 2, also -12 semitones, 123 events. The two alternate 12-track public transcriptions corroborate the intro and electric hook structure. The recommended 14-track version lKrvLtRPuj0rrCfY was rejected because its acoustic Guitar 2 has implausible D3 pedal glitches and its electric hook has discordant alternative pitches. Beat 96 C4/Eb4 held for four beats and the final C-minor chord are a new arranged resolution, not part of the excerpted original melody. Chords are simplified arrangement guidance derived from the source bass/harmony; they are not a transcription of every original rhythm-guitar attack. No original-song recordings are included.",
+    "musical_direction": "30-second complete miniature: articulate recognizable acoustic arpeggio, build the backing during the second eight bars, and hit the full twin-guitar power-metal hook at beat 64. Preserve the exact 75 ms lead onset grid. Use a dry short tonal fart lead with fast 3-5 ms attack, a tiny gap between sixteenths, and 6-9 ms release; no 71 ms lead delay that would smear into the next note. Alternate two or three precise pitched fart timbres gently, keeping pitch perception stable; place high/low sampled textures around the lead rather than obscuring it. Restrained harmony only during the electric hook, with chugging low power chords, double-kick fart pulses, concise snare puffs, and fills at phrase boundaries. Bass and drums must remain quieter than the lead, especially at 200 BPM. Retain the final original hook run and give the new C-minor ending a full resonant bar. No joke failure, speed collapse, random pitch scrambling, or comically slowing down at the end.",
+    "source_segments": [
+      {
+        "output_beats": [
+          0,
+          60
+        ],
+        "source": "Hal Leonard artist-approved preview, page 1, Guitar 3 two-bar reduction",
+        "source_bars": [
+          1,
+          2
+        ],
+        "repeat": "7 complete two-bar statements, then first bar of statement 8",
+        "melody_event_count": 240,
+        "transposition_semitones": 0
+      },
+      {
+        "output_beats": [
+          60,
+          64
+        ],
+        "source": "Songparts dPOfCHp4g18SSKCN Acoustic+Keyboard",
+        "source_tick_window": [
+          28800,
+          30720
+        ],
+        "source_bars": [
+          16,
+          16
+        ],
+        "melody_event_count": 16,
+        "transposition_semitones": 0
+      },
+      {
+        "output_beats": [
+          64,
+          96
+        ],
+        "source": "Songparts dPOfCHp4g18SSKCN Lead 1",
+        "source_tick_window": [
+          30720,
+          46080
+        ],
+        "source_bars": [
+          17,
+          24
+        ],
+        "melody_event_count": 123,
+        "transposition_semitones": -12
+      },
+      {
+        "output_beats": [
+          96,
+          100
+        ],
+        "source": "New arranged C-minor resolution",
+        "melody_event_count": 1,
+        "transposition_semitones": 0
+      }
+    ]
   }
 ]

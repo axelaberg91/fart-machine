@@ -20,12 +20,14 @@
 .song:nth-child(5){--tile:#f6cfdf}
 .song:nth-child(6){--tile:#bddef7}
 .song:nth-child(10){--tile:#d9d0ed}
+.song:nth-child(11){--tile:#f7c2b5}
+.song:nth-child(12){--tile:#ffd08e}
 .song-art{position:relative;display:grid;place-items:center;width:80px;height:80px;flex:none;border:2px dashed var(--ink);border-radius:50%;background:#ffffff80}
 .song-art:before,.song-art:after{position:absolute;font-size:25px;font-weight:900;line-height:1;color:var(--purple)}
 .song-art:before{content:'\266a';left:-20px;top:5px;transform:rotate(-14deg)}
 .song-art:after{content:'\266b';right:-23px;bottom:3px;transform:rotate(12deg)}
 .song .emoji{position:static;width:auto;height:auto;font-size:42px}
-.song .name{display:flex;align-items:center;justify-content:center;min-height:2.4em;margin-top:10px;font-size:20px;text-align:center}
+.song .name{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;min-height:2.4em;margin-top:10px;font-size:20px;text-align:center;overflow-wrap:anywhere;text-wrap:balance}
 .song small{min-height:1.3em;font-size:11px;font-weight:700}
 .song .burst{top:11px;bottom:auto;right:10px;padding:4px 6px;font-size:9px;background:#fff9eb}
 .song[aria-busy=true] .song-art{border-style:solid}
