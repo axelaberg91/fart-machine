@@ -19,6 +19,7 @@
 .song:nth-child(4){--tile:#bce6d8}
 .song:nth-child(5){--tile:#f6cfdf}
 .song:nth-child(6){--tile:#bddef7}
+.song:nth-child(10){--tile:#d9d0ed}
 .song-art{position:relative;display:grid;place-items:center;width:80px;height:80px;flex:none;border:2px dashed var(--ink);border-radius:50%;background:#ffffff80}
 .song-art:before,.song-art:after{position:absolute;font-size:25px;font-weight:900;line-height:1;color:var(--purple)}
 .song-art:before{content:'\266a';left:-20px;top:5px;transform:rotate(-14deg)}

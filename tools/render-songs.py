@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Render the eight fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Render the eight solo fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 The website plays the finished files through native HTML audio; this tool is
 never loaded by the app. All instrument audio comes from the unchanged CC0
 recordings audio/trumpeten.mp3, audio/blota.mp3 and audio/snabbisen.mp3.
+The larger arrangements are rendered by render-orchestra.py and their metadata
+is preserved when this tool regenerates the solo songs.
 """
 import argparse
 import hashlib
@@ -383,8 +385,9 @@ def main():
                     format=dict(codec="mp3", mime="audio/mpeg", sample_rate=SAMPLE_RATE,
                                 channels=1, bitrate_kbps=96), songs=[])
     prior = {}
+    metadata_path = output_dir / "metadata.json"
+    prior_metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.exists() else {}
     if args.only:
-        prior_metadata = json.loads((output_dir / "metadata.json").read_text(encoding="utf-8"))
         prior = {song["id"]: song for song in prior_metadata["songs"]}
     for song in SONGS:
         if args.only and song["id"] not in args.only:
@@ -407,7 +410,14 @@ def main():
                  notes=[dict(note=n, beats=b) for n, b in song["notes"]], validation=report))
         print(f"{path.name}: {report['duration_seconds']} s, {report['bytes']} bytes, "
               f"peak {report['peak']}, {report['audible_recorded_attacks']} audible wet attacks", flush=True)
-    (output_dir / "metadata.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n", encoding="utf-8", newline="\n")
+    managed_ids = {song['id'] for song in SONGS}
+    for extra in prior_metadata.get('songs', []):
+        if extra['id'] not in managed_ids:
+            assert hashlib.sha256((ROOT / extra['file']).read_bytes()).hexdigest() == extra['validation']['sha256'], 'Existing orchestra changed'
+            metadata['songs'].append(extra)
+    if 'orchestra_format' in prior_metadata:
+        metadata['orchestra_format'] = prior_metadata['orchestra_format']
+    metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+"\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

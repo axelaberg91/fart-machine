@@ -7,14 +7,16 @@ const { createHash } = require('node:crypto');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
-const expectedSongIds = ['greta-gris', 'bjornen-sover', 'baby-shark', 'en-livstid-i-krig', 'bromance', 'sommartider', 'sandstorm', 'ring-of-fire'];
+const expectedSongIds = ['greta-gris', 'bjornen-sover', 'baby-shark', 'en-livstid-i-krig', 'bromance', 'sommartider', 'sandstorm', 'ring-of-fire', 'the-final-countdown', 'imperial-march'];
 const retainedSongHashes = {
   'greta-gris': '773755c69f926f9422d5b6df44f32fec44045a1b8329ac9d77aa0417dc74fc37',
   'bjornen-sover': '7cf0cc79156bfa228a9ec0a089b4ea172396e867a6a83c6aa16b4546a26264b8',
   'baby-shark': 'f24b28f778462916fb52c62bd6dd88f3767e05433ba64400ab8a74fa6001b8f7',
   'en-livstid-i-krig': 'e0767b28d081eee8ed85713d97fcce3f4876d3dcac5f8f62df9b9f4c51274bca',
   'bromance': 'a522b3681e7c938fcd1feaf7dc80f47150e2c9295508f23bc32d3059b5455c8f',
-  'sommartider': '432a10395f5112889ad50d41ea2d6cc83fbc816e0c0df855a556c8883a173ad0'
+  'sommartider': '432a10395f5112889ad50d41ea2d6cc83fbc816e0c0df855a556c8883a173ad0',
+  'sandstorm': '17c33b460ed3f7f4b4f64b80ec92c1ffde487a1f42e2af372cd4b5e16e57f6aa',
+  'ring-of-fire': 'fc2cd91aa08ee3e38f3f74cc39d8402ccc7aabd0479653d886fc5652848326a2'
 };
 const code = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
 const context = vm.createContext({ self: { addEventListener() {} }, URL, Request, Response });
@@ -22,16 +24,16 @@ new vm.Script(code, { filename: 'sw.js' }).runInContext(context);
 const rangeResponse = vm.runInContext('audioRange', context);
 const assets = Array.from(vm.runInContext('ASSETS', context));
 const version = vm.runInContext('VERSION', context);
-assert.equal(version, '4.8.1');
+assert.equal(version, '4.9');
 assert.ok(assets.includes('./app-v4.4.js'));
 assert.deepEqual(assets.filter(asset => asset.startsWith('./audio/songs/')).sort(), expectedSongIds.map(id => './audio/songs/' + id + '.mp3').sort());
 assert.equal(assets.filter(asset => /^\.\/audio\/[^/]+\.mp3$/.test(asset)).length, 9);
 assert.equal(new Set(assets).size, assets.length);
-assert.equal(assets.length, 32);
+assert.equal(assets.length, 34);
 new vm.Script(fs.readFileSync(path.join(root, 'app-v4.4.js'), 'utf8'), { filename: 'app-v4.4.js' });
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /app-v4\.4\.js/);
-assert.match(html, /Version 4\.8\.1/);
+assert.match(html, /Version 4\.9/);
 
 async function main() {
   const source = Uint8Array.from({ length: 256 }, (_, index) => index);
@@ -62,7 +64,7 @@ async function main() {
     assert.deepEqual(new Uint8Array(await response.arrayBuffer()), source);
   }
   const missing = assets.filter(asset => asset !== './' && !fs.existsSync(path.join(root, asset)));
-  console.log('PASS app/service-worker syntax, version references, complete seventeen-recording manifest, byte ranges, suffix ranges, and invalid ranges.');
+  console.log('PASS app/service-worker syntax, version references, complete nineteen-recording manifest, byte ranges, suffix ranges, and invalid ranges.');
   if (missing.length) console.log('Manifest files still pending: ' + missing.join(', '));
   else console.log('PASS all manifest assets exist.');
   if (process.argv.includes('--require-assets')) assert.deepEqual(missing, [], 'every offline asset must be present');
@@ -79,8 +81,8 @@ async function main() {
       assert.equal(hash, song.validation.sha256, song.id + ' output hash');
       if (retainedSongHashes[song.id]) assert.equal(hash, retainedSongHashes[song.id], song.id + ' must retain the previous approved recording');
     }
-    console.log('PASS all eight song payloads match their metadata byte counts and SHA-256 hashes.');
-    console.log('PASS all six retained recordings are unchanged, including Sommartider and the approved Bromance chorus.');
+    console.log('PASS all ten song payloads match their metadata byte counts and SHA-256 hashes.');
+    console.log('PASS all eight retained recordings are unchanged, including the approved Sandstorm and Ring of Fire.');
   }
 }
 

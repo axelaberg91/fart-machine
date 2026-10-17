@@ -25,7 +25,7 @@ const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
 const songSelector = '#songs button[data-song]';
 const padSelector = '#grid button[data-sound]';
 const replacementOnly = process.argv.includes('--replacement-only');
-const replacementId = 'sommartider';
+const replacementId = 'the-final-countdown';
 const expectedSongs = [
   { id: 'greta-gris', name: 'Greta Gris' },
   { id: 'bjornen-sover', name: 'Björnen sover' },
@@ -34,7 +34,9 @@ const expectedSongs = [
   { id: 'bromance', name: 'Bromance' },
   { id: 'sommartider', name: 'Sommartider' },
   { id: 'sandstorm', name: 'Sandstorm' },
-  { id: 'ring-of-fire', name: 'Ring of Fire' }
+  { id: 'ring-of-fire', name: 'Ring of Fire' },
+  { id: 'the-final-countdown', name: 'The Final Countdown' },
+  { id: 'imperial-march', name: 'The Imperial March' }
 ];
 const expectedSongIds = expectedSongs.map(song => song.id);
 const expectedCaptions = {
@@ -45,7 +47,9 @@ const expectedCaptions = {
   'bromance': 'Tim Berg (Avicii)',
   'sommartider': 'Gyllene Tider',
   'sandstorm': 'Darude',
-  'ring-of-fire': 'Johnny Cash'
+  'ring-of-fire': 'Johnny Cash',
+  'the-final-countdown': 'Europe',
+  'imperial-march': 'John Williams'
 };
 const errors = [];
 const reports = [];
@@ -108,7 +112,7 @@ async function main() {
   for (const name of ['app-v4.4.js', 'sw.js']) new vm.Script(fs.readFileSync(path.join(root, name), 'utf8'), { filename: name });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.match(html, /app-v4\.4\.js/);
-  assert.match(html, /Version 4\.8\.1/);
+  assert.match(html, /Version 4\.9/);
   console.log('PASS syntax and version references');
 
   const server = http.createServer((request, response) => {
@@ -130,7 +134,7 @@ async function main() {
     const pageErrors = [];
     page.on('pageerror', error => pageErrors.push(error.message));
     await page.goto(url);
-    await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 8);
+    await page.waitForFunction(() => document.querySelectorAll('#songs button[data-song]').length === 10);
     const songs = await page.locator(songSelector).evaluateAll(buttons => buttons.map(button => ({ id: button.dataset.song, name: button.querySelector('.name').textContent })));
     const pads = await page.locator(padSelector).evaluateAll(buttons => buttons.map(button => button.dataset.sound));
     const playbackSongs = songs;
@@ -145,9 +149,9 @@ async function main() {
       assert.equal(await page.locator('[data-song="' + song.id + '"] small').textContent(), expectedCaptions[song.id], 'stopping restores the artist/origin');
     }
 
-    await check('eight requested songs in order expose artist/origin captions and nine original pads', async () => {
-      assert.equal(songs.length, 8);
-      assert.equal(new Set(songs.map(song => song.id)).size, 8);
+    await check('ten requested songs in order expose artist/origin captions and nine original pads', async () => {
+      assert.equal(songs.length, 10);
+      assert.equal(new Set(songs.map(song => song.id)).size, 10);
       assert.deepEqual(songs, expectedSongs);
       assert.equal(pads.length, 9);
       assert.equal(await page.locator('[data-song="through-the-fire-and-flames"]').count(), 0);
@@ -159,7 +163,7 @@ async function main() {
       }
     }, true);
 
-    await check(replacementOnly ? 'all eight songs decode and start native playback synchronously from a trusted click' : 'all seventeen recordings decode and start native playback synchronously from a trusted click', async () => {
+    await check(replacementOnly ? 'all ten songs decode and start native playback synchronously from a trusted click' : 'all nineteen recordings decode and start native playback synchronously from a trusted click', async () => {
       for (const song of playbackSongs) await playSong(song);
       for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
       assert.deepEqual(await page.evaluate(() => window.__mediaTest.webAudio), []);
@@ -278,12 +282,12 @@ async function main() {
       assert.equal(await page.locator(songSelector + '[aria-pressed="true"]').count(), 0);
     });
 
-    await check('service worker caches complete version 4.8.1 shell, eight songs, and original audio', async () => {
+    await check('service worker caches complete version 4.9 shell, ten songs, and original audio', async () => {
       await page.locator('#offline.ready').waitFor({ timeout: 30000 });
-      assert.match(await page.locator('#offline.ready').textContent(), /8\s+låtar/);
+      assert.match(await page.locator('#offline.ready').textContent(), /10\s+låtar/);
       await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
       const cache = await page.evaluate(async () => {
-        const current = await caches.open('fart-machine-v4.8.1');
+        const current = await caches.open('fart-machine-v4.9');
         const keys = await current.keys();
         return Promise.all(keys.map(async request => {
           const response = await current.match(request);
@@ -293,7 +297,7 @@ async function main() {
         }));
       });
       assert.ok(cache.some(entry => entry.path === '/app-v4.4.js'));
-      assert.equal(cache.length, 32);
+      assert.equal(cache.length, 34);
       assert.deepEqual(cache.filter(entry => /\/audio\/songs\//.test(entry.path)).map(entry => entry.path).sort(), expectedSongIds.map(id => '/audio/songs/' + id + '.mp3').sort());
       assert.equal(cache.filter(entry => /\/audio\/[^/]+\.mp3$/.test(entry.path)).length, 9);
       for (const entry of cache) {
@@ -305,19 +309,19 @@ async function main() {
         if (entry.path.endsWith('.wav')) assert.match(entry.type, /audio\/wav|audio\/x-wav/);
       }
       const status = await page.evaluate(() => new Promise(resolve => { const channel = new MessageChannel(); channel.port1.onmessage = event => resolve(event.data); navigator.serviceWorker.controller.postMessage({ type: 'CACHE_STATUS' }, [channel.port2]); }));
-      assert.equal(status.version, '4.8.1');
+      assert.equal(status.version, '4.9');
       assert.equal(status.ready, true);
       assert.equal(status.sounds, 9);
-      assert.equal(status.songs, 8);
+      assert.equal(status.songs, 10);
     }, true);
 
-    await check(replacementOnly ? 'offline eight-song playback restores captions and all eight byte ranges work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
+    await check(replacementOnly ? 'offline ten-song playback restores captions and all ten byte ranges work without network' : 'offline reload, all song playback, and byte range responses work without network', async () => {
       await context.setOffline(true);
       await page.reload();
       await page.locator('#offline.ready').waitFor({ timeout: 15000 });
       for (const song of playbackSongs) await playSong(song);
       for (const id of playbackPads) { await playAndWait(page, '#grid [data-sound="' + id + '"]'); await stop(page); }
-      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.8.1')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
+      const paths = await page.evaluate(async () => (await (await caches.open('fart-machine-v4.9')).keys()).map(request => new URL(request.url).pathname).filter(url => url.includes('/audio/songs/')));
       for (const asset of paths) {
         const result = await page.evaluate(async asset => {
           const response = await fetch(asset, { headers: { Range: 'bytes=0-63' } });

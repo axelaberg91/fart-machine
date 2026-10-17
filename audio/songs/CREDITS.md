@@ -1,8 +1,8 @@
 # Fart-song recordings
 
-Eight instrumental melody and riff clips, rendered offline from real
-recorded farts. There are no vocals, backing instruments or external audio
-requests. The app plays these finished MP3 files using native HTML audio.
+Ten instrumental melody and riff clips, rendered offline from real
+recorded farts. There are no vocals or external audio requests. The two larger
+orchestras include bass, harmony and percussion made only from recorded farts. The app plays these finished MP3 files using native HTML audio.
 
 ## Recorded instruments
 
@@ -18,7 +18,7 @@ requests. The app plays these finished MP3 files using native HTML audio.
 - Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 - SHA-256: `a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2`.
 
-Except for Sandstorm, every note begins with and includes a real wet fart articulation from Blöta's
+In the seven original solo renditions other than Sandstorm, every note begins with and includes a real wet fart articulation from Blöta's
 first 0.67 seconds. Small changes to the starting point and playback speed
 (within 5% of the original) vary the recorded splutters between notes. The
 natural wet texture keeps its original pitch. Soft compression controls sharp
@@ -31,7 +31,9 @@ recording's natural pitch scoops, irregularity and decay remain audible.
 
 **No recording is looped or tiled.** Long written notes end with an organic
 recorded tail and space before the next note. Short attack and release envelopes
-prevent clicks. No oscillator or added instrument produces the melody.
+prevent clicks. No oscillator or conventional instrument produces the melody. The two larger
+orchestras described below use additional finite source passages and time
+stretching for sustained melodic notes.
 
 Sandstorm additionally uses a short attack from `../snabbisen.mp3`:
 
@@ -47,6 +49,53 @@ and is more prominent than the unpitched attack. Notes occupy 67% of their
 written spacing, capped at 120 ms, leaving a clear gap between sixteenths.
 The same pitched body carries both attacks, so alternation changes timbre
 without changing the melody. No synth or percussion recording is added.
+
+## The two larger fart orchestras
+
+The Final Countdown and The Imperial March each use all nine recordings in
+[`../sources.json`](../sources.json), with authors, CC0 source links and verified
+SHA-256 hashes copied into their metadata. No original music recording, synth
+oscillator, drum library or voice is used.
+
+- Trumpeten supplies the tuned lead and lower brass. The lead's known
+  250.874 Hz body is repitched; long notes use FFmpeg's pitch-preserving
+  overlap-add tempo filter on one finite recorded passage.
+- Smygaren supplies pitched bass, using a stable section from 0.20–0.66 s
+  with a measured fundamental of about 80.769 Hz.
+- Ankan supplies chord replies, using 0.08–0.35 s at approximately 82.276 Hz.
+- Kanonen makes the low rhythmic thumps; Blöta makes the wet backbeat.
+- Snabbisen supplies small ticks and marching rolls; selected lead attacks
+  alternate among recorded sources.
+- Raketen adds phrase-end rises and a comic finishing accent. Vulkanen adds
+  a short mid-phrase growl. Katastrofen joins the march and final flourish.
+
+Each source keeps a real finite attack, body or tail. Leading silence is
+trimmed before scheduling so different files cannot shift a written beat.
+No sample is turned into a repeating wavetable. Short envelopes prevent clicks,
+modest stereo placement separates parts, and a quiet recorded-signal echo adds
+space. The support grows during the second half. The lead remains stronger than
+any individual backing stem, and final decoded peaks retain headroom.
+
+The Final Countdown starts directly with the C-sharp–B–C-sharp fanfare.
+Its lead pitches, sixteenth-note pickups and merged ties follow arranger
+Pierre Loiselle's creator-published score (printed pages 1–4). The initial
+1.5-beat written rest is omitted. Two hook cycles lead into the written
+turnaround and a newly added F-sharp minor cadence. Tempo is 118 BPM.
+Harmony is simplified for the fart band, with galloping bass and rock backbeats.
+Composition: Joey Tempest; recording artist: Europe.
+
+The Imperial March starts at the main theme, omitting the four-bar introduction.
+Its 12-bar lead follows bars 5–16 on printed page 28 of the official Faber /
+Warner-Chappell piano sample, down one octave. Dotted-eighth / sixteenth snaps
+retain their 0.75 / 0.25 beat spacing. The 108 BPM tempo, simplified chords,
+marching bass, side rolls and comic ending are arrangement decisions.
+Composition: John Williams.
+
+Notation references:
+
+- [The Final Countdown, Pierre Loiselle's published arrangement](https://www.pierreloiselle.com/uploads/2/3/7/0/23701802/the_final_countdown_-_directeur.pdf).
+- [The Imperial March, official publisher sample](https://faber-product-media.s3.amazonaws.com/082ddb6e-cb5d-4875-acb9-0417d55a5b01).
+- [The Imperial March, Hal Leonard composition credit](https://www.halleonard.com/product/4005404/the-imperial-march-darth-vaders-theme).
 
 ## Melodies
 
@@ -72,6 +121,8 @@ CC0 license to any referenced composition, release or published song arrangement
 | `sommartider.mp3` | Sommartider — Gyllene Tider; Per Gessle (1982); title / hej-hej refrain motif | 22.35 s |
 | `sandstorm.mp3` | Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999); compact main synth riff | 20.77 s |
 | `ring-of-fire.mp3` | Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963); two-part trumpet hook | 21.25 s |
+| `the-final-countdown.mp3` | The Final Countdown — Joey Tempest / Europe; arena-rock fart fanfare | 26.88 s |
+| `imperial-march.mp3` | The Imperial March — John Williams; marching fart brass band | 27.87 s |
 
 Sandstorm now follows the full four-bar main riff: 56 note onsets from the
 upper lead in track 6, beats 72–88, of the publicly shared MIDI below. The
@@ -176,8 +227,10 @@ Notation references:
 
 ## Format, validation and regeneration
 
-All eight files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s, MIME
-`audio/mpeg`. Their combined size is 1,974,381 bytes (approximately 1.97 MB). Decoded peak levels
+The eight solo files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s.
+The two larger orchestras are stereo MP3 at 44,100 Hz and 128 kbit/s.
+All use MIME `audio/mpeg`. The ten files total 2,852,451 bytes
+(approximately 2.85 MB). Decoded peak levels
 are below 0.90 full scale with zero clipped samples. Every melody note has an
 audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
 noise, so idealized note-precision measurements do not describe this mix.
@@ -186,10 +239,12 @@ on a physical iPad.
 
 `metadata.json` records every melody note and duration, tempo, transposition,
 source checksums, output checksum and validation result. Regenerate the assets
-with Python, NumPy and FFmpeg:
+with Python, NumPy and FFmpeg. The solo renderer preserves the orchestra
+metadata; the orchestra renderer preserves every previous song recording:
 
 ```sh
 python tools/render-songs.py --ffmpeg /path/to/ffmpeg
+python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg
 ```
 
 To regenerate selected songs while preserving the other MP3 files exactly:
@@ -206,3 +261,8 @@ python tools/render-songs.py --ffmpeg /path/to/ffmpeg --audition /path/to/previe
 
 Rendering is a development step only. The deployed app needs no Python,
 FFmpeg, audio synthesis or Web Audio API.
+
+`tools/orchestra-scores.json` contains the two inspectable melody and chord
+scores. Each orchestra's metadata records every scheduled source, musical role,
+note, time, gain and pan, plus per-layer RMS and decoded output validation.
+The arrangement references remain outside the deployed app assets.

@@ -1,5 +1,16 @@
 # Hugo och Hermans pruttmaskin
 
+## 4.9 - Två stora fisorkestrar
+
+- Added The Final Countdown (Europe) and The Imperial March (John Williams).
+- Arranged each as a small fart orchestra using all nine CC0 recordings:
+  recognizable lead, lower brass, pitched bass, chord replies, rhythmic puffs,
+  fills, a reverse recorded-fart rise and a comic final flourish.
+- Checked melody pitches and rhythm against published notation. Harmony,
+  percussion, dynamics and comic embellishments are new arrangements.
+- Rendered stereo MP3s; kept all eight existing song recordings unchanged.
+- Added both buttons and audio files to the version 4.9 offline cache.
+
 ## 4.8.1 - Rappare Sandstorm och snabbare Ring of Fire
 
 - Rebuilt Sandstorm around the full 56-note, four-bar main riff, with its
