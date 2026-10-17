@@ -6,17 +6,17 @@
     "composer": "Julian Nott",
     "bpm": 144,
     "meter": "4/4",
-    "bars": 12,
-    "total_beats": 48.0,
+    "bars": 16,
+    "total_beats": 64.0,
     "key": "G major",
     "melody": [
       {
         "beat": 0,
         "note": "D4",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 1.0,
+        "beat": 1,
         "note": "B3",
         "duration": 0.5
       },
@@ -26,17 +26,17 @@
         "duration": 0.5
       },
       {
-        "beat": 2.0,
+        "beat": 2,
         "note": "A3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 3.0,
+        "beat": 3,
         "note": "D3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 4.0,
+        "beat": 4,
         "note": "D3",
         "duration": 0.5
       },
@@ -46,7 +46,7 @@
         "duration": 0.5
       },
       {
-        "beat": 5.0,
+        "beat": 5,
         "note": "A3",
         "duration": 0.5
       },
@@ -56,22 +56,22 @@
         "duration": 0.5
       },
       {
-        "beat": 6.0,
+        "beat": 6,
         "note": "B3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 7.0,
+        "beat": 7,
         "note": "G3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 8.0,
+        "beat": 8,
         "note": "D4",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 9.0,
+        "beat": 9,
         "note": "B3",
         "duration": 0.5
       },
@@ -81,17 +81,17 @@
         "duration": 0.5
       },
       {
-        "beat": 10.0,
+        "beat": 10,
         "note": "A3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 11.0,
+        "beat": 11,
         "note": "D3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 12.0,
+        "beat": 12,
         "note": "D3",
         "duration": 0.5
       },
@@ -101,7 +101,7 @@
         "duration": 0.5
       },
       {
-        "beat": 13.0,
+        "beat": 13,
         "note": "A3",
         "duration": 0.5
       },
@@ -111,42 +111,27 @@
         "duration": 0.5
       },
       {
-        "beat": 14.0,
-        "note": "B3",
-        "duration": 1.0
-      },
-      {
-        "beat": 15.0,
+        "beat": 14,
         "note": "G3",
-        "duration": 1.0
+        "duration": 2
       },
       {
-        "beat": 16.0,
-        "note": "D4",
-        "duration": 1.0
-      },
-      {
-        "beat": 17.0,
-        "note": "B3",
-        "duration": 0.5
-      },
-      {
-        "beat": 17.5,
+        "beat": 16,
         "note": "G3",
-        "duration": 0.5
+        "duration": 2
       },
       {
-        "beat": 18.0,
+        "beat": 18,
         "note": "A3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 19.0,
+        "beat": 19,
         "note": "D3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 20.0,
+        "beat": 20,
         "note": "D3",
         "duration": 0.5
       },
@@ -156,7 +141,7 @@
         "duration": 0.5
       },
       {
-        "beat": 21.0,
+        "beat": 21,
         "note": "A3",
         "duration": 0.5
       },
@@ -166,22 +151,17 @@
         "duration": 0.5
       },
       {
-        "beat": 22.0,
-        "note": "B3",
-        "duration": 1.0
-      },
-      {
-        "beat": 23.0,
+        "beat": 22,
         "note": "G3",
-        "duration": 1.0
+        "duration": 2
       },
       {
-        "beat": 24.0,
+        "beat": 24,
         "note": "D4",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 25.0,
+        "beat": 25,
         "note": "B3",
         "duration": 0.5
       },
@@ -191,17 +171,17 @@
         "duration": 0.5
       },
       {
-        "beat": 26.0,
+        "beat": 26,
         "note": "A3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 27.0,
+        "beat": 27,
         "note": "D3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 28.0,
+        "beat": 28,
         "note": "D3",
         "duration": 0.5
       },
@@ -211,7 +191,7 @@
         "duration": 0.5
       },
       {
-        "beat": 29.0,
+        "beat": 29,
         "note": "A3",
         "duration": 0.5
       },
@@ -221,22 +201,17 @@
         "duration": 0.5
       },
       {
-        "beat": 30.0,
-        "note": "B3",
-        "duration": 1.0
-      },
-      {
-        "beat": 31.0,
+        "beat": 30,
         "note": "G3",
-        "duration": 1.0
+        "duration": 2
       },
       {
-        "beat": 32.0,
+        "beat": 32,
         "note": "D4",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 33.0,
+        "beat": 33,
         "note": "B3",
         "duration": 0.5
       },
@@ -246,17 +221,17 @@
         "duration": 0.5
       },
       {
-        "beat": 34.0,
+        "beat": 34,
         "note": "A3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 35.0,
+        "beat": 35,
         "note": "D3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 36.0,
+        "beat": 36,
         "note": "D3",
         "duration": 0.5
       },
@@ -266,7 +241,7 @@
         "duration": 0.5
       },
       {
-        "beat": 37.0,
+        "beat": 37,
         "note": "A3",
         "duration": 0.5
       },
@@ -276,22 +251,22 @@
         "duration": 0.5
       },
       {
-        "beat": 38.0,
+        "beat": 38,
         "note": "B3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 39.0,
+        "beat": 39,
         "note": "G3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 40.0,
+        "beat": 40,
         "note": "D4",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 41.0,
+        "beat": 41,
         "note": "B3",
         "duration": 0.5
       },
@@ -301,17 +276,17 @@
         "duration": 0.5
       },
       {
-        "beat": 42.0,
+        "beat": 42,
         "note": "A3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 43.0,
+        "beat": 43,
         "note": "D3",
-        "duration": 1.0
+        "duration": 1
       },
       {
-        "beat": 44.0,
+        "beat": 44,
         "note": "D3",
         "duration": 0.5
       },
@@ -321,7 +296,7 @@
         "duration": 0.5
       },
       {
-        "beat": 45.0,
+        "beat": 45,
         "note": "A3",
         "duration": 0.5
       },
@@ -331,14 +306,99 @@
         "duration": 0.5
       },
       {
-        "beat": 46.0,
-        "note": "B3",
-        "duration": 1.0
+        "beat": 46,
+        "note": "G3",
+        "duration": 2
       },
       {
-        "beat": 47.0,
+        "beat": 48,
         "note": "G3",
-        "duration": 1.0
+        "duration": 2
+      },
+      {
+        "beat": 50,
+        "note": "A3",
+        "duration": 1
+      },
+      {
+        "beat": 51,
+        "note": "D3",
+        "duration": 1
+      },
+      {
+        "beat": 52,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 52.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 53,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 53.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 54,
+        "note": "G3",
+        "duration": 2
+      },
+      {
+        "beat": 56,
+        "note": "D4",
+        "duration": 1
+      },
+      {
+        "beat": 57,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 57.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 58,
+        "note": "A3",
+        "duration": 1
+      },
+      {
+        "beat": 59,
+        "note": "D3",
+        "duration": 1
+      },
+      {
+        "beat": 60,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 60.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 61,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 61.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 62,
+        "note": "G3",
+        "duration": 2
       }
     ],
     "chords": [
@@ -400,7 +460,7 @@
       },
       {
         "beat": 16,
-        "duration": 3,
+        "duration": 2,
         "notes": [
           "G2",
           "B2",
@@ -408,8 +468,8 @@
         ]
       },
       {
-        "beat": 19,
-        "duration": 3,
+        "beat": 18,
+        "duration": 4,
         "notes": [
           "D2",
           "F#2",
@@ -509,15 +569,110 @@
           "B2",
           "D3"
         ]
+      },
+      {
+        "beat": 48,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 50,
+        "duration": 4,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 54,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 56,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 59,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 62,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
       }
     ],
     "style": "playful",
     "references": [
       "https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242",
-      "https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf"
+      "https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf",
+      "https://www.musicnotes.com/sheetmusic/christina/peppa-pig-theme-song/MN0201958",
+      "https://www.musicnotes.com/images/productimages/large/mtd/mn0201958.gif"
     ],
-    "source_notes": "Lead converted directly from the existing render-songs.py sequence, with its fixed -5-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Two-bar main-theme hook, repeated six times",
-    "musical_direction": "Cheeky small-band cartoon: alternate short wet lead attacks while preserving every melody note. Springy root/fifth bass, brief duck-like chord replies, quiet offbeat ticks, and tiny answering splutters in phrase gaps. Build by changing recorded timbres between the six exact hook repetitions; keep the melody upfront and avoid fills across the four eighth notes."
+    "source_notes": "Expanded from six identical two-bar hooks to a complete main-theme A/B and a distinct closing tag. A and B pitches, rhythms and tonic-ending difference were read from the complete four-bar Conrad Chords notation. The tag is the top voice of bars14–15 in the public licensed Musicnotes Christina Petrando preview MN0201958: C5(2), D5(1), G4(1) | G4(.5), B4(.5), D5(.5), F5(.5), C5(2). Conrad C-major melody is transposed down5 semitones; the octave-higher Musicnotes tag is transposed down17 semitones, both into the previously accepted G-major D3–D4 register. Existing144 BPM and playful style are retained. The arrangement form A–B–tag–B / A–B–tag–B and all bass/chord/fart responses are creative arrangement choices, not a claim to reproduce the complete television opening or ending recording. No original recording or vocal asset is used.",
+    "musical_direction": "A complete little cartoon performance with three distinct melodic phrases instead of one tiny loop. Play A–B–tag–B, then reprise with the recorded fart voices and band response varied; keep the lead low and clear. The B phrases resolve on a held G3 and the tag starts on its longer G3–A3 answer. Use the existing playful springy root/fifth bass, duck-like chord replies and quiet offbeat ticks. Reserve little splutters for phrase gaps, do not cover the four ascending eighth notes, and let the final two-beat G3 cadence resolve without another hook restart.",
+    "source_segments": [
+      {
+        "section": "A",
+        "beats": 8,
+        "source": "Conrad Chords, bars1–2",
+        "melody_note_count": 11,
+        "arrangement_starts": [
+          0,
+          32
+        ],
+        "transposition_semitones": -5
+      },
+      {
+        "section": "B",
+        "beats": 8,
+        "source": "Conrad Chords, bars3–4, distinct held tonic ending",
+        "melody_note_count": 10,
+        "arrangement_starts": [
+          8,
+          24,
+          40,
+          56
+        ],
+        "transposition_semitones": -5
+      },
+      {
+        "section": "tag",
+        "beats": 8,
+        "source": "Musicnotes MN0201958 public page-one preview, Christina Petrando, top voice bars14–15",
+        "melody_note_count": 8,
+        "arrangement_starts": [
+          16,
+          48
+        ],
+        "transposition_semitones": -17
+      }
+    ]
   },
   {
     "id": "bjornen-sover",
@@ -1971,12 +2126,12 @@
     "composer": "Per Gessle",
     "bpm": 130,
     "meter": "4/4",
-    "bars": 12,
-    "total_beats": 48.0,
-    "key": "A major / F# minor pitch collection",
+    "bars": 14,
+    "total_beats": 56.0,
+    "key": "A major; low vocal lead A2-F#3",
     "melody": [
       {
-        "beat": 0,
+        "beat": 0.0,
         "note": "C#3",
         "duration": 0.5
       },
@@ -1998,12 +2153,12 @@
       {
         "beat": 2.0,
         "note": "F#3",
-        "duration": 1.0
+        "duration": 1
       },
       {
         "beat": 3.0,
         "note": "F#3",
-        "duration": 1.0
+        "duration": 1
       },
       {
         "beat": 4.0,
@@ -2023,271 +2178,261 @@
       {
         "beat": 5.5,
         "note": "E3",
-        "duration": 1.5
+        "duration": 2.5
       },
       {
         "beat": 8.0,
-        "note": "C#3",
+        "note": "D3",
         "duration": 0.5
       },
       {
         "beat": 8.5,
-        "note": "E3",
+        "note": "D3",
         "duration": 0.5
       },
       {
         "beat": 9.0,
-        "note": "E3",
+        "note": "D3",
         "duration": 0.5
       },
       {
         "beat": 9.5,
         "note": "C#3",
-        "duration": 0.5
+        "duration": 1
       },
       {
-        "beat": 10.0,
-        "note": "F#3",
-        "duration": 1.0
+        "beat": 10.5,
+        "note": "C#3",
+        "duration": 0.5
       },
       {
         "beat": 11.0,
-        "note": "F#3",
-        "duration": 1.0
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 11.5,
+        "note": "A2",
+        "duration": 0.5
       },
       {
         "beat": 12.0,
-        "note": "F#3",
-        "duration": 0.5
+        "note": "A2",
+        "duration": 2.5
       },
       {
-        "beat": 12.5,
-        "note": "F#3",
-        "duration": 0.5
+        "beat": 14.5,
+        "note": "D3",
+        "duration": 1
       },
       {
-        "beat": 13.0,
-        "note": "F#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 13.5,
-        "note": "E3",
-        "duration": 1.5
-      },
-      {
-        "beat": 16.0,
+        "beat": 15.5,
         "note": "C#3",
-        "duration": 0.5
+        "duration": 1
       },
       {
         "beat": 16.5,
-        "note": "E3",
-        "duration": 0.5
-      },
-      {
-        "beat": 17.0,
-        "note": "E3",
-        "duration": 0.5
+        "note": "B2",
+        "duration": 1
       },
       {
         "beat": 17.5,
-        "note": "C#3",
+        "note": "B2",
         "duration": 0.5
       },
       {
         "beat": 18.0,
-        "note": "F#3",
-        "duration": 1.0
+        "note": "A2",
+        "duration": 0.5
       },
       {
-        "beat": 19.0,
-        "note": "F#3",
-        "duration": 1.0
+        "beat": 18.5,
+        "note": "B2",
+        "duration": 1
+      },
+      {
+        "beat": 19.5,
+        "note": "B2",
+        "duration": 0.5
       },
       {
         "beat": 20.0,
-        "note": "F#3",
+        "note": "B2",
         "duration": 0.5
       },
       {
         "beat": 20.5,
-        "note": "F#3",
+        "note": "E3",
         "duration": 0.5
       },
       {
         "beat": 21.0,
-        "note": "F#3",
+        "note": "A2",
+        "duration": 1
+      },
+      {
+        "beat": 22.0,
+        "note": "B2",
         "duration": 0.5
       },
       {
-        "beat": 21.5,
-        "note": "E3",
-        "duration": 1.5
-      },
-      {
-        "beat": 24.0,
+        "beat": 22.5,
         "note": "C#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 24.5,
-        "note": "E3",
-        "duration": 0.5
-      },
-      {
-        "beat": 25.0,
-        "note": "E3",
-        "duration": 0.5
-      },
-      {
-        "beat": 25.5,
-        "note": "C#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 26.0,
-        "note": "F#3",
-        "duration": 1.0
-      },
-      {
-        "beat": 27.0,
-        "note": "F#3",
-        "duration": 1.0
+        "duration": 3.5
       },
       {
         "beat": 28.0,
-        "note": "F#3",
+        "note": "C#3",
         "duration": 0.5
       },
       {
         "beat": 28.5,
-        "note": "F#3",
+        "note": "E3",
         "duration": 0.5
       },
       {
         "beat": 29.0,
-        "note": "F#3",
+        "note": "E3",
         "duration": 0.5
       },
       {
         "beat": 29.5,
-        "note": "E3",
-        "duration": 1.5
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 30.0,
+        "note": "F#3",
+        "duration": 1
+      },
+      {
+        "beat": 31.0,
+        "note": "F#3",
+        "duration": 1
       },
       {
         "beat": 32.0,
-        "note": "C#3",
+        "note": "F#3",
         "duration": 0.5
       },
       {
         "beat": 32.5,
-        "note": "E3",
+        "note": "F#3",
         "duration": 0.5
       },
       {
         "beat": 33.0,
-        "note": "E3",
+        "note": "F#3",
         "duration": 0.5
       },
       {
         "beat": 33.5,
-        "note": "C#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 34.0,
-        "note": "F#3",
-        "duration": 1.0
-      },
-      {
-        "beat": 35.0,
-        "note": "F#3",
-        "duration": 1.0
+        "note": "E3",
+        "duration": 2.5
       },
       {
         "beat": 36.0,
-        "note": "F#3",
+        "note": "D3",
         "duration": 0.5
       },
       {
         "beat": 36.5,
-        "note": "F#3",
+        "note": "D3",
         "duration": 0.5
       },
       {
         "beat": 37.0,
-        "note": "F#3",
+        "note": "D3",
         "duration": 0.5
       },
       {
         "beat": 37.5,
-        "note": "E3",
-        "duration": 1.5
+        "note": "C#3",
+        "duration": 1
+      },
+      {
+        "beat": 38.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 39.0,
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 39.5,
+        "note": "A2",
+        "duration": 0.5
       },
       {
         "beat": 40.0,
+        "note": "A2",
+        "duration": 2.5
+      },
+      {
+        "beat": 42.5,
+        "note": "D3",
+        "duration": 1
+      },
+      {
+        "beat": 43.5,
         "note": "C#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 40.5,
-        "note": "E3",
-        "duration": 0.5
-      },
-      {
-        "beat": 41.0,
-        "note": "E3",
-        "duration": 0.5
-      },
-      {
-        "beat": 41.5,
-        "note": "C#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 42.0,
-        "note": "F#3",
-        "duration": 1.0
-      },
-      {
-        "beat": 43.0,
-        "note": "F#3",
-        "duration": 1.0
-      },
-      {
-        "beat": 44.0,
-        "note": "F#3",
-        "duration": 0.5
+        "duration": 1
       },
       {
         "beat": 44.5,
-        "note": "F#3",
-        "duration": 0.5
-      },
-      {
-        "beat": 45.0,
-        "note": "F#3",
-        "duration": 0.5
+        "note": "B2",
+        "duration": 1
       },
       {
         "beat": 45.5,
-        "note": "E3",
-        "duration": 1.5
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 46.0,
+        "note": "A2",
+        "duration": 0.5
+      },
+      {
+        "beat": 46.5,
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 47.0,
+        "note": "B2",
+        "duration": 1
+      },
+      {
+        "beat": 48.0,
+        "note": "C#3",
+        "duration": 1
+      },
+      {
+        "beat": 49.0,
+        "note": "B2",
+        "duration": 5
+      },
+      {
+        "beat": 54.0,
+        "note": "A2",
+        "duration": 2.0
       }
     ],
     "chords": [
       {
-        "beat": 0,
+        "beat": 0.0,
         "duration": 2,
         "notes": [
-          "A2",
-          "C#3",
-          "E3"
+          "E2",
+          "G#2",
+          "B2"
         ]
       },
       {
-        "beat": 2,
+        "beat": 2.0,
         "duration": 3.5,
         "notes": [
           "D2",
@@ -2297,7 +2442,7 @@
       },
       {
         "beat": 5.5,
-        "duration": 2.5,
+        "duration": 4.5,
         "notes": [
           "E2",
           "G#2",
@@ -2305,8 +2450,8 @@
         ]
       },
       {
-        "beat": 8,
-        "duration": 2,
+        "beat": 10.0,
+        "duration": 4,
         "notes": [
           "A2",
           "C#3",
@@ -2314,7 +2459,61 @@
         ]
       },
       {
-        "beat": 10,
+        "beat": 14.0,
+        "duration": 2,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 16.0,
+        "duration": 4.5,
+        "notes": [
+          "B2",
+          "D3",
+          "F#3"
+        ]
+      },
+      {
+        "beat": 20.5,
+        "duration": 2,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 22.5,
+        "duration": 3.5,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 26.0,
+        "duration": 2,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 28.0,
+        "duration": 2,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 30.0,
         "duration": 3.5,
         "notes": [
           "D2",
@@ -2323,8 +2522,8 @@
         ]
       },
       {
-        "beat": 13.5,
-        "duration": 2.5,
+        "beat": 33.5,
+        "duration": 4.5,
         "notes": [
           "E2",
           "G#2",
@@ -2332,8 +2531,8 @@
         ]
       },
       {
-        "beat": 16,
-        "duration": 2,
+        "beat": 38.0,
+        "duration": 4,
         "notes": [
           "A2",
           "C#3",
@@ -2341,8 +2540,8 @@
         ]
       },
       {
-        "beat": 18,
-        "duration": 3.5,
+        "beat": 42.0,
+        "duration": 2,
         "notes": [
           "D2",
           "F#2",
@@ -2350,8 +2549,17 @@
         ]
       },
       {
-        "beat": 21.5,
-        "duration": 2.5,
+        "beat": 44.0,
+        "duration": 4.5,
+        "notes": [
+          "B2",
+          "D3",
+          "F#3"
+        ]
+      },
+      {
+        "beat": 48.5,
+        "duration": 2,
         "notes": [
           "E2",
           "G#2",
@@ -2359,8 +2567,8 @@
         ]
       },
       {
-        "beat": 24,
-        "duration": 2,
+        "beat": 50.5,
+        "duration": 3.5,
         "notes": [
           "A2",
           "C#3",
@@ -2368,88 +2576,68 @@
         ]
       },
       {
-        "beat": 26,
-        "duration": 3.5,
-        "notes": [
-          "D2",
-          "F#2",
-          "A2"
-        ]
-      },
-      {
-        "beat": 29.5,
-        "duration": 2.5,
-        "notes": [
-          "E2",
-          "G#2",
-          "B2"
-        ]
-      },
-      {
-        "beat": 32,
+        "beat": 54.0,
         "duration": 2,
         "notes": [
           "A2",
           "C#3",
           "E3"
-        ]
-      },
-      {
-        "beat": 34,
-        "duration": 3.5,
-        "notes": [
-          "D2",
-          "F#2",
-          "A2"
-        ]
-      },
-      {
-        "beat": 37.5,
-        "duration": 2.5,
-        "notes": [
-          "E2",
-          "G#2",
-          "B2"
-        ]
-      },
-      {
-        "beat": 40,
-        "duration": 2,
-        "notes": [
-          "A2",
-          "C#3",
-          "E3"
-        ]
-      },
-      {
-        "beat": 42,
-        "duration": 3.5,
-        "notes": [
-          "D2",
-          "F#2",
-          "A2"
-        ]
-      },
-      {
-        "beat": 45.5,
-        "duration": 2.5,
-        "notes": [
-          "E2",
-          "G#2",
-          "B2"
         ]
       }
     ],
     "style": "pop-rock",
     "references": [
-      "https://mymusic5.com/Theddykeys/151169",
-      "https://music.apple.com/us/song/691335578",
-      "https://www.gyllenetider.com/discography/singles/sommartider/",
-      "https://www.gyllenetider.com/lyrics/",
-      "https://www.youtube.com/watch?v=4kVRF0hTeyQ"
+      "https://www.youtube.com/watch?v=rJhOk24Yen0&t=44s",
+      "https://www.mymusic5.com/theddykeys/151169",
+      "https://www.gessle.com/gyllene-tider-discography/lyrics_gyllene-tider-discography/sommartider/",
+      "https://www.notpoolen.com/direktnoter/1471/sommartider/"
     ],
-    "source_notes": "Lead converted directly from the existing render-songs.py sequence, with its fixed -12-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. TheddyKeys published piano-arrangement preview, first system: the melody pickup in bar 1, all of bar 2 and the first tied note of bar 3. The E4 tie is merged into 1.5 beats. C#4–F#4 rendered C#3–F#3; 130 BPM is the published arrangement tempo",
-    "musical_direction": "A cheerful summer-rock fart band: steady compact backbeat, buoyant low root/fifth bass, clipped chord stabs and occasional duck-like replies. Preserve the exact pickup and held E then use each one-beat written rest for a different short answering fart. Add ensemble energy across six repetitions without moving melody notes or filling every gap; the hook must remain clear."
+    "source_notes": "Replaces the former 10-note opening repeated six times with a compact, complete two-half VOCAL REFRAIN, read from arranger TheddyKeys' own public Sommartider piano tutorial, chapter Refrang 0:44-1:13. The high green line is selected as the sung lead; the lower chord/arpeggio voices and the instrumental Intro chapter are omitted. Pitch classes were read from the labelled piano roll; rhythms are an ear/visual reduction quantized to eighth/quarter beats at the retained 130 BPM, not a claim of an exact original-recording or engraved-score transcription. The two title calls each continue into the distinct descending answer and vocal closing line. Most tutorial vocal notes C#5-F#5 and A4-B4 are reduced two octaves to C#3-F#3 and A2-B2; the brief E4 pickup before the first closing rise is octave-folded to E3 so it stays above the bass. Instrumental turnarounds are shortened to two beats between halves. The last A2 at beat54 is an arranger-added tonic cadence, after the sustained B2 vocal ending, not an additional original sung note. Official composer/publisher listing confirms Per Gessle and A major; official lyric structure is used only to identify the vocal phrase order, with no recorded voice or lyric audio sampled. Chords, rhythm section, responses and exact compact edit are creative accompaniment choices.",
+    "musical_direction": "The FART VOICE SINGS the refrain from the first beat: clear low A2-F#3 lead, no instrumental intro or riff loop. Keep the lead well in front, with simple quiet root/fifth bass, compact backbeat and restrained chord stabs. Leave the long sung notes audible and distinct; do not answer over their attacks. Build the second vocal half a little, then hold its different closing note and finish with a short low A-major ensemble cadence. All audio remains made from the nine recorded fart sources.",
+    "source_segments": [
+      {
+        "output_start_beat": 0,
+        "output_end_beat": 8,
+        "source": "TheddyKeys tutorial, Refrang chapter starting 0:44",
+        "role": "First sung title/refrain call; retained recognizable opening pitch classes, E3 held to lead into continuation"
+      },
+      {
+        "output_start_beat": 8,
+        "output_end_beat": 16.5,
+        "source": "TheddyKeys tutorial approx0:48-0:52.5",
+        "role": "Descending sung continuation plus two-note response; NOT instrumental riff"
+      },
+      {
+        "output_start_beat": 16.5,
+        "output_end_beat": 26,
+        "source": "TheddyKeys tutorial approx0:52.5-0:56.5",
+        "role": "First sung closing line, climbing to C#3; brief E pickup octave-adapted"
+      },
+      {
+        "output_start_beat": 26,
+        "output_end_beat": 28,
+        "source": "Creative compact turnaround",
+        "role": "Short accompaniment breathing space; original instrumental turnaround shortened"
+      },
+      {
+        "output_start_beat": 28,
+        "output_end_beat": 44.5,
+        "source": "TheddyKeys tutorial approx0:59.5-1:07",
+        "role": "Second sung title call and descending continuation"
+      },
+      {
+        "output_start_beat": 44.5,
+        "output_end_beat": 54,
+        "source": "TheddyKeys tutorial approx1:07-1:13",
+        "role": "Different sung closing line, C#3 followed by sustained B2"
+      },
+      {
+        "output_start_beat": 54,
+        "output_end_beat": 56,
+        "source": "Creative closing cadence",
+        "role": "Arranger-added A2 tonic ending; melody is otherwise the sung refrain reduction"
+      }
+    ]
   },
   {
     "id": "sandstorm",

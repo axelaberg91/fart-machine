@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const VERSION = '5.3.1';
+  const VERSION = '5.3.2';
   const preview = document.body.dataset.preview === 'true' || new URL(location.href).searchParams.get('preview') === '1';
   const sounds = [
     ['smygaren', '\u{1f4a8}', 'Smygaren', '01'],
@@ -260,13 +260,14 @@
     voices.add(voice);
     mediaHost.appendChild(audio);
     updateButton(sound);
-    status.textContent = sound.emoji + ' ' + sound.name + ' ...';
+    const label = (sound.emoji ? sound.emoji + ' ' : '') + sound.name;
+    status.textContent = label + ' ...';
     audio.onplaying = () => {
       if (!voices.has(voice)) return;
       clearTimeout(voice.timer);
       voice.started = true;
       updateButton(sound);
-      status.textContent = sound.emoji + ' ' + sound.name + '!';
+      status.textContent = label + '!';
       debug('Spelar ' + sound.name + (usedBlob ? ' | Lokal ljudfil' : ' | Direkt ljudfil'));
     };
     audio.onended = () => finish(voice);

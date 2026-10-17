@@ -1,5 +1,17 @@
 # Hugo och Hermans pruttmaskin
 
+## 5.3.2 - Små stoppknappar och mer melodi
+
+- Reset the mobile music stop badge's bottom offset, preventing it from
+  stretching down the card. Fixed the missing-emoji prefix in song status.
+- Expanded Greta Fis to 27.87 s with the omitted main-theme response
+  and a distinct closing tag, replacing six identical opening hooks.
+- Rebuilt Sommargaser around the sung refrain melody, with accompaniment
+  below the lead; the full excerpt is 27.05 s.
+- Retained the other ten recordings and metadata exactly, and refreshed the
+  offline cache to 5.3.2. Checked active stop markers on narrow screens,
+  delivered audio, phrase provenance and native/offline playback.
+
 ## 5.3.1 - Musiken först
 
 - Moved Pruttparaden above the individual fart pads, updated section numbers

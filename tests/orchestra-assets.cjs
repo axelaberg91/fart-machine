@@ -13,12 +13,10 @@ const sourceManifest = JSON.parse(fs.readFileSync(path.join(root, 'audio/sources
 const manifestByKey = new Map(sourceManifest.map(source => [source.key, source]));
 const hash = data => createHash('sha256').update(data).digest('hex');
 const retainedSongHashes = {
-  "greta-gris": "ae5d0eea697f5e9ac360da8cfe46beb1805c06efb3cf827551482452010a6716",
   "bjornen-sover": "71ddd2a61bfaa4c7540985e36df5af0ac54520b05c0beb32349f381243386ccc",
   "baby-shark": "6bd468de64856a28d610a8bef73c537cb8926ee729fd3cf55262ffb75a6682bc",
   "en-livstid-i-krig": "cdddfe5f63255f73887758fa299270b5cedb3f40b110aa7669d5876d432516bf",
   "bromance": "277366c4558deb513a478eb0938eb7b354ea340ed592a470b18513f55fcf58e7",
-  "sommartider": "cd0c91f74958deadc002f22d4e6e1dbd86c05668d8112a1c5db874f61f75cf17",
   "sandstorm": "2bc5a4a0fc2bf40cc7acfd6dce1f93ed9c0427524d130fb90182c993806a82fb",
   "ring-of-fire": "41d4a459c0ee0c53ed79cdbe720ff410e275d8b3018ac8393b3c819f14f0d3e6",
   "the-final-countdown": "3fdc6d8e18d516dfcdbada426efdb08118081e88c9a63bf47f1e2af5de773f84",
@@ -27,12 +25,10 @@ const retainedSongHashes = {
   "through-the-fire-and-flames": "19f136ad5f55500090ef245621135b0ec9589bdb56e0df6332b16a21065cc314"
 };
 const retainedMetadataHashes = {
-  "greta-gris": "ee4430edc593842c2089dd7a8eed9e1c0cac5f83621ebf104aebeda1a8872877",
   "bjornen-sover": "c199821a8c83e47aaa9443c5eb4c564c4aa42bcd3ac226cf718c29b2c3d62674",
   "baby-shark": "1b5e5906094e0f6d47fae9425b3ddb24e5f75f8e57c63fc73cec7117a91c9547",
   "en-livstid-i-krig": "c4573378e8bba60b556c2a51500a4e7fbf47cd0d1ccacb0721993faf633e343c",
   "bromance": "dff457348c41b3fafa01877ff1ed16dbddf4da72efd2dfcfdaeb5a43e7b9f7aa",
-  "sommartider": "3842b16ed185db560616fa101407d240ca488b21e70e70166ede7295ba65ce30",
   "sandstorm": "9b801ffe51c1e37455f3fa73eccf149f822a688d3539bc8dc99763123906ddbc",
   "ring-of-fire": "40a7c51b58a8379b3066fbceb89c54793c37275c8675973d927a01a6ceb44348",
   "the-final-countdown": "2ef1e2df85e624cd9ce59c37502da349a0e0e5d63bd9a9e496e4a03262bb4ad0",

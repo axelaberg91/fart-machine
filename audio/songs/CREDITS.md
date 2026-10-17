@@ -59,12 +59,12 @@ score page or downloaded MIDI is an app asset.
 
 | File | Artist / composer | Tempo | Duration |
 | --- | --- | --- | --- |
-| `greta-gris.mp3` | Peppa Pig / Greta Gris / Julian Nott | 144 BPM | 21.20 s |
+| `greta-gris.mp3` | Peppa Pig / Greta Gris / Julian Nott | 144 BPM | 27.87 s |
 | `bjornen-sover.mp3` | Traditional Swedish children's song / Traditional | 138 BPM | 22.07 s |
 | `baby-shark.mp3` | Traditional children's chant / Pinkfong / Traditional chant; popularized by Pinkfong | 112 BPM | 18.34 s |
 | `en-livstid-i-krig.mp3` | Sabaton / Joakim Broden | 68 BPM | 18.85 s |
 | `bromance.mp3` | Tim Berg / Avicii / Tim Bergling | 126 BPM | 24.06 s |
-| `sommartider.mp3` | Gyllene Tider / Per Gessle | 130 BPM | 23.35 s |
+| `sommartider.mp3` | Gyllene Tider / Per Gessle | 130 BPM | 27.05 s |
 | `sandstorm.mp3` | Darude / Ville Virtanen / Jaakko Salovaara | 140 BPM | 21.77 s |
 | `ring-of-fire.mp3` | Johnny Cash / June Carter / Merle Kilgore | 144 BPM | 17.87 s |
 | `the-final-countdown.mp3` | Europe / Joey Tempest | 118 BPM | 26.88 s |
@@ -74,12 +74,14 @@ score page or downloaded MIDI is an app asset.
 
 ### Greta Gris
 
-Playful, springy bass, short chord replies and comic fills.
+Expanded cartoon-theme form with three distinct source phrases, springy bass and recorded fart replies.
 
-Lead converted directly from the existing render-songs.py sequence, with its fixed -5-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Two-bar main-theme hook, repeated six times
+Expanded from six identical two-bar hooks to a complete main-theme A/B and a distinct closing tag. A and B pitches, rhythms and tonic-ending difference were read from the complete four-bar Conrad Chords notation. The tag is the top voice of bars14–15 in the public licensed Musicnotes Christina Petrando preview MN0201958: C5(2), D5(1), G4(1) | G4(.5), B4(.5), D5(.5), F5(.5), C5(2). Conrad C-major melody is transposed down5 semitones; the octave-higher Musicnotes tag is transposed down17 semitones, both into the previously accepted G-major D3–D4 register. Existing144 BPM and playful style are retained. The arrangement form A–B–tag–B / A–B–tag–B and all bass/chord/fart responses are creative arrangement choices, not a claim to reproduce the complete television opening or ending recording. No original recording or vocal asset is used.
 
 - [Reference 1](https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242).
 - [Reference 2](https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf).
+- [Reference 3](https://www.musicnotes.com/sheetmusic/christina/peppa-pig-theme-song/MN0201958).
+- [Reference 4](https://www.musicnotes.com/images/productimages/large/mtd/mn0201958.gif).
 
 ### Björnen sover
 
@@ -124,15 +126,14 @@ Freely published Avicii Melodies MIDI by No_Literature4584, who credits Keiric a
 
 ### Sommartider
 
-Summer-rock bass, backbeat and duck-like replies in the six written rests.
+The lead follows the sung refrain melody; the summer-rock accompaniment stays underneath it.
 
-Lead converted directly from the existing render-songs.py sequence, with its fixed -12-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. TheddyKeys published piano-arrangement preview, first system: the melody pickup in bar 1, all of bar 2 and the first tied note of bar 3. The E4 tie is merged into 1.5 beats. C#4–F#4 rendered C#3–F#3; 130 BPM is the published arrangement tempo
+Replaces the former 10-note opening repeated six times with a compact, complete two-half VOCAL REFRAIN, read from arranger TheddyKeys' own public Sommartider piano tutorial, chapter Refrang 0:44-1:13. The high green line is selected as the sung lead; the lower chord/arpeggio voices and the instrumental Intro chapter are omitted. Pitch classes were read from the labelled piano roll; rhythms are an ear/visual reduction quantized to eighth/quarter beats at the retained 130 BPM, not a claim of an exact original-recording or engraved-score transcription. The two title calls each continue into the distinct descending answer and vocal closing line. Most tutorial vocal notes C#5-F#5 and A4-B4 are reduced two octaves to C#3-F#3 and A2-B2; the brief E4 pickup before the first closing rise is octave-folded to E3 so it stays above the bass. Instrumental turnarounds are shortened to two beats between halves. The last A2 at beat54 is an arranger-added tonic cadence, after the sustained B2 vocal ending, not an additional original sung note. Official composer/publisher listing confirms Per Gessle and A major; official lyric structure is used only to identify the vocal phrase order, with no recorded voice or lyric audio sampled. Chords, rhythm section, responses and exact compact edit are creative accompaniment choices.
 
-- [Reference 1](https://mymusic5.com/Theddykeys/151169).
-- [Reference 2](https://music.apple.com/us/song/691335578).
-- [Reference 3](https://www.gyllenetider.com/discography/singles/sommartider/).
-- [Reference 4](https://www.gyllenetider.com/lyrics/).
-- [Reference 5](https://www.youtube.com/watch?v=4kVRF0hTeyQ).
+- [Reference 1](https://www.youtube.com/watch?v=rJhOk24Yen0&t=44s).
+- [Reference 2](https://www.mymusic5.com/theddykeys/151169).
+- [Reference 3](https://www.gessle.com/gyllene-tider-discography/lyrics_gyllene-tider-discography/sommartider/).
+- [Reference 4](https://www.notpoolen.com/direktnoter/1471/sommartider/).
 
 ### Sandstorm
 
@@ -213,27 +214,25 @@ delivered MP3 also passes decoded headroom and source attribution checks.
 
 ## Musical preservation checks
 
-Version 5.2 changes only Ring of Fire and Through the Fire and Flames.
-The other ten MP3s and their per-song metadata, including Seven Nation Army,
-remain exactly unchanged from 5.1.
+Version 5.3.2 changes only the Greta Gris and Sommartider recordings. The
+other ten MP3s and their per-song metadata remain exactly unchanged from 5.3.1.
+Greta's original opening is retained, with the omitted main-theme response
+and a distinct source-documented closing tag added. Sommartider now follows
+the sung refrain melody instead of looping the instrumental opening phrase.
+Their detailed phrase provenance is recorded above and in source_segments.
 
-Ring of Fire retains all 32 melody notes, beat positions, written durations,
-chord events and source transposition. Its tempo rises from 114 to 144 BPM
-as a creative live-style arrangement, without claiming a particular live take.
-DragonForce removes repeated intro bars, retains the complete electric hook,
-and shifts the kept sections intact as documented above and in source_segments.
-
-The Final Countdown retains its approved five-semitone lowering. Imperial
-March remains byte-for-byte identical to its approved 4.9 recording:
+The accepted 144 BPM Ring of Fire and the short, rawer DragonForce arrangement
+remain unchanged. The Final Countdown retains its five-semitone lowering.
+Imperial March remains identical to its approved 4.9 recording:
 `2bf7cad4826c8d9b18e808f909ea1b4a0d7e1d6b5b4d4336afbb062b1fbb2942`.
 
 ## Format, validation and regeneration
 
 All twelve files are stereo MPEG Layer III (MP3), 44,100 Hz, 128 kbit/s, MIME
-`audio/mpeg`. Their total size is 4,272,808 bytes (approximately 4.27 MB).
+`audio/mpeg`. Their total size is 4,438,320 bytes (approximately 4.44 MB).
 Decoded output has zero clipped samples. Metadata records decoded peaks and
 RMS, lead attack measurements, source hashes, every scheduled layer and
-final output hashes. All twelve songs are included in the version 5.2 offline cache.
+final output hashes. All twelve songs are included in the version 5.3.2 offline cache.
 
 The score registry `tools/orchestra-scores.json` contains all current melodies
 and creative chord plans. `tools/render-songs.py` retains the original eight
@@ -259,10 +258,10 @@ Verification covers the delivered MP3s, source attribution, musical timing,
 native browser playback and offline operation; it does not claim a physical
 iPad listening test.
 
-To regenerate only the two 5.2 revisions:
+To regenerate only the two 5.3.2 music revisions:
 
 ```sh
-python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg --only ring-of-fire through-the-fire-and-flames
+python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg --only greta-gris sommartider
 ```
 
 The rapid-lead pitch/articulation regression check is runnable with the same
