@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render two layered fart orchestras; retain every existing song byte-for-byte.
+"""Render layered fart orchestras with a distinct groove for each song.
 
 Requires Python, NumPy and FFmpeg. Scores and source attribution live beside
 this file and in audio/sources.json. All audible material is recorded farts:
@@ -83,6 +83,7 @@ def pitched(sample, base_hz, note, duration, gain=1):
 class Orchestra:
     def __init__(self, score, bank, ffmpeg):
         self.score, self.bank = score, bank
+        self.style = score.get('style', 'arena-rock' if score['id'] == 'the-final-countdown' else 'march')
         self.spb = 60/score['bpm']
         self.beats = score.get('total_beats', score['bars']*4)
         self.length = round((self.beats*self.spb+1.2)*SR)
@@ -91,15 +92,17 @@ class Orchestra:
         self.ffmpeg = ffmpeg
         self.long_notes = {}
         self.trumpet = normalized(crop(bank, 'trumpeten', 1.49, .45), .23)
+        self.direct_trumpet = normalized(crop(bank, 'trumpeten', 1.54, .40), .23)
         self.bass = normalized(crop(bank, 'smygaren', .20, .46), .22)
         self.duck = normalized(crop(bank, 'ankan', .08, .27), .17)
 
-    def sustained_lead(self, note, duration):
-        key = (note, round(duration, 5))
+    def sustained_lead(self, note, duration, direct_attack=False):
+        key = (note, round(duration, 5), direct_attack)
         if key not in self.long_notes:
             hz = legacy.frequency(note, 0)
-            natural_duration = len(self.trumpet)/SR*250.873629/hz
-            raw = pitched(self.trumpet, 250.873629, note, natural_duration)
+            sample = self.direct_trumpet if direct_attack else self.trumpet
+            natural_duration = len(sample)/SR*250.873629/hz
+            raw = pitched(sample, 250.873629, note, natural_duration)
             if duration > natural_duration*1.08:
                 # Time-stretch one finite recording with FFmpeg's overlap-add
                 # tempo filter; no oscillator, repeating wavetable or new tone.
@@ -136,6 +139,8 @@ class Orchestra:
                                 length_seconds=round((end-start)/SR, 6), gain=gain, pan=pan))
 
     def lead(self):
+        if self.style not in ('arena-rock', 'march'):
+            return self.groove_lead()
         fanfare = self.score['id'] == 'the-final-countdown'
         accents = ['blota', 'snabbisen', 'ankan', 'raketen'] if fanfare else ['kanonen', 'blota', 'snabbisen']
         for index, event in enumerate(self.score['melody']):
@@ -154,6 +159,8 @@ class Orchestra:
                 self.add('low-brass', 'trumpeten', beat+.018, body, .24, .25, octave)
 
     def harmonic_backing(self):
+        if self.style not in ('arena-rock', 'march'):
+            return self.groove_harmony()
         fanfare = self.score['id'] == 'the-final-countdown'
         for chord in self.score['chords']:
             start, length, notes = chord['beat'], chord['duration'], chord['notes']
@@ -176,6 +183,8 @@ class Orchestra:
                     self.add('chords', 'ankan', start+float(offset), audio, .27, [-.45, .35, .15][voice], note)
 
     def rhythm(self):
+        if self.style not in ('arena-rock', 'march'):
+            return self.groove_rhythm()
         fanfare = self.score['id'] == 'the-final-countdown'
         for beat in range(int(self.beats)):
             if fanfare:
@@ -203,14 +212,143 @@ class Orchestra:
                 audio = natural_hit(self.bank, 'raketen', .28, rate=1.2, reverse=True)
                 self.add('riser', 'raketen', phrase-.55/self.spb, audio, .13, .45)
 
+    def groove_lead(self):
+        """Keep accepted melody timing/pitches; change accompaniment and colour."""
+        dry = self.style in ('dance', 'trance')
+        soft = self.style == 'lullaby'
+        colours = ['ankan', 'snabbisen', 'blota', 'raketen']
+        if self.style == 'trance': colours = ['blota', 'snabbisen']
+        if self.style == 'heavy-rock': colours = ['kanonen', 'blota', 'snabbisen']
+        for index, event in enumerate(self.score['melody']):
+            beat, note, span = event['beat'], event['note'], event['duration']
+            if self.style == 'trance':
+                gate = min(.12, span*self.spb*.67)
+            elif self.style == 'dance':
+                gate = min(.48, span*self.spb*.77)
+            elif self.style in ('playful', 'bouncy'):
+                gate = min(.62, span*self.spb*.84)
+            else:
+                gate = min(1.15, span*self.spb*(.94 if soft else .87))
+            # Starting at the voiced body avoids a slow pre-attack when the
+            # accepted low G#2/B2 dance register slows the source recording.
+            body = self.sustained_lead(note, gate, direct_attack=True)
+            self.add('lead', 'trumpeten', beat, body, 1.0, -.04, note)
+            source = colours[index % len(colours)]
+            attack = natural_hit(self.bank, source, min(.05 if dry else .07, gate),
+                                 rate=1.25 if dry else 1.0, offset=.015)
+            self.add('lead-attacks', source, beat, attack, .10 if soft else .20, .07)
+            # A lower brass response colours anchors without doubling every note.
+            if not soft and span >= (1.5 if dry else 1):
+                octave = note[:-1]+str(int(note[-1])-1)
+                double = pitched(self.trumpet, 250.873629, octave, min(.45, gate))
+                self.add('low-brass', 'trumpeten', beat+.015, double,
+                         .18 if self.style in ('playful', 'bouncy') else .24, .25, octave)
+
+    def groove_harmony(self):
+        soft = self.style == 'lullaby'
+        dance = self.style in ('dance', 'trance')
+        rock = self.style in ('pop-rock', 'heavy-rock')
+        for chord in self.score['chords']:
+            start, length, notes = chord['beat'], chord['duration'], chord['notes']
+            step = 2 if soft else (.5 if dance or self.style == 'pop-rock' else 1)
+            for index, offset in enumerate(np.arange(0, length, step)):
+                note = notes[-1] if (index % 4 == 2 or self.style == 'country' and index % 2) else notes[0]
+                while legacy.frequency(note, 0) > 125:
+                    note = note[:-1]+str(int(note[-1])-1)
+                while legacy.frequency(note, 0) < 42:
+                    note = note[:-1]+str(int(note[-1])+1)
+                gate = min(.45 if soft else .27, (length-offset)*self.spb*.75)
+                audio = pitched(self.bass, 80.769, note, gate)
+                # Leave headroom for the low register in Shark/Sommartider.
+                self.add('bass', 'smygaren', start+float(offset), audio,
+                         .27 if soft else (.39 if dance else .42), 0, note)
+            if soft:
+                chord_offsets = np.arange(0, length, 4)
+            elif self.style == 'country':
+                chord_offsets = np.arange(.5, length, 1)
+            elif dance:
+                chord_offsets = np.arange(.5, length, 1)
+            else:
+                chord_offsets = np.arange(1, length, 2)
+            for offset in chord_offsets:
+                for voice, written in enumerate(notes[:3]):
+                    note = written
+                    while legacy.frequency(note, 0) < 145:
+                        note = note[:-1]+str(int(note[-1])+1)
+                    audio = pitched(self.duck, 82.276, note, .22 if soft else .14)
+                    self.add('chords', 'ankan', start+float(offset), audio,
+                             .12 if soft else (.23 if rock else .19), [-.4, .35, .1][voice], note)
+
+    def groove_rhythm(self):
+        soft = self.style == 'lullaby'
+        dance = self.style in ('dance', 'trance')
+        for beat in range(int(np.ceil(self.beats))):
+            if beat >= self.beats: continue
+            if soft:
+                if beat % 4 == 0:
+                    self.add('soft-pulse', 'kanonen', beat, natural_hit(self.bank, 'kanonen', .14, rate=.8), .15, -.12)
+                if beat % 2 == 1:
+                    self.add('brush', 'blota', beat, natural_hit(self.bank, 'blota', .10, bright=True), .10, .25)
+            elif dance:
+                self.add('kick', 'kanonen', beat, natural_hit(self.bank, 'kanonen', .13, rate=.75), .32, -.08)
+                if beat % 2:
+                    self.add('backbeat', 'blota', beat, natural_hit(self.bank, 'blota', .11, rate=1.25, bright=True), .26, .15)
+                self.add('offbeat', 'snabbisen', beat+.5, natural_hit(self.bank, 'snabbisen', .038, rate=1.7, offset=.13, bright=True), .11, .32)
+            elif self.style == 'heavy-rock':
+                # Original melody uses half-time 68 BPM; the band drives at 136.
+                for offset in (0, .5):
+                    source = 'kanonen' if offset == 0 else 'blota'
+                    self.add('heavy-beat', source, beat+offset,
+                             natural_hit(self.bank, source, .17, rate=.8 if offset == 0 else 1.2), .35 if offset == 0 else .24, -.1 if offset == 0 else .16)
+            elif self.style == 'country':
+                self.add('boom', 'kanonen', beat, natural_hit(self.bank, 'kanonen', .11, rate=.85), .28, -.13)
+                self.add('chick', 'snabbisen', beat+.5, natural_hit(self.bank, 'snabbisen', .07, rate=1.35, offset=.1, bright=True), .20, .25)
+                if beat % 2:
+                    self.add('wet-clap', 'blota', beat, natural_hit(self.bank, 'blota', .09, rate=1.3), .15, -.25)
+            else:
+                source = 'kanonen' if beat % 2 == 0 else 'blota'
+                self.add('beat', source, beat, natural_hit(self.bank, source, .13, rate=.8 if beat % 2 == 0 else 1.2), .30 if self.style == 'pop-rock' else .21, -.1 if beat % 2 == 0 else .2)
+            # Small recorded ticks mark space; avoid cluttering Sandstorm's pulse.
+            if not soft and self.style != 'trance':
+                for offset in ((.25, .75) if self.style == 'heavy-rock' else (0, .5)):
+                    if beat+offset < self.beats:
+                        self.add('ticks', 'snabbisen', beat+offset, natural_hit(self.bank, 'snabbisen', .025, rate=1.8, offset=.14, bright=True), .045 if dance else .055, -.3 if offset else .3)
+        self.groove_fills()
+
+    def groove_fills(self):
+        soft = self.style == 'lullaby'
+        dry = self.style == 'trance'
+        # Quiet replies sit in actual melody rests where possible. Otherwise
+        # phrase-end fills stay below the tune and retain the accepted pulse.
+        for phrase in range(8, int(self.beats)+1, 8):
+            offsets = (-.5, -.25) if dry or soft else (-.75, -.5, -.25)
+            for index, offset in enumerate(offsets):
+                source = ('ankan', 'snabbisen', 'blota')[index]
+                self.add('fills', source, phrase+offset,
+                         natural_hit(self.bank, source, .055 if dry else .085, rate=1.15+index*.15),
+                         .07 if soft else (.12 if dry else .19), -.3+index*.3)
+            if phrase < self.beats and phrase % 16 == 0:
+                self.add('riser', 'raketen', phrase-.4/self.spb,
+                         natural_hit(self.bank, 'raketen', .22, rate=1.25, reverse=True), .06 if soft else .11, .4)
+        # Natural breathing gaps get an occasional duck-like reply, not a
+        # competing melody. Only existing rests longer than .5 beats qualify.
+        melody = self.score['melody']
+        for previous, following in zip(melody, melody[1:]):
+            end = previous['beat']+previous['duration']
+            gap = following['beat']-end
+            if gap >= .5:
+                self.add('reply', 'ankan', end+min(.15, gap/4), natural_hit(self.bank, 'ankan', min(.18, gap*self.spb*.5), rate=1.1), .07 if soft else .14, -.3)
+
     def comedy(self):
         # A different low recorded growl marks the midpoint, and a theatrical
         # fart flourish resolves the final cadence. No new musical quote here.
         middle = min(self.beats-4, int(self.beats/8)*4)
-        self.add('growl', 'vulkanen', middle, natural_hit(self.bank, 'vulkanen', .42, rate=.78, offset=.8), .23, -.35)
+        gentle = self.style == 'lullaby'
+        tight = self.style == 'trance'
+        self.add('growl', 'vulkanen', middle, natural_hit(self.bank, 'vulkanen', .25 if tight else .42, rate=.78, offset=.8), .06 if gentle else (.12 if tight else .23), -.35)
         end = self.beats-.5
-        self.add('finale', 'katastrofen', end, natural_hit(self.bank, 'katastrofen', .7, rate=.88), .38, 0)
-        self.add('finale', 'raketen', end+.25, natural_hit(self.bank, 'raketen', .4, rate=1.3, offset=.18), .12, .4)
+        self.add('finale', 'katastrofen', end, natural_hit(self.bank, 'katastrofen', .7, rate=.88), .12 if gentle else .38, 0)
+        self.add('finale', 'raketen', end+.25, natural_hit(self.bank, 'raketen', .4, rate=1.3, offset=.18), .05 if gentle else .12, .4)
 
     def mix(self):
         self.lead(); self.harmonic_backing(); self.rhythm(); self.comedy()
@@ -257,15 +395,17 @@ def validate(ffmpeg, path, orchestra, scale):
 
 
 def main():
+    scores = json.loads((ROOT/'tools/orchestra-scores.json').read_text(encoding='utf-8'))
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--ffmpeg', default='ffmpeg')
-    parser.add_argument('--only', nargs='+', choices=['the-final-countdown', 'imperial-march'])
+    parser.add_argument('--only', nargs='+', choices=[score['id'] for score in scores])
     args = parser.parse_args()
-    scores = json.loads((ROOT/'tools/orchestra-scores.json').read_text(encoding='utf-8'))
     bank, sources = load_sources(args.ffmpeg)
     metadata_path = ROOT/'audio/songs/metadata.json'
     metadata = json.loads(metadata_path.read_text(encoding='utf-8'))
-    targets = args.only or [s['id'] for s in scores]
+    # The user approved Imperial March's audio. Keep that delivered file and
+    # metadata untouched unless it is explicitly selected for regeneration.
+    targets = args.only or [s['id'] for s in scores if s['id'] != 'imperial-march']
     for previous in metadata['songs']:
         if previous['id'] not in targets:
             assert hashlib.sha256((ROOT/previous['file']).read_bytes()).hexdigest() == previous['validation']['sha256'], 'Existing song changed'
@@ -285,19 +425,22 @@ def main():
             meter=score['meter'], melody=score['title']+' — '+score['composer'],
             composition_rights='Copyrighted composition; CC0 applies only to the source fart recordings',
             file='audio/songs/'+path.name,
-            arrangement=('Arena-rock fart fanfare with sustained recorded-fart lead, octave brass, galloping bass, chord replies, wet rock backbeat, short puffs, phrase fills and comic finale' if score['id'] == 'the-final-countdown' else 'Marching fart brass band with sustained recorded-fart lead, octave brass, heavy bass steps, chord replies, alternating side rolls, phrase fills and comic finale'),
+            arrangement=('Arena-rock fart fanfare with sustained recorded-fart lead, octave brass, galloping bass, chord replies, wet rock backbeat, short puffs, phrase fills and comic finale' if score['id'] == 'the-final-countdown' else score.get('style', 'march')+' fart orchestra with tuned lead, bass, chord replies, a distinct rhythmic groove, short recorded attacks, phrase fills and a comic ending'),
             source_notation=score['source_notes'], references=score['references'],
             format=dict(codec='mp3', mime='audio/mpeg', sample_rate=SR, channels=2, bitrate_kbps=128),
             notes=score['melody'], chords=score['chords'],
             orchestra=dict(sources=[s for s in sources if s['key'] in report['sources_used']],
                            events=orchestra.events, no_oscillators=True, no_original_song_audio=True),
             validation=report)
+        if 'key_change_from_previous_semitones' in score:
+            additions[score['id']]['key_change_from_previous_semitones'] = score['key_change_from_previous_semitones']
         print(json.dumps({'id': score['id'], **report}, ensure_ascii=False), flush=True)
     # Retain metadata entries in their existing order; append new songs in score order.
     metadata['songs'] = [additions.pop(s['id'], s) for s in metadata['songs']]
     metadata['songs'].extend(additions.values())
     metadata['orchestra_format'] = dict(codec='mp3', mime='audio/mpeg', sample_rate=SR, channels=2, bitrate_kbps=128)
-    metadata['articulation'] = 'Eight solo renditions retain their previous recorded-fart articulation; two layered orchestras use the sources, processing and event roles documented per song'
+    metadata['format'] = metadata['orchestra_format'].copy()
+    metadata['articulation'] = 'Ten layered recorded-fart orchestras with distinct grooves; Sandstorm retains its tight alternating attacks; all sources, musical roles and timing are documented per song'
     metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
 
 

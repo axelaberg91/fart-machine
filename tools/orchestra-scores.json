@@ -1,308 +1,4127 @@
 [
   {
+    "id": "greta-gris",
+    "title": "Greta Gris",
+    "artist": "Peppa Pig / Greta Gris",
+    "composer": "Julian Nott",
+    "bpm": 144,
+    "meter": "4/4",
+    "bars": 12,
+    "total_beats": 48.0,
+    "key": "G major",
+    "melody": [
+      {
+        "beat": 0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 1.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 1.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 2.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 3.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 4.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 4.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.0,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 6.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 7.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 8.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 9.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 10.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 11.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 12.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 12.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.0,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 14.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 15.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 16.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 17.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 17.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 18.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 19.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 20.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 20.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.0,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 22.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 23.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 24.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 25.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 26.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 27.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 28.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 28.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.0,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 30.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 31.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 32.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 33.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 33.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 34.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 35.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 36.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 36.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 37.0,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 37.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 38.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 39.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 40.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 41.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 42.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 43.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 44.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 44.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.0,
+        "note": "A3",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.5,
+        "note": "C4",
+        "duration": 0.5
+      },
+      {
+        "beat": 46.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 47.0,
+        "note": "G3",
+        "duration": 1.0
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 3,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 6,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 8,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 11,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 14,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 16,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 19,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 22,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 24,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 27,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 30,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 32,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 35,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 38,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 40,
+        "duration": 3,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 43,
+        "duration": 3,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 46,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      }
+    ],
+    "style": "playful",
+    "references": [
+      "https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242",
+      "https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf"
+    ],
+    "source_notes": "Lead converted directly from the existing render-songs.py sequence, with its fixed -5-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Two-bar main-theme hook, repeated six times",
+    "musical_direction": "Cheeky small-band cartoon: alternate short wet lead attacks while preserving every melody note. Springy root/fifth bass, brief duck-like chord replies, quiet offbeat ticks, and tiny answering splutters in phrase gaps. Build by changing recorded timbres between the six exact hook repetitions; keep the melody upfront and avoid fills across the four eighth notes."
+  },
+  {
+    "id": "bjornen-sover",
+    "title": "Björnen sover",
+    "artist": "Traditional Swedish children's song",
+    "composer": "Traditional",
+    "bpm": 138,
+    "meter": "4/4",
+    "bars": 12,
+    "total_beats": 48.0,
+    "key": "G major",
+    "melody": [
+      {
+        "beat": 0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 1.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 2.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 3.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 4.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 5.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 6.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 7.0,
+        "note": "C4",
+        "duration": 1.0
+      },
+      {
+        "beat": 8.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 9.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 10.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 11.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 12.0,
+        "note": "G3",
+        "duration": 4.0
+      },
+      {
+        "beat": 16.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 17.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 18.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 19.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 20.0,
+        "note": "D4",
+        "duration": 2.0
+      },
+      {
+        "beat": 22.0,
+        "note": "C4",
+        "duration": 2.0
+      },
+      {
+        "beat": 24.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 25.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 26.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 27.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 28.0,
+        "note": "C4",
+        "duration": 2.0
+      },
+      {
+        "beat": 30.0,
+        "note": "B3",
+        "duration": 2.0
+      },
+      {
+        "beat": 32.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 33.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 34.0,
+        "note": "G3",
+        "duration": 1.0
+      },
+      {
+        "beat": 35.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 36.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 37.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 38.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 39.0,
+        "note": "C4",
+        "duration": 1.0
+      },
+      {
+        "beat": 40.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 41.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 42.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 43.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 44.0,
+        "note": "G3",
+        "duration": 4.0
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0,
+        "duration": 4,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 4,
+        "duration": 4,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 8,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 10,
+        "duration": 2,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 12,
+        "duration": 8,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 20,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 22,
+        "duration": 2,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 24,
+        "duration": 6,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 30,
+        "duration": 6,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 36,
+        "duration": 4,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 40,
+        "duration": 2,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 42,
+        "duration": 2,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 44,
+        "duration": 4,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      }
+    ],
+    "style": "lullaby",
+    "references": [
+      "https://ciss.se/munspel/barnvisor.html"
+    ],
+    "source_notes": "Lead converted directly from the existing render-songs.py sequence, with its fixed -5-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Traditional: Gubben Noak / Björnen sover",
+    "musical_direction": "A warm, slightly sleepy bear orchestra on the unchanged four-beat grid: rounded low bass, sparse soft chord answers, hushed ticks and occasional bubbling responses under sustained notes. Gradually add a higher answering timbre for the middle phrase, then return to a gentler final phrase. Keep fills sparse and lower in level than the lead; no forced march or tempo change."
+  },
+  {
+    "id": "baby-shark",
+    "title": "Baby Shark",
+    "artist": "Traditional children's chant / Pinkfong",
+    "composer": "Traditional chant; popularized by Pinkfong",
+    "bpm": 112,
+    "meter": "4/4",
+    "bars": 8,
+    "total_beats": 32.0,
+    "key": "G major",
+    "melody": [
+      {
+        "beat": 0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 1.0,
+        "note": "E3",
+        "duration": 1.0
+      },
+      {
+        "beat": 2.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 2.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 3.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 3.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.75,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 4.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 6.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 6.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 7.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 7.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.75,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 8.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 10.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 10.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 11.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 11.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.75,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 12.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 14.0,
+        "note": "F#3",
+        "duration": 2.0
+      },
+      {
+        "beat": 16.0,
+        "note": "D3",
+        "duration": 1.0
+      },
+      {
+        "beat": 17.0,
+        "note": "E3",
+        "duration": 1.0
+      },
+      {
+        "beat": 18.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 18.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 19.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 19.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.75,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 20.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 22.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 22.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 23.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 23.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.75,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 24.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.0,
+        "note": "D3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 26.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 26.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 27.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 27.5,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.75,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 28.25,
+        "note": "G3",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.0,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 30.0,
+        "note": "F#3",
+        "duration": 2.0
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 4,
+        "duration": 4,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 8,
+        "duration": 4,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 12,
+        "duration": 4,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 16,
+        "duration": 4,
+        "notes": [
+          "E2",
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 20,
+        "duration": 4,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 24,
+        "duration": 4,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 28,
+        "duration": 4,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2",
+          "C3"
+        ]
+      }
+    ],
+    "style": "bouncy",
+    "references": [
+      "https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377",
+      "https://www.stantons.com/scores/03746512.pdf",
+      "https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html"
+    ],
+    "source_notes": "Lead converted directly from the existing render-songs.py sequence, with its fixed -12-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Children's melody: Baby Shark (traditional chant, popularized by Pinkfong)",
+    "musical_direction": "Playful call and response: crisp varied real-fart attacks articulate the exact rapid G-note rhythm, with bouncy bass and short offbeat chord replies. The second verse grows into a family chorus by changing attack timbres and occasional quieter octave support, keeping the original melody register constant. Wet little fills answer the sustained F-sharp at each verse ending without obscuring the main rhythm."
+  },
+  {
+    "id": "en-livstid-i-krig",
+    "title": "En livstid i krig",
+    "artist": "Sabaton",
+    "composer": "Joakim Broden",
+    "bpm": 68,
+    "meter": "4/4, half-time notation",
+    "bars": 5,
+    "total_beats": 20.0,
+    "melody": [
+      {
+        "beat": 0.0,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 0.75,
+        "note": "Bb3",
+        "duration": 0.75
+      },
+      {
+        "beat": 1.5,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 2.0,
+        "note": "C4",
+        "duration": 1.5
+      },
+      {
+        "beat": 3.5,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.0,
+        "note": "Eb4",
+        "duration": 0.75
+      },
+      {
+        "beat": 4.75,
+        "note": "D4",
+        "duration": 0.75
+      },
+      {
+        "beat": 5.5,
+        "note": "Bb3",
+        "duration": 0.5
+      },
+      {
+        "beat": 6.0,
+        "note": "C4",
+        "duration": 2.0
+      },
+      {
+        "beat": 8.0,
+        "note": "Eb4",
+        "duration": 0.75
+      },
+      {
+        "beat": 8.75,
+        "note": "D4",
+        "duration": 0.75
+      },
+      {
+        "beat": 9.5,
+        "note": "Bb3",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.75,
+        "note": "C4",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.0,
+        "note": "Bb3",
+        "duration": 2.0
+      },
+      {
+        "beat": 12.0,
+        "note": "Bb3",
+        "duration": 0.75
+      },
+      {
+        "beat": 12.75,
+        "note": "Ab3",
+        "duration": 0.75
+      },
+      {
+        "beat": 13.5,
+        "note": "G3",
+        "duration": 0.5
+      },
+      {
+        "beat": 14.0,
+        "note": "F3",
+        "duration": 2.0
+      },
+      {
+        "beat": 16.0,
+        "note": "F3",
+        "duration": 0.75
+      },
+      {
+        "beat": 16.75,
+        "note": "G3",
+        "duration": 0.75
+      },
+      {
+        "beat": 17.5,
+        "note": "Ab3",
+        "duration": 0.5
+      },
+      {
+        "beat": 18.0,
+        "note": "G3",
+        "duration": 0.125
+      },
+      {
+        "beat": 18.125,
+        "note": "Ab3",
+        "duration": 0.125
+      },
+      {
+        "beat": 18.25,
+        "note": "G3",
+        "duration": 0.125
+      },
+      {
+        "beat": 18.375,
+        "note": "F3",
+        "duration": 0.125
+      },
+      {
+        "beat": 18.5,
+        "note": "G3",
+        "duration": 1.5
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0.0,
+        "duration": 2.0,
+        "notes": [
+          "G2",
+          "Bb2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 2.0,
+        "duration": 6.0,
+        "notes": [
+          "C2",
+          "Eb2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 8.0,
+        "duration": 2.0,
+        "notes": [
+          "Eb2",
+          "G2",
+          "Bb2"
+        ]
+      },
+      {
+        "beat": 10.0,
+        "duration": 2.0,
+        "notes": [
+          "Bb1",
+          "D2",
+          "F2"
+        ]
+      },
+      {
+        "beat": 12.0,
+        "duration": 2.0,
+        "notes": [
+          "Eb2",
+          "G2",
+          "Bb2"
+        ]
+      },
+      {
+        "beat": 14.0,
+        "duration": 4.0,
+        "notes": [
+          "F2",
+          "Ab2",
+          "C3"
+        ]
+      },
+      {
+        "beat": 18.0,
+        "duration": 2.0,
+        "notes": [
+          "G2",
+          "Bb2",
+          "D3"
+        ]
+      }
+    ],
+    "style": "heavy-rock",
+    "references": [
+      "https://www.sabaton.net/discography/carolus-rex/en-livstid-i-krig/",
+      "https://gtptabs.com/tabs/19/sabaton/en-livstid-i-krig.html",
+      "https://gtptabs.com/tabs/download/55609.html",
+      "https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html"
+    ],
+    "source_notes": "Freely published Solo Guitar GP5 arrangement, opening measures 2 through the first half of 7; written F4–Eb5 rendered F3–Eb4. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.",
+    "musical_direction": "Heavy half-time rock march at the accepted 68 BPM. Keep all 27 lead events and the F3-Eb4 register; do not smooth over the four 0.125-beat grace figures at beat 18. Under the lead, use low rounded root-and-fifth farts, restrained alternating eighth-note gallops, dry thudding downbeats and rasping backbeats. Add smaller nasal chord replies at phrase ends and quiet rattling fills into beats 8, 12 and 18. Build the second half with more timbres and wider backing, while leaving the melodic wet attacks clearly above the ensemble. Land the final G3 with a low G-minor fart ensemble."
+  },
+  {
+    "id": "bromance",
+    "title": "Bromance",
+    "artist": "Tim Berg / Avicii",
+    "composer": "Tim Bergling",
+    "bpm": 126,
+    "meter": "4/4",
+    "bars": 12,
+    "total_beats": 48.0,
+    "melody": [
+      {
+        "beat": 0.0,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 0.75,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 1.5,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 2.25,
+        "note": "B3",
+        "duration": 0.75
+      },
+      {
+        "beat": 3.0,
+        "note": "F#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 3.75,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 4.5,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 5.25,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 6.0,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 6.75,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 7.5,
+        "note": "G#2",
+        "duration": 0.5
+      },
+      {
+        "beat": 8.0,
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 8.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.0,
+        "note": "D#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.5,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 10.25,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 11.0,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 11.75,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 12.5,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 13.25,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 14.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 14.5,
+        "note": "D#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 15.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 15.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 16.0,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 16.75,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 17.5,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 18.25,
+        "note": "B3",
+        "duration": 0.75
+      },
+      {
+        "beat": 19.0,
+        "note": "F#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 19.75,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 20.5,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 21.25,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 22.0,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 22.75,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 23.5,
+        "note": "G#2",
+        "duration": 0.5
+      },
+      {
+        "beat": 24.0,
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 24.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.0,
+        "note": "D#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.5,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 26.25,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 27.0,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 27.75,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 28.5,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 29.25,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 30.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 30.5,
+        "note": "D#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 31.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 31.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 32.0,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 32.75,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 33.5,
+        "note": "G#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 34.25,
+        "note": "B3",
+        "duration": 0.75
+      },
+      {
+        "beat": 35.0,
+        "note": "F#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 35.75,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 36.5,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 37.25,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 38.0,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 38.75,
+        "note": "D#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 39.5,
+        "note": "G#2",
+        "duration": 0.5
+      },
+      {
+        "beat": 40.0,
+        "note": "B2",
+        "duration": 0.5
+      },
+      {
+        "beat": 40.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.0,
+        "note": "D#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.5,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 42.25,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 43.0,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 43.75,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 44.5,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 45.25,
+        "note": "C#3",
+        "duration": 0.75
+      },
+      {
+        "beat": 46.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 46.5,
+        "note": "D#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 47.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 47.5,
+        "note": "F#3",
+        "duration": 0.5
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0.0,
+        "duration": 4.0,
+        "notes": [
+          "G#1",
+          "B1",
+          "D#2"
+        ]
+      },
+      {
+        "beat": 4.0,
+        "duration": 4.0,
+        "notes": [
+          "B1",
+          "D#2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 8.0,
+        "duration": 4.0,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 12.0,
+        "duration": 4.0,
+        "notes": [
+          "C#2",
+          "E2",
+          "G#2"
+        ]
+      },
+      {
+        "beat": 16.0,
+        "duration": 4.0,
+        "notes": [
+          "G#1",
+          "B1",
+          "D#2"
+        ]
+      },
+      {
+        "beat": 20.0,
+        "duration": 4.0,
+        "notes": [
+          "B1",
+          "D#2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 24.0,
+        "duration": 4.0,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 28.0,
+        "duration": 4.0,
+        "notes": [
+          "C#2",
+          "E2",
+          "G#2"
+        ]
+      },
+      {
+        "beat": 32.0,
+        "duration": 4.0,
+        "notes": [
+          "G#1",
+          "B1",
+          "D#2"
+        ]
+      },
+      {
+        "beat": 36.0,
+        "duration": 4.0,
+        "notes": [
+          "B1",
+          "D#2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 40.0,
+        "duration": 4.0,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 44.0,
+        "duration": 4.0,
+        "notes": [
+          "C#2",
+          "E2",
+          "G#2"
+        ]
+      }
+    ],
+    "style": "dance",
+    "references": [
+      "https://sirupmusic.com/releases/bromance-aviciis-arena-mix/",
+      "https://www.qobuz.com/us-en/album/bromance-remixes-pt-2-tim-berg/7640130863125",
+      "https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174",
+      "https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/",
+      "https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file"
+    ],
+    "source_notes": "Freely published Avicii Melodies MIDI by No_Literature4584, who credits Keiric and TyphoonMusic; highest lead at beats 224–240, confirmed by the identical repetition at 240–256. MIDI G#4–B5 rendered G#2–B3 through one fixed transposition, preserving the register contour. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.",
+    "musical_direction": "Dance arrangement at the accepted 126 BPM. Preserve all 72 syncopated lead notes, their low G#2-B3 register, and the three identical 16-beat chorus loops. Support the recognizable hook with a firm four-on-the-floor deep fart kick, short backbeat splats, quiet offbeat squeaks and springy root/fifth bass. Use sparse upstroke-style chord farts to answer the 0.75-beat lead, and keep the 0.5-beat run at each loop end clear. First loop lean, second loop with wider chord puffs, third loop with little splutter fills and a fuller bass. Do not octave-shift any melody note or add a competing tune."
+  },
+  {
+    "id": "sommartider",
+    "title": "Sommartider",
+    "artist": "Gyllene Tider",
+    "composer": "Per Gessle",
+    "bpm": 130,
+    "meter": "4/4",
+    "bars": 12,
+    "total_beats": 48.0,
+    "key": "A major / F# minor pitch collection",
+    "melody": [
+      {
+        "beat": 0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 0.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 1.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 1.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 2.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 3.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 4.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 4.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.5,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 8.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 8.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 10.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 11.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 12.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 12.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.5,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 16.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 16.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 17.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 17.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 18.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 19.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 20.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 20.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.5,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 24.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 24.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 26.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 27.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 28.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 28.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.5,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 32.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 32.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 33.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 33.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 34.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 35.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 36.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 36.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 37.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 37.5,
+        "note": "E3",
+        "duration": 1.5
+      },
+      {
+        "beat": 40.0,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 40.5,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.0,
+        "note": "E3",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.5,
+        "note": "C#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 42.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 43.0,
+        "note": "F#3",
+        "duration": 1.0
+      },
+      {
+        "beat": 44.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 44.5,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.0,
+        "note": "F#3",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.5,
+        "note": "E3",
+        "duration": 1.5
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0,
+        "duration": 2,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 2,
+        "duration": 3.5,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 5.5,
+        "duration": 2.5,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 8,
+        "duration": 2,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 10,
+        "duration": 3.5,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 13.5,
+        "duration": 2.5,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 16,
+        "duration": 2,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 18,
+        "duration": 3.5,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 21.5,
+        "duration": 2.5,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 24,
+        "duration": 2,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 26,
+        "duration": 3.5,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 29.5,
+        "duration": 2.5,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 32,
+        "duration": 2,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 34,
+        "duration": 3.5,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 37.5,
+        "duration": 2.5,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 40,
+        "duration": 2,
+        "notes": [
+          "A2",
+          "C#3",
+          "E3"
+        ]
+      },
+      {
+        "beat": 42,
+        "duration": 3.5,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 45.5,
+        "duration": 2.5,
+        "notes": [
+          "E2",
+          "G#2",
+          "B2"
+        ]
+      }
+    ],
+    "style": "pop-rock",
+    "references": [
+      "https://mymusic5.com/Theddykeys/151169",
+      "https://music.apple.com/us/song/691335578",
+      "https://www.gyllenetider.com/discography/singles/sommartider/",
+      "https://www.gyllenetider.com/lyrics/",
+      "https://www.youtube.com/watch?v=4kVRF0hTeyQ"
+    ],
+    "source_notes": "Lead converted directly from the existing render-songs.py sequence, with its fixed -12-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. TheddyKeys published piano-arrangement preview, first system: the melody pickup in bar 1, all of bar 2 and the first tied note of bar 3. The E4 tie is merged into 1.5 beats. C#4–F#4 rendered C#3–F#3; 130 BPM is the published arrangement tempo",
+    "musical_direction": "A cheerful summer-rock fart band: steady compact backbeat, buoyant low root/fifth bass, clipped chord stabs and occasional duck-like replies. Preserve the exact pickup and held E then use each one-beat written rest for a different short answering fart. Add ensemble energy across six repetitions without moving melody notes or filling every gap; the hook must remain clear."
+  },
+  {
+    "id": "sandstorm",
+    "title": "Sandstorm",
+    "artist": "Darude",
+    "composer": "Ville Virtanen / Jaakko Salovaara",
+    "bpm": 140,
+    "meter": "4/4",
+    "bars": 12,
+    "total_beats": 48.0,
+    "melody": [
+      {
+        "beat": 0.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 0.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 0.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 0.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 1.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 1.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 1.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 2.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 3.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 3.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.0,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.25,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 4.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 5.0,
+        "note": "E4",
+        "duration": 0.5
+      },
+      {
+        "beat": 5.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 5.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.0,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.25,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 6.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.0,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 7.5,
+        "note": "A3",
+        "duration": 0.25
+      },
+      {
+        "beat": 7.75,
+        "note": "A3",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 8.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 9.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 9.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 10.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 11.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 11.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 12.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 13.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 13.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 14.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 15.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 15.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 15.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 16.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 17.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 17.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 17.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 18.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 19.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 19.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.0,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.25,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 20.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 21.0,
+        "note": "E4",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 21.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.0,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.25,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 22.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.0,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 23.5,
+        "note": "A3",
+        "duration": 0.25
+      },
+      {
+        "beat": 23.75,
+        "note": "A3",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 24.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 25.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 25.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 25.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 26.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 27.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 27.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 28.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 29.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 29.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 29.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 30.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 31.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 31.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 31.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 32.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 33.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 33.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 33.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 34.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 35.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 35.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 35.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.0,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.25,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 36.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 37.0,
+        "note": "E4",
+        "duration": 0.5
+      },
+      {
+        "beat": 37.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 37.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.0,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.25,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.5,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 38.75,
+        "note": "D4",
+        "duration": 0.25
+      },
+      {
+        "beat": 39.0,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 39.5,
+        "note": "A3",
+        "duration": 0.25
+      },
+      {
+        "beat": 39.75,
+        "note": "A3",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 40.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 41.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 41.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 41.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 42.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 43.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 43.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 43.75,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 44.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 45.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 45.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 45.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.0,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.25,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.5,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 46.75,
+        "note": "B3",
+        "duration": 0.25
+      },
+      {
+        "beat": 47.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 47.5,
+        "note": "E4",
+        "duration": 0.25
+      },
+      {
+        "beat": 47.75,
+        "note": "E4",
+        "duration": 0.25
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 3.5,
+        "duration": 2.0,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 5.5,
+        "duration": 2.0,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 7.5,
+        "duration": 0.5,
+        "notes": [
+          "A1",
+          "C#2",
+          "E2"
+        ]
+      },
+      {
+        "beat": 8.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 11.5,
+        "duration": 0.5,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 12.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 15.5,
+        "duration": 0.5,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 16.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 19.5,
+        "duration": 2.0,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 21.5,
+        "duration": 2.0,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 23.5,
+        "duration": 0.5,
+        "notes": [
+          "A1",
+          "C#2",
+          "E2"
+        ]
+      },
+      {
+        "beat": 24.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 27.5,
+        "duration": 0.5,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 28.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 31.5,
+        "duration": 0.5,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 32.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 35.5,
+        "duration": 2.0,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 37.5,
+        "duration": 2.0,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 39.5,
+        "duration": 0.5,
+        "notes": [
+          "A1",
+          "C#2",
+          "E2"
+        ]
+      },
+      {
+        "beat": 40.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 43.5,
+        "duration": 0.5,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      },
+      {
+        "beat": 44.0,
+        "duration": 3.5,
+        "notes": [
+          "B1",
+          "D2",
+          "F#2"
+        ]
+      },
+      {
+        "beat": 47.5,
+        "duration": 0.5,
+        "notes": [
+          "E2",
+          "G2",
+          "B2"
+        ]
+      }
+    ],
+    "style": "trance",
+    "references": [
+      "https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488",
+      "https://bitmidi.com/darude_-_sandstorm-mid",
+      "https://www.cprato.com/en/midi/details/223/darude-sandstorm"
+    ],
+    "source_notes": "Upper lead line of publicly shared MIDI, track 6, beats 72–88; all 56 note onsets preserved on the sixteenth-note grid. B4–E5–D5–A4 rendered one octave down. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.",
+    "musical_direction": "Tight trance at exactly 140 BPM. Preserve all 56 corrected notes per 16-beat riff, repeated three times, with the accepted B3-E4-D4-A3 register. The sixteenth-note lead is the main attraction: crisp alternating Blota/Snabbisen attacks, a stable pitched body, no timing jitter and gates at most 0.12 seconds or 67% of the written duration. Keep the tatatatata separation audible. Add a low four-on-the-floor fart kick, offbeat bass pulses, short airy squeaks and thin backbeat splats; harmonic stabs stay sparse and quiet. Grow from a lean first pass to extra percussion and occasional muted bubbles in pass three. Avoid long wet tails, busy fills during dense lead runs, or any octave or tempo change."
+  },
+  {
+    "id": "ring-of-fire",
+    "title": "Ring of Fire",
+    "artist": "Johnny Cash",
+    "composer": "June Carter / Merle Kilgore",
+    "bpm": 114,
+    "meter": "4/4 with 2/4 turnaround",
+    "bars": 10,
+    "total_beats": 40.0,
+    "melody": [
+      {
+        "beat": 0.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 1.0,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 1.5,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 2.5,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 3.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 4.0,
+        "note": "E4",
+        "duration": 1.0
+      },
+      {
+        "beat": 5.0,
+        "note": "C4",
+        "duration": 1.0
+      },
+      {
+        "beat": 6.0,
+        "note": "D4",
+        "duration": 4.0
+      },
+      {
+        "beat": 10.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 11.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 11.5,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 12.5,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 13.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 14.0,
+        "note": "C4",
+        "duration": 1.0
+      },
+      {
+        "beat": 15.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 16.0,
+        "note": "B3",
+        "duration": 4.0
+      },
+      {
+        "beat": 20.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 21.0,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 21.5,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 22.5,
+        "note": "D4",
+        "duration": 0.5
+      },
+      {
+        "beat": 23.0,
+        "note": "D4",
+        "duration": 1.0
+      },
+      {
+        "beat": 24.0,
+        "note": "E4",
+        "duration": 1.0
+      },
+      {
+        "beat": 25.0,
+        "note": "C4",
+        "duration": 1.0
+      },
+      {
+        "beat": 26.0,
+        "note": "D4",
+        "duration": 4.0
+      },
+      {
+        "beat": 30.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 31.0,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 31.5,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 32.5,
+        "note": "B3",
+        "duration": 0.5
+      },
+      {
+        "beat": 33.0,
+        "note": "B3",
+        "duration": 1.0
+      },
+      {
+        "beat": 34.0,
+        "note": "C4",
+        "duration": 1.0
+      },
+      {
+        "beat": 35.0,
+        "note": "A3",
+        "duration": 1.0
+      },
+      {
+        "beat": 36.0,
+        "note": "B3",
+        "duration": 4.0
+      }
+    ],
+    "chords": [
+      {
+        "beat": 0.0,
+        "duration": 4.0,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 4.0,
+        "duration": 2.0,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 6.0,
+        "duration": 2.0,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 8.0,
+        "duration": 6.0,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 14.0,
+        "duration": 2.0,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 16.0,
+        "duration": 4.0,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 20.0,
+        "duration": 4.0,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 24.0,
+        "duration": 2.0,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 26.0,
+        "duration": 2.0,
+        "notes": [
+          "D2",
+          "F#2",
+          "A2"
+        ]
+      },
+      {
+        "beat": 28.0,
+        "duration": 6.0,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      },
+      {
+        "beat": 34.0,
+        "duration": 2.0,
+        "notes": [
+          "C2",
+          "E2",
+          "G2"
+        ]
+      },
+      {
+        "beat": 36.0,
+        "duration": 4.0,
+        "notes": [
+          "G2",
+          "B2",
+          "D3"
+        ]
+      }
+    ],
+    "style": "country",
+    "references": [
+      "https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf",
+      "https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397"
+    ],
+    "source_notes": "Upper trumpet line in Gary Badger transcription; written F#5–G#5–E5–F#5 and D#5–E5–C#5–D#5 moved to D4–E4–C4–D4 and B3–C4–A3–B3 for the solo fart instrument. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.",
+    "musical_direction": "Playful country/mariachi fart band at the accepted faster 114 BPM, with the same 32 lead notes in D4-E4-C4-D4 and B3-C4-A3-B3 register. Keep the paired half-beat trumpet-hook snaps and all long phrase notes intact. Use alternating low root/fifth farts on the boom beats and short nasal chord puffs on the chick beats; soft ticking farts and occasional dry splats carry the train rhythm. Add gentle low brass-like doubling on long notes, tiny question-and-answer splutters after phrase anchors, and a more colorful second 20-beat pass. The 20-beat hook includes its short turnaround; do not force a new intro, change the melody rhythm or accelerate beyond 114 BPM."
+  },
+  {
     "id": "the-final-countdown",
     "title": "The Final Countdown",
     "artist": "Europe",
     "composer": "Joey Tempest",
     "bpm": 118,
     "meter": "4/4",
-    "key": "F# minor",
+    "key": "C# minor",
     "references": [
       "https://www.pierreloiselle.com/uploads/2/3/7/0/23701802/the_final_countdown_-_directeur.pdf"
     ],
-    "source_notes": "Pitches, exact sixteenth/eighth-note rhythm and ties visually checked against the piano melody on printed pages 1-4 of arranger Pierre Loiselle's self-published score. Uses its bars 1-8, then 13-16, with an added F# minor cadence. Lead uses original-key pitches C#5/B4/F#4/D5 etc. Tied notes are merged. The initial 1.5 beats of rest are omitted so the recognisable C#5-B4-C#5 fanfare starts instantly. Tempo 118 BPM and octave choices are arrangement decisions; this is an independently sequenced fart arrangement, not original-recording audio. Harmonic extensions are optional accompaniment colour.",
+    "source_notes": "Pitches, exact sixteenth/eighth-note rhythm and ties visually checked against the piano melody on printed pages 1-4 of arranger Pierre Loiselle's self-published score. Uses its bars 1-8, then 13-16, with an added F# minor cadence. Lead uses original-key pitches C#5/B4/F#4/D5 etc. Tied notes are merged. The initial 1.5 beats of rest are omitted so the recognisable C#5-B4-C#5 fanfare starts instantly. Tempo 118 BPM and octave choices are arrangement decisions; this is an independently sequenced fart arrangement, not original-recording audio. Harmonic extensions are optional accompaniment colour. For version 5.0 the complete melody and all harmonies are transposed down five semitones from the accepted F# minor score into C# minor. Rhythm, note durations and tempo are unchanged.",
     "bars": 13,
     "pickup_beats": 1.5,
     "total_beats": 50.5,
     "melody": [
       {
         "beat": 0.0,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 0.25,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.25
       },
       {
         "beat": 0.5,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 1
       },
       {
         "beat": 1.5,
-        "note": "F#4",
+        "note": "C#4",
         "duration": 2.5
       },
       {
         "beat": 4.0,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.25
       },
       {
         "beat": 4.25,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 4.5,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.5
       },
       {
         "beat": 5.0,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.5
       },
       {
         "beat": 5.5,
-        "note": "B4",
+        "note": "F#4",
         "duration": 2.5
       },
       {
         "beat": 8.0,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.25
       },
       {
         "beat": 8.25,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 8.5,
-        "note": "D5",
+        "note": "A4",
         "duration": 1
       },
       {
         "beat": 9.5,
-        "note": "F#4",
+        "note": "C#4",
         "duration": 2.5
       },
       {
         "beat": 12.0,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.25
       },
       {
         "beat": 12.25,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.25
       },
       {
         "beat": 12.5,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.5
       },
       {
         "beat": 13.0,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.5
       },
       {
         "beat": 13.5,
-        "note": "G#4",
+        "note": "Eb4",
         "duration": 0.5
       },
       {
         "beat": 14.0,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.5
       },
       {
         "beat": 14.5,
-        "note": "A4",
+        "note": "E4",
         "duration": 1.5
       },
       {
         "beat": 16.0,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 16.25,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.25
       },
       {
         "beat": 16.5,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 1
       },
       {
         "beat": 17.5,
-        "note": "F#4",
+        "note": "C#4",
         "duration": 2.5
       },
       {
         "beat": 20.0,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.25
       },
       {
         "beat": 20.25,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 20.5,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.5
       },
       {
         "beat": 21.0,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.5
       },
       {
         "beat": 21.5,
-        "note": "B4",
+        "note": "F#4",
         "duration": 2.5
       },
       {
         "beat": 24.0,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.25
       },
       {
         "beat": 24.25,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 24.5,
-        "note": "D5",
+        "note": "A4",
         "duration": 1
       },
       {
         "beat": 25.5,
-        "note": "F#4",
+        "note": "C#4",
         "duration": 2.5
       },
       {
         "beat": 28.0,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.25
       },
       {
         "beat": 28.25,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.25
       },
       {
         "beat": 28.5,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.5
       },
       {
         "beat": 29.0,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.5
       },
       {
         "beat": 29.5,
-        "note": "G#4",
+        "note": "Eb4",
         "duration": 0.5
       },
       {
         "beat": 30.0,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.5
       },
       {
         "beat": 30.5,
-        "note": "A4",
+        "note": "E4",
         "duration": 1.5
       },
       {
         "beat": 32.0,
-        "note": "G#4",
+        "note": "Eb4",
         "duration": 0.25
       },
       {
         "beat": 32.25,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.25
       },
       {
         "beat": 32.5,
-        "note": "B4",
+        "note": "F#4",
         "duration": 1.5
       },
       {
         "beat": 34.0,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.25
       },
       {
         "beat": 34.25,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.25
       },
       {
         "beat": 34.5,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.5
       },
       {
         "beat": 35.0,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.5
       },
       {
         "beat": 35.5,
-        "note": "A4",
+        "note": "E4",
         "duration": 0.5
       },
       {
         "beat": 36.0,
-        "note": "G#4",
+        "note": "Eb4",
         "duration": 0.5
       },
       {
         "beat": 36.5,
-        "note": "F#4",
+        "note": "C#4",
         "duration": 1
       },
       {
         "beat": 37.5,
-        "note": "D5",
+        "note": "A4",
         "duration": 1
       },
       {
         "beat": 38.5,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 3
       },
       {
         "beat": 41.5,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 41.75,
-        "note": "D5",
+        "note": "A4",
         "duration": 0.25
       },
       {
         "beat": 42.0,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 0.25
       },
       {
         "beat": 42.25,
-        "note": "B4",
+        "note": "F#4",
         "duration": 0.25
       },
       {
         "beat": 42.5,
-        "note": "C#5",
+        "note": "Ab4",
         "duration": 4
       },
       {
         "beat": 46.5,
-        "note": "F#4",
+        "note": "C#4",
         "duration": 4
       }
     ],
@@ -311,170 +4130,172 @@
         "beat": 0,
         "duration": 2.5,
         "notes": [
-          "F#2",
-          "A2",
-          "C#3"
+          "C#2",
+          "E2",
+          "Ab2"
         ]
       },
       {
         "beat": 2.5,
         "duration": 4,
         "notes": [
-          "D2",
-          "F#2",
-          "A2"
+          "A1",
+          "C#2",
+          "E2"
         ]
       },
       {
         "beat": 6.5,
         "duration": 4,
         "notes": [
-          "B1",
-          "D2",
-          "F#2"
+          "F#1",
+          "A1",
+          "C#2"
         ]
       },
       {
         "beat": 10.5,
         "duration": 2,
         "notes": [
-          "E2",
-          "G#2",
-          "B2"
+          "B1",
+          "Eb2",
+          "F#2"
         ]
       },
       {
         "beat": 12.5,
         "duration": 2,
         "notes": [
-          "E2",
-          "G#2",
-          "D3",
-          "F3"
+          "B1",
+          "Eb2",
+          "A2",
+          "C3"
         ]
       },
       {
         "beat": 14.5,
         "duration": 4,
         "notes": [
-          "F#2",
-          "A2",
-          "C#3"
+          "C#2",
+          "E2",
+          "Ab2"
         ]
       },
       {
         "beat": 18.5,
         "duration": 4,
         "notes": [
-          "D2",
-          "F#2",
-          "A2"
+          "A1",
+          "C#2",
+          "E2"
         ]
       },
       {
         "beat": 22.5,
         "duration": 4,
         "notes": [
-          "B1",
-          "D2",
-          "F#2"
+          "F#1",
+          "A1",
+          "C#2"
         ]
       },
       {
         "beat": 26.5,
         "duration": 2,
         "notes": [
-          "E2",
-          "G#2",
-          "B2"
+          "B1",
+          "Eb2",
+          "F#2"
         ]
       },
       {
         "beat": 28.5,
         "duration": 2,
         "notes": [
-          "E2",
-          "G#2",
-          "D3",
-          "F3"
+          "B1",
+          "Eb2",
+          "A2",
+          "C3"
         ]
       },
       {
         "beat": 30.5,
         "duration": 2,
         "notes": [
-          "F#2",
-          "A2",
-          "C#3"
+          "C#2",
+          "E2",
+          "Ab2"
         ]
       },
       {
         "beat": 32.5,
         "duration": 2,
         "notes": [
-          "G#2",
-          "B2",
-          "E3"
+          "Eb2",
+          "F#2",
+          "B2"
         ]
       },
       {
         "beat": 34.5,
         "duration": 1,
         "notes": [
-          "A2",
-          "C#3",
-          "E3"
+          "E2",
+          "Ab2",
+          "B2"
         ]
       },
       {
         "beat": 35.5,
         "duration": 1,
         "notes": [
-          "G#2",
-          "B2",
-          "E3"
+          "Eb2",
+          "F#2",
+          "B2"
         ]
       },
       {
         "beat": 36.5,
         "duration": 1,
         "notes": [
-          "F#2",
-          "A2",
-          "C#3"
+          "C#2",
+          "E2",
+          "Ab2"
         ]
       },
       {
         "beat": 37.5,
         "duration": 1,
         "notes": [
-          "D2",
-          "F#2",
-          "A2"
+          "A1",
+          "C#2",
+          "E2"
         ]
       },
       {
         "beat": 38.5,
         "duration": 8,
         "notes": [
-          "C#2",
-          "G#2",
-          "C#3",
-          "F3"
+          "Ab1",
+          "Eb2",
+          "Ab2",
+          "C3"
         ]
       },
       {
         "beat": 46.5,
         "duration": 4,
         "notes": [
-          "F#2",
-          "A2",
-          "C#3",
-          "F#3"
+          "C#2",
+          "E2",
+          "Ab2",
+          "C#3"
         ]
       }
     ],
-    "musical_direction": "Approx 25.7 seconds plus release. Arena-rock fart fanfare: firm bright pitched lead with clean sustained note bodies, alternating articulations only at phrase boundaries; double selected long notes a quiet octave down, then add a second slightly nasal lead for the second hook. Use deep round fart bass on roots/fifths, syncopated chord stabs at low volume, dry short plop kick, papery clap/snare fart, tiny squeaks as hats, and a playful rising fill in the turnaround. Preserve the 1/16+1/16+quarter attack cells, ties and silence before each answering figure; do not fill every melodic gap with loud effects. Because the first 1.5 beats of score rest were cut, original score barlines are at 2.5, 6.5, 10.5, ...; drum accents can align to that grid, with the first phrase unaccompanied or lightly accented until 2.5. Build the second hook wider and fuller, then thin out under the long dominant C#5 and land a big F#4 + low F# chord final fart at 46.5 beats."
+    "musical_direction": "Arena-rock fart fanfare in a lower C# minor register. Keep the accepted melody, phrasing, bass gallop and orchestration, transposing every pitched voice down five semitones.",
+    "style": "arena-rock",
+    "key_change_from_previous_semitones": -5
   },
   {
     "id": "imperial-march",

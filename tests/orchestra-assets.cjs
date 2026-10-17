@@ -1,6 +1,6 @@
 'use strict';
 
-// Integration contract for the two approved richer arrangements. Examines the
+// Integration contract for all ten layered arrangements. Examines the
 // shipped assets and their provenance, without importing the audio renderer.
 // Run with: node tests/orchestra-assets.cjs
 const assert = require('node:assert/strict');
@@ -12,6 +12,8 @@ const metadata = JSON.parse(fs.readFileSync(path.join(root, 'audio/songs/metadat
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(root, 'audio/sources.json'), 'utf8'));
 const manifestByKey = new Map(sourceManifest.map(source => [source.key, source]));
 const hash = data => createHash('sha256').update(data).digest('hex');
+const expectedIds = ['greta-gris', 'bjornen-sover', 'baby-shark', 'en-livstid-i-krig', 'bromance', 'sommartider', 'sandstorm', 'ring-of-fire', 'the-final-countdown', 'imperial-march'];
+assert.deepEqual(metadata.songs.map(song => song.id), expectedIds, 'all ten arrangements stay in the approved order');
 
 function maximumSimultaneousRoles(events) {
   const edges = events.flatMap(event => [
@@ -57,13 +59,14 @@ function inspectMp3(data, id) {
   return frames * 1152 / 44100;
 }
 
-for (const id of ['the-final-countdown', 'imperial-march']) {
+for (const id of expectedIds) {
   const song = metadata.songs.find(entry => entry.id === id);
   assert.ok(song, id + ' published in song metadata');
   assert.deepEqual(song.format, { codec: 'mp3', mime: 'audio/mpeg', sample_rate: 44100, channels: 2, bitrate_kbps: 128 });
   const output = fs.readFileSync(path.join(root, song.file));
   assert.equal(output.length, song.validation.bytes, id + ' output byte count');
   assert.equal(hash(output), song.validation.sha256, id + ' output hash');
+  if (id === 'imperial-march') assert.equal(hash(output), '2bf7cad4826c8d9b18e808f909ea1b4a0d7e1d6b5b4d4336afbb062b1fbb2942', 'approved Imperial March recording stays byte-for-byte unchanged');
   const actualDuration = inspectMp3(output, id);
   assert.ok(actualDuration > 15 && actualDuration < 45, id + ' output lasts 15–45 seconds');
   assert.ok(Math.abs(actualDuration - song.validation.duration_seconds) < 0.12, id + ' MP3 frame duration matches decoded validation');

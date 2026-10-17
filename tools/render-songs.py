@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Render the eight solo fart-song MP3 assets offline. Requires Python, NumPy and FFmpeg.
+"""Original solo score registry and compatibility entry point for the orchestra renderer.
 
 Run: python tools/render-songs.py --ffmpeg /path/to/ffmpeg
-The website plays the finished files through native HTML audio; this tool is
-never loaded by the app. All instrument audio comes from the unchanged CC0
-recordings audio/trumpeten.mp3, audio/blota.mp3 and audio/snabbisen.mp3.
-The larger arrangements are rendered by render-orchestra.py and their metadata
-is preserved when this tool regenerates the solo songs.
+The accepted eight original melody scores and transpositions below remain
+available for independent regression checks. Running this file delegates to
+render-orchestra.py, which renders the current full arrangements. All audible
+material comes from credited CC0 fart recordings; the website uses native audio.
 """
 import argparse
 import hashlib
@@ -421,4 +420,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # Preserve the accepted source scores above for verification. Regeneration
+    # now uses the complete orchestrations rather than replacing them with solos.
+    import runpy
+    runpy.run_path(str(ROOT/'tools/render-orchestra.py'), run_name='__main__')

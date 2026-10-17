@@ -1,268 +1,213 @@
 # Fart-song recordings
 
-Ten instrumental melody and riff clips, rendered offline from real
-recorded farts. There are no vocals or external audio requests. The two larger
-orchestras include bass, harmony and percussion made only from recorded farts. The app plays these finished MP3 files using native HTML audio.
+Ten independently arranged fart orchestras. The website plays finished local MP3s
+through native HTML audio. Every audible instrument comes from the nine recorded
+farts below: no voices, original song recordings, synth oscillators or drum libraries.
 
 ## Recorded instruments
 
-- Source file: `../trumpeten.mp3` (unchanged).
-- Recording: **fart,bum,trumpet,poop.wav** by **sorce**.
-- Source: https://freesound.org/people/sorce/sounds/431621/
-- Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
-- SHA-256: `cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63`.
+The original source MP3s are unchanged. All nine are CC0 1.0; their original
+attribution, source URLs, byte counts and SHA-256 checksums are recorded in
+[`../sources.json`](../sources.json).
 
-- Source file: `../blota.mp3` (unchanged).
-- Recording: **Diarrhea** by **Breviceps**.
-- Source: https://freesound.org/people/Breviceps/sounds/445997/
-- Source recording license: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
-- SHA-256: `a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2`.
+- **smygaren**: Fart 1 by Breviceps; [source](https://freesound.org/people/Breviceps/sounds/445998/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `fa2e4edb297ec65372a5fee6705128a307bcadc0b0245ad29e9681a8955bf96e`.
+- **kanonen**: Fart 2 by Breviceps; [source](https://freesound.org/people/Breviceps/sounds/445999/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `569793c01b0f84b63a9d55029f004332f918d1370132fb75fba0873995a3f6c1`.
+- **blota**: Diarrhea by Breviceps; [source](https://freesound.org/people/Breviceps/sounds/445997/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `a8709692b0719509700a38897f2de217b02f12af5f9a9a4768351623b8f8e8f2`.
+- **trumpeten**: fart,bum,trumpet,poop.wav by sorce; [source](https://freesound.org/people/sorce/sounds/431621/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `cf58ca41e3b6fb183995a099bc88e084df3561110aefc40ee9f9040cbd815c63`.
+- **ankan**: Fart 3 by Breviceps; [source](https://freesound.org/people/Breviceps/sounds/446000/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `da890ff85703358d2e3fbcf5271ccf4fe76a15e07dbed5efabed65eb4ae4a210`.
+- **vulkanen**: Blubberfreak Fart 3 by Blubberfreak; [source](https://freesound.org/people/Blubberfreak/sounds/732057/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `c90baedd94619d3d351e556f585dc56067ca9d1f976bfa6ce15f9240ff8a49f6`.
+- **snabbisen**: FART.wav by C-V; [source](https://freesound.org/people/C-V/sounds/506994/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `912a288d0e14f0d2e68e6904bb1215f9e38080e76d6adede7e0b488e24e8fb00`.
+- **raketen**: FART - 2 by SamuelGremaud; [source](https://freesound.org/people/SamuelGremaud/sounds/518699/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `37686fdfe462b3609246b9223a73c912f2417b49bfbdb21c7603c17b0c40e878`.
+- **katastrofen**: Fart 3 by Under7dude; [source](https://freesound.org/people/Under7dude/sounds/163381/); [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  SHA-256: `b637625415830a5baa34b2db1dd2fd6da3f404670516db2aa6a753e157a2d56a`.
 
-In the seven original solo renditions other than Sandstorm, every note begins with and includes a real wet fart articulation from Blöta's
-first 0.67 seconds. Small changes to the starting point and playback speed
-(within 5% of the original) vary the recorded splutters between notes. The
-natural wet texture keeps its original pitch. Soft compression controls sharp
-recorded transients so the melody remains audible.
+## Orchestration
 
-The melodic body uses a complete attack, body and tail from approximately
-1.49–1.94 seconds of Trumpeten. Its central body has a measured fundamental of
-250.874 Hz; resampled playback places that body on each melody note. The
-recording's natural pitch scoops, irregularity and decay remain audible.
+Trumpeten supplies the tuned lead and selected lower brass. Its stable recorded
+body has a measured fundamental of about 250.874 Hz. The eight upgraded tunes
+start their pitched body at 1.54 s to avoid an indistinct attack when low notes
+slow the original sample. Long written notes use pitch-preserving time stretching
+of a finite recorded passage; no repeating wavetable is introduced. Short
+envelopes prevent clicks. Recorded wet attacks add timbre without changing notes.
 
-**No recording is looped or tiled.** Long written notes end with an organic
-recorded tail and space before the next note. Short attack and release envelopes
-prevent clicks. No oscillator or conventional instrument produces the melody. The two larger
-orchestras described below use additional finite source passages and time
-stretching for sustained melodic notes.
+Smygaren supplies the tuned bass (0.20–0.66 s; approximately 80.769 Hz). Ankan
+supplies short chord replies (0.08–0.35 s; approximately 82.276 Hz). Kanonen
+and Blöta make the low thumps and wet backbeats. Snabbisen provides small ticks,
+offbeats and rolls. Raketen adds short phrase rises, Vulkanen a brief growl,
+and Katastrofen a final flourish. Each song has its own rhythm, note gates,
+bass spacing and backing level; Björnen sover is deliberately sparse.
 
-Sandstorm additionally uses a short attack from `../snabbisen.mp3`:
+The lead remains stronger than any individual backing layer. Supporting parts
+grow modestly in the second half. Stereo placement separates the parts; a quiet
+echo uses only the recorded mix. Leading silence is trimmed before scheduling
+so different source files cannot move a written beat.
 
-- Recording: **Fart** by **C-V**.
-- Source: https://freesound.org/people/C-V/sounds/506994/.
-- License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
-- SHA-256: `912a288d0e14f0d2e68e6904bb1215f9e38080e76d6adede7e0b488e24e8fb00`.
+## Melodies and arrangements
 
-Its attacks alternate between Blöta and Snabbisen. Each uses up to 45 ms from
-the loudest 30 ms block within the first 300 ms of its source, with a fast fade.
-The pitched Trumpeten body starts immediately, without the usual 18 ms delay,
-and is more prominent than the unpitched attack. Notes occupy 67% of their
-written spacing, capped at 120 ms, leaving a clear gap between sixteenths.
-The same pitched body carries both attacks, so alternation changes timbre
-without changing the melody. No synth or percussion recording is added.
+**Composition rights are separate from sample rights.** CC0 covers the source
+fart recordings only. Referenced compositions and published arrangements remain
+credited to their writers and creators. No original music performance, lyrics,
+score page or downloaded MIDI is an app asset.
 
-## The two larger fart orchestras
+| File | Artist / composer | Tempo | Duration |
+| --- | --- | --- | --- |
+| `greta-gris.mp3` | Peppa Pig / Greta Gris / Julian Nott | 144 BPM | 21.20 s |
+| `bjornen-sover.mp3` | Traditional Swedish children's song / Traditional | 138 BPM | 22.07 s |
+| `baby-shark.mp3` | Traditional children's chant / Pinkfong / Traditional chant; popularized by Pinkfong | 112 BPM | 18.34 s |
+| `en-livstid-i-krig.mp3` | Sabaton / Joakim Broden | 68 BPM | 18.85 s |
+| `bromance.mp3` | Tim Berg / Avicii / Tim Bergling | 126 BPM | 24.06 s |
+| `sommartider.mp3` | Gyllene Tider / Per Gessle | 130 BPM | 23.35 s |
+| `sandstorm.mp3` | Darude / Ville Virtanen / Jaakko Salovaara | 140 BPM | 21.77 s |
+| `ring-of-fire.mp3` | Johnny Cash / June Carter / Merle Kilgore | 114 BPM | 22.25 s |
+| `the-final-countdown.mp3` | Europe / Joey Tempest | 118 BPM | 26.88 s |
+| `imperial-march.mp3` | John Williams / John Williams | 108 BPM | 27.87 s |
 
-The Final Countdown and The Imperial March each use all nine recordings in
-[`../sources.json`](../sources.json), with authors, CC0 source links and verified
-SHA-256 hashes copied into their metadata. No original music recording, synth
-oscillator, drum library or voice is used.
+### Greta Gris
 
-- Trumpeten supplies the tuned lead and lower brass. The lead's known
-  250.874 Hz body is repitched; long notes use FFmpeg's pitch-preserving
-  overlap-add tempo filter on one finite recorded passage.
-- Smygaren supplies pitched bass, using a stable section from 0.20–0.66 s
-  with a measured fundamental of about 80.769 Hz.
-- Ankan supplies chord replies, using 0.08–0.35 s at approximately 82.276 Hz.
-- Kanonen makes the low rhythmic thumps; Blöta makes the wet backbeat.
-- Snabbisen supplies small ticks and marching rolls; selected lead attacks
-  alternate among recorded sources.
-- Raketen adds phrase-end rises and a comic finishing accent. Vulkanen adds
-  a short mid-phrase growl. Katastrofen joins the march and final flourish.
+Playful, springy bass, short chord replies and comic fills.
 
-Each source keeps a real finite attack, body or tail. Leading silence is
-trimmed before scheduling so different files cannot shift a written beat.
-No sample is turned into a repeating wavetable. Short envelopes prevent clicks,
-modest stereo placement separates parts, and a quiet recorded-signal echo adds
-space. The support grows during the second half. The lead remains stronger than
-any individual backing stem, and final decoded peaks retain headroom.
+Lead converted directly from the existing render-songs.py sequence, with its fixed -5-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Two-bar main-theme hook, repeated six times
 
-The Final Countdown starts directly with the C-sharp–B–C-sharp fanfare.
-Its lead pitches, sixteenth-note pickups and merged ties follow arranger
-Pierre Loiselle's creator-published score (printed pages 1–4). The initial
-1.5-beat written rest is omitted. Two hook cycles lead into the written
-turnaround and a newly added F-sharp minor cadence. Tempo is 118 BPM.
-Harmony is simplified for the fart band, with galloping bass and rock backbeats.
-Composition: Joey Tempest; recording artist: Europe.
+- [Reference 1](https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242).
+- [Reference 2](https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf).
 
-The Imperial March starts at the main theme, omitting the four-bar introduction.
-Its 12-bar lead follows bars 5–16 on printed page 28 of the official Faber /
-Warner-Chappell piano sample, down one octave. Dotted-eighth / sixteenth snaps
-retain their 0.75 / 0.25 beat spacing. The 108 BPM tempo, simplified chords,
-marching bass, side rolls and comic ending are arrangement decisions.
-Composition: John Williams.
+### Björnen sover
 
-Notation references:
+Gentle bass, sparse chord replies and soft recorded puffs.
 
-- [The Final Countdown, Pierre Loiselle's published arrangement](https://www.pierreloiselle.com/uploads/2/3/7/0/23701802/the_final_countdown_-_directeur.pdf).
-- [The Imperial March, official publisher sample](https://faber-product-media.s3.amazonaws.com/082ddb6e-cb5d-4875-acb9-0417d55a5b01).
-- [The Imperial March, Hal Leonard composition credit](https://www.halleonard.com/product/4005404/the-imperial-march-darth-vaders-theme).
+Lead converted directly from the existing render-songs.py sequence, with its fixed -5-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Traditional: Gubben Noak / Björnen sover
 
-## Melodies
+- [Reference 1](https://ciss.se/munspel/barnvisor.html).
 
-These are new sampled-fart renditions of the melodies below. The only
-sampled audio is the CC0 fart recordings credited above. No modern song
-performance or accompaniment is sampled.
-The references below were used to verify notes, timing and composition credits.
-The clips are compact new arrangements; source scores, page images, lyrics and
-original music recordings are not app assets.
+### Baby Shark
 
-**Composition rights are separate from the recorded instrument sources.** The
-melodies and releases are credited to their respective writers and creators
-below. The CC0 licenses cover the source fart recordings and do not grant a
-CC0 license to any referenced composition, release or published song arrangement.
+Bouncy pulse, bass, chord stabs and short answering fills.
 
-| File | Melody | Duration |
-| --- | --- | --- |
-| `greta-gris.mp3` | Peppa Pig Main Theme — Julian Nott (2004); two-bar melody hook, six repetitions | 20.20 s |
-| `bjornen-sover.mp3` | Björnen sover / Gubben Noak (traditional) | 21.07 s |
-| `baby-shark.mp3` | Baby Shark, children's chant popularized by Pinkfong; two melody verses | 17.34 s |
-| `en-livstid-i-krig.mp3` | En livstid i krig — Joakim Brodén / Sabaton (2012); short opening lead melody | 17.85 s |
-| `bromance.mp3` | Bromance — Tim Berg / Tim Bergling (Avicii, 2010); instrumental main drop / chorus lead | 23.06 s |
-| `sommartider.mp3` | Sommartider — Gyllene Tider; Per Gessle (1982); title / hej-hej refrain motif | 22.35 s |
-| `sandstorm.mp3` | Sandstorm — Darude; Ville Virtanen / Jaakko Salovaara (1999); compact main synth riff | 20.77 s |
-| `ring-of-fire.mp3` | Ring of Fire — Johnny Cash; June Carter / Merle Kilgore (1963); two-part trumpet hook | 21.25 s |
-| `the-final-countdown.mp3` | The Final Countdown — Joey Tempest / Europe; arena-rock fart fanfare | 26.88 s |
-| `imperial-march.mp3` | The Imperial March — John Williams; marching fart brass band | 27.87 s |
+Lead converted directly from the existing render-songs.py sequence, with its fixed -12-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. Children's melody: Baby Shark (traditional chant, popularized by Pinkfong)
 
-Sandstorm now follows the full four-bar main riff: 56 note onsets from the
-upper lead in track 6, beats 72–88, of the publicly shared MIDI below. The
-sixteenth-note pulse and half-beat gaps replace the earlier sparse 9.25-beat
-approximation. The original MIDI pitches B4, E5, D5 and A4 move down one octave.
-Three repetitions at 140 BPM create a short clip with alternating, clipped fart
-attacks. MIDI note timing is a reference only; no MIDI or original recording
-is included in the website. The Musicnotes edition supplies composer credits.
+- [Reference 1](https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377).
+- [Reference 2](https://www.stantons.com/scores/03746512.pdf).
+- [Reference 3](https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html).
 
-Ring of Fire uses the upper trumpet hook from Gary Badger's published trumpet
-transcription. Its repeated F-sharps, rise to G-sharp and fall to E are moved to
-D, E and C, followed by the lower B, C and A response. Tied eighth notes are
-merged; the long ending of each phrase is shortened to four beats in this
-compact arrangement. Both phrases repeat twice at 114 BPM (previously 105 BPM). The source's pickup
-and second trumpet harmony are omitted. Composer credits are June Carter and
-Merle Kilgore; Johnny Cash is the recording artist named on the song button.
+### En livstid i krig
 
-References for the two additions:
+Heavy rock pulse, bass and brass anchors, with 136-BPM backing under the 68-BPM score.
 
-- [Sandstorm published edition and composer credits](https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488).
-- [Sandstorm MIDI timing reference](https://bitmidi.com/darude_-_sandstorm-mid).
-- [Carlo Prato Sandstorm reference and tempo](https://www.cprato.com/en/midi/details/223/darude-sandstorm).
-- [Ring of Fire trumpet transcription, Gary Badger](https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf).
-- [Ring of Fire licensed trumpet edition and composer credits](https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397).
+Freely published Solo Guitar GP5 arrangement, opening measures 2 through the first half of 7; written F4–Eb5 rendered F3–Eb4. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.
 
+- [Reference 1](https://www.sabaton.net/discography/carolus-rex/en-livstid-i-krig/).
+- [Reference 2](https://gtptabs.com/tabs/19/sabaton/en-livstid-i-krig.html).
+- [Reference 3](https://gtptabs.com/tabs/download/55609.html).
+- [Reference 4](https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html).
 
-Greta Gris follows the original two-bar Peppa Pig melody hook, including the
-low G and rising G–B–D–F figure.
+### Bromance
 
-En livstid i krig follows the opening Solo Guitar melody in the freely published
-GP5 arrangement, checked against an independent public guitar tab. The exact
-GP5 rhythm and tied durations are retained; slide and hammer ornaments are
-represented by their target notes. Written F4–Eb5 is moved one octave down to
-F3–Eb4 for the fart instrument. Its half-time notation uses 68 quarter notes per
-minute, equivalent to 136 with doubled written durations.
+Dance bass, four-on-the-floor recorded-fart kick and offbeat puffs.
 
-Bromance starts directly on the instrumental main drop / chorus melody. It uses
-the highest lead line at beats 224–240 in the freely published *Avicii Melodies*
-MIDI compilation by No_Literature4584, who credits Keiric and TyphoonMusic.
-The following sixteen beats repeat that melody exactly. This rendition repeats
-the four-bar hook three times at the Arena recording's tempo of 126 BPM, using
-the source's dotted-eighth (0.75 beat) and eighth-note (0.5 beat) durations.
-The compilation's 128 BPM serves its whole multi-song file.
-One fixed two-octave transposition places its G#4–B5 highest melody line at
-G#2–B3 for the wet fart instrument, preserving the source's register contour.
+Freely published Avicii Melodies MIDI by No_Literature4584, who credits Keiric and TyphoonMusic; highest lead at beats 224–240, confirmed by the identical repetition at 240–256. MIDI G#4–B5 rendered G#2–B3 through one fixed transposition, preserving the register contour. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.
 
-The main hook's pitch classes and syncopated onsets were independently aligned
-with the official Arena preview from approximately 0.55 seconds: repeated
-G-sharps, B, F-sharp, repeated D-sharps, then the rising transition into C-sharp.
-The original mix contains doubled piano/synth and sustained chords, so spectrum
-alone establishes its pitch classes and timing more firmly than its octave
-placement. This solo preserves the published MIDI contour without per-note
-octave changes. It omits the opening piano motif and the separate Seek Bromance
-vocal chorus. No original recording or vocal is sampled.
+- [Reference 1](https://sirupmusic.com/releases/bromance-aviciis-arena-mix/).
+- [Reference 2](https://www.qobuz.com/us-en/album/bromance-remixes-pt-2-tim-berg/7640130863125).
+- [Reference 3](https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174).
+- [Reference 4](https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/).
+- [Reference 5](https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file).
 
-Sommartider uses the sung title / hej-hej refrain motif, clearly notated in
-the opening of TheddyKeys' published piano arrangement. Two independent visual
-readings agree on all ten notes: the four eighth-note pickup notes, five
-separate F-sharp attacks and the closing E tied across the barline. The E tie
-is merged into one 1.5-beat note. This rendition adds a one-beat breathing rest
-to complete each eight-beat loop, then repeats that motif six times at the
-published arrangement tempo of 130 BPM. The source's C#4–F#4 melody moves down
-one octave to C#3–F#3 for the unchanged wet fart instrument.
+### Sommartider
 
-Fundamental and harmonic material in the original Apple Music preview supports
-the repeated F-sharps and transition to E; the printed notation determines the
-exact notes and durations. The original recording and its separate arrangement
-remain references only. The song is credited to Per Gessle, with its original
-1982 release identified by the Parlophone-distributed artist recording and the
-band-endorsed GylleneTider.com archive. That archive identifies itself as
-independent, with song material courtesy of Jimmy Fun Music and Elevator
-Entertainment. Preview images and original music remain outside the app.
+Summer-rock bass, backbeat and duck-like replies in the six written rests.
 
-Baby Shark uses the recognizable D–E–G melody, repeated-note refrain and
-G–G–F-sharp ending, transposed down an octave for the same wet fart instrument.
-The clip contains two verses of that melody, without vocals or an introduction.
-The CC0 licenses above cover the source fart recordings; they do not assert a
-license for any Pinkfong recording, arrangement or other Baby Shark material.
+Lead converted directly from the existing render-songs.py sequence, with its fixed -12-semitone transposition applied to every note name. Exact beat onsets, durations, repetition count and written rests are preserved from the previous published clip; no melody changes or additional quoted material. Backing chords and instrumental responses are creative accompaniment choices, not a claimed transcription of the original recording. TheddyKeys published piano-arrangement preview, first system: the melody pickup in bar 1, all of bar 2 and the first tied note of bar 3. The E4 tie is merged into 1.5 beats. C#4–F#4 rendered C#3–F#3; 130 BPM is the published arrangement tempo
 
-Notation references:
+- [Reference 1](https://mymusic5.com/Theddykeys/151169).
+- [Reference 2](https://music.apple.com/us/song/691335578).
+- [Reference 3](https://www.gyllenetider.com/discography/singles/sommartider/).
+- [Reference 4](https://www.gyllenetider.com/lyrics/).
+- [Reference 5](https://www.youtube.com/watch?v=4kVRF0hTeyQ).
 
-- [Peppa Pig Main Theme preview, Bobby Cyr / Piano Notion](https://www.musicnotes.com/sheetmusic/piano-notion/peppa-pig-theme-song/MN0239242).
-- [Peppa Pig melody-line teaching notation](https://conradschords.com/wp-content/uploads/2014/05/peppa-pig-theme-tune.pdf).
-- [Björnen sover notation](https://ciss.se/munspel/barnvisor.html).
-- [Baby Shark melody edition](https://www.musicnotes.com/sheetmusic/childrens-song/baby-shark/MN0189377).
-- [Hal Leonard's Baby Shark score credits](https://www.stantons.com/scores/03746512.pdf).
-- [Baby Shark note timing reference](https://pianoletternotes.blogspot.com/2019/03/baby-shark-by-pinkfong.html).
-- [Sabaton's official En livstid i krig page and composer credit](https://www.sabaton.net/discography/carolus-rex/en-livstid-i-krig/).
-- [Freely published GP5 arrangement and download](https://gtptabs.com/tabs/19/sabaton/en-livstid-i-krig.html).
-- [Independent En livstid i krig opening guitar tab](https://www.guitartabs.cc/tabs/s/sabaton/en_livstid_i_krig_tab.html).
-- [Bromance Arena mix, official label release](https://sirupmusic.com/releases/bromance-aviciis-arena-mix/).
-- [Bromance distributor metadata and composer credit](https://www.qobuz.com/us-en/album/bromance-remixes-pt-2-tim-berg/7640130863125).
-- [Official Bromance Arena recording preview](https://music.apple.com/us/album/bromance-aviciis-arena-mix/1670446170?i=1670446174).
-- [Avicii Melodies MIDI compiler's original publication and credits](https://www.reddit.com/r/avicii/comments/1jagvzf/52_avicii_melodies/).
-- [Publicly shared MIDI/FLP compilation](https://www.mediafire.com/file/d574ksdtv6qgw33/Avicii_Melodies.zip/file).
-- [Sommartider piano arrangement and readable preview, TheddyKeys](https://mymusic5.com/Theddykeys/151169).
-- [Original Sommartider Apple Music release and preview](https://music.apple.com/us/song/691335578).
-- [Sommartider officially distributed artist recording](https://www.youtube.com/watch?v=4kVRF0hTeyQ).
-- [Sommartider original 1982 single, band-endorsed archive](https://www.gyllenetider.com/discography/singles/sommartider/).
-- [Song credits supplied by Jimmy Fun Music / Elevator Entertainment](https://www.gyllenetider.com/lyrics/).
+### Sandstorm
 
+Tight trance pulse; original 56-note hook, short alternating Blota/Snabbisen attacks.
+
+Upper lead line of publicly shared MIDI, track 6, beats 72–88; all 56 note onsets preserved on the sixteenth-note grid. B4–E5–D5–A4 rendered one octave down. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.
+
+- [Reference 1](https://www.musicnotes.com/sheetmusic/darude/sandstorm/MN0144488).
+- [Reference 2](https://bitmidi.com/darude_-_sandstorm-mid).
+- [Reference 3](https://www.cprato.com/en/midi/details/223/darude-sandstorm).
+
+### Ring of Fire
+
+Country boom-chick rhythm, root/fifth bass and offbeat chord replies.
+
+Upper trumpet line in Gary Badger transcription; written F#5–G#5–E5–F#5 and D#5–E5–C#5–D#5 moved to D4–E4–C4–D4 and B3–C4–A3–B3 for the solo fart instrument. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.
+
+- [Reference 1](https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf).
+- [Reference 2](https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397).
+
+### The Final Countdown
+
+Arena-rock fanfare lowered five semitones, from F-sharp minor to C-sharp minor.
+
+Pitches, exact sixteenth/eighth-note rhythm and ties visually checked against the piano melody on printed pages 1-4 of arranger Pierre Loiselle's self-published score. Uses its bars 1-8, then 13-16, with an added F# minor cadence. Lead uses original-key pitches C#5/B4/F#4/D5 etc. Tied notes are merged. The initial 1.5 beats of rest are omitted so the recognisable C#5-B4-C#5 fanfare starts instantly. Tempo 118 BPM and octave choices are arrangement decisions; this is an independently sequenced fart arrangement, not original-recording audio. Harmonic extensions are optional accompaniment colour. For version 5.0 the complete melody and all harmonies are transposed down five semitones from the accepted F# minor score into C# minor. Rhythm, note durations and tempo are unchanged.
+
+- [Reference 1](https://www.pierreloiselle.com/uploads/2/3/7/0/23701802/the_final_countdown_-_directeur.pdf).
+
+### The Imperial March
+
+Approved marching brass band; exact delivered 4.9 recording preserved.
+
+Melody and note durations visually checked against the official Faber/Warner-Chappell piano sample, printed page 28, bars 5-16 (the 4-bar introduction is omitted). The publisher sample is marked approximately 100 BPM; 108 BPM is the creative arrangement tempo. All melody pitches are transposed down one octave from that piano notation. The defining figures use dotted eighth + sixteenth (0.75 + 0.25 quarter-note beats), not straight eighths or triplets. F# and Eb in the upper chromatic descent are enharmonic spellings of the printed F# and D#. Chord events below are simplified arrangement guidance, not a transcription of the original orchestration.
+
+- [Reference 1](https://faber-product-media.s3.amazonaws.com/082ddb6e-cb5d-4875-acb9-0417d55a5b01).
+- [Reference 2](https://www.halleonard.com/product/4005404/the-imperial-march-darth-vaders-theme).
+
+## Musical preservation checks
+
+The original eight tunes keep every accepted sounding pitch, note onset,
+written duration, tempo and phrase repetition. Sommartider retains its six
+one-beat rests; Sandstorm retains its corrected 56-note / 16-beat main riff.
+The added chords, rhythm and effects are creative arrangements.
+
+The Final Countdown keeps its exact note timing and tempo, with all melody
+and chord pitches five semitones lower. The Imperial March MP3 remains
+byte-for-byte identical to the approved 4.9 release:
+`2bf7cad4826c8d9b18e808f909ea1b4a0d7e1d6b5b4d4336afbb062b1fbb2942`.
 
 ## Format, validation and regeneration
 
-The eight solo files are mono MPEG Layer III (MP3), 44,100 Hz, 96 kbit/s.
-The two larger orchestras are stereo MP3 at 44,100 Hz and 128 kbit/s.
-All use MIME `audio/mpeg`. The ten files total 2,852,451 bytes
-(approximately 2.85 MB). Decoded peak levels
-are below 0.90 full scale with zero clipped samples. Every melody note has an
-audible recorded attack in the finished mixed file. The wet recording retains its natural pitch and
-noise, so idealized note-precision measurements do not describe this mix.
-These measurements check the audio files themselves and do not claim testing
-on a physical iPad.
+All ten files are stereo MPEG Layer III (MP3), 44,100 Hz, 128 kbit/s, MIME
+`audio/mpeg`. Their total size is 3,637,983 bytes (approximately 3.64 MB).
+Decoded output has zero clipped samples. Metadata records decoded peaks and
+RMS, lead attack measurements, source hashes, every scheduled layer and
+final output hashes. All ten songs are included in the version 5.0 offline cache.
 
-`metadata.json` records every melody note and duration, tempo, transposition,
-source checksums, output checksum and validation result. Regenerate the assets
-with Python, NumPy and FFmpeg. The solo renderer preserves the orchestra
-metadata; the orchestra renderer preserves every previous song recording:
+The score registry `tools/orchestra-scores.json` contains all current melodies
+and creative chord plans. `tools/render-songs.py` retains the original eight
+solo score definitions for regression checks and delegates rendering to the
+current orchestra tool. Regenerate the nine revised songs with Python, NumPy
+and FFmpeg (Imperial March is preserved by default):
 
 ```sh
-python tools/render-songs.py --ffmpeg /path/to/ffmpeg
 python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg
 ```
 
-To regenerate selected songs while preserving the other MP3 files exactly:
+Regenerate selected songs while retaining all other recordings and metadata:
 
 ```sh
-python tools/render-songs.py --ffmpeg /path/to/ffmpeg --only sommartider
+python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg --only sommartider sandstorm
 ```
 
-To preview the first eight seconds before replacing the app assets:
+An explicitly selected `--only imperial-march` regenerates that score; no
+other command overwrites its approved recording. Rendering is a development
+step only. The deployed app needs no Python, FFmpeg or Web Audio synthesis.
 
-```sh
-python tools/render-songs.py --ffmpeg /path/to/ffmpeg --audition /path/to/preview.mp3
-```
-
-Rendering is a development step only. The deployed app needs no Python,
-FFmpeg, audio synthesis or Web Audio API.
-
-`tools/orchestra-scores.json` contains the two inspectable melody and chord
-scores. Each orchestra's metadata records every scheduled source, musical role,
-note, time, gain and pan, plus per-layer RMS and decoded output validation.
-The arrangement references remain outside the deployed app assets.
+Verification covers the delivered MP3s, source attribution, musical timing,
+native browser playback and offline operation; it does not claim a physical
+iPad listening test.

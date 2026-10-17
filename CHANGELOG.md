@@ -1,5 +1,16 @@
 # Hugo och Hermans pruttmaskin
 
+## 5.0 - Hela fisorkestern
+
+- Lowered The Final Countdown's melody and harmonies five semitones while
+  keeping its rhythm, phrasing and tempo.
+- Rebuilt the other eight former solo recordings as layered fart orchestras,
+  using all nine CC0 source recordings with distinct musical grooves.
+- Retained every accepted melody pitch, onset, duration and tempo in those
+  eight songs, including Sandstorm's tight articulation and Sommartider's rests.
+- Kept the approved Imperial March MP3 exactly unchanged.
+- Standardized current assets on stereo 128 kbps MP3 and updated offline cache.
+
 ## 4.9 - Två stora fisorkestrar
 
 - Added The Final Countdown (Europe) and The Imperial March (John Williams).
