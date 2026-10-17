@@ -345,17 +345,26 @@ class Orchestra:
         self.groove_fills()
 
     def power_metal_lead(self):
-        # Fast guitar articulations need a pitched attack immediately, a very
-        # short release and a small gap. Unpitched effects stay below the lead.
+        # Keep the accepted pitched line, but restore the raw, irregular fart
+        # attacks that were lost when its short stable body was tuned. The
+        # unfiltered recorded attacks are now an audible part of every note.
         for index, event in enumerate(self.score['melody']):
             beat, note, span = event['beat'], event['note'], event['duration']
             gate = min(.85, span*self.spb*.88)
             body = self.sustained_lead(note, gate, direct_attack=True)
             body = envelope(body, .0018, min(.007, gate*.12))
             self.add('lead', 'trumpeten', beat, body, 1.0, -.03, note)
-            source = 'snabbisen' if index % 2 else 'blota'
-            attack = natural_hit(self.bank, source, min(.024, gate*.42), rate=1.3, offset=.015, bright=True)
-            self.add('lead-attacks', source, beat, attack, .11, .06)
+            source = ('blota', 'snabbisen', 'ankan', 'blota')[index % 4]
+            attack = natural_hit(self.bank, source, min(.11, gate*.92),
+                                 rate=(.88, 1.04, .93, 1.12)[index % 4], offset=.006)
+            self.add('lead-attacks', source, beat, attack,
+                     .62 if index % 2 == 0 else .48, -.10 if index % 2 == 0 else .12)
+            # A rough lower octave retains the original trumpet recording's
+            # natural pitch scoop and flutter underneath the precise melody.
+            if index % 4 == 0 or span >= .5:
+                octave = note[:-1]+str(int(note[-1])-1)
+                rough = pitched(self.trumpet, 250.873629, octave, min(.16, gate))
+                self.add('rasp', 'trumpeten', beat, rough, .29, -.18, octave)
             if span >= 1:
                 octave = note[:-1]+str(int(note[-1])-1)
                 body = pitched(self.trumpet, 250.873629, octave, min(.24, gate))
@@ -386,7 +395,7 @@ class Orchestra:
                     while legacy.frequency(note, 0) < 145:
                         note = note[:-1]+str(int(note[-1])+1)
                     audio = pitched(self.duck, 82.276, note, gate*.9)
-                    self.add('chugs', 'ankan', start+float(offset), audio, .16, -.35 if voice == 0 else .35, note)
+                    self.add('chugs', 'ankan', start+float(offset), audio, .10, -.35 if voice == 0 else .35, note)
             for voice, note in enumerate(notes[:3]):
                 while legacy.frequency(note, 0) < 145:
                     note = note[:-1]+str(int(note[-1])+1)
@@ -401,7 +410,7 @@ class Orchestra:
                          natural_hit(self.bank, 'kanonen', .085, rate=.85), .27 if offset == 0 else .22, -.1)
             if beat % 2:
                 self.add('snare', 'blota', beat,
-                         natural_hit(self.bank, 'blota', .075, rate=1.25, bright=True), .28, .2)
+                         natural_hit(self.bank, 'blota', .13, rate=.95), .34, .2)
             self.add('ticks', 'snabbisen', beat+.5,
                      natural_hit(self.bank, 'snabbisen', .023, rate=1.7, offset=.14, bright=True), .055, -.3)
         # Brief natural rises mark complete phrases, never a joke collapse or
@@ -439,12 +448,22 @@ class Orchestra:
 
     def comedy(self):
         if self.style == 'power-metal':
-            middle = min(self.beats-4, int(self.beats/8)*4)
-            self.add('growl', 'vulkanen', middle, natural_hit(self.bank, 'vulkanen', .22, rate=.9, offset=.8), .11, -.35)
+            # Leave enough of these finite recordings intact to hear an actual
+            # raspberry/bubble rather than converting every source into a tick.
+            # The precise melody stays above the low, alternating fart replies.
+            replies = ('blota', 'vulkanen', 'katastrofen', 'raketen')
+            for index, beat in enumerate(range(0, int(self.beats)-1, 4)):
+                source = replies[index % len(replies)]
+                duration = .25 if source == 'blota' else .31
+                self.add('fart-replies', source, beat+.08,
+                         natural_hit(self.bank, source, duration,
+                                     rate=.88 if source != 'raketen' else 1.05,
+                                     offset=.8 if source == 'vulkanen' else 0),
+                         .42 if index % 2 == 0 else .36, -.34 if index % 2 == 0 else .34)
             self.add('final-hit', 'katastrofen', self.beats-.25,
-                     natural_hit(self.bank, 'katastrofen', .17, rate=1.05), .17, 0)
+                     natural_hit(self.bank, 'katastrofen', .62, rate=.9), .48, 0)
             self.add('final-hit', 'raketen', self.beats-.25,
-                     natural_hit(self.bank, 'raketen', .13, rate=1.3, offset=.18), .07, .35)
+                     natural_hit(self.bank, 'raketen', .28, rate=1.1, offset=.18), .15, .35)
             return
         # A different low recorded growl marks the midpoint, and a theatrical
         # fart flourish resolves the final cadence. No new musical quote here.
@@ -466,7 +485,7 @@ class Orchestra:
         if self.style == 'power-metal':
             # A 71 ms lead echo would nearly land on the following 75 ms note
             # at 200 BPM. Keep the rapid melodic line dry and echo backing only.
-            room_input = dry-self.stems['lead']-self.stems['lead-attacks']
+            room_input = dry-self.stems['lead']-self.stems['lead-attacks']-self.stems['rasp']-self.stems['fart-replies']
             echoes = ((.071, .04), (.119, .025))
         for delay, level in echoes:
             n = round(delay*SR)
@@ -556,7 +575,11 @@ def main():
                 source_duration_seconds=.085, tuning_reference_hz=250.0,
                 finite_source_tempo_chain=[.5, .5, .68],
                 lead_gate_fraction=.88, lead_echo=False,
-                design='Stable recorded body for rapid notes; independent dry gaps; original guitar harmony kept quieter than main melody')
+                raw_attack_sources=['blota', 'snabbisen', 'ankan'],
+                raw_attack_gain=[.62, .48], raw_attack_high_pass=False,
+                rough_octave_gain=.29, natural_fart_reply_every_beats=4,
+                intro_beats=8, electric_hook_start_beat=12,
+                design='Accepted stable melody plus prominent unfiltered fart attacks, rough lower octave, natural bubbling replies and a longer fart ending; shortened intro, dry rapid lead and quieter second guitar')
         print(json.dumps({'id': score['id'], **report}, ensure_ascii=False), flush=True)
     # Retain metadata entries in their existing order; append new songs in score order.
     metadata['songs'] = [additions.pop(s['id'], s) for s in metadata['songs']]

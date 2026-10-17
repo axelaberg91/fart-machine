@@ -66,11 +66,11 @@ score page or downloaded MIDI is an app asset.
 | `bromance.mp3` | Tim Berg / Avicii / Tim Bergling | 126 BPM | 24.06 s |
 | `sommartider.mp3` | Gyllene Tider / Per Gessle | 130 BPM | 23.35 s |
 | `sandstorm.mp3` | Darude / Ville Virtanen / Jaakko Salovaara | 140 BPM | 21.77 s |
-| `ring-of-fire.mp3` | Johnny Cash / June Carter / Merle Kilgore | 114 BPM | 22.25 s |
+| `ring-of-fire.mp3` | Johnny Cash / June Carter / Merle Kilgore | 144 BPM | 17.87 s |
 | `the-final-countdown.mp3` | Europe / Joey Tempest | 118 BPM | 26.88 s |
 | `imperial-march.mp3` | John Williams / John Williams | 108 BPM | 27.87 s |
 | `seven-nation-army.mp3` | The White Stripes / Jack White | 124 BPM | 28.30 s |
-| `through-the-fire-and-flames.mp3` | DragonForce / Herman Li, ZP Theart, Sam Totman and Vadim Pruzhanov | 200 BPM | 31.20 s |
+| `through-the-fire-and-flames.mp3` | DragonForce / Herman Li, ZP Theart, Sam Totman and Vadim Pruzhanov | 200 BPM | 15.60 s |
 
 ### Greta Gris
 
@@ -146,9 +146,9 @@ Upper lead line of publicly shared MIDI, track 6, beats 72–88; all 56 note ons
 
 ### Ring of Fire
 
-Country boom-chick rhythm, root/fifth bass and offbeat chord replies.
+Faster live-style country boom-chick rhythm, with unchanged trumpet-hook notes.
 
-Upper trumpet line in Gary Badger transcription; written F#5–G#5–E5–F#5 and D#5–E5–C#5–D#5 moved to D4–E4–C4–D4 and B3–C4–A3–B3 for the solo fart instrument. Melody events, durations, tempo and fixed source transposition are preserved exactly from the previously accepted solo score. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development are a new simplified creative adaptation, not a transcription of the original backing arrangement. All sound is made from the existing recorded fart source bank.
+Upper trumpet line in the Gary Badger transcription, with source written F#5-G#5-E5-F#5 and D#5-E5-C#5-D#5 moved to D4-E4-C4-D4 and B3-C4-A3-B3 for the solo fart instrument. All 32 melody pitches, onsets, durations and the existing fixed source transposition are preserved exactly from the previously accepted score, as are all chord-event beats, pitches and durations. The previously approved 114 BPM tempo is increased to a creative live-style 144 BPM at the user's request for a faster performance. This tempo choice is an arrangement decision and is not claimed to transcribe any specific live recording. Chords, bass roots, rhythmic accompaniment, articulation layers and dynamic development remain a simplified creative adaptation of the song. All sound is made from the existing recorded fart source bank.
 
 - [Reference 1](https://garybadger.com/wp-content/uploads/2017/09/johnny-cash-ring-of-fire-trumpets.pdf).
 - [Reference 2](https://www.musicnotes.com/sheetmusic/johnny-cash/ring-of-fire/MN0298397).
@@ -179,7 +179,7 @@ Riff pitches and durations visually verified against online-skills own education
 
 ### Through the Fire and Flames
 
-Original key C minor, 4/4, 200 BPM (licensed Musicnotes lists 199; Hal Leonard artist-approved preview marks 200). All beats below are quarter-note beats at 200, with straight sixteenths at 0.25 beat = 75 ms. Bars 1-15 (beats 0-60) use the licensed Hal Leonard page-1 Guitar 3 two-bar top-voice reduction, repeating its 32 exact sounding guitar notes: 240 events. This is an intentional melodic reduction of simultaneous acoustic voices; it is not a claim that any single community MIDI track equals the licensed reduction. The higher moving eighth-note pitches independently agree with the maximum of the 12-track Acoustic+Keyboard and Acoustic Guitar parts; the licensed reduction supplies the explicit C4 interleaved pedal. Bar 16 (beats 60-64) is the exact 16-event Acoustic+Keyboard connecting run from Songparts dPOfCHp4g18SSKCN, 480 ticks per beat. Bars 17-24 (beats 64-96) are all 123 exact note onsets and durations from that transcription Lead 1, with a single fixed -12-semitone register change for this electric section. The optional harmony uses the same exact window of Lead 2, also -12 semitones, 123 events. The two alternate 12-track public transcriptions corroborate the intro and electric hook structure. The recommended 14-track version lKrvLtRPuj0rrCfY was rejected because its acoustic Guitar 2 has implausible D3 pedal glitches and its electric hook has discordant alternative pitches. Beat 96 C4/Eb4 held for four beats and the final C-minor chord are a new arranged resolution, not part of the excerpted original melody. Chords are simplified arrangement guidance derived from the source bass/harmony; they are not a transcription of every original rhythm-guitar attack. No original-song recordings are included.
+Short-intro edit of the verified 30-second arrangement: retain old beats 0-8 at output 0-8, move the connecting run from old 60-64 to output 8-12, move the complete electric hook from old 64-96 to output 12-44, and move the arranged closing cadence from old 96-100 to output 44-48. Total 12 bars / 48 quarter-note beats / 14.4 seconds at 200 BPM. Original key C minor, 4/4, 200 BPM (licensed Musicnotes lists 199; Hal Leonard artist-approved preview marks 200). Straight sixteenths remain 0.25 beat = 75 ms. Output bars 1-2 (beats 0-8) retain the licensed Hal Leonard page-1 Guitar 3 two-bar top-voice reduction once, all 32 exact sounding guitar notes. This is an intentional melodic reduction of simultaneous acoustic voices; no single community MIDI track is claimed to equal the licensed reduction. The higher moving eighth-note pitches agree independently with the maximum of the 12-track Acoustic+Keyboard and Acoustic Guitar parts; the licensed reduction supplies the explicit C4 interleaved pedal. Output bar 3 (beats 8-12) retains the exact 16-event Acoustic+Keyboard connecting run from original bar 16, source beats 60-64 / ticks 28800-30720, Songparts dPOfCHp4g18SSKCN, 480 ticks per beat. Output bars 4-11 (beats 12-44) retain all 123 exact onsets, pitches and durations of Lead 1 from original source bars 17-24 / beats 64-96 / ticks 30720-46080, with the existing fixed -12-semitone electric-section register change. Optional harmony retains the same 123 Lead 2 events and the same -12-semitone register change. All retained melody and harmony durations are unchanged; only their onsets are shifted. The two alternate 12-track transcriptions corroborate the intro and electric hook structure. The 14-track lKrvLtRPuj0rrCfY version was rejected because of implausible acoustic D3 pedal glitches and discordant electric-hook pitches. Output beat 44 C4/Eb4 held for four beats and the final C-minor chord are the existing newly arranged resolution, moved intact from old beat 96. The first C-minor chord is trimmed from 16 to 8 beats; the retained final four beats of the old G-major chord become output 8-12. Remaining kept chord pitches and durations are unchanged. Chords are simplified guidance derived from source bass/harmony, not a transcription of every original rhythm-guitar attack. No original-song recordings are included.
 
 - [Reference 1](https://www.guitarinstructor.com/product/guitar-tab/dragonforce/through-the-fire-and-flames/1000059217).
 - [Reference 2](https://s3.amazonaws.com/halleonard-pagepreviews/HL_DDS_0000000000260920.png).
@@ -190,47 +190,50 @@ Original key C minor, 4/4, 200 BPM (licensed Musicnotes lists 199; Hal Leonard a
 
 ### Extra work on the rapid DragonForce lead
 
-The lead has 380 scheduled melody attacks at 200 BPM. The acoustic opening
-uses 75 ms sixteenths; the electric section has a quieter, independently
-verified second guitar line. The opening is a documented upper-voice reduction
-of simultaneous acoustics, rather than a claim that one guitar alone plays it.
+The shortened edit has 172 melody attacks and 124 quieter harmony notes at
+200 BPM. Its acoustic opening is two bars / 2.4 seconds, followed by a
+1.2-second connecting run; the full electric hook starts at 3.6 seconds.
+All retained melody pitches, written durations and electric harmony notes
+are unchanged. The complete delivered clip is 15.6 seconds including its tail.
 
-An early source passage scoops sharp during very short notes. For this new
-arrangement only, a steady 1.595–1.680 s passage of Trumpeten is stretched once
-using overlap-add tempo filters, then repitched from a 250 Hz tuning reference.
-This is finite recorded audio, not an oscillator or repeating wavetable.
-Lead gates occupy 88% of the written spacing, capped at 0.85 s. Its lead echo
-is disabled, avoiding a 71 ms delay landing near the following 75 ms note.
-Backing uses bass, muted chord chugs, rapid kicks and restrained wet attacks.
-The ending is a new C-minor cadence; there is no intentional stutter or collapse.
+The accepted stable melody still uses a finite 1.595-1.680 s Trumpeten passage,
+stretched once with overlap-add filters and repitched from a 250 Hz reference.
+It has 88% note gates and no lead echo. Every note now also has a longer,
+prominent unfiltered Blota, Snabbisen or Ankan attack. The raw attacks use
+gains 0.48/0.62 instead of 0.11 and retain their low bubbling body. A rough
+recorded lower octave supports anchors. Natural 0.25-0.31 s fart replies
+arrive every four beats, and a 0.62 s natural fart closes the final C minor.
+Chord chugs are quieter to leave space for this organic texture and melody.
+All sound remains finite CC0 fart recordings, with no oscillator or original
+song audio. The raw attacks measure about 8 dB below the lead in stem RMS.
 
-The independent physical pitch test measures all 380 isolated lead notes.
-The final measured median absolute error is 9.82 cents (about 0.10 semitone);
-all 379 inter-note dry gaps are silent. This physical test complements the
-separate event-by-event transcription audit and decoded delivered MP3 checks.
+The physical pitch/articulation check measures the isolated pitched melody;
+the deliberately rough octave and natural fart layers are separate. The
+delivered MP3 also passes decoded headroom and source attribution checks.
 
 ## Musical preservation checks
 
-Version 5.1 adds two recordings. All ten previously approved MP3s and their
-per-song metadata entries remain exactly unchanged.
+Version 5.2 changes only Ring of Fire and Through the Fire and Flames.
+The other ten MP3s and their per-song metadata, including Seven Nation Army,
+remain exactly unchanged from 5.1.
 
-The original eight tunes keep every accepted sounding pitch, note onset,
-written duration, tempo and phrase repetition. Sommartider retains its six
-one-beat rests; Sandstorm retains its corrected 56-note / 16-beat main riff.
-The added chords, rhythm and effects are creative arrangements.
+Ring of Fire retains all 32 melody notes, beat positions, written durations,
+chord events and source transposition. Its tempo rises from 114 to 144 BPM
+as a creative live-style arrangement, without claiming a particular live take.
+DragonForce removes repeated intro bars, retains the complete electric hook,
+and shifts the kept sections intact as documented above and in source_segments.
 
-The Final Countdown keeps its exact note timing and tempo, with all melody
-and chord pitches five semitones lower. The Imperial March MP3 remains
-byte-for-byte identical to the approved 4.9 release:
+The Final Countdown retains its approved five-semitone lowering. Imperial
+March remains byte-for-byte identical to its approved 4.9 recording:
 `2bf7cad4826c8d9b18e808f909ea1b4a0d7e1d6b5b4d4336afbb062b1fbb2942`.
 
 ## Format, validation and regeneration
 
 All twelve files are stereo MPEG Layer III (MP3), 44,100 Hz, 128 kbit/s, MIME
-`audio/mpeg`. Their total size is 4,592,547 bytes (approximately 4.59 MB).
+`audio/mpeg`. Their total size is 4,272,808 bytes (approximately 4.27 MB).
 Decoded output has zero clipped samples. Metadata records decoded peaks and
 RMS, lead attack measurements, source hashes, every scheduled layer and
-final output hashes. All twelve songs are included in the version 5.1 offline cache.
+final output hashes. All twelve songs are included in the version 5.2 offline cache.
 
 The score registry `tools/orchestra-scores.json` contains all current melodies
 and creative chord plans. `tools/render-songs.py` retains the original eight
@@ -256,10 +259,10 @@ Verification covers the delivered MP3s, source attribution, musical timing,
 native browser playback and offline operation; it does not claim a physical
 iPad listening test.
 
-To regenerate only the two 5.1 additions:
+To regenerate only the two 5.2 revisions:
 
 ```sh
-python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg --only seven-nation-army through-the-fire-and-flames
+python tools/render-orchestra.py --ffmpeg /path/to/ffmpeg --only ring-of-fire through-the-fire-and-flames
 ```
 
 The rapid-lead pitch/articulation regression check is runnable with the same

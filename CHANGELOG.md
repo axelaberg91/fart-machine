@@ -1,5 +1,17 @@
 # Hugo och Hermans pruttmaskin
 
+## 5.2 - Mer fisig DragonForce och snabbare Ring of Fire
+
+- Shortened DragonForce's repeated acoustic opening to two bars. The complete
+  electric hook now starts at 3.6 s; the delivered clip is 15.6 s rather than 31.2 s.
+- Kept all surviving melody/harmony pitches and written durations. Raised and
+  lengthened raw fart attacks, removed their high-pass treatment, added rough
+  lower-octave texture, recurring natural fart replies and a longer fart ending.
+- Increased Ring of Fire from 114 to 144 BPM for a livelier train rhythm,
+  preserving all 32 melody notes and the complete chord plan.
+- Preserved the other ten audio files and song metadata exactly. Updated the
+  offline cache to 5.2 and checked native playback, pitch and decoded headroom.
+
 ## 5.1 - Seven Nation Army och ett nytt DragonForce-försök
 
 - Added Seven Nation Army (The White Stripes), with its exact dotted riff,
